@@ -1,0 +1,102 @@
+---
+title: 'About | Code Stitch Web Designs'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'services/'
+eleventyNavigation:
+    key: Services
+    order: 1
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/services.css">
+{% endblock %}
+
+{% block body %}
+  <!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+<section id="content-page-714">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h3>SERVICES</h3>
+            <h1 class="cs-title">$0 Down, $149 CAD Per Month, 12-Month Minimum Contract <span class="cs-color"> <BR>Get a Professional 5-page small business website with $0 down. </span></h1>
+            <h2>Unlike traditional website building, which often involves costly page builders and thousands of dollars upfront, our model offers an affordable $149 per month with no initial payment. We don't just sell websites; we offer comprehensive ongoing service.</h2>
+            <h3>For additional pages or custom features, we'll provide tailored pricing based on the scope of work and time involved.</h3>
+            <h4>Service Includes:</h4>
+            <p>
+                Design: Custom designs crafted in Figma, tailored to today’s industry standards.<BR>
+                Development: Fully hand-coded websites using Visual Studio Code for top-notch performance.<BR>
+                Domain & Hosting: Complete management of your domain and hosting needs.<BR>
+                We handle everything so you can concentrate on what matters most—growing your business!<BR>
+                            </p>
+            
+            <h3>Hosting Fees Included</h3>
+            <ol>
+                <li>Hosting fees are built right into the monthly payment.</li>
+               
+            </ol>
+            <h3>Unlimited Edits</h3>
+            <ol>
+                <li>Change anything you want at anytime and it will be done that day.</li>
+               
+            </ol>
+            <h3>24/7 Customer Service</h3>
+            <ol>
+                <li>Call direct anytime day or night, no phone trees or automated responses.</li>
+               
+            </ol>
+            <h3>Web Design & Development</h3>
+            <ol>
+                <li>Includes over 40 hours of design, development, and testing.</li>
+               
+            </ol>
+            <h3>100 Google Page Speed Score</h3>
+            <ol>
+                <li>We can achieve a perfect 100 on Google Page Speed scores and boost your search ranking.</li>
+               
+            </ol>
+            <h3>Google Analytics</h3>
+            <ol>
+                <li>We install Analytics for free to monitor traffic and where it comes from.
+            </ol>
+            
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/save.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/save.png">
+                <img loading="lazy" decoding="async" src="/assets/images/icons8-piggy-bank.gif" alt="person" width="570" height="680" aria-hidden="true">
+            </picture>
+
+            <!--Flower Graphic-->
+            <img class="cs-flower" loading="lazy" decoding="async" src="/assets/images/prism.svg">
+
+            <!--Spidey Sense Graphic-->
+            <img class="cs-sense" loading="lazy" decoding="async" src="/assets/images/prism.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true">
+        </div>
+    </div>
+    <!--Waves Graphic-->
+    <!-- <picture class="cs-background">
+        <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Flarge-waves.svg" alt="waves" decoding="async" aria-hidden="true" width="625" height="952">
+    </picture> -->
+</section>
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

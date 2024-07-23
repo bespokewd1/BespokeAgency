@@ -1,0 +1,83 @@
+---
+title: 'About | Code Stitch Web Designs'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'portfolio/'
+eleventyNavigation:
+    key: Portfolio
+    order: 2
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
+{% endblock %}
+
+{% block body %}
+  <!-- ============================================ -->
+<!--                  portfolio                    -->
+<!-- ============================================ -->
+<section id="services-448">
+    
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">PORTFOLIO</span>
+            <h2 class="cs-title">Explore our Portfolio</h2>
+            <p class="cs-text">
+                Collections of professional web designs, graphic art, and creative projects. We transform ideas into visually captivating and functional designs. Let's create something amazing together.            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/check.gif" alt="icon" width="70" height="70">
+                    </picture>
+                    <h3 class="cs-h3">Waffle House Bar & Grill</h3>
+                    <p class="cs-item-text">A restaurant serving waffles, steaks, salad and more.</p>
+                    <a href="" class="cs-link">Read More</a>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/waffle.png">
+                    <source media="(min-width: 601px)" srcset="/assets/images/waffle.png">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/waffle.png" alt="leaf" width="345" height="428">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/check.gif" alt="icon" width="70" height="70">
+                    </picture>
+                    <h3 class="cs-h3">Montano Plumbing & Constracting LTD.</h3>
+                    <p class="cs-item-text">A plumbing and contracting business in Canada</p>
+                    <a href="" class="cs-link">Read More</a>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/montana.png">
+                    <source media="(min-width: 601px)" srcset="/assets/images/montana.png">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/montana.png" alt="grass" width="345" height="428">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/check.gif" alt="icon" width="70" height="70">
+                    </picture>
+                    <h3 class="cs-h3">G-MACSTEAM LTD.</h3>
+                    <p class="cs-item-text">Carpet, Upholstery, pressure washing, HCAV cleaning service and more.</p>
+                    <a href="" class="cs-link">Read More</a>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/gmac.png">
+                    <source media="(min-width: 601px)" srcset="/assets/images/gmac.png">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/gmac.png" alt="leaves" width="345" height="428">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+  
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}
