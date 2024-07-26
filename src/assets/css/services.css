@@ -857,7 +857,7 @@
         background-color: var(--dark);
     }
     body.dark-mode #pricing-357 .cs-topper {
-        color: var(--primaryLight);
+        color: #4295cd;
     }
     body.dark-mode #pricing-357 .cs-title,
     body.dark-mode #pricing-357 .cs-text {

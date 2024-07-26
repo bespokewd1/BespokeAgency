@@ -1020,12 +1020,15 @@ html {
   body.dark-mode #services-597 .cs-card-group {
       background-color: var(--medium);
   }
-  body.dark-mode #services-597 .cs-topper,
+ 
   body.dark-mode #services-597 .cs-title,
   body.dark-mode #services-597 .cs-text,
   body.dark-mode #services-597 .cs-h3,
   body.dark-mode #services-597 .cs-item-text {
       color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-597 .cs-topper{
+    color:#6EACDA;
   }
   body.dark-mode #services-597 .cs-item-text,
   body.dark-mode #services-597 .cs-text {
@@ -1327,7 +1330,7 @@ html {
       max-width: 20ch;
   }
   #blog-1347 .cs-topper {
-      color: var(--secondary);
+      color: #6EACDA;
   }
   #blog-1347 .cs-card-group {
       width: 100%;
@@ -1554,7 +1557,7 @@ html {
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #blog-1347 .cs-topper {
-      color: var(--primaryLight);
+      color: #4fa7b9;
   }
   body.dark-mode #blog-1347 .cs-title,
   body.dark-mode #blog-1347 .cs-text,
@@ -1859,7 +1862,7 @@ html {
       background-color: var(--dark);
   }
   body.dark-mode #pricing-357 .cs-topper {
-      color: var(--primaryLight);
+      color: #4fa7b9;
   }
   body.dark-mode #pricing-357 .cs-title,
   body.dark-mode #pricing-357 .cs-text {
