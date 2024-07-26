@@ -335,9 +335,9 @@
     }
    
     #content-page-714 .cs-content img {
-        width: 100%;
+        width: 40px;
         height: auto;
-        margin: 1rem 0;
+        margin: 0rem 0;
         display: block;
     }
     #content-page-714 .cs-title {
@@ -350,6 +350,9 @@
         margin: 0 0 1rem 0;
         color: #000000;
         position: relative;
+    }
+    #content-page-714 .bluetext {
+        color:#4295cd;
     }
     #content-page-714 h2,
     #content-page-714 h3,
@@ -481,6 +484,8 @@
     #content-page-714 .cs-background {
         display: none;
     }
+    
+  
   }
   /* Tablet - 768px */
   @media only screen and (min-width: 48rem) {

@@ -18,7 +18,7 @@
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --sectionPadding: clamp(7rem, 7.82vw, 6.25rem) 4rem;
    
   }
   .cs-topper {
@@ -360,7 +360,7 @@ html {
       align-items: center;
   }
   #cs-navigation .cs-logo {
-      width: 9.1875rem;
+      width: 13rem;
       height: auto;
       margin: 0 auto 0 0;
       padding: 0;
@@ -541,7 +541,7 @@ html {
       left: 0;
   }
   #cs-navigation .cs-li-link.cs-active {
-      color: var(--secondary);
+      color: #6EACDA;
   }
   #cs-navigation .cs-li-link.cs-active:before {
       display: block;
@@ -719,6 +719,7 @@ html {
   }
   #cs-navigation .cs-nav-button {
       line-height: 2.875rem;
+      border-radius: .25rem;
   }
 }
 
@@ -745,7 +746,9 @@ html {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    padding:var(--sectionPadding)
+    padding:var(--sectionPadding);
+    padding-bottom: 0%;
+    
   }
   #hero-855 .cs-container {
     width: 100%;
@@ -837,7 +840,7 @@ html {
     width: 100%;
     max-width: 100%;
     /* 400px - 712px */
-    height: clamp(25rem, 95vw, 44.5rem);
+    height: clamp(25rem, 70vw, 44.5rem);
     /* 100px - 200px */
     border-radius: 0 clamp(0rem, 17vw, 0rem) 0 clamp(0rem, 17vw, 0rem);
     box-shadow: 0px 4px 60px rgba(0, 0, 0, 0);
@@ -1220,6 +1223,7 @@ html {
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
+    border-radius: .25rem;
   }
   #cta-1014 .cs-button-solid:before {
     content: "";

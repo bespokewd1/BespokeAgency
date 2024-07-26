@@ -172,16 +172,18 @@
       /* prevents flexbox from squishing it */
       flex: none;
       gap: 0.75rem;
+      border-radius: 50px;
   }
   #contact-1333 .cs-form .cs-title {
       /* 16px - 28px */
       margin: 0 0 clamp(1rem, 3vw, 1.75rem) 0;
+      color: #fff;
   }
   #contact-1333 .cs-label {
       /* 14px - 16px */
       font-size: clamp(0.875rem, 1.5vw, 1rem);
       width: 100%;
-      color: var(--headerColor);
+      color: #ffff;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -199,6 +201,7 @@
       border: none;
       /* prevents padding from adding to height and width */
       box-sizing: border-box;
+      border-radius: 10px;
   }
   #contact-1333 .cs-input::placeholder {
       color: #767676;
@@ -252,7 +255,8 @@
   }
   #contact-1333 .cs-submit {
       width: 100%;
-      min-width: 17.6875rem;
+      min-width: fit-content;
+      border-radius: 10px;
   }
   #contact-1333 .cs-submit:hover {
       cursor: pointer;
