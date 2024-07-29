@@ -1,19 +1,20 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "7802638028",
+    "name": "Bespoke Webdesign Edmonton",
+    "email": "info@bespokewebdesign.ca",
+    "phoneForTel": "+1 (780) 263-8028",
     "phoneFormatted": "(555) 779-4407",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+        "lineOne": "Ellerslie RD",
+        "lineTwo": "",
+        "city": "SW Edmonton",
+        "state": "Alberta, canafa",
+        "zip": "",
+        "mapLink": "https://maps.app.goo.gl/3NLJN6zN5ciNsQsc7",
+    "description": "Professional web design for small businesses in Edmonton. Affordable and tailored web solutions to help your business grow."
     },
     "socials": {
-        "facebook": "https://www.facebook.com/",
-        "instagram": "https://www.instagram.com/",
+        "facebook": "https://www.facebook.com/profile.php?id=61561167136463",
+        "instagram": "https://www.instagram.com/bespokewebdesign.ca/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     "domain": "https://www.example.com"
