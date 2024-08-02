@@ -16,8 +16,7 @@
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    --bodyFontSize: 1rem;
-    --subheadingFontSize: 1.3rem;
+    --bodyFontSize: 1.1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(7rem, 7.82vw, 6.25rem) 4rem;
   }
@@ -1532,6 +1531,12 @@ html {
   #cs-footer-309 {
     padding: var(--sectionPadding);
     background-color: #000000;
+    /* Navigation Links */
+  }
+  #cs-footer-309 .id {
+    padding: var(--sectionPadding);
+    background-color: #f8f8f8;
+    color: #6EACDA;
     /* Navigation Links */
   }
   #cs-footer-309 .cs-container {
