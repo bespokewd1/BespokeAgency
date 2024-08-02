@@ -55,7 +55,7 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
 getEdmontonTime();
 setInterval(getEdmontonTime,1000)
 
-const weather= require('weather-js');
+
 
 	weather.find({
 		search: 'New York, USA',
