@@ -16,7 +16,8 @@
       --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
       /* 31px - 49px */
       --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-      --bodyFontSize: 1.3rem;
+      --bodyFontSize: 1.1rem;
+    
       /* 60px - 100px top and bottom */
       --sectionPadding: clamp(7rem, 7.82vw, 6.25rem) 4rem;
     }
@@ -709,12 +710,13 @@
       position: relative;
       z-index: 1;
       padding: var(--sectionPadding);
-      padding-bottom: 0%;
+      padding-bottom:8%;
+      
     }
     #hero-855 .cs-container {
       width: 100%;
       max-width: 80rem;
-   
+      height: calc(100vh - 100px);
       margin: auto;
       display: flex;
       justify-content: center;
@@ -761,7 +763,7 @@
       width: 100%;
       max-width: 33.1875rem;
       /* 28px - 40px */
-      margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+      margin: 0 0 clamp(1rem, 3.92vw, 0.5rem) 0;
       color: var(--bodyTextColor);
     }
     #hero-855 .cs-button-solid {
@@ -803,25 +805,25 @@
       width: 100%;
       max-width: 100%;
       /* 400px - 712px */
-      height: clamp(25rem, 70vw, 44.5rem);
+      height: clamp(25rem, 70vw, 44.510rem);
       /* 100px - 200px */
       border-radius: 0 clamp(0rem, 17vw, 0rem) 0 clamp(0rem, 17vw, 0rem);
       box-shadow: 0px 4px 60px rgba(0, 0, 0, 0);
       /* clips the img tag corners */
       position: relative;
       display: block;
-      overflow: hidden;
+      overflow:visible;
     }
     #hero-855 .cs-picture img {
       position: absolute;
-      top: 20%;
-      left: 2%;
-      height: 50%;
-      width: 100%;
+      top: 18%;
+      left: -3%;
+      height: 60%;
+      width: 115%;
       /* makes image act as a background image */
       object-fit: contain;
       /* ensures the top of the images is at the top of the container, no heads getting cut off */
-      object-position: center;
+      object-position:bottom;
     }
     #hero-855 .cs-wave {
       /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
@@ -887,6 +889,7 @@
     #services-597 {
       padding: var(--sectionPadding);
       padding-top: 0%;
+      padding-bottom:8%;
       overflow: hidden;
     }
     #services-597 .cs-container {
@@ -901,7 +904,7 @@
     }
     #services-597 .cs-content {
       /* set text aling to left if content needs to be left aligned */
-      text-align: center;
+      text-align: justify;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -979,6 +982,7 @@
     body.dark-mode #services-597 .cs-h3,
     body.dark-mode #services-597 .cs-item-text {
       color: var(--bodyTextColorWhite);
+      font-size: (--subheadingFontSize);
     }
     body.dark-mode #services-597 .cs-topper {
       color: #6EACDA;
@@ -1082,6 +1086,7 @@
   @media only screen and (min-width: 0rem) {
     #cta-1014 {
       padding: var(--sectionPadding);
+      padding-top: 0%;
     }
     #cta-1014 .cs-container {
       width: 100%;
@@ -1514,6 +1519,7 @@
   @media only screen and (min-width: 0rem) {
     #pricing-357 {
       padding: var(--sectionPadding);
+      padding-top: 0%;
     }
     #pricing-357 .cs-container {
       width: 100%;
@@ -1738,6 +1744,7 @@
       width: 100%;
       margin: 0 0 1rem 0;
     }
+
   }
   /* Tablet 768px */
   @media only screen and (min-width: 48rem) {
@@ -1809,6 +1816,15 @@
       background-color: #000000;
       /* Navigation Links */
     }
+
+    #cs-footer-309 .id {
+      padding: var(--sectionPadding);
+      background-color: #f8f8f8;
+      color: #6EACDA;
+      /* Navigation Links */
+    }
+
+    
     #cs-footer-309 .cs-container {
       width: 100%;
       /* reset on desktop */
@@ -1920,7 +1936,7 @@
     }
     #cs-footer-309 .cs-copyright,
     #cs-footer-309 .cs-copyright-link {
-      font-size: 1rem;
+      font-size: .7rem;
       line-height: 1.5em;
       color: #ffff;
     }
@@ -1997,6 +2013,11 @@
   }
   
 
+
+
+
+
+
   #time-wrapper {
     width: 250px;
     margin: 20px auto;
@@ -2016,3 +2037,144 @@
   #time-holder div {
     margin-bottom: 8px;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background: #171717;
+    color: #fff;
+    padding: 2rem;
+    width: 40%;
+    margin: 4rem auto;
+    border-radius: 10px;
+}
+
+.weather__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    border: none;
+    background: #1e1e1e;
+    outline: none;
+    color: #fff;
+    padding: 0.5rem 2.5rem;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.weather__search {
+    position: relative;
+}
+
+.weather__search i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.weather__units {
+    font-size: 1.5rem;
+}
+
+.weather__units span {
+    cursor: pointer;
+}
+
+.weather__units span:first-child {
+    margin-right: 0.5rem;
+}
+
+.weather__body {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.weather__datetime {
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.weather__forecast {
+    background: #1e1e1e;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.weather__icon img {
+    width: 100px;
+}
+
+.weather__temperature {
+    font-size: 1.75rem;
+}
+
+.weather__minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather__minmax p {
+    font-size: 14px;
+    margin: 0.5rem;
+}
+
+.weather__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+.weather__card {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weather__card i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.weather__card p {
+    font-size: 14px;
+}
+
+@media(max-width: 936px){
+    .container {
+        width: 90%;
+    }
+
+    .weather__header {
+        flex-direction: column;
+    }
+
+    .weather__units {
+        margin-top: 1rem;
+    }
+}
+
+
+@media(max-width: 400px){
+    .weather__info {
+        grid-template-columns: none;
+    }
+}
