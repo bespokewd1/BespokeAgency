@@ -50,23 +50,13 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
 
 
  var getEdmontonTime = function () {
- document.getElementById("EdmontonTime") .innerHTML = new Date() .toLocaleString("en-US", {timeZone:'America/Edmonton', timeStyle:'medium', hourCycle:'h12' });
+ document.getElementById("EdmontonTime") .innerHTML = new Date() .toLocaleString("en-US", {timeZone:'America/Edmonton', timeStyle:'medium', hourCycle:'h12',  });
 }
 getEdmontonTime();
 setInterval(getEdmontonTime,1000)
 
 
 
-	weather.find({
-		search: 'New York, USA',
-		degreeType: 'F',
-	}, onTemp
-	);
-
-function onTemp(err, result) {
-	let temp = result[0].current.temperature;
-	console.log('NYC temperature is ${temp}');
-}
 
 
 
