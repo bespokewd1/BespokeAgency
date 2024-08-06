@@ -104,8 +104,8 @@ setInterval(getEdmontonTime,1000)
 
 
 // Declaring the variables
-let lon;
-let lat;
+let lon =-113.491241;
+let lat =53.5462055;
 let temperature = document.querySelector(".temp");
 let summary = document.querySelector(".summary");
 let loc = document.querySelector(".location");
@@ -113,9 +113,7 @@ let icon = document.querySelector(".icon");
 const kelvin = 273;
 
 window.addEventListener("load", () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position);
+  
 	  lon = -113.491241;
       lat = 53.5462055;
 
@@ -142,8 +140,7 @@ window.addEventListener("load", () => {
           
         });
     });
-  }
-});
+
 
 
 
