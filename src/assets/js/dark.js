@@ -108,21 +108,18 @@ let lon =-113.491241;
 let lat =53.5462055;
 let temperature = document.querySelector(".temp");
 let summary = document.querySelector(".summary");
-let loc = document.querySelector(".location");
-let icon = document.querySelector(".icon");
 const kelvin = 273;
 
 window.addEventListener("load", () => {
   
-	  lon = -113.491241;
-      lat = 53.5462055;
+	
 
       // API ID
       const api = "6d055e39ee237af35ca066f35474e9df";
 
       // API URL
       const base =
-`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
+`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
 `lon=${lon}&appid=6d055e39ee237af35ca066f35474e9df`;
 
       // Calling the API
