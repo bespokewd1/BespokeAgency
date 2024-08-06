@@ -411,7 +411,7 @@
   }
   #sbs-1014 .cs-content {
     /* set text align to left if content needs to be left aligned */
-    text-align: justify;
+    text-align: left;
     width: 100%;
     max-width: 33.875rem;
     display: flex;
@@ -422,7 +422,7 @@
   #sbs-1014 .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
-    text-align: inherit;
+    text-align: left;
     width: 100%;
     max-width: 40.625rem;
     margin: 0;

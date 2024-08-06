@@ -19,7 +19,7 @@
       --bodyFontSize: 1.1rem;
     
       /* 60px - 100px top and bottom */
-      --sectionPadding: clamp(7rem, 7.82vw, 6.25rem) 4rem;
+      --sectionPadding: clamp(7rem, 7.82vw, 6.25rem) 3rem;
     }
     .cs-topper {
       display: block;
@@ -49,7 +49,7 @@
       font-size: var(--bodyFontSize);
       line-height: 1.5em;
       color: var(--bodyTextColor);
-      text-align: inherit;
+      text-align: center;
     }
     .cs-button-solid {
       z-index: 1;
@@ -160,28 +160,28 @@
     /* roboto-regular - latin */
     @font-face {
       font-style: normal;
-      font-family: "Roboto";
+      font-family: "Poppins";
       font-weight: 400;
       font-display: swap;
-      src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff");
+      src: local(""), url("/assets/fonts/poppins-v21-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff");
       /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
     /* roboto-700 - latin */
     @font-face {
       font-style: normal;
-      font-family: "Roboto";
+      font-family: "Poppins";
       font-weight: 700;
       font-display: swap;
-      src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff");
+      src: local(""), url("/assets/fonts/poppins-v21-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff");
       /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
     /* roboto-900 - latin */
     @font-face {
       font-style: normal;
-      font-family: "Roboto";
+      font-family: "Poppins";
       font-weight: 900;
       font-display: swap;
-      src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff");
+      src: local(""), url("/assets/fonts/poppins-v21-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff");
       /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
   }
@@ -817,7 +817,7 @@
     #hero-855 .cs-picture img {
       position: absolute;
       top: 18%;
-      left: -3%;
+      left: -7%;
       height: 60%;
       width: 115%;
       /* makes image act as a background image */
@@ -911,6 +911,7 @@
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
     }
+    
     #services-597 .cs-card-group {
       width: 100%;
       margin: 0;
@@ -928,11 +929,11 @@
       row-gap: clamp(2rem, 7vw, 4rem);
     }
     #services-597 .cs-item {
-      text-align: left;
+      text-align: center;
       list-style: none;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 1rem;
     }
     #services-597 .cs-h3 {
