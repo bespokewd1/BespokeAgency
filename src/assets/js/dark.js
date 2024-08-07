@@ -39,7 +39,7 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
 	localStorage.getItem('theme') === 'light' ? enableDarkMode() : disableDarkMode();
 });
 
-
+//faq
 const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         for (const item of faqItems) {
             const onClick = () => {
@@ -48,7 +48,7 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         item.addEventListener('click', onClick)
         }
 
-
+///time
  var getEdmontonTime = function () {
  document.getElementById("EdmontonTime") .innerHTML = new Date() .toLocaleString("en-US", {timeZone:'America/Edmonton', timeStyle:'medium', hourCycle:'h12',  });
 }
@@ -58,51 +58,9 @@ setInterval(getEdmontonTime,1000)
 
 
 
-// Declaring the variables
-// let lon;
-// let lat;
-// let temperature = document.querySelector(".temp");
-// let summary = document.querySelector(".summary");
-// let loc = document.querySelector(".location");
-// let icon = document.querySelector(".icon");
-// const kelvin = 273;
-
-// window.addEventListener("load", () => {
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition((position) => {
-//       console.log(position);
-//       lon = position.coords.longitude;
-//       lat = position.coords.latitude;
-
-//       // API ID
-//       const api = "6d055e39ee237af35ca066f35474e9df";
-
-//       // API URL
-//       const base = 
-// 	  'api.openweathermap.org/data/2.5/forecast?lat=53.5462055&lon=-113.491241&appid=6d055e39ee237af35ca066f35474e9df'
 
 
-
-//       // Calling the API
-//       fetch(base)
-//         .then((response) => {
-//           return response.json();
-//         })
-//         .then((data) => {
-//           console.log(data);
-//           temperature.textContent = 
-//               Math.floor(data.main.temp - kelvin) + "°C";
-//           summary.textContent = data.weather[0].description;
-//           loc.textContent = data.name + "," + data.sys.country;
-//           let icon1 = data.weather[0].icon;
-//           icon.innerHTML = 
-//               `<img src="icons/${icon1}.svg" style= 'height:10rem'/>`;
-//         });
-//     });
-//   }
-// });
-
-
+//weather
 // Declaring the variables
 let lon =-113.491241;
 let lat =53.5462055;
@@ -178,112 +136,7 @@ window.addEventListener("load", () => {
 
 
 
-// 		function updateClock() {
-// 			const gmtTime = new Date().toUTCString(); ('nl-NL', {timeZone: 'America/Edmonton'});
-// 			const cetTime = new Date().toLocaleString('nl-NL', {timeZone: 'Europe/Berlin'});
-// 			const estTime = new Date().toLocaleString('nl-NL', {timeZone: 'America/New_York'});
-		
-// 			document.getElementById('gmt').innerHTML = gmtTime;
-// 			document.getElementById('cet').innerHTML = cetTime;
-// 			document.getElementById('est').innerHTML = estTime;
-// 		}
-		
-// 		setInterval(updateClock, 1000);    
-		
-// 		// state
-// let currCity = "Edmonton";
-// let units = "metric";
 
-// // Selectors
-// let city = document.querySelector(".weather__city");
-// let datetime = document.querySelector(".weather__datetime");
-// let weather__forecast = document.querySelector('.weather__forecast');
-// let weather__temperature = document.querySelector(".weather__temperature");
-// let weather__icon = document.querySelector(".weather__icon");
-// let weather__minmax = document.querySelector(".weather__minmax")
-// let weather__realfeel = document.querySelector('.weather__realfeel');
-// let weather__humidity = document.querySelector('.weather__humidity');
-// let weather__wind = document.querySelector('.weather__wind');
-// let weather__pressure = document.querySelector('.weather__pressure');
-
-// // search
-// document.querySelector(".weather__search").addEventListener('submit', e => {
-//     let search = document.querySelector(".weather__searchform");
-//     // prevent default action
-//     e.preventDefault();
-//     // change current city
-//     currCity = search.value;
-//     // get weather forecast 
-//     getWeather();
-//     // clear form
-//     search.value = ""
-// })
-
-// // units
-// document.querySelector(".weather_unit_celsius").addEventListener('click', () => {
-//     if(units !== "metric"){
-//         // change to metric
-//         units = "metric"
-//         // get weather forecast 
-//         getWeather()
-//     }
-// })
-
-// document.querySelector(".weather_unit_farenheit").addEventListener('click', () => {
-//     if(units !== "imperial"){
-//         // change to imperial
-//         units = "imperial"
-//         // get weather forecast 
-//         getWeather()
-//     }
-// })
-
-// function convertTimeStamp(timestamp, timezone){
-//      const convertTimezone = timezone / 3600; // convert seconds to hours 
-
-//     const date = new Date(timestamp * 1000);
-    
-//     const options = {
-//         weekday: "long",
-//         day: "numeric",
-//         month: "long",
-//         year: "numeric",
-//         hour: "numeric",
-//         minute: "numeric",
-//         timeZone: `Etc/GMT${convertTimezone >= 0 ? "-" : "+"}${Math.abs(convertTimezone)}`,
-//         hour12: true,
-//     }
-//     return date.toLocaleString("en-US", options)
-   
-// }
-
- 
-
-// // convert country code to name
-// function convertCountryCode(country){
-//     let regionNames = new Intl.DisplayNames(["en"], {type: "region"});
-//     return regionNames.of(country)
-// }
-
-// function getWeather(){
-//     const API_KEY = '64f60853740a1ee3ba20d0fb595c97d5'
-
-// fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currCity}&appid=${API_KEY}&units=${units}`).then(res => res.json()).then(data => {
-//     console.log(data)
-//     city.innerHTML = `${data.name}, ${convertCountryCode(data.sys.country)}`
-//     datetime.innerHTML = convertTimeStamp(data.dt, data.timezone); 
-//     weather__forecast.innerHTML = `<p>${data.weather[0].main}`
-//     weather__temperature.innerHTML = `${data.main.temp.toFixed()}&#176`
-//     weather__icon.innerHTML = `   <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png" />`
-//     weather__minmax.innerHTML = `<p>Min: ${data.main.temp_min.toFixed()}&#176</p><p>Max: ${data.main.temp_max.toFixed()}&#176</p>`
-//     weather__realfeel.innerHTML = `${data.main.feels_like.toFixed()}&#176`
-//     weather__humidity.innerHTML = `${data.main.humidity}%`
-//     weather__wind.innerHTML = `${data.wind.speed} ${units === "imperial" ? "mph": "m/s"}` 
-//     weather__pressure.innerHTML = `${data.main.pressure} hPa`
-// })
-// }
-
-// document.body.addEventListener('load', getWeather())
 
 
 
