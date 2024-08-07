@@ -39,6 +39,11 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
 	localStorage.getItem('theme') === 'light' ? enableDarkMode() : disableDarkMode();
 });
 
+
+
+
+
+
 //faq
 const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         for (const item of faqItems) {
