@@ -1,0 +1,91 @@
+---
+title: 'Get Started | Bespoke Web Design'
+description: 'Professional web design for small businesses in Edmonton. Affordable and tailored web solutions to help your business grow.'
+preloadImg: '/assets/images/bespokelogonotext.png'
+permalink: 'typecontact/'
+eleventyNavigation:
+    key: Get Started
+    order: 900
+    hideOnDesktop: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/typecontact.css">
+{% endblock %}
+
+{% block body %}
+
+
+
+   <!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1106-1112">
+    <div class="cs-container">
+        <span class="cs-int-title">Contact Us</span>
+        <div class="cs-breadcrumbs">
+            <a href="/index" class="cs-link">Home</a>
+            <a href="/contact" class="cs-link cs-active">Contact Us</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg">
+        <img decoding="async" src="/assets/images/banner.jpg" alt="mechanic" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+    <!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1426">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"> Get Started</span>
+            <h1 class="cs-title">Choose How you want to Contact Us</h1>
+            <p class="cs-text">
+                We value your interest and are here to assist you in the best way possible. To make your experience seamless, we offer multiple ways to get in touch with us. Choose the option that suits you best:
+            </p>
+            <div class="cs-button-group">
+                <a href="/contact" class="cs-button-solid cs-button1">Send us a Message</a>
+                <a href="/appointment" class="cs-button-solid cs-button2">Schedule an Appointment</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <!-- <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/field-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/field.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/field.jpg" alt="field" width="1920" height="1200" aria-hidden="true">
+    </picture> -->
+</section>
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+{% include 'components/chatbot.html' %}
+                                
+{% endblock %}
