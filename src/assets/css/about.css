@@ -558,3 +558,268 @@
     opacity: 0.2;
   }
 }
+/*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #why-choose-1904 {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-container {
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-content {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--sectionPadding);
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-topper {
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1904 .cs-title {
+    max-width: 13ch;
+    margin: 0 0 3rem;
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1904 .cs-picture {
+    width: 100%;
+    max-width: 36.625rem;
+    height: auto;
+    display: block;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50px;
+  }
+  #why-choose-1904 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #why-choose-1904 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    height: clamp(18.75rem, 55vw, 26.25rem);
+    margin: 0;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    padding: clamp(2rem, 4.5vw, 3.75rem) clamp(1rem, 3.1vw, 2.5rem);
+    background-color: #767676;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-column: span 12;
+    /* 24px - 40px */
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-item:nth-last-of-type(odd) {
+    background-color: #5f5f5f;
+  }
+  #why-choose-1904 .cs-icon-wrapper {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #why-choose-1904 .cs-icon {
+    width: 2rem;
+    height: auto;
+  }
+  #why-choose-1904 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    /* 12px - 16px */
+    margin: 0 0 clamp(0.75rem, 1.8vw, 1rem) 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1904 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #why-choose-1904 .cs-item {
+    grid-column: span 6;
+  }
+  #why-choose-1904 .cs-item:nth-of-type(1),
+  #why-choose-1904 .cs-item:nth-of-type(4) {
+    background-color: #767676;
+  }
+  #why-choose-1904 .cs-item:nth-of-type(2),
+  #why-choose-1904 .cs-item:nth-of-type(3) {
+    background-color: #5f5f5f;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #why-choose-1904 .cs-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  #why-choose-1904 .cs-content {
+    text-align: left;
+    width: 100%;
+    align-items: flex-start;
+  }
+  #why-choose-1904 .cs-content:before {
+    /* background color, moves to the section parent at desktop */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #why-choose-1904 .cs-picture {
+    max-width: 100%;
+    margin-left: auto;
+  }
+  #why-choose-1904 .cs-card-group {
+    width: 65%;
+    max-width: 100%;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #why-choose-1904 .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Desktop - 1600px */
+@media only screen and (min-width: 100rem) {
+  #why-choose-1904:before {
+    /* background color */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    right: 50%;
+    left: auto;
+    z-index: -1;
+  }
+  #why-choose-1904 .cs-content {
+    width: 50%;
+    /* 16px - 100px */
+    padding-left: clamp(1rem, 5vw, 6.25rem);
+  }
+  #why-choose-1904 .cs-content:before {
+    margin-right: 0.625rem;
+    right: 50%;
+    left: auto;
+  }
+  #why-choose-1904 .cs-picture {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    /* right: 2.5rem; */
+    bottom: 0rem;
+    z-index: -1;
+  }
+  #why-choose-1904 .cs-picture img {
+    width: auto;
+    height: auto;
+    max-height: 47.5rem;
+    object-fit: contain;
+  }
+  #why-choose-1904 .cs-card-group {
+    width: 50%;
+  }
+}
+/* Dark Mode - Mobile */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #why-choose-1904 .cs-title,
+  body.dark-mode #why-choose-1904 .cs-h3,
+  body.dark-mode #why-choose-1904 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #why-choose-1904 .cs-content {
+    background-color: transparent;
+  }
+  body.dark-mode #why-choose-1904 .cs-content:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.4;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body.dark-mode #why-choose-1904 .cs-item {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  body.dark-mode #why-choose-1904 .cs-item:nth-of-type(1),
+  body.dark-mode #why-choose-1904 .cs-item:nth-of-type(4) {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  body.dark-mode #why-choose-1904 .cs-item:nth-of-type(1) .cs-h3,
+  body.dark-mode #why-choose-1904 .cs-item:nth-of-type(4) .cs-h3,
+  body.dark-mode #why-choose-1904 .cs-item:nth-of-type(1) .cs-item-text,
+  body.dark-mode #why-choose-1904 .cs-item:nth-of-type(4) .cs-item-text {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+}
+/* Dark Mode Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+  body.dark-mode #why-choose-1904:before {
+    background: var(--primary);
+    opacity: 0.4;
+  }
+  body.dark-mode #why-choose-1904 .cs-content {
+    background-color: transparent;
+  }
+  body.dark-mode #why-choose-1904 .cs-content:before {
+    display: none;
+  }
+}
