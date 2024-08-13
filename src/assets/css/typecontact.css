@@ -252,12 +252,5 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode #hero-1426 .cs-background:before {
     opacity: 0.72;
-
-  }
-  body.dark-mode #hero-1426 .cs-content,
-  body.dark-mode #hero-1426 .cs-topper,
-  body.dark-mode #hero-1426 .cs-text
-   {
-    color: #ffff;
   }
 }

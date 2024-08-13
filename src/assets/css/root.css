@@ -1452,6 +1452,225 @@ html {
   }
 }
 /*-- -------------------------- -->
+<---        Why Choose          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #why-choose-223 {
+    padding: var(--sectionPadding);
+    background-color: #fafbfc;
+  }
+  #why-choose-223 .cs-container {
+    width: 100%;
+    /* changes to 1280px on tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #why-choose-223 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 39rem;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #why-choose-223 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #why-choose-223 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #why-choose-223 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #why-choose-223 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #why-choose-223 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #why-choose-223 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  #why-choose-223 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    /* 32px - 44px top & bottom, 24px - 32px left & right */
+    padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2rem);
+    margin: 0;
+    border-radius: 0.3125rem;
+    border: 1px solid #dad9e3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* 16px - 32px */
+    column-gap: clamp(1rem, 2vw, 2rem);
+    /* 24px - 28px */
+    row-gap: clamp(1.5rem, 1.5vw, 1.75rem);
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+  }
+  #why-choose-223 .cs-item:hover {
+    background-color: var(--primary);
+  }
+  #why-choose-223 .cs-item:hover .cs-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #why-choose-223 .cs-item:hover .cs-h3,
+  #why-choose-223 .cs-item:hover .cs-item-text {
+    color: #fff;
+  }
+  #why-choose-223 .cs-icon {
+    /* 70px - 80px */
+    width: clamp(4.375rem, 7vw, 5rem);
+    height: auto;
+    margin: 0;
+    display: block;
+  }
+  #why-choose-223 .cs-h3 {
+    /* 25px - 31px */
+    font-size: clamp(1.5625rem, 2vw, 1.9375rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: inherit;
+    width: 55%;
+    margin: 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #why-choose-223 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    margin: auto 0 0 0;
+    color: var(--bodyTextColor);
+    transition: color 0.3s;
+  }
+  #why-choose-223 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #why-choose-223 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #why-choose-223 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #why-choose-223 .cs-container {
+    max-width: 80rem;
+  }
+  #why-choose-223 .cs-content {
+    width: 70%;
+  }
+  #why-choose-223 .cs-card-group {
+    /* switch to grid since there's no chance of adding or removing cards in this design.  We can be more set and rigid in our layout of this section and use grid for better spacing */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    /* if different boxes are different heights, this makes them all the same height so the grid is always even */
+    align-items: stretch;
+  }
+  #why-choose-223 .cs-item {
+    grid-column: span 1;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #why-choose-223 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #why-choose-223 .cs-card-group {
+    width: 60%;
+    max-width: 47.375rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #why-choose-223 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #why-choose-223 .cs-topper {
+    color: var(--primaryLight);
+  }
+  body.dark-mode #why-choose-223 .cs-title,
+  body.dark-mode #why-choose-223 .cs-text,
+  body.dark-mode #why-choose-223 .cs-h3,
+  body.dark-mode #why-choose-223 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+}
+/*-- -------------------------- -->
 <---    Side By Side Reverse    -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
@@ -1829,7 +2048,7 @@ html {
     width: 100%;
     max-width: 25.8125rem;
     border-radius: 1rem;
-    background: #8e8e8e;
+    background: var(--primary);
     border: 1px solid #e8e8e8;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
@@ -1896,7 +2115,7 @@ html {
     font-weight: 700;
     margin: 0 0 0.25rem;
     padding: 0;
-    color: var(--headerColor);
+    color: #ffff;
   }
   #pricing-357 .cs-item-text {
     font-size: 0.875rem;
@@ -1904,7 +2123,7 @@ html {
     /* 16px - 24px */
     margin: 0 0 clamp(1rem, 2vw, 1.5rem);
     padding: 0;
-    color: var(--bodyTextColor);
+    color: #fff;
   }
   #pricing-357 .cs-option-group {
     position: relative;
@@ -1926,14 +2145,14 @@ html {
     line-height: 1.2em;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--headerColor);
+    color: #fff;
     /* spans are inline, need to add block for margin to work */
     display: block;
   }
   #pricing-357 .cs-small {
     font-size: 0.875rem;
     font-weight: 400;
-    color: #4e4b66;
+    color: #ffffff;
   }
   #pricing-357 .cs-included {
     font-size: 1rem;
@@ -1941,7 +2160,7 @@ html {
     font-weight: 700;
     /* 16px - 24px */
     margin-bottom: clamp(1rem, 3vw, 1.5rem);
-    color: var(--headerColor);
+    color: #fff;
     display: block;
   }
   #pricing-357 .cs-ul {
@@ -1957,7 +2176,7 @@ html {
     list-style: none;
     padding: 0;
     margin: 0 0 0.75rem;
-    color: var(--bodyTextColor);
+    color: #fff;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1982,10 +2201,10 @@ html {
     font-weight: 700;
     text-align: center;
     margin: 0;
-    color: #fff;
+    color: var(--primary);
     min-width: 9.375rem;
     padding: 0 1.5rem;
-    background-color: var(--primary);
+    background-color: #ffff;
     border-radius: 0.25rem;
     display: inline-block;
     position: relative;
