@@ -2167,6 +2167,8 @@
     padding: var(--sectionPadding);
     
     background-color:#e9ebec ;
+    background: url("/assets/images/lightmodepricing.svg");
+    background-size: cover;
   }
   #pricing-357 .cs-container {
     width: 100%;
@@ -2420,7 +2422,8 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #pricing-357 {
-    background-color: var(--dark);
+    background: url("/assets/images/darkmodepricing.svg");
+    background-size: cover;
   }
   body.dark-mode #pricing-357 .cs-topper {
     color: #4fa7b9;
@@ -2433,7 +2436,7 @@
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #pricing-357 .cs-item {
-    background: var(--accent);
+    background: var(--primary);
     border-color: var(--medium);
   }
   body.dark-mode #pricing-357 .cs-popular {
@@ -2807,6 +2810,14 @@
     flex: none;
   }
 }
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #cta-1014 {
+    background: var(--dark)
+  }
+}
+
+
+
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #cta-1014 .cs-background:before {
