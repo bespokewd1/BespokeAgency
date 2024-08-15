@@ -1434,13 +1434,169 @@
   }
 }
 /*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-1130 {
+    padding: var(--sectionPadding);
+  }
+  #services-1130 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-1130 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #services-1130 .cs-topper {
+    color: #767676;
+  }
+  #services-1130 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  #services-1130 .cs-item {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    /* 24px - 32px */
+    padding: clamp(1.5rem, 3vw, 2rem);
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 1rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    grid-column: span 12;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  #services-1130 .cs-item:hover {
+    box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.12);
+    border-color: transparent;
+  }
+  #services-1130 .cs-item:hover .cs-h3 {
+    color: var(--primary);
+  }
+  #services-1130 .cs-image-group {
+    width: 6.25rem;
+    height: auto;
+    /* 20px - 24px */
+    margin: 0 0 clamp(1.25rem, 2.5vw, 1.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    position: relative;
+  }
+  #services-1130 .cs-icon {
+    width: 3rem;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #services-1130 .cs-graphic {
+    width: 100%;
+    height: auto;
+  }
+  #services-1130 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    text-align: inherit;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #services-1130 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    max-width: 28.125rem;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-1130 .cs-item {
+    text-align: left;
+    align-items: flex-start;
+    grid-column: span 6;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-1130 .cs-item {
+    grid-column: span 3;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #services-1130 .cs-item {
+    background-color: var(--dark);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode #services-1130 .cs-item:hover .cs-h3 {
+    color: var(--secondary);
+  }
+  body.dark-mode #services-1130 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #services-1130 .cs-title,
+  body.dark-mode #services-1130 .cs-text,
+  body.dark-mode #services-1130 .cs-h3,
+  body.dark-mode #services-1130 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-1130 .cs-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #services-1130 .cs-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #services-1130 .cs-graphic {
+    opacity: 0.2;
+  }
+}
+/*-- -------------------------- -->
 <---        Why Choose   US       -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #why-choose-223 {
     padding: var(--sectionPadding);
-    background-color: #e9ebec;
+    background-color: #ffffff;
+    background: url("/assets/images/lightmodewhychoose.svg");
+    background-size: cover;
   }
   #why-choose-223 .cs-container {
     width: 100%;
@@ -1518,7 +1674,7 @@
     padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2rem);
     margin: 0;
     border-radius: 0;
-    border: 2px dashed #000000;
+    border: 2px dashed #ffffff;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1530,12 +1686,10 @@
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
     transition: background-color 0.3s;
+    background-color: #1a1a1a;
   }
   #why-choose-223 .cs-item:hover {
     background-color: var(--primary);
-  }
-  #why-choose-223 .cs-item:hover .cs-icon {
-    filter: grayscale(1) brightness(1000%);
   }
   #why-choose-223 .cs-item:hover .cs-h3,
   #why-choose-223 .cs-item:hover .cs-item-text {
@@ -1556,7 +1710,7 @@
     text-align: inherit;
     width: 55%;
     margin: 0;
-    color: var(--headerColor);
+    color: #ffff;
     transition: color 0.3s;
   }
   #why-choose-223 .cs-item-text {
@@ -1565,7 +1719,7 @@
     text-align: inherit;
     width: 100%;
     margin: auto 0 0 0;
-    color: var(--bodyTextColor);
+    color: #ffff;
     transition: color 0.3s;
   }
   #why-choose-223 .cs-button-solid {
@@ -1640,7 +1794,8 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #why-choose-223 {
-    background-color: var(--dark);
+    background: url("/assets/images/darkmodewhychoose.svg");
+    background-size: cover;
   }
   body.dark-mode #why-choose-223 .cs-topper {
     color: var(--primary);
@@ -1661,168 +1816,166 @@
     padding: var(--sectionPadding);
     /* prevents padding from affecting height and  */
     box-sizing: border-box;
-    background-color: #e9ebec;
+    background: url("/assets/images/lightmodeprocess.svg");
+    background-size: cover;
   }
-  #services-1259 .cs-container {
-    /* changes to 1280px at desktop */
-    max-width: 58.75rem;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-  }
-  #services-1259 .cs-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-  }
-  #services-1259 .cs-title {
-    max-width: 20ch;
-  }
-  #services-1259 .cs-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-    position: relative;
-  }
-  #services-1259 .cs-image {
-    width: 100%;
-    max-width: 26.0625rem;
-    height: auto;
-    display: none;
-    position: relative;
-  }
-  #services-1259 .cs-image:before {
-    /* gradient mask, change the rgba values to match the color of the background you chose for the section and change it for dark mode as well if you chose a different dark mode color scheme */
-    content: "";
-    width: 100%;
-    height: 40%;
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-    opacity: 1;
-    position: absolute;
-    display: block;
-    bottom: -1px;
-    left: 0;
-  }
-  #services-1259 .cs-circle {
-    display: none;
-  }
-  #services-1259 .cs-card-group {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.25rem;
-  }
-  #services-1259 .cs-item {
-    list-style: none;
-    margin: 0;
-    box-sizing: border-box;
-    grid-column: span 12;
-    gap: 1.25rem;
-  }
-  #services-1259 .cs-link {
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-  }
-  #services-1259 .cs-link:hover .cs-picture {
-    transform: scale(1.2);
-  }
-  #services-1259 .cs-link:hover .cs-h3 {
-    color: var(--primary);
-  }
-  #services-1259 .cs-picture {
-    width: 5rem;
-    height: 5rem;
-    box-sizing: border-box;
-    /* prevents border from affecting height and width */
-    background-color: #6EACDA;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    /* prevents flexbox from squishing it */
-    flex: none;
-    transition: transform 0.3s;
-  }
-  #services-1259 .cs-icon {
-    width: 5rem;
-    height: 5rem;
-    display: block;
-  }
-  #services-1259 .cs-h3 {
-    font-size: 1.25rem;
-    line-height: 1.5em;
-    margin: 0;
-    margin-bottom: 0.5rem;
-    color: var(--headerColor);
-    text-align: inherit;
-    transition: color 0.3s;
-  }
-  #services-1259 .cs-item-text {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--bodyTextColor);
-    text-align: inherit;
-  }
-  #services-1259 .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    font-weight: 700;
-    min-width: 9.375rem;
-    margin: 0;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    padding: 0 1.5rem;
-    color: #fff;
-    background-color: var(--primary);
-    overflow: hidden;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-  }
-  #services-1259 .cs-button-solid:before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    background: #000;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #services-1259 .cs-button-solid:hover:before {
-    width: 100%;
-  }
+}
+#services-1259 .cs-container {
+  /* changes to 1280px at desktop */
+  max-width: 58.75rem;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 48px - 64px */
+  gap: clamp(3rem, 6vw, 4rem);
+}
+#services-1259 .cs-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* centers content horizontally, set to flex-start to left align */
+  align-items: center;
+  /* set text align to left if content needs to be left aligned */
+  text-align: center;
+}
+#services-1259 .cs-title {
+  max-width: 20ch;
+}
+#services-1259 .cs-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 48px - 64px */
+  gap: clamp(3rem, 6vw, 4rem);
+  position: relative;
+}
+#services-1259 .cs-image {
+  width: 100%;
+  max-width: 26.0625rem;
+  height: auto;
+  display: none;
+  position: relative;
+}
+#services-1259 .cs-image:before {
+  /* gradient mask, change the rgba values to match the color of the background you chose for the section and change it for dark mode as well if you chose a different dark mode color scheme */
+  content: "";
+  width: 100%;
+  height: 40%;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  opacity: 1;
+  position: absolute;
+  display: block;
+  bottom: 1px;
+  left: 0;
+}
+#services-1259 .cs-circle {
+  display: none;
+}
+#services-1259 .cs-card-group {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+}
+#services-1259 .cs-item {
+  list-style: none;
+  margin: 0;
+  box-sizing: border-box;
+  grid-column: span 12;
+  gap: 1.25rem;
+}
+#services-1259 .cs-link {
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+#services-1259 .cs-link:hover .cs-picture {
+  transform: scale(1.2);
+}
+#services-1259 .cs-link:hover .cs-h3 {
+  color: var(--primary);
+}
+#services-1259 .cs-picture {
+  width: 5rem;
+  height: 5rem;
+  box-sizing: border-box;
+  /* prevents border from affecting height and width */
+  background-color: #6EACDA;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* prevents flexbox from squishing it */
+  flex: none;
+  transition: transform 0.3s;
+}
+#services-1259 .cs-icon {
+  width: 5rem;
+  height: 5rem;
+  display: block;
+}
+#services-1259 .cs-h3 {
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: var(--headerColor);
+  text-align: inherit;
+  transition: color 0.3s;
+}
+#services-1259 .cs-item-text {
+  /* 14px - 16px */
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: 1.5em;
+  margin: 0;
+  color: var(--bodyTextColor);
+  text-align: inherit;
+}
+#services-1259 .cs-button-solid {
+  font-size: 1rem;
+  /* 46px - 56px */
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  font-weight: 700;
+  min-width: 9.375rem;
+  margin: 0;
+  /* prevents padding from adding to the width */
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  color: #fff;
+  background-color: var(--primary);
+  overflow: hidden;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+#services-1259 .cs-button-solid:before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #000;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 0.3s;
+}
+#services-1259 .cs-button-solid:hover:before {
+  width: 100%;
 }
 /* Tablet - 1768px */
 @media only screen and (min-width: 48rem) {
@@ -1903,6 +2056,10 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #services-1259 {
+    background: url("/assets/images/darkmodeprocess.svg");
+    background-size: cover;
+  }
   body.dark-mode #services-1259 .cs-topper {
     color: var(--primaryLight);
   }
@@ -1910,15 +2067,10 @@
   body.dark-mode #services-1259 .cs-item-text {
     opacity: 0.8;
   }
-  body.dark-mode #services-1259 .cs-picture {
-    background-color: var(--medium);
-  }
   body.dark-mode #services-1259 .cs-image:before {
     /* if you choose a different dark mode scheme or a different background color for this section on dark mode, change the rgba colors to match */
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #082032 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background-color: var(--dark);
   }
   body.dark-mode #services-1259 .cs-icon {
     /* turns it white */
@@ -1937,7 +2089,6 @@
 @media only screen and (min-width: 0rem) {
   #pricing-357 {
     padding: var(--sectionPadding);
-    padding-top: 0%;
     background-color: #e9ebec;
   }
   #pricing-357 .cs-container {
@@ -2407,7 +2558,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #cs-footer-309 {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.6);
   }
   body.dark-mode #cs-footer-309 .cs-logo {
     /* makes it so bright it turns white */
