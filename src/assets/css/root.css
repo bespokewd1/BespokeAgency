@@ -2242,7 +2242,8 @@
     width: 100%;
     max-width: 25.8125rem;
     border-radius: 1rem;
-    background: var(--primary);
+    background: rgba(164, 31, 153, 0.544);
+    background: radial-gradient(circle, #a41f98 8%, rgba(164, 31, 153, 0.969) 53%, #8909e4 89%, #5d019e 100%);
     border: 1px solid #e8e8e8;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
@@ -2256,7 +2257,8 @@
     transition-delay: 0.2s;
   }
   #pricing-357 .cs-popular {
-    background: var(--primary);
+    background: rgba(164, 31, 153, 0.544);
+    background: radial-gradient(circle, #a41f98 8%, rgba(164, 31, 153, 0.969) 53%, #8909e4 89%, #5d019e 100%);
     position: relative;
     /* clips the popular tag */
     overflow: hidden;
