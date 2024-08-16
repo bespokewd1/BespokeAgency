@@ -9,8 +9,8 @@
     --primaryLight: #000000;
     --secondary: #000000;
     --secondaryLight: #000000;
-    --headerColor: #000000;
-    --bodyTextColor: #000000;
+    --headerColor: #fdfdfd;
+    --bodyTextColor: #ffffff;
     --bodyTextColorWhite: #fafbfc;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -1763,9 +1763,9 @@
     transition: width 0.3s;
   }
   #why-choose-223 .cs-button-solid:hover {
-    color: #f7f7f7;
+    color: #1a1a1a;
   }
-  #why-choose-223 .cs-button-solid:hover #why-choose-223 .cs-button-solid:hover:before {
+  #why-choose-223 .cs-button-solid:hover:before {
     width: 100%;
   }
 }
@@ -1827,8 +1827,7 @@
     padding: var(--sectionPadding);
     /* prevents padding from affecting height and  */
     box-sizing: border-box;
-    background: url("/assets/images/lightmodeprocess.svg");
-    background-size: cover;
+    background: #000;
   }
 }
 #services-1259 .cs-container {
@@ -1921,7 +1920,7 @@
   height: 5rem;
   box-sizing: border-box;
   /* prevents border from affecting height and width */
-  background-color: #6EACDA;
+  background-color: var(--primary);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1977,13 +1976,16 @@
   content: "";
   width: 0%;
   height: 100%;
-  background: #000;
+  background: #ffffff;
   opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   transition: width 0.3s;
+}
+#services-1259 .cs-button-solid:hover {
+  color: #000000;
 }
 #services-1259 .cs-button-solid:hover:before {
   width: 100%;
@@ -2100,9 +2102,7 @@
 @media only screen and (min-width: 0rem) {
   #pricing-357 {
     padding: var(--sectionPadding);
-    background-color: #e9ebec;
-    background: url("/assets/images/lightmodepricing.svg");
-    background-size: cover;
+    background-color: #000000;
   }
   #pricing-357 .cs-container {
     width: 100%;
@@ -2469,7 +2469,7 @@
     color: var(--headerColor);
     position: relative;
     display: block;
-    color: #6EACDA;
+    color: var(--primary);
   }
   #cs-footer-309 .cs-nav-link {
     font-size: 1rem;
@@ -2600,7 +2600,7 @@
   #cta-1014 {
     padding-bottom: 30px;
     padding-top: 30px;
-    background-color: #e9ebec;
+    background-color: #000000;
   }
   #cta-1014 .cs-container {
     width: 100%;
@@ -2690,12 +2690,15 @@
     position: absolute;
     height: 100%;
     width: 0%;
-    background: #000;
+    background: #ffffff;
     opacity: 1;
     top: 0;
     left: 0;
     z-index: -1;
     transition: width 0.3s;
+  }
+  #cta-1014 .cs-button-solid:hover {
+    color: #000;
   }
   #cta-1014 .cs-button-solid:hover:before {
     width: 100%;
