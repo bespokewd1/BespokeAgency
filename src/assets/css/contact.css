@@ -115,6 +115,7 @@
     padding: var(--sectionPadding);
     position: relative;
     z-index: 1;
+    background-color: #000;
   }
   #contact-1333 .cs-container {
     width: 100%;

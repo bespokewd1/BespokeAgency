@@ -398,6 +398,7 @@
 @media only screen and (min-width: 0rem) {
   #sbs-1014 {
     padding: var(--sectionPadding);
+    background-color: #000000;
   }
   #sbs-1014 .cs-container {
     width: 100%;
