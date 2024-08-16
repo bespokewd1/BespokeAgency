@@ -1761,9 +1761,11 @@
     z-index: -1;
     border-radius: 12px;
     transition: width 0.3s;
-    color: #000;
   }
-  #why-choose-223 .cs-button-solid:hover:before {
+  #why-choose-223 .cs-button-solid:hover {
+    color: #f7f7f7;
+  }
+  #why-choose-223 .cs-button-solid:hover #why-choose-223 .cs-button-solid:hover:before {
     width: 100%;
   }
 }
