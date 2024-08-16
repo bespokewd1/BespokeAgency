@@ -5,7 +5,7 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #6EACDA;
+    --primary: #dc0ecb;
     --primaryLight: #000000;
     --secondary: #000000;
     --secondaryLight: #000000;
@@ -360,7 +360,7 @@
     width: 100%;
     height: 100%;
     background: #1e1a1a;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(241, 0, 229, 0.206) 0px 8px 24px;
     opacity: 1;
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
@@ -724,7 +724,7 @@
     margin: 0;
     padding: 0;
     background-color: #fff;
-    box-shadow: inset rgba(149, 157, 165, 0.1) 0px 8px 10px;
+    box-shadow: inset rgba(241, 5, 241, 0.194) 0px 8px 10px;
     opacity: 0;
     border-bottom: 5px solid var(--primary);
     border-radius: 0 0 1.5rem 1.5rem;
@@ -827,7 +827,7 @@
     /* 12px - 24px */
     padding: clamp(0.75rem, 2vw, 1.5rem) 0;
     background-color: #000000;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(231, 7, 197, 0.188) 0px 8px 24px;
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
     display: flex;
@@ -1057,6 +1057,7 @@
     z-index: 1;
     /* prevents overflow from the lines extending past the screen width */
     overflow: hidden;
+    background-color: #000000;
   }
 }
 #hero-997 .cs-container {
@@ -1156,6 +1157,7 @@
   position: relative;
   z-index: 1;
   transition: color 0.3s;
+  border-radius: 12px;
 }
 #hero-997 .cs-button-solid:before {
   content: "";
@@ -1169,6 +1171,7 @@
   left: 0;
   z-index: -1;
   transition: width 0.3s;
+  border-radius: 12px;
 }
 #hero-997 .cs-button-solid:hover {
   color: #1a1a1a;
@@ -1197,6 +1200,7 @@
   position: relative;
   z-index: 1;
   transition: color / 3s;
+  border-radius: 12px;
 }
 #hero-997 .cs-button-transparent:before {
   content: "";
@@ -1214,6 +1218,7 @@
   /* this is what creates the grow affect on hover */
   transform: scaleX(0);
   transition: transform 0.3s;
+  border-radius: 12px;
 }
 #hero-997 .cs-button-transparent:hover {
   color: #1a1a1a;
@@ -1265,6 +1270,7 @@
     /* creates parallax effect on background image */
     background-attachment: fixed;
     /* remove img tag so we can make parallax work */
+    background-color: #000000;
   }
   #hero-997 .cs-background img {
     display: none;
@@ -1277,7 +1283,7 @@
 @media only screen and (min-width: 0rem) {
   #services-962 {
     padding: var(--sectionPadding);
-    background-color: #e9ebec;
+    background-color: #000;
     position: relative;
     z-index: 1;
   }
@@ -1304,7 +1310,7 @@
   #services-962 .cs-title {
     margin: 0;
     max-width: 20ch;
-    color: #000000;
+    color: #ffffff;
   }
   #services-962 .cs-card-group {
     width: 100%;
@@ -1327,13 +1333,16 @@
     border: 1px solid #484848;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
+    border-radius: 5%;
     position: relative;
     z-index: 1;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    background: rgba(164, 31, 153, 0.544);
+    background: radial-gradient(circle, #a41f98 8%, rgba(164, 31, 153, 0.969) 53%, #8909e4 89%, #5d019e 100%);
   }
   #services-962 .cs-item:hover {
     transform: translateY(-0.5rem);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(235, 2, 243, 0.2) 0px 8px 24px;
   }
   #services-962 .cs-item-link {
     text-decoration: none;
@@ -1386,7 +1395,7 @@
     width: 100%;
     max-width: 39.375rem;
     margin: 0 0 2rem 0;
-    color: #000;
+    color: #ffffff;
   }
 }
 /* Tablet - 768px */
@@ -1594,9 +1603,7 @@
 @media only screen and (min-width: 0rem) {
   #why-choose-223 {
     padding: var(--sectionPadding);
-    background-color: #ffffff;
-    background: url("/assets/images/lightmodewhychoose.svg");
-    background-size: cover;
+    background-color: #000;
   }
   #why-choose-223 .cs-container {
     width: 100%;
@@ -1638,7 +1645,7 @@
     text-align: inherit;
     max-width: 43.75rem;
     margin: 0 0 1rem 0;
-    color: var(--headerColor);
+    color: #fff;
     position: relative;
   }
   #why-choose-223 .cs-text {
@@ -1648,7 +1655,7 @@
     width: 100%;
     max-width: 40.625rem;
     margin: 0;
-    color: var(--bodyTextColor);
+    color: #fff;
   }
   #why-choose-223 .cs-text {
     margin-bottom: 1rem;
@@ -1686,10 +1693,11 @@
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
     transition: background-color 0.3s;
-    background-color: #1a1a1a;
+    background: rgba(164, 31, 153, 0.544);
+    background: radial-gradient(circle, #a41f98 8%, rgba(164, 31, 153, 0.969) 53%, #8909e4 89%, #5d019e 100%);
   }
   #why-choose-223 .cs-item:hover {
-    background-color: var(--primary);
+    background-color: var(--dark);
   }
   #why-choose-223 .cs-item:hover .cs-h3,
   #why-choose-223 .cs-item:hover .cs-item-text {
@@ -1734,7 +1742,7 @@
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
-    border-radius: 0.25rem;
+    border-radius: 12px;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -1746,13 +1754,14 @@
     position: absolute;
     height: 100%;
     width: 0%;
-    background: #000;
+    background: #ffffff;
     opacity: 1;
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.25rem;
+    border-radius: 12px;
     transition: width 0.3s;
+    color: #000;
   }
   #why-choose-223 .cs-button-solid:hover:before {
     width: 100%;
