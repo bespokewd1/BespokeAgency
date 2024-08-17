@@ -120,7 +120,6 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
-    background-color: #000;
   }
   #hero-1426 .cs-background {
     width: 100%;
@@ -177,7 +176,7 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 1rem;
-    color: #ffffff;
+    color: #000000;
     display: inline-block;
     position: relative;
   }
@@ -201,7 +200,7 @@
     max-width: clamp(29rem, 60vw, 38.785rem);
     margin: 0 auto 0;
     margin-bottom: 2rem;
-    color: #ffffff;
+    color: #010101;
   }
   #hero-1426 .cs-button-group {
     display: flex;

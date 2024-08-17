@@ -289,7 +289,6 @@
 @media only screen and (min-width: 0rem) {
   #content-page-714 {
     padding: 2rem;
-    background-color: #000000;
     /* clips the wave background from causing overflow issues when it goes off screen */
     overflow: hidden;
     position: relative;
@@ -330,7 +329,7 @@
     width: 100%;
     max-width: 100%;
     margin: 0 0 0rem 0;
-    color: #ffffff;
+    color: #000000;
     position: relative;
   }
   #content-page-714 .bluetext {
@@ -344,7 +343,7 @@
     font-weight: 700;
     text-align: inherit;
     margin: 0 0 1rem 0;
-    color: #ffffff;
+    color: #000000;
   }
   #content-page-714 h2 {
     font-size: 2rem;
@@ -352,7 +351,7 @@
   }
   #content-page-714 h3 {
     font-size: 1.5rem;
-    color: #fff;
+    color: #000000;
   }
   #content-page-714 h4,
   #content-page-714 h5,
@@ -363,7 +362,7 @@
     margin-bottom: 2rem;
   }
   #content-page-714 .cs-color {
-    color: #fff;
+    color: #000000;
   }
   #content-page-714 p {
     font-size: var(--bodyFontSize);
@@ -371,7 +370,7 @@
     text-align: justify;
     width: 100%;
     margin: 0 0 1rem 0;
-    color: #ffffff;
+    color: #000000;
   }
   #content-page-714 p:last-of-type {
     margin-bottom: 2rem;
@@ -612,8 +611,7 @@
     border: 1px solid #e8e8e8;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
-    background: #2069d6;
-    background: radial-gradient(circle, #2069d6 14%, #1055bc 23%, #0d418e 47%, #062f6b 68%);
+    background: #3795BD;
   }
   #pricing-357 .cs-item:nth-of-type(2) .cs-option2-text,
   #pricing-357 .cs-item:nth-of-type(2) .cs-option1-text {
@@ -624,8 +622,7 @@
     transition-delay: 0.2s;
   }
   #pricing-357 .cs-popular {
-    background: #2069d6;
-    background: radial-gradient(circle, #2069d6 14%, #1055bc 23%, #0d418e 47%, #062f6b 68%);
+    background: #3795BD;
     position: relative;
     /* clips the popular tag */
     overflow: hidden;

@@ -5,13 +5,13 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #146EF5;
+    --primary: #3795BD;
     --primaryLight: #000000;
     --secondary: #000000;
     --secondaryLight: #000000;
-    --headerColor: #f7f7f7;
-    --bodyTextColor: #ffffff;
-    --bodyTextColorWhite: #fafbfc;
+    --headerColor: #000000;
+    --bodyTextColor: #000000;
+    --bodyTextColorWhite: #fafafa;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -360,7 +360,7 @@
     width: 100%;
     height: 100%;
     background: #1e1a1a;
-    box-shadow: hwb(216 8% 4%) 0px 8px 24px;
+    box-shadow: hwb(0 58% 42%) 0px 8px 24px;
     opacity: 1;
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
@@ -724,7 +724,7 @@
     margin: 0;
     padding: 0;
     background-color: #fff;
-    box-shadow: inset #146EF5 0px 8px 10px;
+    box-shadow: inset #4f4f4f86 0px 8px 10px;
     opacity: 0;
     border-bottom: 5px solid var(--primary);
     border-radius: 0 0 1.5rem 1.5rem;
@@ -827,7 +827,7 @@
     /* 12px - 24px */
     padding: clamp(0.75rem, 2vw, 1.5rem) 0;
     background-color: #000000;
-    box-shadow: #146ef5a3 0px 8px 24px;
+    box-shadow: #d6d6d6a3 0px 8px 24px;
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
     display: flex;
@@ -909,7 +909,7 @@
     text-decoration: none;
     width: 2rem;
     height: 2rem;
-    background-color: #f7f7f7;
+    background-color: #3795BD;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1057,27 +1057,6 @@
     z-index: 1;
     /* prevents overflow from the lines extending past the screen width */
     overflow: hidden;
-    background-color: #000000;
-  }
-}
-#hero-997 .cs-topper {
-  position: relative;
-  font-size: 15px;
-  letter-spacing: 4px;
-  overflow: hidden;
-  background: linear-gradient(90deg, #ffffff, #146EF5, #ffffff);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 3s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
-}
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
   }
 }
 #hero-997 .cs-container {
@@ -1290,7 +1269,6 @@
     /* creates parallax effect on background image */
     background-attachment: fixed;
     /* remove img tag so we can make parallax work */
-    background-color: #000000;
   }
   #hero-997 .cs-background img {
     display: none;
@@ -1303,7 +1281,6 @@
 @media only screen and (min-width: 0rem) {
   #services-962 {
     padding: var(--sectionPadding);
-    background-color: #000;
     position: relative;
     z-index: 1;
   }
@@ -1330,27 +1307,7 @@
   #services-962 .cs-title {
     margin: 0;
     max-width: 20ch;
-    color: #ffffff;
-  }
-  #services-962 span {
-    position: relative;
-    font-size: 15px;
-    letter-spacing: 4px;
-    overflow: hidden;
-    background: linear-gradient(90deg, #000, #146EF5, #000);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 3s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  }
-  @keyframes animate {
-    0% {
-      background-position: -500%;
-    }
-    100% {
-      background-position: 500%;
-    }
+    color: #000000;
   }
   #services-962 .cs-card-group {
     width: 100%;
@@ -1377,8 +1334,7 @@
     position: relative;
     z-index: 1;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    background: #2069d6;
-    background: radial-gradient(circle, #2069d6 14%, #1055bc 23%, #0d418e 47%, #062f6b 68%);
+    background: #282828;
   }
   #services-962 .cs-item:hover {
     transform: translateY(-0.5rem);
@@ -1435,7 +1391,7 @@
     width: 100%;
     max-width: 39.375rem;
     margin: 0 0 2rem 0;
-    color: #ffffff;
+    color: #000000;
   }
 }
 /* Tablet - 768px */
@@ -1643,27 +1599,7 @@
 @media only screen and (min-width: 0rem) {
   #why-choose-223 {
     padding: var(--sectionPadding);
-    background-color: #000;
-  }
-  #why-choose-223 span {
-    position: relative;
-    font-size: 15px;
-    letter-spacing: 4px;
-    overflow: hidden;
-    background: linear-gradient(90deg, #000, #146EF5, #000);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 3s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  }
-  @keyframes animate {
-    0% {
-      background-position: -500%;
-    }
-    100% {
-      background-position: 500%;
-    }
+    z-index: -2;
   }
   #why-choose-223 .cs-container {
     width: 100%;
@@ -1705,7 +1641,7 @@
     text-align: inherit;
     max-width: 43.75rem;
     margin: 0 0 1rem 0;
-    color: #fff;
+    color: #000000;
     position: relative;
   }
   #why-choose-223 .cs-text {
@@ -1715,7 +1651,7 @@
     width: 100%;
     max-width: 40.625rem;
     margin: 0;
-    color: #fff;
+    color: #000000;
   }
   #why-choose-223 .cs-text {
     margin-bottom: 1rem;
@@ -1741,7 +1677,6 @@
     padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2rem);
     margin: 0;
     border-radius: 0;
-    border: 2px dashed #ffffff;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1753,8 +1688,7 @@
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
     transition: background-color 0.3s;
-    background: #2069d6;
-    background: radial-gradient(circle, #2069d6 14%, #1055bc 23%, #0d418e 47%, #062f6b 68%);
+    background: #3795BD;
   }
   #why-choose-223 .cs-item:hover {
     background-color: var(--dark);
@@ -1864,10 +1798,6 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #why-choose-223 {
-    background: url("/assets/images/darkmodewhychoose.svg");
-    background-size: cover;
-  }
   body.dark-mode #why-choose-223 .cs-topper {
     color: var(--primary);
   }
@@ -1885,29 +1815,9 @@
 @media only screen and (min-width: 0rem) {
   #services-1259 {
     padding: var(--sectionPadding);
+    padding-top: 0%;
     /* prevents padding from affecting height and  */
     box-sizing: border-box;
-    background: #000;
-  }
-  #services-1259 span {
-    position: relative;
-    font-size: 15px;
-    letter-spacing: 4px;
-    overflow: hidden;
-    background: linear-gradient(90deg, #000, #146EF5, #000);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 3s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  }
-  @keyframes animate {
-    0% {
-      background-position: -500%;
-    }
-    100% {
-      background-position: 500%;
-    }
   }
 }
 #services-1259 .cs-container {
@@ -2149,10 +2059,6 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #services-1259 {
-    background: url("/assets/images/darkmodeprocess.svg");
-    background-size: cover;
-  }
   body.dark-mode #services-1259 .cs-topper {
     color: var(--primaryLight);
   }
@@ -2182,27 +2088,7 @@
 @media only screen and (min-width: 0rem) {
   #pricing-357 {
     padding: var(--sectionPadding);
-    background-color: #000000;
-  }
-  #pricing-357 .cs-topper {
-    position: relative;
-    font-size: 15px;
-    letter-spacing: 4px;
-    overflow: hidden;
-    background: linear-gradient(90deg, #000, #146EF5, #000);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 3s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  }
-  @keyframes animate {
-    0% {
-      background-position: -500%;
-    }
-    100% {
-      background-position: 500%;
-    }
+    padding-top: 0%;
   }
   #pricing-357 .cs-container {
     width: 100%;
@@ -2242,8 +2128,7 @@
     width: 100%;
     max-width: 25.8125rem;
     border-radius: 1rem;
-    background: #2069d6;
-    background: radial-gradient(circle, #2069d6 14%, #1055bc 23%, #0d418e 47%, #062f6b 68%);
+    background: #3795BD;
     border: 1px solid #e8e8e8;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
@@ -2257,8 +2142,7 @@
     transition-delay: 0.2s;
   }
   #pricing-357 .cs-popular {
-    background: #2069d6;
-    background: radial-gradient(circle, #2069d6 14%, #1055bc 23%, #0d418e 47%, #062f6b 68%);
+    background: #3795BD;
     position: relative;
     /* clips the popular tag */
     overflow: hidden;
@@ -2702,7 +2586,6 @@
   #cta-1014 {
     padding-bottom: 30px;
     padding-top: 30px;
-    background-color: #000000;
   }
   #cta-1014 .cs-container {
     width: 100%;
