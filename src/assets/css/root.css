@@ -2060,7 +2060,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #services-1259 .cs-topper {
-    color: var(--primaryLight);
+    color: var(--primary);
   }
   body.dark-mode #services-1259 .cs-text,
   body.dark-mode #services-1259 .cs-item-text {
@@ -2352,7 +2352,7 @@
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #pricing-357 .cs-item {
-    background: var(--primary);
+    background: #3795BD;
     border-color: var(--medium);
   }
   body.dark-mode #pricing-357 .cs-popular {
