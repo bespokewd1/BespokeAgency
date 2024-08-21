@@ -95,9 +95,6 @@ window.addEventListener("load", () => {
           temperature.textContent = 
               Math.floor(data.main.temp - kelvin) + "°C";
           summary.textContent = data.weather[0].description;
-          
-          
-          
         });
     });
 
