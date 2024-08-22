@@ -562,12 +562,13 @@
   }
 }
 /*-- -------------------------- -->
-    <---          Pricing           -->
+    <---        Pricing           -->
     <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   #pricing-357 {
     padding: var(--sectionPadding);
+    padding-top: 0%;
   }
   #pricing-357 .cs-container {
     width: 100%;
@@ -607,11 +608,10 @@
     width: 100%;
     max-width: 25.8125rem;
     border-radius: 1rem;
-    background: var(--primary);
+    background: #4594F2;
     border: 1px solid #e8e8e8;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
-    background: #4594F2;
   }
   #pricing-357 .cs-item:nth-of-type(2) .cs-option2-text,
   #pricing-357 .cs-item:nth-of-type(2) .cs-option1-text {
@@ -629,9 +629,42 @@
     /* send to the top */
     order: -1;
   }
+  #pricing-357 .cs-best {
+    background: #4594F2;
+    position: relative;
+    /* clips the popular tag */
+    overflow: hidden;
+    /* send to the top */
+    order: -1;
+  }
   #pricing-357 .cs-popular:before {
     /* Most Popular Tag */
     content: "Popular";
+    font-size: 0.875rem;
+    text-align: center;
+    line-height: 1.8125em;
+    font-weight: 700;
+    width: 10.625rem;
+    padding: 0 0.75rem;
+    color: var(--bodyTextColorWhite);
+    background-color: var(--secondary);
+    position: absolute;
+    display: block;
+    top: 1.25rem;
+    right: -3.75rem;
+    transform: rotate(42deg);
+  }
+  #pricing-357 .cs-best {
+    background: #4594F2;
+    position: relative;
+    /* clips the popular tag */
+    overflow: hidden;
+    /* send to the top */
+    order: -1;
+  }
+  #pricing-357 .cs-best:before {
+    /*Best valueTag */
+    content: "Best Value";
     font-size: 0.875rem;
     text-align: center;
     line-height: 1.8125em;
@@ -821,9 +854,6 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #pricing-357 {
-    background-color: var(--dark);
-  }
   body.dark-mode #pricing-357 .cs-topper {
     color: #4fa7b9;
   }
@@ -835,10 +865,13 @@
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #pricing-357 .cs-item {
-    background: var(--accent);
+    background: #4594F2;
     border-color: var(--medium);
   }
   body.dark-mode #pricing-357 .cs-popular {
+    background: var(--primary);
+  }
+  body.dark-mode #pricing-357 .cs-best {
     background: var(--primary);
   }
   body.dark-mode #pricing-357 .cs-h3,
@@ -907,7 +940,7 @@
     width: 78%;
     /* changes to 305px at desktop */
     max-width: 26.25rem;
-    color: var(--headerColor);
+    color: #fff;
   }
   #cs-footer-309 .cs-nav {
     width: 100%;
@@ -934,7 +967,7 @@
     color: var(--headerColor);
     position: relative;
     display: block;
-    color: #6EACDA;
+    color: var(--primary);
   }
   #cs-footer-309 .cs-nav-link {
     font-size: 1rem;
@@ -1037,7 +1070,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #cs-footer-309 {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.6);
   }
   body.dark-mode #cs-footer-309 .cs-logo {
     /* makes it so bright it turns white */
