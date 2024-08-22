@@ -188,7 +188,7 @@
     line-height: 1.2em;
     text-align: center;
     max-width: 51.8125rem;
-    color: #146EF5;
+    color: #0c0c0c;
     position: relative;
   }
   #hero-1426 .cs-text {
@@ -255,7 +255,8 @@
     opacity: 0.72;
   }
   body.dark-mode #hero-1426 .cs-topper,
-  body.dark-mode #hero-1426 .cs-text {
+  body.dark-mode #hero-1426 .cs-text,
+  body.dark-mode #hero-1426 .cs-title {
     color: #ffff;
   }
 }
