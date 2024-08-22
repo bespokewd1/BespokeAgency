@@ -2907,9 +2907,46 @@
     /* send to the top */
     order: -1;
   }
+  #pricing-357 .cs-best {
+    background: #4594F2;
+
+    
+    position: relative;
+    /* clips the popular tag */
+    overflow: hidden;
+    /* send to the top */
+    order: -1;
+  }
   #pricing-357 .cs-popular:before {
     /* Most Popular Tag */
     content: "Popular";
+    font-size: 0.875rem;
+    text-align: center;
+    line-height: 1.8125em;
+    font-weight: 700;
+    width: 10.625rem;
+    padding: 0 0.75rem;
+    color: var(--bodyTextColorWhite);
+    background-color: var(--secondary);
+    position: absolute;
+    display: block;
+    top: 1.25rem;
+    right: -3.75rem;
+    transform: rotate(42deg);
+  }
+  #pricing-357 .cs-best {
+    background: #4594F2;
+
+    
+    position: relative;
+    /* clips the popular tag */
+    overflow: hidden;
+    /* send to the top */
+    order: -1;
+  }
+  #pricing-357 .cs-best:before {
+    /*Best valueTag */
+    content: "Best Value";
     font-size: 0.875rem;
     text-align: center;
     line-height: 1.8125em;
@@ -3118,6 +3155,9 @@
     border-color: var(--medium);
   }
   body.dark-mode #pricing-357 .cs-popular {
+    background: var(--primary);
+  }
+  body.dark-mode #pricing-357 .cs-best {
     background: var(--primary);
   }
   body.dark-mode #pricing-357 .cs-h3,
@@ -3547,4 +3587,5 @@ color: #000;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nato Serif Georgian', sans-serif;
+}
 }
