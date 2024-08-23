@@ -1155,7 +1155,6 @@
     overflow: hidden;
     margin: 0;
     color: #fff;
-    padding: 0 3rem;
     border-radius: 12px;
     background-color: var(--primary);
     display: inline-block;
@@ -1180,7 +1179,7 @@
     color: var(--primary);
   }
   #hero-1352 .cs-button-solid:hover:before {
-    width: 100%;
+    width: 80%;
   }
   #hero-1352 .cs-picture {
     width: 100%;
@@ -1421,10 +1420,10 @@
     align-items: flex-start;
   }
   #hero-1352 .cs-picture {
-    width: 100%;
+    width: 60%;
     position: absolute;
     bottom: -25rem;
-    right: -20rem;
+    right: -2rem;
   }
   #hero-1352 .cs-bubbles {
     font-size: 1em;
