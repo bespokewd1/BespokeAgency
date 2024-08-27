@@ -10,7 +10,7 @@ module.exports = {
         "state": "Alberta, canafa",
         "zip": "",
         "mapLink": "https://maps.app.goo.gl/3NLJN6zN5ciNsQsc7",
-    "description": "Professional web design for small businesses in Edmonton. Affordable and tailored web solutions to help your business grow."
+    "description": "Get superior results with our premium, 100% hand-coded websites. Improve your brand and convert visitors into leads. Starting at just $149/month, our custom sites offer unmatched quality and ongoing support. Explore our services today!"
     },
     "socials": {
         "facebook": "https://www.facebook.com/profile.php?id=61561167136463",
