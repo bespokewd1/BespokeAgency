@@ -1,7 +1,7 @@
 ---
 title: "Custom Code vs. Page Builders: Why Tailor-Made Websites Are Better for
   Your Business"
-url: Blog Post
+url: what-is-the-difference-between-hand-coded-websites-and-pagebuilders
 description: Explore the key differences between custom code and page builders
   to find the best solution for your website needs.
 author: Bespoke Web Design Team
