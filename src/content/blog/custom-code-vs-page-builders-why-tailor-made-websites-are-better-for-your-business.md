@@ -8,7 +8,7 @@ author: Bespoke Web Design Team
 date: 2024-09-09T10:27:00.000Z
 tags:
   - webdesign
-image: /assets/images/blog/bram-naus-n8qb1zakk88-unsplash.jpg
+image: /assets/images/blog/vscode.jpg
 imageAlt: work mode
 ---
 *Read Time: 4 minutes*
