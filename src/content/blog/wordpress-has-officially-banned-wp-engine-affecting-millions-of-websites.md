@@ -1,6 +1,6 @@
 ---
 title: WordPress has officially banned WP Engine, affecting millions of websites
-url: WordPress has officially banned WP Engine, affecting millions of websites
+url: blog-post
 description: WordPress has officially banned WP Engine, impacting millions of
   websites and raising critical questions about the future of website hosting
   and management for users reliant on WP Engine's services.
