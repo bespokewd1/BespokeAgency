@@ -709,6 +709,10 @@
                 .cs-icon {
                     filter: brightness(1000%) grayscale(1);
                 }
+                .cs-picture {
+                    filter: brightness(.8);
+                    transform: scale(1.1);
+                }
             }
         }
 
@@ -720,6 +724,7 @@
             display: block;
             position: relative;
             overflow: hidden;
+            filter: brightness(.6);
 
             img {
                 width: 100%;
@@ -732,7 +737,7 @@
         }
 
         .cs-item-text {
-            padding: 1rem 0;
+            padding: 1rem 0 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
