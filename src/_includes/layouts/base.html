@@ -16,7 +16,7 @@
         <meta property="og:description" content="{{ description }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-        <meta property="og:image" content="https://bespokewebdesign.ca/assets/images/ogimage2.png"/>
+        <meta property="og:image" content="{{ image ? image : /assets/images/ogimage2.png }}"/>
         <meta property="og:image:secure_url" content="https://bespokewebdesign.ca/assets/images/ogimage2.png"/>
 
         <!--Favicons-->
