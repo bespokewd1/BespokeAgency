@@ -1108,7 +1108,6 @@
   }
   #hero-1352 .cs-content {
     /* set text align to left if content needs to be left aligned */
-    text-align: center;
     width: 100%;
     max-width: 45rem;
     display: flex;
@@ -1122,7 +1121,7 @@
     min-height: 720px;
   }
   #hero-1352 .cs-text-content{
-    border-radius: 1.5rem 1.5rem 1.5rem 0;
+    border-radius: 1.5rem;
     padding: clamp(1.5rem, 2.5vw, 2rem);
   }
   #hero-1352 .cs-topper {
@@ -1414,8 +1413,7 @@
   #hero-1352 .cs-video {
     max-width: 100%;
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
-    margin-top: -10rem;
-    z-index:-1;
+    margin-top: -25rem;
   }
   body.dark-mode #hero-1352 .cs-text-content{
       background-color: var(--dark);
@@ -1434,7 +1432,6 @@
     justify-content: space-between;
   }
   #hero-1352 .cs-content {
-    text-align: left;
     width: 60%;
     align-items: flex-start;
   }
