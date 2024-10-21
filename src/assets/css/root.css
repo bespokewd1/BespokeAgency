@@ -1411,7 +1411,6 @@
     padding-bottom: clamp(11.25rem, 16.5vw, 15.625rem);
   }
   #hero-1352 .cs-container {
-    flex-direction: row;
     justify-content: space-between;
   }
   #hero-1352 .cs-content {
