@@ -1117,6 +1117,10 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
+  #hero-1352 .cs-video-wrapper{
+    max-width: 100% !important; 
+    width: 100% !important; 
+  }
   #hero-1352 .cs-topper {
     font-size: 1.25rem;
     line-height: 1.2em;
@@ -1408,7 +1412,7 @@
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
     margin-top: -7rem;
     z-index:-1;
-}
+  }
   body.dark-mode #hero-1352 .cs-text-content{
       background-color: var(--dark);
   }
