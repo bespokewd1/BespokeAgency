@@ -1414,12 +1414,7 @@
     max-width: 100%;
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
     margin-top: -25rem;
-  }
-  body.dark-mode #hero-1352 .cs-text-content{
-      background-color: var(--dark);
-  }
-  #hero-1352 .cs-text-content{
-      background-color: #ffffff;
+    z-index: -1;
   }
 }
 /* Tablet - 768px */
@@ -1448,6 +1443,12 @@
     /* changes to auto at large desktop */
     right: -18.75rem;
   }
+  body.dark-mode #hero-1352 .cs-text-content{
+    background-color: var(--dark);
+}
+#hero-1352 .cs-text-content{
+  background-color: #ffffff;
+}
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 48rem) {
