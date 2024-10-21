@@ -1087,6 +1087,7 @@
   #hero-1352 {
       /* 250px - 500px - leaving extra space for the navigation */
       padding: clamp(12.625rem, 12.95vw, 25rem) 1rem 0;
+      padding-top: 10rem;
       padding-bottom: 0;
       box-sizing: border-box;
       overflow: hidden;
@@ -1182,7 +1183,7 @@
   }
   #hero-1352 .cs-button-solid {
       font-size: 1rem;
-      line-height: 3.5rem;
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
       text-decoration: none;
       font-weight: 700;
       overflow: hidden;
@@ -1450,6 +1451,7 @@
   #hero-1352 .cs-text-content{
     background-color: #ffffff;
     order:1;
+    margin-top:-2rem
   }
   body.dark-mode #hero-1352 .cs-text-content{
       background-color: var(--dark);
@@ -1461,7 +1463,6 @@
   #hero-1352 {
       /* 180px - 250px */
       padding-bottom: clamp(11.25rem, 16.5vw, 15.625rem);
-      padding-top: 10rem;
   }
   #hero-1352 .cs-container {
       justify-content: space-between;
@@ -1489,6 +1490,7 @@
   #hero-1352 .cs-text-content{
     background-color: #ffffff;
     order:0;
+    margin-top: 0;
   }
   #hero-1352 .cs-video-wrapper{
     min-height: calc(720px - 22rem);
