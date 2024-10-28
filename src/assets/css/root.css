@@ -2747,7 +2747,7 @@
   #pricing-357 .cs-card-group {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: nowrap;
   }
   #pricing-357 .cs-item {

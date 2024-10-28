@@ -428,3 +428,310 @@
 }
 
                               
+    /*-- -------------------------- -->
+    <---          Reviews           -->
+    <--- -------------------------- -*/
+
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+        #reviews-1833 {
+            padding: var(--sectionPadding);
+            overflow: hidden;
+            background-color: #222222;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                /* gradient that softens the transition from the pattern to the edge of the section */
+                content: '';
+                width: 100%;
+                height: 20%;
+                background: linear-gradient(to bottom,  rgba(34, 34, 34,1) 0%,rgba(34, 34, 34,0) 100%);
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+            }
+
+            &:after {
+                /* gradient that softens the transition from the pattern to the edge of the section */
+                content: '';
+                width: 100%;
+                height: 20%;
+                background: linear-gradient(to bottom,  rgba(34, 34, 34,0) 0%,rgba(34, 34, 34,1) 100%);
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+            }
+
+            .cs-container {
+                width: 100%;
+                /* changes to 1280px at tablet */
+                max-width: (550/16rem);
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* 48px - 64px */
+                gap: clamp(3rem, 6vw, 4rem);
+                position: relative;
+                z-index: 1;
+            }
+
+            .cs-content {
+                /* set text align to left if content needs to be left aligned */
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                /* centers content horizontally, set to flex-start to left align */
+                align-items: center;
+            }
+
+            .cs-title {
+                max-width: 26ch;
+                margin: 0;
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-flex-group {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: (48/16rem);
+            }
+
+            .cs-review-group {
+                text-align: center;
+                max-width: (860/16rem);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+            }
+
+            .cs-stars {
+                width: (162/16rem);
+                height: auto;
+                margin: 0 0 (24/16rem);
+                display: block;
+            }
+
+            .cs-quote {
+                /* 244px - 340px */
+                width: clamp(15.25rem, 25vw, 21.25rem);
+                height: auto;
+                margin: 0 0 (24/16rem) 0;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: -1;
+                transform: translateX(-50%);
+            }
+
+            .cs-review-text {
+                /* 25px - 39px */
+                font-size: clamp(1.5625rem, 3vw, 2.4375rem);
+                line-height: 1.2em;
+                font-weight: bold;
+                text-align: inherit;
+                margin: 0 0 (40/16rem) 0;
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-name {
+                font-size: (20/16rem);
+                line-height: 1.2em;
+                text-align: inherit;
+                font-weight: 700;
+                margin: 0 0 (4/16rem) 0;
+                color: var(--bodyTextColorWhite);
+                display: block;
+            }
+
+            .cs-job {
+                font-size: (16/16rem);
+                line-height: 1.2em;
+                text-align: inherit;
+                margin: 0;
+                color: var(--primary);
+                display: block;
+            }
+
+            .cs-image-group {
+                /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
+                font-size: ~"min(3.7vw, 1rem)";
+                /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+                width: (372/16em);
+                height: (352/16em);
+                /* make a white shadow to fade over the texture background behind it so it hides the fact its a mask on top of the image */
+                box-shadow: rgba(34, 34, 34, 1) 0px -45px 90px 4px;
+                position: relative;
+                z-index: -1;
+            }
+
+            .cs-picture {
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    /* makes it act like a background image */
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            .cs-mask {
+                width: 101%;
+                height: 101%;
+                object-fit: cover;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                z-index: 1;
+                transform: translate(-50%, -50%);
+            }
+
+            .cs-dark {
+                display: none;
+            }
+
+            .cs-waves {
+                width: 55vw;
+                /* 400px - 566px */
+                max-width: clamp(25rem, 40vw, 35.375rem);
+                height: auto;
+                opacity: 0.5;
+                position: absolute;
+                top: 0;
+                /* 100px - 160px */
+                right: ~"calc(clamp(6.25rem, 17vw, 10rem)*-1)";
+                z-index: -1;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .cs-background {
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: .32;
+                    /* Makes img tag act as a background image */
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    /* Tablet - 768px */
+    @media only screen and (min-width: 48rem) {
+        #reviews-1833 {
+            .cs-container {
+                max-width: (1280/16rem);
+            }
+
+            .cs-flex-group {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .cs-image-group {
+                font-size: ~"min(1.68vw, 1rem)";
+                /* prevents flexbox from squishing it */
+                flex: none;
+            }
+
+            .cs-review-group {
+                text-align: left;
+                width: 65vw;
+                align-items: flex-start;
+            }
+
+            .cs-quote {
+                left: auto;
+                right: 0;
+                transform: none;
+            }
+        }
+    }
+
+    /* Dark Mode */
+    @media only screen and (min-width: 0rem) {
+        body.dark-mode {
+            #reviews-1833 {
+                background-color: rgba(0, 0, 0, .6);
+                &:before {
+                    /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
+                    background: linear-gradient(to bottom,  rgba(3, 13, 20,1) 0%,rgba(3, 13, 20,0) 100%);
+                }
+
+                &:after {
+                    /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
+                    background: linear-gradient(to bottom,  rgba(3, 13, 20,0) 0%,rgba(3, 13, 20,1) 100%);
+                }
+
+                .cs-title,
+                .cs-text,
+                .cs-review-text,
+                .cs-name,
+                .cs-job {
+                    color: var(--bodyTextColorWhite);
+                }
+
+                .cs-image-group {
+                    /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
+                    box-shadow: rgba(3, 13, 20, 1) 0px -45px 90px 4px;
+                }
+
+                .cs-quote {
+                    opacity: .05;
+                }
+
+                .cs-text {
+                    opacity: 0.8;
+                }
+
+                .cs-light {
+                    display: none;
+                }
+
+                .cs-dark {
+                    display: block;
+                }
+
+                .cs-background {
+                    img {
+                        filter: grayscale(1) brightness(1000%);
+                        opacity: .12;
+                    }
+                }
+            }
+        }
+    }
