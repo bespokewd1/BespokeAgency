@@ -476,7 +476,6 @@
   }
   #reviews-1833 .cs-review-group {
     text-align: center;
-    max-width: 53.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -503,7 +502,7 @@
   }
   #reviews-1833 .cs-review-text {
     /* 25px - 39px */
-    font-size: clamp(1.5625rem, 3vw, 2.4375rem);
+    font-size: clamp(1.2rem, 3vw, 2rem);
     line-height: 1.2em;
     font-weight: bold;
     text-align: inherit;
@@ -619,7 +618,6 @@
   }
   #reviews-1833 .cs-review-group {
     text-align: left;
-    width: 65vw;
     align-items: flex-start;
   }
   #reviews-1833 .cs-quote {
