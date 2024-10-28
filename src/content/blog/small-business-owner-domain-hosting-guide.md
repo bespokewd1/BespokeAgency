@@ -85,9 +85,6 @@ Choosing the right VPN can make a big difference in speed, privacy, and ease of 
 <section id="table-1669">
   <div class="cs-container">
       <div class="cs-content">
-          <p class="cs-text">
-          Choosing the right VPN can make a big difference in speed, privacy, and ease of use. Here’s a quick breakdown of the top three contenders:
-          </p>
       </div>
       <table class="cs-table">
           <thead>

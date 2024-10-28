@@ -1256,3 +1256,30 @@
   }
 }
               
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #table-1669 .cs-th {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #table-1669 .cs-th:first-child,
+  body.dark-mode #table-1669 .cs-td:first-child {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #table-1669 .cs-th,
+  body.dark-mode #table-1669 .cs-td {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode #table-1669 .cs-color .cs-th:first-child {
+    color: #fff;
+    background-color: var(--secondary);
+  }
+  body.dark-mode #table-1669 .cs-tr {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #table-1669 .cs-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+}
