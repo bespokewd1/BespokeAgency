@@ -38,6 +38,7 @@ Configure shipping rates based on location and product weight, and manage taxes 
 Shopify integrates with various sales channels, such as social media platforms, Amazon, and Google Shopping, making it easy to reach customers everywhere.
 
 <h3>What Sets Shopify Apart?</h3>
+
 Shopify stands out for its ease of use, flexibility, and integrations with thousands of apps. Here’s what makes Shopify different:
 
 <ul>
@@ -92,6 +93,7 @@ Automation is one of Shopify’s biggest strengths, especially for busy entrepre
 With the right apps and integrations, you can spend less time on admin tasks and more time focusing on growth.
 
 <h3>The Benefits of a Custom Front-End Design for Your Shopify Store</h3>
+
 While Shopify provides attractive themes, a custom front-end design can make your store truly stand out. Here’s why a custom front end is beneficial:
 
 <ol>
