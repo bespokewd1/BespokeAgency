@@ -3,7 +3,7 @@ title: How to Build an Online Store: A Step-by-Step Guide for Entrepreneurs
 url: online-store-guide-fore-ntrepreneurs
 description: Learn how Shopify simplifies launching an online store with powerful tools for growth. This guide covers Shopify’s features, benefits, and tips on using custom front-end design to elevate your brand.
 author: Bespoke Web Design Team
-date: 2024-10-30T15:29:00.000Z
+date: 2024-10-30T02:29:00.000Z
 tags:
   - post
 image: /assets/images/blog/shopify.jpg
