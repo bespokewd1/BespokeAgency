@@ -10,6 +10,7 @@ image: /assets/images/blog/shopify.jpg
 imageAlt: Online Store Guide
 ---
 *Read Time: 5 minutes*
+
 <h3>What is Shopify>?</h3>
 
 Shopify is an all-in-one eCommerce platform that enables anyone to create, customize, and manage an online store without extensive technical knowledge. Whether you’re selling products, services, or digital downloads, Shopify provides a complete toolkit to build and scale your online business.
