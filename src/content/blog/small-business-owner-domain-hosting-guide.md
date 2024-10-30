@@ -11,6 +11,8 @@ tags:
 image: /assets/images/blog/hosting-and-domain.jpg
 imageAlt: Domain and Hosting Guide
 ---
+Image from <a href="https://www.freepik.com/free-vector/gradient-website-hosting-illustration_22112053.htm#fromView=search&page=2&position=0&uuid=ef9e71d2-6739-42c2-ad5b-bf56c1b8ddaf" target="_blank">Freepik</a>
+
 *Note: Some links may be affiliate links, meaning I may earn a small commission if you choose to sign up, at no extra cost to you. Your support helps me continue sharing valuable content!*
 
 **A Small Business Owner’s Guide to Domain and Hosting Selection**

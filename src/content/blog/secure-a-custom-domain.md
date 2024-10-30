@@ -11,7 +11,7 @@ tags:
 image: /assets/images/blog/secure-a-domain.jpg
 imageAlt: secure domain
 ---
-*Photo from <a href="https://www.freepik.com/free-photo/website-hosting-concept-with-search-bar_26412525.htm#fromView=search&page=2&position=29&uuid=1f016c88-e4ed-40e4-8b5f-498653d9aad7" target="_blank">Pexels</a>*
+*Photo from <a href="https://www.freepik.com/free-photo/website-hosting-concept-with-search-bar_26412525.htm#fromView=search&page=2&position=29&uuid=1f016c88-e4ed-40e4-8b5f-498653d9aad7" target="_blank">Freepik</a>*
 
 *Read Time: 5 minutes*
 
