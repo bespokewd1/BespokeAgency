@@ -13,7 +13,7 @@ imageAlt: secure domain
 ---
 *Photo from <a href="https://www.freepik.com/free-photo/website-hosting-concept-with-search-bar_26412525.htm#fromView=search&page=2&position=29&uuid=1f016c88-e4ed-40e4-8b5f-498653d9aad7" target="_blank">Pexels</a>*
 
-Read Time: 5 minutes
+*Read Time: 5 minutes*
 
 *Note: Some links may be affiliate links, meaning I may earn a small commission if you choose to sign up, at no extra cost to you. Your support helps me continue sharing valuable content!*
 
