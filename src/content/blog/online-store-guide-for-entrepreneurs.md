@@ -9,6 +9,7 @@ date: 2024-10-29T16:29:00.000Z
 tags:
   - post
   - featured
+  - latest
 image: /assets/images/blog/shopify.jpg
 imageAlt: Online Store Guide
 ---

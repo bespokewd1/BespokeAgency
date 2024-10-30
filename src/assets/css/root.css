@@ -3376,5 +3376,7 @@
       color: var(--primary);
   }
 }
-
                               
+#blog-1289.below-article{
+  padding-top:0;
+}

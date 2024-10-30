@@ -2,7 +2,7 @@
 <!--                    Blog                      -->
 <!-- ============================================ -->
 
-<section id="blog-1289">
+<section id="blog-1289" class="below-article">
     <div class="cs-container">
         <div class="cs-content">
             <div class="cs-flex-group">
@@ -11,7 +11,7 @@
             </div>
         </div>      
         <ul class="cs-card-group">
-            {%- for post in collections.post -%}
+            {%- for post in collections.latest -%}
             <li class="cs-item">
                 <a href="{{ post.url }}" class="cs-link">
                     <picture class="cs-picture">
