@@ -11,7 +11,7 @@
             </div>
         </div>      
         <ul class="cs-card-group">
-            {%- for post in collections.post | limit: 3 -%}
+            {%- for post in collections.post -%}
             <li class="cs-item">
                 <a href="{{ post.url }}" class="cs-link">
                     <picture class="cs-picture">
