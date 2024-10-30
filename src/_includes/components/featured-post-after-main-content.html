@@ -6,50 +6,26 @@
     <div class="cs-container">
         <div class="cs-content">
             <div class="cs-flex-group">
-                <span class="cs-topper">Other Articles</span>
+                <span class="cs-topper">Latest News</span>
                 <h2 class="cs-title">Learn more about the web development space with these articles.</h2>
             </div>
         </div>      
         <ul class="cs-card-group">
+            {%- for post in collections.post | limit: 3 -%}
             <li class="cs-item">
-                <a href="" class="cs-link">
+                <a href="{{ post.url }}" class="cs-link">
                     <picture class="cs-picture">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg">
+                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
                         <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg" alt="building" width="270" height="200">
+                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="270" height="200">
                     </picture>
-                    <span class="cs-date">October 30, 2023</span>
-                    <h3 class="cs-h3">Building Strong Foundations: Expert Insights For the Construction Industry</h3>
+                    <span class="cs-date">{{ post.date | postDate }}</span>
+                    <h3 class="cs-h3">{{ post.data.title }}</h3>
                 </a>
             </li>
-            <li class="cs-item">
-                <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg" alt="building" width="270" height="200">
-                    </picture>
-                    <span class="cs-date">October 30, 2023</span>
-                    <h3 class="cs-h3">Construction Chronicles: Stories of Creativity, Innovation, and Success in the Industry</h3>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building12.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building12.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building12.jpg" alt="building" width="270" height="200">
-                    </picture>
-                    <span class="cs-date">October 30, 2023</span>
-                    <h3 class="cs-h3">Construction Connection: Building Strong Relationships in the Construction Industry</h3>
-                </a>
-            </li>
+            {%- endfor -%}
         </ul>
     </div>
 </section>
