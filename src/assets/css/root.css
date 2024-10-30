@@ -3215,6 +3215,7 @@
 @media only screen and (min-width: 0rem) {
   #blog-1289 {
       padding: var(--sectionPadding);
+      padding-top: 0 !important;
   }
   #blog-1289 .cs-container {
       width: 100%;
@@ -3351,7 +3352,7 @@
       margin: 0;
   }
   #blog-1289 .cs-flex-group {
-      width: 50%;
+      width: 100%;
   }
   #blog-1289 .cs-item {
       grid-column: span 4;
