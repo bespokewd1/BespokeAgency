@@ -6,7 +6,7 @@
     <!--Featured-->
     <div class="blog-featured-group">
         <span class="blog-header">Featured Posts</span>
-        {%- for post in collections.featured | reverse -%}
+        {%- for post in collections.post | reverse -%}
             <a class="blog-feature" href="{{ post.url }}">
                 <picture class="blog-featureImage">
                     <img
