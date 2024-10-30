@@ -9,7 +9,6 @@ date: 2024-09-29T15:29:00.000Z
 tags:
   - post
   - featured
-  - latest
 image: /assets/images/blog/wp-engine.jpg
 imageAlt: WordPress bans WP Engine
 ---
