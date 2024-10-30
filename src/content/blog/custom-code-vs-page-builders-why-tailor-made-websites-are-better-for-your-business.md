@@ -8,6 +8,8 @@ author: Bespoke Web Design Team
 date: 2024-09-09T10:27:00.000Z
 tags:
   - webdesign
+  - post
+  - featured
 image: /assets/images/blog/vscode.jpg
 imageAlt: work mode
 ---
