@@ -4093,8 +4093,8 @@ color: #000;
       }
   }
 }
-                              
-
+                            
+                  
 /*-- -------------------------- -->
 <---         CS-Content         -->
 <--- -------------------------- -*/
@@ -4103,104 +4103,84 @@ color: #000;
 
 /* Mobile */
 @media only screen and (min-width: 0rem) {
-  #cs-content-829 {
+  #cs-content-1801 {
       /* set text align to left if content needs to be left aligned */
-      text-align: left;
+      text-align: center;
       width: 100%;
+      max-width: (1280/16rem);
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
-      align-items: flex-start;
-  }
-  #cs-content-829 .cs-topper {
-      font-size: var(--topperFontSize);
-      line-height: 1.2em;
-      text-transform: uppercase;
-      text-align: inherit;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
-      display: block;
-  }
-  #cs-content-829 .cs-title {
-      font-size: var(--headerFontSize);
-      font-weight: 900;
-      line-height: 1.2em;
-      text-align: inherit;
-      max-width: 43.75rem;
-      margin: 0 0 1rem 0;
-      color: var(--headerColor);
-      position: relative;
-  }
-  #cs-content-829 .cs-text {
-      font-size: var(--bodyFontSize);
-      line-height: 1.5em;
-      text-align: inherit;
-      width: 100%;
-      max-width: 40.625rem;
-      margin: 0;
-      color: var(--bodyTextColor);
-  }
-  #cs-content-829 .cs-title {
-      max-width: 20ch;
-  }
-  #cs-content-829 .cs-text {
-      max-width: 31.5rem;
-  }
-  #cs-content-829 .cs-text:before {
-      /* divider line */
-      content: "";
-      width: 7.8125rem;
-      height: 3px;
-      margin-bottom: 1rem;
-      background: var(--primary);
-      opacity: 1;
-      display: block;
-      position: relative;
+      align-items: center;
+
+      .cs-title {
+          max-width: 25ch;
+      }
+
+      .cs-button-solid {
+          font-size: calc(16/16 * 1rem);
+          /* 46px - 56px */
+          line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+          text-decoration: none;
+          font-weight: 700;
+          text-align: center;
+          margin: 0;
+          color: #fff;
+          min-width: calc(150/16 * 1rem);
+          padding: 0 calc(24/16 * 1rem);
+          background-color: var(--primary);
+          border-radius: calc(4/16 * 1rem);
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+          /* prevents padding from adding to the width */
+          box-sizing: border-box;
+
+          &:before {
+              content: "";
+              position: absolute;
+              height: 100%;
+              width: 0%;
+              background: #000;
+              opacity: 1;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              border-radius: calc(4/16 * 1rem);
+              transition: width 0.3s;
+          }
+
+          &:hover {
+              &:before {
+                  width: 100%;
+              }
+          }
+      }
   }
 }
+
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #cs-content-829 {
+  #cs-content-1801 {
+      text-align: left;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
-  }
-  #cs-content-829 .cs-flex {
-      width: 50%;
-      max-width: 34.375rem;
-      flex: none;
-  }
-  #cs-content-829 .cs-topper,
-  #cs-content-829 .cs-title {
-      text-align: right;
-  }
-  #cs-content-829 .cs-title {
-      margin: 0;
-  }
-  #cs-content-829 .cs-text {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  #cs-content-829 .cs-text:before {
-      width: 3px;
-      height: 7.8125rem;
-      /* 24px - 28px */
-      margin: 0 clamp(1.5rem, 3vw, 1.75rem);
-      /* prevents flexbox from squishing it */
-      flex: none;
+      justify-content: space-between;
+      align-items: flex-end;
   }
 }
+
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #cs-content-829 .cs-title,
-  body.dark-mode #cs-content-829 .cs-text,
-  body.dark-mode #cs-content-829 .cs-h3,
-  body.dark-mode #cs-content-829 .cs-item-text {
-      color: var(--bodyTextColorWhite);
+  body.dark-mode {
+      #cs-content-1801 {
+          .cs-title, .cs-text {
+              color: var(--bodyTextColorWhite);
+          }
+
+          .cs-text {
+              opacity: .8;
+          }
+      }
   }
 }
                               
