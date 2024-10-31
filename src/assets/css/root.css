@@ -3376,7 +3376,209 @@
       color: var(--primary);
   }
 }
-                              
+                   
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #pricing-1690 {
+    padding: var(--sectionPadding);
+  }
+  #pricing-1690 .cs-container {
+    width: 100%;
+    max-width: 80em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #pricing-1690 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #pricing-1690 .cs-text {
+    max-width: 32.625rem;
+  }
+  #pricing-1690 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap row;
+    justify-content: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+    transform-style: preserve-3d;
+    perspective: 700px;
+  }
+  #pricing-1690 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 31.25rem;
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 24px - 32px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #pricing-1690 .cs-item.cs-popular {
+    background-color: #111926;
+  }
+  #pricing-1690 .cs-item.cs-popular .cs-package,
+  #pricing-1690 .cs-item.cs-popular .cs-li,
+  #pricing-1690 .cs-item.cs-popular .cs-duration {
+    color: var(--bodyTextColorWhite);
+  }
+  #pricing-1690 .cs-item.cs-popular .cs-icon {
+    /* if icon is not black, this turns it white */
+    filter: grayscale(1) brightness(1000%);
+  }
+  #pricing-1690 .cs-item.cs-popular .cs-price {
+    color: var(--primary);
+  }
+  #pricing-1690 .cs-package {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+    color: #111926;
+  }
+  #pricing-1690 .cs-ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #pricing-1690 .cs-li {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.2em;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: space-between;
+    /* push everything to the top so if the li goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #pricing-1690 .cs-li.cs-disabled {
+    opacity: 0.5;
+  }
+  #pricing-1690 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+  }
+  #pricing-1690 .cs-price {
+    font-size: 3.0625rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    /* margin-top pushes price information to bottom when there are different list lengths. padding-top keeps a minimum distance between price and list */
+    margin-top: auto;
+    /* 48px - 64px */
+    padding-top: clamp(3rem, 6vw, 4rem);
+    color: var(--headerColor);
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  #pricing-1690 .cs-duration {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+  }
+  #pricing-1690 .cs-link {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    text-decoration: none;
+    margin-top: 1rem;
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.625rem;
+    transition: color 0.3s;
+  }
+  #pricing-1690 .cs-link:hover .cs-arrow {
+    transform: translateX(0.25rem);
+  }
+  #pricing-1690 .cs-link-text {
+    width: fit-content;
+  }
+  #pricing-1690 .cs-arrow {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing-1690 .cs-option2 {
+    top: auto;
+    bottom: 0;
+  }
+  #pricing-1690 .cs-item {
+    width: 48.9%;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #pricing-1690 .cs-card-group {
+    flex-wrap: nowrap;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #pricing-1690 .cs-title,
+  body.dark-mode #pricing-1690 .cs-text,
+  body.dark-mode #pricing-1690 .cs-li,
+  body.dark-mode #pricing-1690 .cs-package,
+  body.dark-mode #pricing-1690 .cs-price,
+  body.dark-mode #pricing-1690 .cs-duration {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #pricing-1690 .cs-text,
+  body.dark-mode #pricing-1690 .cs-duration {
+    opacity: 0.8;
+  }
+  body.dark-mode #pricing-1690 .cs-item {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #pricing-1690 .cs-item.cs-popular {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  body.dark-mode #pricing-1690 .cs-icon {
+    /* makes icon white (if it wasnt black to start) */
+    filter: grayscale(1) brightness(1000%);
+  }
+}
+                                
+
 #blog-1289.below-article{
   padding-top:0;
 }
