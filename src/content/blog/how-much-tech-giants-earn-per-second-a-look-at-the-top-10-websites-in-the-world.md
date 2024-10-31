@@ -18,7 +18,7 @@ As a entrepreneur and agency aiming to create value for small businesses, I've o
 
 <h3>1. Amazon</h3>
 
-***Revenue per year: $575 billion (approximately $18,250 per second)***
+Revenue per year: $575 billion **(approximately $18,250 per second)**
 
 Founded by: Jeff Bezos
 
@@ -38,7 +38,7 @@ Value to customers: Amazon revolutionized shopping with convenience and vast pro
 
 <h3>2. Google</h3>
 
-***Revenue per year: $182 billion (approximately $5,785.95 per second)***
+Revenue per year: $182 billion **(approximately $5,785.95 per second)**
 
 Founded by: Larry Page and Sergey Brin
 
@@ -58,7 +58,7 @@ Value to customers: Google provides access to information and services that enha
 
 <h3>3. Facebook</h3>
 
-***Revenue per year: $135 billion (approximately $4,273.50 per second)***
+Revenue per year: $135 billion **(approximately $4,273.50 per second)**
 
 Founded by: Mark Zuckerberg and co-founders
 
@@ -79,7 +79,7 @@ Value to customers: Facebook connects users and provides a platform for business
 
 <h3>4. JD.com</h3>
 
-***Revenue per year: $114 billion (approximately $3,615.92 per second)***
+Revenue per year: $114 billion **(approximately $3,615.92 per second)**
 
 Founded by: Liu Qiangdong (Richard Liu)
 
@@ -100,7 +100,7 @@ Value to customers: JD.com ensures product authenticity and fast delivery, enhan
 
 <h3>5. Alibaba</h3>
 
-***Revenue per year: $72 billion (approximately $2,280.70 per second)***
+Revenue per year: $72 billion **(approximately $2,280.70 per second)**
 
 Founded by: Jack Ma
 
@@ -121,7 +121,7 @@ Value to customers: Alibaba provides a platform for small businesses to reach gl
 
 <h3>6. Tencent</h3>
 
-***Revenue per year: $66 billion (approximately $2,092.84 per second)***
+Revenue per year: $66 billion **(approximately $2,092.84 per second)**
 
 Founded by: Ma Huateng
 
@@ -142,7 +142,7 @@ Value to customers: Tencent offers a comprehensive suite of digital services, en
 
 <h3>7. eBay</h3>
 
-***Revenue per year: $59 billion (approximately $1,870.00 per second)***
+Revenue per year: $59 billion **(approximately $1,870.00 per second)**
 
 Founded by: Pierre Omidyar
 
@@ -163,7 +163,7 @@ Value to customers: eBay provides a platform for consumers to buy and sell uniqu
 
 <h3>8. PayPal</h3>
 
-***Revenue per year: $30 billion (approximately $951.32 per second)***
+**Revenue per year: $30 billion **(approximately $951.32 per second)**
 
 Founded by: Peter Thiel and others
 
@@ -184,7 +184,7 @@ Value to customers: PayPal offers a secure way to send and receive money online,
 
 <h3>9. Booking.com</h3>
 
-***Revenue per year: $21.3 billion (approximately $674.25 per second)***
+Revenue per year: $21.3 billion **(approximately $674.25 per second)**
 
 Founded by: Geert-Jan Bruinsma
 
@@ -205,7 +205,7 @@ Value to customers: Booking.com provides travelers with extensive options and pr
 
 <h3>10. Salesforce</h3>
 
-***Revenue per year: $21 billion (approximately $665.78 per second)***
+Revenue per year: $21 billion **(approximately $665.78 per second)**
 
 Founded by: Marc Benioff and Parker Harris
 
