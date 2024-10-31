@@ -3408,8 +3408,8 @@
     align-items: flex-start;
   }
   #services-1626 .cs-item:hover .cs-picture img {
-    opacity: .5;
-    transform: scale(1.2);
+    opacity: .9;
+    transform: scale(1.05);
   }
   #services-1626 .cs-link {
     text-decoration: none;
