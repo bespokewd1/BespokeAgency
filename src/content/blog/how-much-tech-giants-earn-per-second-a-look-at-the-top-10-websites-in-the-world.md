@@ -225,7 +225,7 @@ Value to customers: Salesforce provides businesses with tools to manage customer
 
 
 
-<img src="/assets/images/blog/money-rich"/>
+<img src="/assets/images/blog/money-rich.jpg"/>
 
 While money isn’t everything, it’s fascinating to see the staggering figures that these tech giants generate. In reality, having financial resources can likely solve 99.99% of your problems! What we can take away from their success is the importance of harnessing data effectively, creating real value for customers, and ensuring scalability in our endeavors.
 
