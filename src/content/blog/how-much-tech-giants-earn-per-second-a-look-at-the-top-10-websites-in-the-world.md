@@ -1,24 +1,22 @@
 ---
 title: "How Much Tech Giants Earn Per Second: A Look at the Top 10 Websites in
   the World"
-url: Blog Post
+url: how-much-tech-giants-earn
 description: A Look at the Top 10 Websites in the World
 author: Charles M
 date: 2024-11-01T12:34:00.000Z
 tags:
   - post
-image: /assets/images/blog/bram-naus-n8qb1zakk88-unsplash.jpg
+image: /assets/images/blog/earnings-per-second.jpg
 imageAlt: Change that photo -just temporary
 ---
 
 
 As a entrepreneur and agency aiming to create value for small businesses, I've often found inspiration in the successes of tech giants. We use their services daily—think of Google, Facebook, and Netflix—but have you ever wondered just how much they earn per second? How long did it take them to reach these heights, and what tech stacks do they rely on? Let’s dive into these impressive figures and uncover what makes these companies tick.
 
+<h3>1. Amazon</h3>
 
-
-1. Amazon
-
-Revenue per year: $575 billion (approximately $18,250 per second)
+***Revenue per year: $575 billion (approximately $18,250 per second)***
 
 Founded by: Jeff Bezos
 
@@ -36,11 +34,9 @@ Challenges and future plans: Amazon continually faces scrutiny over labor practi
 
 Value to customers: Amazon revolutionized shopping with convenience and vast product availability.
 
+<h3>2. Google</h3>
 
-
-2. Google
-
-Revenue per year: $182 billion (approximately $5,785.95 per second)
+***Revenue per year: $182 billion (approximately $5,785.95 per second)***
 
 Founded by: Larry Page and Sergey Brin
 
@@ -58,11 +54,9 @@ Challenges and future plans: Google faces regulatory challenges globally but aim
 
 Value to customers: Google provides access to information and services that enhance productivity and connectivity.
 
+<h3>3. Facebook</h3>
 
-
-3. Facebook
-
-Revenue per year: $135 billion (approximately $4,273.50 per second)
+***Revenue per year: $135 billion (approximately $4,273.50 per second)***
 
 Founded by: Mark Zuckerberg and co-founders
 
@@ -81,10 +75,9 @@ Challenges and future plans: Facebook is dealing with privacy concerns but conti
 Value to customers: Facebook connects users and provides a platform for businesses to reach targeted audiences.
 
 
+<h3>4. JD.com</h3>
 
-4. JD.com
-
-Revenue per year: $114 billion (approximately $3,615.92 per second)
+***Revenue per year: $114 billion (approximately $3,615.92 per second)***
 
 Founded by: Liu Qiangdong (Richard Liu)
 
@@ -103,10 +96,9 @@ Challenges and future plans: JD.com faces competition from Alibaba but plans to 
 Value to customers: JD.com ensures product authenticity and fast delivery, enhancing the online shopping experience.
 
 
+<h3>5. Alibaba</h3>
 
-5. Alibaba
-
-Revenue per year: $72 billion (approximately $2,280.70 per second)
+***Revenue per year: $72 billion (approximately $2,280.70 per second)***
 
 Founded by: Jack Ma
 
@@ -125,10 +117,9 @@ Challenges and future plans: Alibaba is navigating regulatory challenges in Chin
 Value to customers: Alibaba provides a platform for small businesses to reach global markets easily.
 
 
+<h3>6. Tencent</h3>
 
-6. Tencent
-
-Revenue per year: $66 billion (approximately $2,092.84 per second)
+***Revenue per year: $66 billion (approximately $2,092.84 per second)***
 
 Founded by: Ma Huateng
 
@@ -147,10 +138,9 @@ Challenges and future plans: Tencent faces increasing competition in the gaming 
 Value to customers: Tencent offers a comprehensive suite of digital services, enhancing user connectivity and entertainment.
 
 
+<h3>7. eBay</h3>
 
-7. eBay
-
-Revenue per year: $59 billion (approximately $1,870.00 per second)
+***Revenue per year: $59 billion (approximately $1,870.00 per second)***
 
 Founded by: Pierre Omidyar
 
@@ -169,10 +159,9 @@ Challenges and future plans: eBay faces competition from other e-commerce platfo
 Value to customers: eBay provides a platform for consumers to buy and sell unique items worldwide.
 
 
+<h3>8. PayPal</h3>
 
-8. PayPal
-
-Revenue per year: $30 billion (approximately $951.32 per second)
+***Revenue per year: $30 billion (approximately $951.32 per second)***
 
 Founded by: Peter Thiel and others
 
@@ -191,10 +180,9 @@ Challenges and future plans: PayPal faces competition from new fintech players b
 Value to customers: PayPal offers a secure way to send and receive money online, enhancing financial transactions for consumers and businesses.
 
 
+<h3>9. Booking.com</h3>
 
-9. Booking.com
-
-Revenue per year: $21.3 billion (approximately $674.25 per second)
+***Revenue per year: $21.3 billion (approximately $674.25 per second)***
 
 Founded by: Geert-Jan Bruinsma
 
@@ -213,10 +201,9 @@ Challenges and future plans: Booking.com faces intense competition but aims to e
 Value to customers: Booking.com provides travelers with extensive options and price comparisons for accommodation and travel services.
 
 
+<h3>10. Salesforce</h3>
 
-10. Salesforce
-
-Revenue per year: $21 billion (approximately $665.78 per second)
+***Revenue per year: $21 billion (approximately $665.78 per second)***
 
 Founded by: Marc Benioff and Parker Harris
 
