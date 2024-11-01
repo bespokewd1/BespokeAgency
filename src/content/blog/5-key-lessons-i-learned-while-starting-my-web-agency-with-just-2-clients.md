@@ -75,17 +75,7 @@ These experiences have shaped my mindset as a web developer. I now see failure n
 
 As Thomas Edison famously said, “I have not failed. I’ve just found 10,000 ways that won’t work.” This quote rings true in any industry. Whatever your field may be, you will inevitably encounter failure. Instead of fearing it, embrace it as a chance to learn and grow. By adopting this mindset, you’ll build resilience and become more adept at navigating the challenges that come your way. Embracing setbacks as learning opportunities will ultimately lead to greater success in your business.
 
-
-
-
-
-
-
-
-
-
-
-6.	Never Stop Learning
+<h4>6.	Never Stop Learning</h4>
 
 I’ve learned that continuous learning is very important. The tech world is always changing and very competitive, so I make it a priority to keep my skills and knowledge updated. I recently finished a course in Web and Mobile Development at CDI College and completed an internship at Voyager Tek as an iOS Developer. This experience gave me new ideas and ways to think about development. Working with Native iOS was especially interesting!
 
@@ -95,15 +85,7 @@ Even after many years in tech, I learn something new every day. You can’t know
 
 I’ve also learned to be open to different tech stacks. I’m getting interested in Bitcoin and affiliate marketing, and I’m currently creating new personal projects related to that. With some traction on my website, I got approved as an associate for Amazon Canada and affiliate marketer for a couple of SAAS products like vps, hosting and domain sites. 
 
-
-
-
-
-
-
-
-
-
+<img src="laptop.jpg" alt="laptop"/>
 
 In closing, the lessons I've shared remind me that as a small business owner, I've got nothing to lose. I came into this journey with determination and a willingness to learn. So, embrace every opportunity and take risks while you are physically and mentally capable. This is the time to push boundaries, innovate, and build a future that reflects your dreams. Don’t wait for the perfect moment—create it!
 
