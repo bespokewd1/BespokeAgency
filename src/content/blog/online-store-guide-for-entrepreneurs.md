@@ -22,6 +22,8 @@ Shopify is an all-in-one eCommerce platform that enables anyone to create, custo
 
 Popular among businesses of all sizes—from small startups to well-known brands—Shopify hosts over 4 million stores globally, with notable brands like Gymshark and Tesla using it for their online sales.
 
+<img class="/assets/images/blog/shopify-process.jpg" />
+
 <h4>1. Store Setup</h4>
 
 Shopify’s easy setup process helps you establish your store’s basic structure, including adding products, choosing a theme, and setting up categories.
