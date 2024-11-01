@@ -4086,7 +4086,7 @@ color: #000;
           flex-direction: column;
           align-items: center;
           /* 48px - 64px */
-          gap: clamp(.5rem, 6vw, 1rem);
+          gap: clamp(1rem, 6vw, 2rem);
           position: relative;
       }
 
@@ -4098,6 +4098,21 @@ color: #000;
           justify-content: space-between;
           align-items: flex-end;
           gap: (24/16rem);
+      }
+      .cs-container.cs-subhead{
+        flex-direction: column;
+        text-align: left;
+        justify-content: flex-start;
+        gap: .5rem;
+
+        h3{
+          width: 100%;  
+        }
+        .cs-text{
+          width: 100% !important;
+          max-width: unset;
+          text-align: left;
+        }
       }
 
       .cs-title {
