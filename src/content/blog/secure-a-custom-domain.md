@@ -53,6 +53,8 @@ With your domain secured, you can create a simple website to serve as your onlin
 
 <h3>Wrapping Up</h3>
 
+<img src="/assets/images/blog/domain-to-money.jpg"/>
+
 A custom domain is a valuable asset that establishes your business’s online presence, giving you control over how customers find and interact with you. Whether you're ready to start a full website or just want a simple page that represents your business, a domain name is a crucial first step.
 
 *Ready to get started? Visit <a href="https://namecheap.pxf.io/Kjov1a" target="_blank">Namecheap</a> to secure your domain name today!*
