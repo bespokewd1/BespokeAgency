@@ -13,8 +13,6 @@ tags:
 image: /assets/images/blog/man-working-in-a-dark-room.jpg
 imageAlt: man working in a dark room
 ---
-5 Key Lessons I Learned While Starting My Web Agency with Just 2 Clients
-
 Starting a web agency from scratch with only two clients sounds risky, right? The journey was full of hard lessons, unexpected wins, and some epic failures. But each experience pushed me forward and taught me something invaluable. Here are five key lessons I learned on this wild entrepreneurial ride—and why you should consider them if you’re starting your own business, too.
 
 <h3>1. Don’t Overthink – Just Get Started!</h3>
