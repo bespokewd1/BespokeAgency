@@ -19,7 +19,7 @@ When launching a website, choosing the right hosting service is a foundational s
 
 Choosing the right hosting is like picking the best location for a store or office. Here’s a breakdown of different types of hosting and how they align with the needs of various businesses, complete with examples and estimated visitor capacities.
 
-<img src="/assets/images/blog/bram-naus-n8qb1zakk88-unsplash.jpg" />
+<img src="/assets/images/blog/bram-naus-n8qb1zakk88-unsplash.jpg" alt="types of hosting"/>
 
 <h3>1. Shared Hosting: An Affordable Starting Point</h3>
 

@@ -6,14 +6,14 @@ author: Charles M
 date: 2024-11-01T05:28:00.000Z
 tags:
   - post
-image: /assets/images/blog/about2.jpg
+image: /assets/images/blog/man-working-in-a-dark-room.jpg
 imageAlt: change photo pls ty
 ---
 5 Key Lessons I Learned While Starting My Web Agency with Just 2 Clients
 
 Starting a small business—like a web agency—isn’t easy, especially when you're kicking things off with just a couple of clients and a lot of big ideas. I’ve learned quite a few valuable lessons in this journey so far—here are five that have been essential in helping me grow and stay motivated, even on the toughest days!
 
-1. Don’t Overthink – Just Get Started!
+<h3>1. Don’t Overthink – Just Get Started!</h3>
 
 It’s easy to get wrapped up in planning every little detail. I spent a lot of time looking into different business models and thinking about what my web design agency would look like. During this time, I worried about costs and the chance of losing money on my tools. I even spent hours feeling unhappy with my designs and business plans. In the end, I realized that no amount of planning can really get you fully ready.
 
@@ -27,7 +27,7 @@ Sometimes, due to our 9-to-5 jobs, it can be tough to brainstorm ideas or think 
 
 I reached out to friends in sales, accounting, web development, and actual business owners. While they shared valuable insights, I quickly realized that everyone has their own commitments, so I couldn't expect too much assistance. And that’s perfectly fine! I appreciate their time and expertise, which taught me that sometimes you have to depend on yourself and take the initiative. It’s hard to find a mentor who will guide you without expecting something in return, so let's face it: no one will do it for you. The key is to just get started now, as no one really cares. Focus on creating value and being useful!
 
-2. Support May Not Come from Where You Expect It
+<h3>2. Support May Not Come from Where You Expect It</h3>
 
 One surprising thing I’ve discovered is that friends and family, while well-meaning, might not be your biggest supporters. They may not fully understand your vision, the risks you’re taking, or even the excitement that drives you forward. Jack Ma, the founder of Alibaba, once said, “When you have a big idea, friends and family won’t understand it; it’s strangers who will support you first.” This couldn’t be more accurate. Friends and family often see us as who we’ve always been, not necessarily as who we’re trying to become.
 
@@ -37,15 +37,15 @@ However, I’ve also faced frustration when asking friends and family for suppor
 
 This kind of support has shown me the value of networking beyond my usual circle. By reaching out to people in your industry, joining online communities, or attending local events, you can build relationships based on shared interests and goals. In many cases, these connections can be incredibly uplifting, and some may even turn into long-term clients, collaborators, or mentors. Embracing support from new and unexpected sources has been a powerful and humbling lesson in this journey.
 
-3. Learn to Delegate – Don’t Be Afraid to Ask for Help
+<h3>3. Learn to Delegate – Don’t Be Afraid to Ask for Help</h3>
 
 When I first started, I felt like I had to do everything myself—after all, this was my business, and I wanted control over every detail. But quickly, I learned that trying to juggle every single task, from technical troubleshooting to graphic design, led to burnout and slowed my progress. Asking for help and delegating has been a huge relief, bringing in fresh perspectives and skills that enhance my work.
 
-One project taught me this lesson well. I spent three days wrestling with a logo design issue, trying every trick I could find—even using AI tools and endless Google searches—but nothing worked. Finally, I reached out to a web dev group I’m part of, and within a short time, someone spotted the issue and guided me through a solution. That experience was a real eye-opener: no matter how much you learn, you can’t know everything!
+One project taught me this lesson well. I spent three days wrestling with a logo design issue, trying every trick I could find—even using AI tools and endless Google searches—but nothing worked. Finally, I reached out to a web dev group I’m part of, and within a short time, someone spotted the issue and guided me through a solution. That experience was a real eye-opener: no matter how much you learn; you can’t know everything!
 
 Since then, I’ve made it a habit to tap into different resources and communities when I’m stuck. Whether it’s my Discord group, classmates from web dev courses, or a web design group, each community offers unique insights that have helped me solve complex challenges. Learning to contract out specialized tasks when needed and knowing whom to reach out to for help has been essential for my growth and sanity. Embracing others' knowledge has shown me that collaboration can lead to better outcomes than trying to go it alone.
 
-4. Be Ready for the Stress – But Don’t Let It Overwhelm You
+<h3>4. Be Ready for the Stress – But Don’t Let It Overwhelm You</h3>
 
 Starting a business is super exciting, but it can also be pretty stressful. You have to juggle taxes, finances, client expectations, and various subscriptions—all of which can feel like big mountains to climb! To make it easier, stay organized and break tasks down into smaller steps. Taking things one at a time really helps! And remember to celebrate the small wins; they keep you motivated on tough days.
 
@@ -55,19 +55,19 @@ Even though I’m not making that much yet, I believe my business will grow into
 
 And ensure to find that balance, as no one gets out of here alive!
 
-5. Embrace Failure as a Learning Opportunity
+<h3>5. Embrace Failure as a Learning Opportunity</h3>
 
 Starting a marketing business in web development comes with its own set of challenges. While many think the toughest part is the technical aspects or project creation, I’ve discovered that the real challenges often stem from the mental side. Here are a few common setbacks I’ve faced and how I learned to view them as opportunities for growth:
 
-•	Rejection from Clients:
+<h4>Rejection from Clients</h4>
 
 It can be tough to hear "no" after investing time and effort into a proposal. Instead of seeing rejection as a reflection of my skills, I now view it as valuable feedback. I analyze what went wrong and use that information to improve my approach for future interactions.
 
-•	“Seen Zoned”:
+<h4>“Seen Zoned”</h4>
 
 Getting “seen zoned” can be disheartening when you put your heart into reaching out to a potential client only for them to leave your message unread. This experience teaches me the importance of crafting compelling messages that grab attention. I work on my communication skills to ensure that my emails and pitches are engaging and clear.
 
-•	Failed Upsells:
+<h4>Failed Upsells</h4>
 
 When attempts to upsell additional services fall flat, it’s easy to feel discouraged. However, each failed upsell is a learning moment. I reflect on why the client didn’t see the value in the extra services and adjust my approach accordingly. This helps me refine my offerings and tailor them better to meet clients' needs.
 
