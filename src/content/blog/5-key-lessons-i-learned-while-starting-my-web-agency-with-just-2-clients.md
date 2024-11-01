@@ -85,7 +85,7 @@ Even after many years in tech, I learn something new every day. You can’t know
 
 I’ve also learned to be open to different tech stacks. I’m getting interested in Bitcoin and affiliate marketing, and I’m currently creating new personal projects related to that. With some traction on my website, I got approved as an associate for Amazon Canada and affiliate marketer for a couple of SAAS products like vps, hosting and domain sites. 
 
-<img src="laptop.jpg" alt="laptop"/>
+<img src="/assets/images/blog/laptop.jpg" alt="laptop"/>
 
 In closing, the lessons I've shared remind me that as a small business owner, I've got nothing to lose. I came into this journey with determination and a willingness to learn. So, embrace every opportunity and take risks while you are physically and mentally capable. This is the time to push boundaries, innovate, and build a future that reflects your dreams. Don’t wait for the perfect moment—create it!
 
