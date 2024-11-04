@@ -1,7 +1,9 @@
 ---
 title: "GitHub 101: The Ultimate Beginner’s Guide to Collaboration"
 url: github-beginner-guide
-description: This article aims to help students, web developers, and tech enthusiasts explore GitHub while I share tips from my journey as a small web agency and reinforce my own learning.
+description: This article aims to help students, web developers, and tech
+  enthusiasts explore GitHub while I share tips from my journey as a small web
+  agency and reinforce my own learning.
 author: Charles M
 date: 2024-11-04T17:34:00.000Z
 tags:
@@ -58,7 +60,7 @@ To work on your code locally, you’ll need to clone (or download) the repositor
 
 1. *bash* 
 2. Copy Code
-3. *git clone [URL_of_your_repo]*
+3. *git clone \[URL_of_your_repo]*
 
 Cloning creates a local copy of the repository, allowing you to make changes without affecting the original files until you’re ready.
 
@@ -68,7 +70,7 @@ To work on a new feature or fix a bug without affecting the main codebase, creat
 
 1. *bash* 
 2. Copy Code
-3. *git checkout -b [branch_name]*
+3. *git checkout -b \[branch_name]*
 
 For example, if you’re adding a new feature, you might name your branch feature/add-login. This command does two things: it creates a new branch and switches you to that branch.
 
@@ -96,7 +98,7 @@ To share your updates with others or save them on GitHub, use:
 
 1. *bash* 
 2. Copy Code
-3. *git push origin [branch_name]*
+3. *git push origin \[branch_name]*
 
 This uploads your commits from your local machine to the GitHub repository, making your changes visible to anyone who has access.
 
@@ -138,7 +140,7 @@ Understanding some basic Git commands will make your experience with GitHub much
           </thead>
           <tbody>
               <tr class="cs-tr">
-                  <td class="cs-td">git clone [URL]</td>
+                  <td class="cs-td">git clone \[URL]</td>
                   <td class="cs-td">Copies a repository from GitHub to your local machine</td>
                   <td class="cs-td">git clone https://github.com/user/repo.git</td>
               </tr>
@@ -148,7 +150,7 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git status</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git add [file]</td>
+                  <td class="cs-td">git add \[file]</td>
                   <td class="cs-td">Stages a file for commit</td>
                   <td class="cs-td">git add index.html</td>
               </tr>
@@ -158,12 +160,12 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git commit -m "Add homepage layout"</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git push origin [branch_name]</td>
+                  <td class="cs-td">git push origin \[branch_name]</td>
                   <td class="cs-td">Pushes your commits to the specified branch on GitHub</td>
                   <td class="cs-td">git push origin feature/add-login</td>
               </tr>
                <tr class="cs-tr">
-                  <td class="cs-td">git pull origin [branch_name]</td>
+                  <td class="cs-td">git pull origin \[branch_name]</td>
                   <td class="cs-td">Fetches changes from the remote repository and merges them</td>
                   <td class="cs-td">git pull origin main</td>
               </tr>
@@ -185,3 +187,33 @@ Once you’re comfortable with the basics, GitHub offers advanced features to en
 <li>Forking Repositories: Create a copy of another user’s repository to experiment with changes without affecting the original project. This is particularly useful for contributing to open-source projects.</li>
 <li>Using Issues and Project Boards: Organize your work by creating issues for bugs or tasks and managing them with project boards, providing a clear overview of progress and priorities.</li>
 </ul>
+
+
+
+**Here are some easy-to-use GitHub projects that beginners can practice and fork, along with their difficulty ratings and descriptions:**
+
+ **1. HTML5 Boilerplate** (Difficulty: 1)
+
+This project is a powerful front-end template that provides a solid foundation for building fast, robust web applications. It includes all the necessary elements to kickstart your development process, making it ideal for beginners. You can fork it at https://github.com/h5bp/html5-boilerplate.
+
+ **2. Personal Portfolio Template** (Difficulty: 2)
+
+This customizable portfolio template is designed to showcase your work with a modern aesthetic using HTML, CSS, and JavaScript. It’s an excellent way to present your projects and skills to potential employers. You can find it and fork it at https://github.com/codewithsadee/vcard-personal-portfolio.
+
+  **3. Bootstrap Templates** (Difficulty: 2)
+
+This repository offers a collection of responsive front-end templates built with Bootstrap, allowing you to create sleek, modern websites quickly. It's perfect for those looking to learn how to use Bootstrap effectively. You can explore and fork it at https://github.com/mdbootstrap/bootstrap-templates.
+
+ ** 4. Super Mario Bros. in JavaScript** (Difficulty: 3)
+
+This project features a fully playable version of Super Mario Bros. built with JavaScript. You can fork this repository to understand the game mechanics, modify the code, and even create your own levels. It’s a fun way to enhance your JavaScript skills while working on an interactive project. You can fork it at https://github.com/meth-meth-method/super-mario.
+
+These projects provide a fantastic opportunity to enhance your coding skills, explore GitHub, and gain hands-on experience with real-world applications. By forking these repositories, you can modify the code and personalize them to improve your understanding and expertise in web development. Happy coding!
+
+**Conclusion**
+
+Getting started with GitHub might seem overwhelming at first, but once you familiarize yourself with the basic commands and workflows, you'll find it an invaluable tool in your web development toolkit. Whether you’re working on personal projects or collaborating with a team, GitHub simplifies the coding process and helps you stay organized.
+
+Remember, practice is key! Explore the sample repositories, play around with the commands, and soon you’ll feel right at home on GitHub. Happy coding!
+
+*This blog was created to share knowledge and foster a community of learners.*
