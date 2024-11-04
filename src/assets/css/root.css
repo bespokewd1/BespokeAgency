@@ -3541,7 +3541,7 @@
 
 .cs-tooltip .cs-tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 500px;
   background-color: black;
   color: #fff;
   text-align: center;
