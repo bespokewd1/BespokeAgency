@@ -188,23 +188,25 @@ Once you’re comfortable with the basics, GitHub offers advanced features to en
 <li>Using Issues and Project Boards: Organize your work by creating issues for bugs or tasks and managing them with project boards, providing a clear overview of progress and priorities.</li>
 </ul>
 
-**Here are some easy-to-use GitHub projects that beginners can practice and fork, along with their difficulty ratings and descriptions:**
 
- **1. HTML5 Boilerplate** (Difficulty: 1)
 
-This project is a powerful front-end template that provides a solid foundation for building fast, robust web applications. It includes all the necessary elements to kickstart your development process, making it ideal for beginners. You can fork it at https://github.com/h5bp/html5-boilerplate.
+Here are some easy-to-use GitHub projects that beginners can practice and fork, along with their difficulty ratings and descriptions:
 
- **2. Personal Portfolio Template** (Difficulty: 2)
+**HTML5 Boilerplate (Difficulty: 1)**
 
-This customizable portfolio template is designed to showcase your work with a modern aesthetic using HTML, CSS, and JavaScript. It’s an excellent way to present your projects and skills to potential employers. You can find it and fork it at https://github.com/codewithsadee/vcard-personal-portfolio.
+This project is a powerful front-end template that provides a solid foundation for building fast, robust web applications. It includes all the necessary elements to kickstart your development process, making it ideal for beginners. You can fork it at <a href="https://github.com/h5bp/html5-boilerplate" target="_blank" rel="noopener noreferrer">https://github.com/h5bp/html5-boilerplate</a>.
 
-  **3. Bootstrap Templates** (Difficulty: 2)
+**Personal Portfolio Template (Difficulty: 2)**
 
-This repository offers a collection of responsive front-end templates built with Bootstrap, allowing you to create sleek, modern websites quickly. It's perfect for those looking to learn how to use Bootstrap effectively. You can explore and fork it at https://github.com/mdbootstrap/bootstrap-templates.
+This customizable portfolio template is designed to showcase your work with a modern aesthetic using HTML, CSS, and JavaScript. It’s an excellent way to present your projects and skills to potential employers. You can find it and fork it at <a href="https://github.com/codewithsadee/vcard-personal-portfolio" target="_blank" rel="noopener noreferrer">https://github.com/codewithsadee/vcard-personal-portfolio</a>.
 
-  **4. Super Mario Bros. in JavaScript** (Difficulty: 3)
+**Bootstrap Templates (Difficulty: 2)**
 
-This project features a fully playable version of Super Mario Bros. built with JavaScript. You can fork this repository to understand the game mechanics, modify the code, and even create your own levels. It’s a fun way to enhance your JavaScript skills while working on an interactive project. You can fork it at https://github.com/meth-meth-method/super-mario.
+This repository offers a collection of responsive front-end templates built with Bootstrap, allowing you to create sleek, modern websites quickly. It's perfect for those looking to learn how to use Bootstrap effectively. You can explore and fork it at <a href="https://github.com/mdbootstrap/bootstrap-templates" target="_blank" rel="noopener noreferrer">https://github.com/mdbootstrap/bootstrap-templates</a>.
+
+**Super Mario Bros. in JavaScript (Difficulty: 3)**
+
+This project features a fully playable version of Super Mario Bros. built with JavaScript. You can fork this repository to understand the game mechanics, modify the code, and even create your own levels. It’s a fun way to enhance your JavaScript skills while working on an interactive project. You can fork it at <a href="https://github.com/meth-meth-method/super-mario" target="_blank" rel="noopener noreferrer">https://github.com/meth-meth-method/super-mario</a>.
 
 These projects provide a fantastic opportunity to enhance your coding skills, explore GitHub, and gain hands-on experience with real-world applications. By forking these repositories, you can modify the code and personalize them to improve your understanding and expertise in web development. Happy coding!
 
