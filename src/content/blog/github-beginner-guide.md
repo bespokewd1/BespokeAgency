@@ -122,7 +122,7 @@ While this article focuses on GitHub, it’s important to know that there are ot
 
 In this article, we are focusing on GitHub because it’s user-friendly and widely adopted, making it the go-to choice for many developers. Its collaborative features and robust community support make it ideal for beginners and experienced developers alike.
 
-<h3>5. Top Commonly Used Commands: Cheat Sheet for Developers (create a quickboxchart)</h3>
+<h3>5. Top Commonly Used Commands: Cheat Sheet for Developers </h3>
 
 Understanding some basic Git commands will make your experience with GitHub much smoother. Here are some essential commands to get you started:
 
@@ -140,7 +140,7 @@ Understanding some basic Git commands will make your experience with GitHub much
           </thead>
           <tbody>
               <tr class="cs-tr">
-                  <td class="cs-td">git clone \[URL]</td>
+                  <td class="cs-td">git clone \\[URL]</td>
                   <td class="cs-td">Copies a repository from GitHub to your local machine</td>
                   <td class="cs-td">git clone https://github.com/user/repo.git</td>
               </tr>
@@ -150,7 +150,7 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git status</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git add \[file]</td>
+                  <td class="cs-td">git add \\[file]</td>
                   <td class="cs-td">Stages a file for commit</td>
                   <td class="cs-td">git add index.html</td>
               </tr>
@@ -160,12 +160,12 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git commit -m "Add homepage layout"</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git push origin \[branch_name]</td>
+                  <td class="cs-td">git push origin \\[branch_name]</td>
                   <td class="cs-td">Pushes your commits to the specified branch on GitHub</td>
                   <td class="cs-td">git push origin feature/add-login</td>
               </tr>
                <tr class="cs-tr">
-                  <td class="cs-td">git pull origin \[branch_name]</td>
+                  <td class="cs-td">git pull origin \\[branch_name]</td>
                   <td class="cs-td">Fetches changes from the remote repository and merges them</td>
                   <td class="cs-td">git pull origin main</td>
               </tr>
@@ -188,8 +188,6 @@ Once you’re comfortable with the basics, GitHub offers advanced features to en
 <li>Using Issues and Project Boards: Organize your work by creating issues for bugs or tasks and managing them with project boards, providing a clear overview of progress and priorities.</li>
 </ul>
 
-
-
 **Here are some easy-to-use GitHub projects that beginners can practice and fork, along with their difficulty ratings and descriptions:**
 
  **1. HTML5 Boilerplate** (Difficulty: 1)
@@ -204,7 +202,7 @@ This customizable portfolio template is designed to showcase your work with a mo
 
 This repository offers a collection of responsive front-end templates built with Bootstrap, allowing you to create sleek, modern websites quickly. It's perfect for those looking to learn how to use Bootstrap effectively. You can explore and fork it at https://github.com/mdbootstrap/bootstrap-templates.
 
- ** 4. Super Mario Bros. in JavaScript** (Difficulty: 3)
+  **4. Super Mario Bros. in JavaScript** (Difficulty: 3)
 
 This project features a fully playable version of Super Mario Bros. built with JavaScript. You can fork this repository to understand the game mechanics, modify the code, and even create your own levels. It’s a fun way to enhance your JavaScript skills while working on an interactive project. You can fork it at https://github.com/meth-meth-method/super-mario.
 
