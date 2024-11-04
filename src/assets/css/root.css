@@ -3533,3 +3533,34 @@
   padding-top:0;
 }
 
+.cs-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.cs-tooltip .cs-tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  top: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.cs-tooltip:hover .cs-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
