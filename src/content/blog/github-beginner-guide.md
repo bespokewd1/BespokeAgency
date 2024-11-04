@@ -56,11 +56,9 @@ Start by creating a new repository on GitHub. Think of a repository as a project
 
 To work on your code locally, you’ll need to clone (or download) the repository to your computer. This can be done using the command:
 
-<ol>
-<li>*bash*</li>
-<li>Copy Code</li>
-<li>*git clone [URL_of_your_repo]*</li>
-</ol>
+1. *bash* 
+2. Copy Code
+3. *git clone [URL_of_your_repo]*
 
 Cloning creates a local copy of the repository, allowing you to make changes without affecting the original files until you’re ready.
 
