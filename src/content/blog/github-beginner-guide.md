@@ -8,7 +8,7 @@ tags:
   - post
   - featured
   - latest
-image: /assets/images/blog/earnings-per-second.jpg
+image: /assets/images/blog/code-placeholder.jpg
 imageAlt: Placeholder
 ---
 *Reading time: 10 minutes*
@@ -21,7 +21,7 @@ GitHub is a valuable platform for anyone learning to code, working on software p
 
 In this article, I'll walk you through GitHub's essential features, show you how to set up a project, and introduce some helpful commands and workflows.
 
-<img src="/assets/images/blog/earnings-per-second.jpg" />
+<img src="/assets/images/blog/code-placeholder.jpg" />
 
 <h3>1. A Quick History of GitHub</h3>
 
@@ -46,7 +46,7 @@ If you're new to coding, GitHub might seem intimidating, but it’s packed with 
 
 Let’s walk through a basic workflow to help you understand how GitHub is used in day-to-day projects. This guide can be useful whether you're working alone or collaborating with a team.
 
-<img src="/assets/images/blog/earnings-per-second.jpg" />
+<img src="/assets/images/blog/code-placeholder.jpg" />
 
 <h4>Step 1: Create a Repository</h4>
 
