@@ -62,7 +62,7 @@ By choosing Shopify, you have a reliable, scalable solution that grows with your
 
 <h4>1. Sign Up for a Free Trial</h4>
 
-Start with <a href="https://shopify.pxf.io/c/5804036/1061744/13624" target="_blank">Shopify’s 14-day free trial</a>, which lets you explore features and build a basic store before committing.
+Start with <a href="https://shopify.pxf.io/c/5804036/1061744/13624" target="_top">Shopify’s 14-day free trial</a>, which lets you explore features and build a basic store before committing.
 
 <h4>2. Pick a Plan</h4>
 
@@ -129,4 +129,4 @@ These differences highlight why Shopify remains a go-to choice for many entrepre
 
 <h3>Get Started with Shopify</h3>
 
-Ready to bring your business online? <a href="https://shopify.pxf.io/c/5804036/1061744/13624" target="_blank">Sign up for Shopify here</a> and start building your online store today! It’s time to launch your brand, reach new customers, and grow your business effortlessly with Shopify’s powerful tools and support.
+Ready to bring your business online? <a href="https://shopify.pxf.io/c/5804036/1061744/13624" target="_top">Sign up for Shopify here</a> and start building your online store today! It’s time to launch your brand, reach new customers, and grow your business effortlessly with Shopify’s powerful tools and support.
