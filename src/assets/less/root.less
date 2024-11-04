@@ -4076,6 +4076,14 @@ color: #000;
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+  #cta-403.cs-image-only{
+    background: none;
+     .cs-container{
+        flex-direction: column;
+        gap: 0;
+     }
+  }
+  
   #cta-403 {
       padding: var(--sectionPadding);
       position: relative;
@@ -4196,13 +4204,6 @@ color: #000;
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #cta-403.cs-image-only{
-    background: none;
-     .cs-container{
-        flex-direction: column;
-        gap: 0;
-     }
-  }
   #cta-403 {
     background: #00000070;
 
@@ -4323,6 +4324,9 @@ color: #000;
 }
 body.dark-mode #cta-403 .cs-text.cs-tooltip {
   color: #fff !important;
+}
+#cta-403.cs-image-only {
+
 }
 
 /*Responsive Display*/
