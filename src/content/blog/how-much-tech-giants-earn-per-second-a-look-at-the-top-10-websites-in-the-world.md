@@ -10,7 +10,7 @@ tags:
   - featured
   - latest
 image: /assets/images/blog/earnings-per-second.jpg
-imageAlt: Change that photo -just temporary
+imageAlt: Tech Earn Money
 ---
 As a entrepreneur and agency aiming to create value for small businesses, I've often found inspiration in the successes of tech giants. We use their services daily—think of Google, Facebook, and Netflix—but have you ever wondered just how much they earn per second? How long did it take them to reach these heights, and what tech stacks do they rely on? Let’s dive into these impressive figures and uncover what makes these companies tick.
 
