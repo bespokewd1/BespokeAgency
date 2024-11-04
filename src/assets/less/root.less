@@ -4083,7 +4083,7 @@ color: #000;
         gap: 0;
      }
   }
-  
+
   #cta-403 {
       padding: var(--sectionPadding);
       position: relative;
@@ -4331,7 +4331,7 @@ body.dark-mode #cta-403 .cs-text.cs-tooltip {
 
 /*Responsive Display*/
 @media only screen and (min-width: 0rem) {
-  .cs-large-device-only{
+  .cs-large-device-only, .cs-medium-device-only{
     display: none;
   }
   .cs-small-device-only img{
@@ -4341,10 +4341,18 @@ body.dark-mode #cta-403 .cs-text.cs-tooltip {
   }
 }
 @media only screen and (min-width: 48rem) {
-  .cs-large-device-only{
+  .cs-medium-device-only{
     display: block;
   }
   .cs-small-device-only{
+    display: none;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .cs-large-device-only{
+    display: block;
+  }
+  .cs-medium-device-only{
     display: none;
   }
 }
