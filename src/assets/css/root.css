@@ -3541,7 +3541,7 @@
 
 .cs-tooltip .cs-tooltiptext {
   visibility: hidden;
-  width: 500px;
+  width: 400px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -3554,6 +3554,7 @@
   margin-left: -60px;
   opacity: 0;
   transition: opacity .3s;
+  font-size: 12px;
 }
 
 .cs-tooltip:hover .cs-tooltiptext {
