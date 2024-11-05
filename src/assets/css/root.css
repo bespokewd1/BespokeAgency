@@ -3172,8 +3172,7 @@
     line-height: 1.2em;
     /* margin-top pushes price information to bottom when there are different list lengths. padding-top keeps a minimum distance between price and list */
     margin-top: auto;
-    /* 48px - 64px */
-    padding-top: clamp(3rem, 6vw, 4rem);
+    padding-top: clamp(1.5rem, 6vw, 2rem);
     color: var(--headerColor);
     display: flex;
     align-items: baseline;
