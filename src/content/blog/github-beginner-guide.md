@@ -10,7 +10,7 @@ tags:
   - post
   - featured
   - latest
-image: /assets/images/blog/code-placeholder.jpg
+image: /assets/images/blog/git_workflow.png
 imageAlt: Placeholder
 ---
 *Reading time: 10 minutes*
