@@ -23,7 +23,7 @@ GitHub is a valuable platform for anyone learning to code, working on software p
 
 In this article, I'll walk you through GitHub's essential features, show you how to set up a project, and introduce some helpful commands and workflows.
 
-<img src="/assets/images/blog/code-placeholder.jpg" />
+<img src="/assets/images/blog/Git_workflow.png" />
 
 <h3>1. A Quick History of GitHub</h3>
 
@@ -140,7 +140,7 @@ Understanding some basic Git commands will make your experience with GitHub much
           </thead>
           <tbody>
               <tr class="cs-tr">
-                  <td class="cs-td">git clone \\[URL]</td>
+                  <td class="cs-td">git clone \\\[URL]</td>
                   <td class="cs-td">Copies a repository from GitHub to your local machine</td>
                   <td class="cs-td">git clone https://github.com/user/repo.git</td>
               </tr>
@@ -150,7 +150,7 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git status</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git add \\[file]</td>
+                  <td class="cs-td">git add \\\[file]</td>
                   <td class="cs-td">Stages a file for commit</td>
                   <td class="cs-td">git add index.html</td>
               </tr>
@@ -160,12 +160,12 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git commit -m "Add homepage layout"</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git push origin \\[branch_name]</td>
+                  <td class="cs-td">git push origin \\\[branch_name]</td>
                   <td class="cs-td">Pushes your commits to the specified branch on GitHub</td>
                   <td class="cs-td">git push origin feature/add-login</td>
               </tr>
                <tr class="cs-tr">
-                  <td class="cs-td">git pull origin \\[branch_name]</td>
+                  <td class="cs-td">git pull origin \\\[branch_name]</td>
                   <td class="cs-td">Fetches changes from the remote repository and merges them</td>
                   <td class="cs-td">git pull origin main</td>
               </tr>
@@ -187,8 +187,6 @@ Once you’re comfortable with the basics, GitHub offers advanced features to en
 <li>Forking Repositories: Create a copy of another user’s repository to experiment with changes without affecting the original project. This is particularly useful for contributing to open-source projects.</li>
 <li>Using Issues and Project Boards: Organize your work by creating issues for bugs or tasks and managing them with project boards, providing a clear overview of progress and priorities.</li>
 </ul>
-
-
 
 Here are some easy-to-use GitHub projects that beginners can practice and fork, along with their difficulty ratings and descriptions:
 
