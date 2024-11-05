@@ -56,11 +56,7 @@ Let’s walk through a basic workflow to help you understand how GitHub is used 
 
 Start by creating a new repository on GitHub. Think of a repository as a project folder where all your files and code will be stored. Give it a descriptive name and choose whether it will be public (accessible to anyone) or private (only accessible to you and those you invite).
 
-
-
 ![](/assets/images/blog/new-repo.png)
-
-
 
 <h4>Step 2: Clone the Repository</h4>
 
@@ -84,8 +80,6 @@ To work on a new feature or fix a bug without affecting the main codebase, creat
 
 For example, if you’re adding a new feature, you might name your branch feature/add-login. This command does two things: it creates a new branch and switches you to that branch.
 
-
-
 **Benefits of Using Branches:**
 
 <ul>
@@ -103,10 +97,6 @@ Open your project in your code editor and start making changes. Once you’re ha
 3. *git commit -m "Descriptive message about changes"*
 
 Make sure your commit message explains what changes you made; this helps others (and you) understand the project history.
-
-
-
-
 
 <h4>Step 5: Push Changes to GitHub</h4>
 
@@ -156,7 +146,7 @@ Understanding some basic Git commands will make your experience with GitHub much
           </thead>
           <tbody>
               <tr class="cs-tr">
-                  <td class="cs-td">git clone \\\\[URL]</td>
+                  <td class="cs-td">git clone \\\\\[URL]</td>
                   <td class="cs-td">Copies a repository from GitHub to your local machine</td>
                   <td class="cs-td">git clone https://github.com/user/repo.git</td>
               </tr>
@@ -166,7 +156,7 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git status</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git add \\\\[file]</td>
+                  <td class="cs-td">git add \\\\\[file]</td>
                   <td class="cs-td">Stages a file for commit</td>
                   <td class="cs-td">git add index.html</td>
               </tr>
@@ -176,12 +166,12 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git commit -m "Add homepage layout"</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git push origin \\\\[branch_name]</td>
+                  <td class="cs-td">git push origin \\\\\[branch_name]</td>
                   <td class="cs-td">Pushes your commits to the specified branch on GitHub</td>
                   <td class="cs-td">git push origin feature/add-login</td>
               </tr>
                <tr class="cs-tr">
-                  <td class="cs-td">git pull origin \\\\[branch_name]</td>
+                  <td class="cs-td">git pull origin \\\\\[branch_name]</td>
                   <td class="cs-td">Fetches changes from the remote repository and merges them</td>
                   <td class="cs-td">git pull origin main</td>
               </tr>
@@ -230,4 +220,5 @@ Getting started with GitHub might seem overwhelming at first, but once you famil
 
 Remember, practice is key! Explore the sample repositories, play around with the commands, and soon you’ll feel right at home on GitHub. Happy coding!
 
+*Image Credits: Images are used for illustrative purposes only. All rights to respective owners.*\
 *This blog was created to share knowledge and foster a community of learners.*
