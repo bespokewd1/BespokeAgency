@@ -11,11 +11,9 @@ tags:
 image: /assets/images/blog/code-placeholder.jpg
 imageAlt: Placeholder
 ---
-![]()
 
 *Reading time: 10 minutes*
 
-*This article aims to help students, web developers, and tech enthusiasts explore GitHub while I share tips from my journey as a small web agency and reinforce my own learning.*
 
 <h3>Customer Attraction Checklist for Trades Professionals</h3>
 
@@ -93,7 +91,6 @@ Welcome to your essential guide for attracting more customers to your trades bus
 
 **Checklist Items:**
 
-
 <ul>
 <li>Create accounts on relevant social media platforms.</li>
 <li>Develop a content calendar for regular posting.</li>
@@ -108,8 +105,6 @@ Welcome to your essential guide for attracting more customers to your trades bus
 <li>Repurpose content: Share blog posts as social media updates or email newsletters.</li>
 </ul>
 
-
-
 **Checklist Items:**
 
 <ul>
@@ -118,7 +113,7 @@ Welcome to your essential guide for attracting more customers to your trades bus
 <li>Create and share video content.</li>
 </ul>
 
-<h4>Section 6: Build Your Email List<h/4>
+<h4>Section 6: Build Your Email List</h4>
 
 <ul>
 <li>Offer incentives: Provide a free guide, discount, or exclusive content in exchange for email sign-ups.</li>
@@ -151,7 +146,6 @@ Welcome to your essential guide for attracting more customers to your trades bus
 </ul>
 
 <h4>Section 8: Implement Promotional Strategies</h4>
-
 <ul>
 <li>Create limited-time offers: Use special discounts or packages to attract new customers.</li>
 <li>Start a referral program: Reward existing customers for referring new clients to your business.</li>
