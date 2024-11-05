@@ -11,11 +11,6 @@ tags:
 image: /assets/images/blog/code-placeholder.jpg
 imageAlt: Placeholder
 ---
-![]()
-
-*Reading time: 10 minutes*
-
-*This article aims to help students, web developers, and tech enthusiasts explore GitHub while I share tips from my journey as a small web agency and reinforce my own learning.*
 
 <h3>Customer Attraction Checklist for Trades Professionals</h3>
 
