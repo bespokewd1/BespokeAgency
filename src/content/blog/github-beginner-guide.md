@@ -31,7 +31,7 @@ In this article, I'll walk you through GitHub's essential features, show you how
 
 GitHub was founded in 2008 by four developers: Tom Preston-Werner, Chris Wanstrath, PJ Hyett, and Scott Chacon. They aimed to make it easier to track and manage changes in code, a practice called version control. In 2018, GitHub was acquired by Microsoft for $7.5 billion, showcasing its value in the tech world.
 
-Fun Fact: GitHub is built on top of Git, a version control system created by Linus Torvalds, who also created the Linux operating system. Git’s design simplifies saving versions of your projects, making collaboration smoother and providing backup copies if things go wrong.
+**Fun Fact:** GitHub is built on top of Git, a version control system created by Linus Torvalds, who also created the Linux operating system. Git’s design simplifies saving versions of your projects, making collaboration smoother and providing backup copies if things go wrong.
 
 *“GitHub is the home for all developers. By joining forces with Microsoft, we strengthen GitHub’s commitment to being an open platform and provide developers with even more resources to innovate.”* - Satya Nadella, Microsoft CEO
 
@@ -40,10 +40,10 @@ Fun Fact: GitHub is built on top of Git, a version control system created by Lin
 If you're new to coding, GitHub might seem intimidating, but it’s packed with features that make it useful for all skill levels. Here’s why GitHub is so popular:
 
 <ul>
-<li>Version Control: Track changes to your code, making it easy to revert to previous versions if something goes wrong.</li>
-<li>Collaboration: Allows multiple people to work on the same project simultaneously without overwriting each other’s contributions.</li>
-<li>Portfolio Building: Show off your work! By hosting your projects on GitHub, you can build a portfolio that potential employers can view.</li>
-<li>Project Management: GitHub provides tools for managing your projects, including issue tracking and project boards.</li>
+<li>**Version Control:** Track changes to your code, making it easy to revert to previous versions if something goes wrong.</li>
+<li>**Collaboration:** Allows multiple people to work on the same project simultaneously without overwriting each other’s contributions.</li>
+<li>**Portfolio Building:** Show off your work! By hosting your projects on GitHub, you can build a portfolio that potential employers can view.</li>
+<li>**Project Management:** GitHub provides tools for managing your projects, including issue tracking and project boards.</li>
 </ul>
 
 <h3>3. A Common GitHub Workflow: Your Step-by-Step Guide</h3>
@@ -146,7 +146,7 @@ Understanding some basic Git commands will make your experience with GitHub much
           </thead>
           <tbody>
               <tr class="cs-tr">
-                  <td class="cs-td">git clone \\\\\[URL]</td>
+                  <td class="cs-td">git clone \\\\\\[URL]</td>
                   <td class="cs-td">Copies a repository from GitHub to your local machine</td>
                   <td class="cs-td">git clone https://github.com/user/repo.git</td>
               </tr>
@@ -156,7 +156,7 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git status</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git add \\\\\[file]</td>
+                  <td class="cs-td">git add \\\\\\[file]</td>
                   <td class="cs-td">Stages a file for commit</td>
                   <td class="cs-td">git add index.html</td>
               </tr>
@@ -166,12 +166,12 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git commit -m "Add homepage layout"</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git push origin \\\\\[branch_name]</td>
+                  <td class="cs-td">git push origin \\\\\\[branch_name]</td>
                   <td class="cs-td">Pushes your commits to the specified branch on GitHub</td>
                   <td class="cs-td">git push origin feature/add-login</td>
               </tr>
                <tr class="cs-tr">
-                  <td class="cs-td">git pull origin \\\\\[branch_name]</td>
+                  <td class="cs-td">git pull origin \\\\\\[branch_name]</td>
                   <td class="cs-td">Fetches changes from the remote repository and merges them</td>
                   <td class="cs-td">git pull origin main</td>
               </tr>
