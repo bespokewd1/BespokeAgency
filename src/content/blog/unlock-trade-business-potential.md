@@ -3,7 +3,7 @@ title: "Unlock Your Trades Business Potential: The Essential Guide to Attracting
 url: unlock-trade-business-potential
 description: Here’s the comprehensive content for the Customer Attraction Checklist lead magnet, designed specifically for trades professionals. This guide provides actionable insights and tools to help them attract more customers and grow their business.
 author: Charles M
-date: 2024-11-05T16:00:00.000Z
+date: 2024-11-05T10:00:00.000Z
 tags:
   - post
   - featured
