@@ -4309,31 +4309,36 @@ body.dark-mode #cta-403.cs-image-only{
 
 @media only screen and (min-width: 0rem) {
   #logo-carousel{
+      .cs-container{
+        padding: var(--sectionPadding);
+        padding-left: 0;
+        padding-right: 0;
+      }
       .blaze-nav {
         padding: 1.5rem 1rem
-    }
-    .blaze-pagination {
-        display:flex;
-        justify-content:center;
-        gap: 5px
-    }
-    .blaze-pagination button{
-        border-radius: 50%; /* Makes the button round */
-        background-color: #ccc; /* Default background color */
-        color: transparent;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease; /* Smooth transition when active */;
-        font-size: 0;
-        padding: 5px;
-    }
-    .blaze-pagination button.active{
-        background:var(--primary);
-    }
-    .blaze-slide {
-      max-width:50%;
-      flex: 0 0 50%;
-    }
+      }
+      .blaze-pagination {
+          display:flex;
+          justify-content:center;
+          gap: 5px
+      }
+      .blaze-pagination button{
+          border-radius: 50%; /* Makes the button round */
+          background-color: #ccc; /* Default background color */
+          color: transparent;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease; /* Smooth transition when active */;
+          font-size: 0;
+          padding: 5px;
+      }
+      .blaze-pagination button.active{
+          background:var(--primary);
+      }
+      .blaze-slide {
+        max-width:50%;
+        flex: 0 0 50%;
+      }
   }
 }        
 @media only screen and (min-width: 48rem) {
