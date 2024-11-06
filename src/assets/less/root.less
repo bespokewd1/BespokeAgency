@@ -4308,11 +4308,42 @@ body.dark-mode #cta-403.cs-image-only{
 <--- -------------------------- -*/
 
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #logo-carousel {
+    .cs-text{
+      color: #fff;
+    }
+  }
+
   #logo-carousel{
       .cs-container{
-        padding: var(--sectionPadding);
+        width: 100%;
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 4rem);
+
         padding-left: 0;
         padding-right: 0;
+
+        .cs-content{
+          text-align: center;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .cs-text{
+            font-size: clamp(1rem, 1.95vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: left;
+            width: 100%;
+            max-width: 39.375rem;
+            margin: 0 0 2rem 0;
+            color: #000000;
+          }
+        }
       }
       .blaze-nav {
         padding: 1.5rem 1rem
@@ -4347,7 +4378,15 @@ body.dark-mode #cta-403.cs-image-only{
       max-width:33%;
       flex: 0 0 33%;
     }
-  }
+    .cs-container{
+      max-width: 80rem;
+
+      .cs-content {
+          text-align: left;
+          align-items: flex-start;
+      }
+    }
+  }    
 }
 @media only screen and (min-width: 64rem) {
   #logo-carousel{
