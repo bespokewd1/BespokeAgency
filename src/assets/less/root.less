@@ -4302,3 +4302,48 @@ body.dark-mode #cta-403.cs-image-only{
     margin-left:-60px;
   }
 }
+
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-1689 {
+      padding: var(--sectionPadding);
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+
+      .cs-picture {
+          width: 100%;
+          height: auto;
+          display: block;
+          position: relative;
+          /* width divided by height */
+          aspect-ratio: 109/180;
+
+          img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: absolute;
+              top: 0;
+              left: 0;
+          }
+      }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #gallery-1689 {
+      grid-template-columns: repeat(4, 1fr);
+
+      .cs-picture {
+          /* 180px - 420px */
+          height: clamp(11.25rem, 30vw, 26.25rem);
+          aspect-ratio: initial;
+      }
+  }
+}
+                              
