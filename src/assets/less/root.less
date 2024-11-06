@@ -2672,7 +2672,6 @@
           text-transform: uppercase;
           letter-spacing: 0.1em;
           /* 48px - 100px */
-          margin-bottom: clamp(3rem, 7.8vw, 6.25rem);
           color: var(--primary);
           display: block;
           text-align: inherit;
@@ -2785,6 +2784,16 @@
   }
 }
 
+/* Services Custom */
+@media only screen and (min-width: 0rem) {
+  .cs-step-icon {
+    width: 100px;
+    margin: 3rem 0 2rem;
+  }
+  body.dark-mode .cs-step-icon {
+  filter: grayscale(1) contrast(0) brightness(10)
+  }
+}
                               
 
 
