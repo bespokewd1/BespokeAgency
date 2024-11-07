@@ -49,6 +49,8 @@ Different people use NordVPN for various reasons, and here are some examples of 
 
 <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=111266&url_id=902" target="_blank"> ![Nord VPN Black Friday Deal](/assets/images/blog/affiliate-black-friday-campaign-768x300-en.png)</a>
 
+<a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=111266&url_id=902" target="_blank"> <img src="/assets/images/blog/affiliate-black-friday-campaign-768x300-en.png" /></a>
+
 ### Exclusive Offer: NordVPN’s Black Friday Deal is Here!
 
 Take control of your online privacy and security today by signing up for NordVPN. With their Black Friday offer, you get up to 74% off and 3 additional months for free—the best deal of the year. Whether you're gaming, streaming, or just browsing, NordVPN will keep you safe online.
