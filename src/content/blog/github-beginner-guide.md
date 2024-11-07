@@ -54,7 +54,7 @@ Let’s walk through a basic workflow to help you understand how GitHub is used 
 
 <h4>Step 1: Create a GitHub Account</h4>
 
-Head over to www.github.com and click on Sign Up to begin. Enter a unique username, your email address, and a secure password, then complete the CAPTCHA to verify you’re not a bot. After that, you’ll choose your plan — the Free plan is perfect to start with. Finally, check your email for a verification link, click it, and your GitHub account will be ready to use!
+Head over to <a href="https://github.com/" target="_blank">github.com</a> and click on Sign Up to begin. Enter a unique username, your email address, and a secure password, then complete the CAPTCHA to verify you’re not a bot. After that, you’ll choose your plan — the Free plan is perfect to start with. Finally, check your email for a verification link, click it, and your GitHub account will be ready to use!
 
 <h4>Step 2: Create a Repository</h4>
 
