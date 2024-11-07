@@ -9,7 +9,7 @@ author: Charles M
 date: 2024-11-07T01:30:00.000Z
 tags:
   - post
-image: /assets/images/blog/affiliate-black-friday-campaign-768x300-en-1-.png
+image: /assets/images/blog/affiliate-black-friday-campaign-480x320-en.png
 imageAlt: Nord VPN Black Friday Deal
 ---
 ### Protect Your Digital Life with NordVPN: The Ultimate Online Security Tool
