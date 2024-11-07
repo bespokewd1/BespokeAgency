@@ -45,7 +45,7 @@ Pro Tip: If your first choice isn’t available, consider slight variations, but
 
 After finding an available domain, it’s time to register it. A reliable and user-friendly provider, like Namecheap, offers competitive prices and a simple registration process. They also offer features like privacy protection to keep your information secure.
 
-*Secure your custom domain name with <a href="https://namecheap.pxf.io/Kjov1a" target="_top">Namecheap</a> today and start building your brand’s online presence.*
+*Secure your custom domain name with <a href="https://namecheap.pxf.io/Kjov1a" target="_blank" class="affiliate_link" >Namecheap</a> today and start building your brand’s online presence.*
 
 <h4>4. Set Up Your Website</h4>
 
@@ -57,4 +57,4 @@ With your domain secured, you can create a simple website to serve as your onlin
 
 A custom domain is a valuable asset that establishes your business’s online presence, giving you control over how customers find and interact with you. Whether you're ready to start a full website or just want a simple page that represents your business, a domain name is a crucial first step.
 
-*Ready to get started? Visit <a href="https://namecheap.pxf.io/Kjov1a" target="_top">Namecheap</a> to secure your domain name today!*
+*Ready to get started? Visit <a href="https://namecheap.pxf.io/Kjov1a" target="_blank" class="affiliate_link" >Namecheap</a> to secure your domain name today!*
