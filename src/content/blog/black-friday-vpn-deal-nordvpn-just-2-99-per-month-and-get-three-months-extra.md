@@ -47,8 +47,7 @@ Different people use NordVPN for various reasons, and here are some examples of 
 **For Travelers:** When you travel, staying connected securely is a must. NordVPN gives you access to a fast, secure connection no matter where you are, so you can continue accessing your local services while abroad.
 
 
-
-![Nord VPN Black Friday Deal](/assets/images/blog/affiliate-black-friday-campaign-768x300-en.png)
+<a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=111266&url_id=902" target="_blank"> ![Nord VPN Black Friday Deal](/assets/images/blog/affiliate-black-friday-campaign-768x300-en.png)</a>
 
 ### Exclusive Offer: NordVPN’s Black Friday Deal is Here!
 
