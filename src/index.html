@@ -75,7 +75,7 @@ eleventyNavigation:
         let currentSlide = 0;
 
         function updateCarouselText() {
-        document.getElementById("carousel-text").innerText = carouselText[currentSlide];
+        document.getElementsByClassName("cs-changing-text").innerText = carouselText[currentSlide];
         currentSlide = (currentSlide + 1) % carouselText.length;
         }
         updateCarouselText();
