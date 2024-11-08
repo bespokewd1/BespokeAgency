@@ -38,7 +38,7 @@ var isLast = function(word) {
   }
   
   var init = function() {
-    setInterval(getStarted, 2000);
+    setInterval(getStarted, 3000);
   }
   
   init();
