@@ -50,7 +50,12 @@ eleventyNavigation:
 <section id="hero-1352">
     <div class="cs-container">
         <div class="cs-content cs-text-content">
-            <h1 class="cs-title"> Elevate your Business! Custom Built Websites for <span class="cs-changing-text">Entrepreneurs</span></h1>
+            <h1 class="cs-title"> Elevate your Business! Custom Built Websites for <span class="words-wrapper">
+                <b class="is-visible">Entrepreneurs</b>
+                <b>Plumbers</b>
+                <b>Contractors</b>
+                <b>Small Business</b>
+                </span></h1>
             <p class="cs-text">
                 Get superior results with our 100% hand-coded websites. No page builders or
                 WordPress. Starting at $149/month.  
@@ -65,23 +70,6 @@ eleventyNavigation:
             <video src="/assets/videos/vs-code.mp4" class="cs-video" autoplay loop muted alt="coding video"></video>
         </div>
     </div>
-    <script>
-        const carouselText = [
-        "Plumbers",
-        "Contractors",
-        "Entrepreneurs"
-        ];
-
-        let currentSlide = 0;
-
-        function updateCarouselText() {
-        document.getElementsByClassName("cs-changing-text").innerText = carouselText[currentSlide];
-        currentSlide = (currentSlide + 1) % carouselText.length;
-        }
-        updateCarouselText();
-        setInterval(updateCarouselText, 2000);
-
-    </script>
 </section>
                                 
 
