@@ -8,8 +8,8 @@ tags:
   - post
   - featured
   - latest
-image: /assets/images/blog/code-placeholder.jpg
-imageAlt: Placeholder
+image: /assets/images/blog/business-partner.jpg
+imageAlt: Buisiness Partner
 ---
 
 *Reading time: 10 minutes*
@@ -19,7 +19,6 @@ imageAlt: Placeholder
 
 Welcome to your essential guide for attracting more customers to your trades business! This checklist is designed to provide you with the strategies and tools necessary to enhance your online presence, build your brand, and ultimately grow your customer base. Whether you’re in plumbing, electrical work, or general contracting, these actionable steps will help you stand out in a competitive market.
 
-<img src="/assets/images/blog/code-placeholder.jpg" />
 
 <h4>How to Use This Checklist</h4>
 
@@ -52,7 +51,7 @@ Welcome to your essential guide for attracting more customers to your trades bus
 <ul>
 <li>Choose a domain name: Use your business name or a relevant keyword for SEO.</li>
 <li>Create a user-friendly design: Ensure your website is easy to navigate and mobile-friendly.</li>
-<li>AddInclude essential pages: Home, About, Services, Testimonials, Blog, Contact.</li>
+<li>Include essential pages: Home, About, Services, Testimonials, Blog, Contact.</li>
 <li>Optimize for SEO: Use relevant keywords, meta descriptions, and alt tags for images.</li>
 </ul>
 
@@ -64,6 +63,8 @@ Welcome to your essential guide for attracting more customers to your trades bus
 <li>Create essential pages and content.</li>
 <li>Optimize for SEO.</li>
 </ul>
+
+<img src="/assets/images/blog/code-placeholder.jpg" />
 
 <h4>Section 3: Develop a Strong Brand Identity</h4>
 
