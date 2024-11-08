@@ -1,47 +1,44 @@
 var isLast = function(word) {
-    return $(word).next().length > 0 ? false : true;
+    return word.nextElementSibling ? false : true;
   }
   
   var getNext = function(word) {
-    return $(word).next();
+    return word.nextElementSibling;
   }
   
-  var getVisible = function () {
-    return document.getElementsByClassName('is-visible');
+  var getVisible = function() {
+    return document.getElementsByClassName('is-visible')[0]; // assuming only one element is visible at a time
   }
   
-  var getFirst =  function() {
-    var node = $('.words-wrapper').children().first();
-    return node;
+  var getFirst = function() {
+    return document.querySelector('.words-wrapper').firstElementChild;
   }
   
   var switchWords = function(current, next) {
-    $(current).removeClass('is-visible').addClass('is-hidden');
-    $(next).removeClass('is-hidden').addClass('is-visible');
+    current.classList.remove('is-visible');
+    current.classList.add('is-hidden');
+    next.classList.remove('is-hidden');
+    next.classList.add('is-visible');
   }
   
   var getStarted = function() {
-    //We start by getting the visible element and its sibling
     var first = getVisible();
     var next = getNext(first);
     
-    //If our element has a sibling, it's not the last of the list. We switch the classes
-    if (next.length !== 0) {
-       switchWords(first,next);
+    if (next) {
+      switchWords(first, next);
     } else {
+      first.classList.remove('is-visible');
+      first.classList.add('is-hidden');
       
-      //The element is the last of the list. We remove the visible class of the current element
-      $(first).removeClass('is-visible').addClass('is-hidden');
-      
-      //And we get the first element of the list, and we give it the visible class. And it starts again.
       var newEl = getFirst();
-      $(newEl).removeClass('is-hidden').addClass('is-visible');
+      newEl.classList.remove('is-hidden');
+      newEl.classList.add('is-visible');
     }
-    
   }
   
   var init = function() {
-    setInterval(function() {getStarted()}, 2000);
+    setInterval(getStarted, 2000);
   }
   
   init();
