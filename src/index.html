@@ -50,7 +50,7 @@ eleventyNavigation:
 <section id="hero-1352">
     <div class="cs-container">
         <div class="cs-content cs-text-content">
-            <h1 class="cs-title"> Elevate Your Business with Custom-Built Websites </h1>
+            <h1 class="cs-title"> Elevate your Business! Custom Built Websites for <span class="cs-changing-text">Entrepreneurs</span></h1>
             <p class="cs-text">
                 Get superior results with our 100% hand-coded websites. No page builders or
                 WordPress. Starting at $149/month.  
@@ -65,10 +65,23 @@ eleventyNavigation:
             <video src="/assets/videos/vs-code.mp4" class="cs-video" autoplay loop muted alt="coding video"></video>
         </div>
     </div>
-    <!--Bubble Groups-->
-    <!-- <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
-    <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div> -->
-    <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+    <script>
+        const carouselText = [
+        "Plumbers",
+        "Contractors",
+        "Entrepreneurs"
+        ];
+
+        let currentSlide = 0;
+
+        function updateCarouselText() {
+        document.getElementById("carousel-text").innerText = carouselText[currentSlide];
+        currentSlide = (currentSlide + 1) % carouselText.length;
+        }
+        updateCarouselText();
+        setInterval(updateCarouselText, 2000);
+
+    </script>
 </section>
                                 
 
@@ -80,7 +93,7 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Our Services</span>
-            <h1 class="cs-title">WHAT WE DO</h1><br><br>
+            <h3 class="cs-title">WHAT WE DO</h3><br><br>
             <p class="cs-text">
                 We specialize in web design and development for small businesses throughout Canada. Our meticulously hand-crafted code ensures top performance, enhancing your online presence and increasing your revenue. 
                 <a href="/about">LEARN MORE</a>            </p>
@@ -483,7 +496,7 @@ eleventyNavigation:
         <div id="cs-content-1801">
             <div class="cs-flex">
                 <span class="cs-topper">Pricing</span>
-                <h1 class="cs-title">It’s Easy to Get Started</h1>
+                <h3 class="cs-title">It’s Easy to Get Started</h3>
                 <p class="cs-text">
                     At Bespoke web design, we create professional sites hassle-free, so you can focus on what matters most—your business!
                 </p>
