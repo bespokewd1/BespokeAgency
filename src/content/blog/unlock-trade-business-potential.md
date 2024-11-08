@@ -64,9 +64,9 @@ Welcome to your essential guide for attracting more customers to your trades bus
 <li>Optimize for SEO.</li>
 </ul>
 
-<img src="/assets/images/blog/code-placeholder.jpg" />
-
 <h4>Section 3: Develop a Strong Brand Identity</h4>
+
+<img src="/assets/images/blog/brand-identity.jpg" />
 
 <ul>
 <li>Create a professional logo: Invest in a logo that reflects your business’s identity and values.</li>
@@ -78,8 +78,8 @@ Welcome to your essential guide for attracting more customers to your trades bus
 
 <ul>
 <li>Design a professional logo.</li>
-<li>Define brand colors and fonts.</li>
-<li>Create a brand message statement.</li>
+<li>Define brand colors messageand fonts.</li>
+<li>Create a brand  statement.</li>
 </ul>
 
 <h4>Section 4: Engage on Social Media</h4>
@@ -161,7 +161,7 @@ Welcome to your essential guide for attracting more customers to your trades bus
 <li>Plan seasonal promotions based on upcoming holidays.</li>
 </ul>
 
-<img src="/assets/images/blog/code-placeholder.jpg" />
+<img src="/assets/images/blog/promotion-strategy.jpg" />
 
 By following this Customer Attraction Checklist, you are taking the first steps toward enhancing your visibility and growing your trades business. Implement these strategies consistently, and you’ll be well on your way to attracting more customers and increasing your revenue.
 
