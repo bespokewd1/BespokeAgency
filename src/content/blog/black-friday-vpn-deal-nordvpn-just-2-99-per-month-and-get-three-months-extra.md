@@ -6,9 +6,11 @@ url: "Black Friday VPN deal: NordVPN just 2.99$ per month (and get three months
 description: "Black Friday VPN deal: NordVPN just 2.99$ per month (and get three
   months extra)"
 author: Charles M
-date: 2024-11-07T01:30:00.000Z
+date: 2024-11-08T01:30:00.000Z
 tags:
   - post
+  - featured
+  - latest
 image: /assets/images/blog/affiliate-black-friday-campaign-1200x628.png
 imageAlt: Nord VPN Black Friday Deal
 ---
