@@ -32,8 +32,6 @@ Bluehost is one of the most trusted hosting providers in the industry, and for g
 
 Plus, with their wide range of hosting plans, you can choose one that fits your exact needs—whether you're a small business owner, an entrepreneur, or a blogger looking to scale.
 
-
-
 ### Black Friday Bluehost Deals You Don’t Want to Miss:
 
 Here’s a breakdown of the plans on sale and what kinds of websites they’re best suited for:
@@ -72,9 +70,9 @@ o	Unlimited bandwidth to support growing traffic
 
 36-Month - $7.45/mth  → Now $5.45/mth
 
-Get this deal [here](https://bluehost.sjv.io/c/5804036/1376228/11352):\
-\
-2. Pro Shared Hosting:
+Get this deal [here](https://bluehost.sjv.io/c/5804036/1376228/11352):
+
+**2. Pro Shared Hosting:**
 
 The Pro plan is ideal for growing businesses or websites that need more power and flexibility. It includes unlimited websites and performance-boosting features.
 
@@ -109,8 +107,6 @@ o	Premium security features like malware protection
 36-Month - $18.95/mth → Now $14.95/mth
 
 Get this deal [here](https://bluehost.sjv.io/c/5804036/1376228/11352):
-
-
 
 #### 3. Online Store Hosting:
 
@@ -180,8 +176,6 @@ Online Store + Market Place
 
 Get this deal [here](https://bluehost.sjv.io/c/5804036/2095829/11352):
 
-
-
 #### 5. Cloud Hosting:
 
 For larger, high-traffic websites, the Cloud Hosting plan offers superior performance and scalability, ideal for businesses that expect significant growth or handle high volumes of traffic.
@@ -193,8 +187,6 @@ o	Large businesses with high-traffic websites
 o	Media sites or news websites
 
 o	Enterprise-level eCommerce stores
-
-
 
 **•	Benefits:**
 
