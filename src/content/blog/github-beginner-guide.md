@@ -40,10 +40,10 @@ GitHub was founded in 2008 by four developers: Tom Preston-Werner, Chris Wanstra
 If you're new to coding, GitHub might seem intimidating, but it’s packed with features that make it useful for all skill levels. Here’s why GitHub is so popular:
 
 <ul>
-<li>**Version Control:** Track changes to your code, making it easy to revert to previous versions if something goes wrong.</li>
-<li>**Collaboration:** Allows multiple people to work on the same project simultaneously without overwriting each other’s contributions.</li>
-<li>**Portfolio Building:** Show off your work! By hosting your projects on GitHub, you can build a portfolio that potential employers can view.</li>
-<li>**Project Management:** GitHub provides tools for managing your projects, including issue tracking and project boards.</li>
+<li>\*\*Version Control:\*\* Track changes to your code, making it easy to revert to previous versions if something goes wrong.</li>
+<li>\*\*Collaboration:\*\* Allows multiple people to work on the same project simultaneously without overwriting each other’s contributions.</li>
+<li>\*\*Portfolio Building:\*\* Show off your work! By hosting your projects on GitHub, you can build a portfolio that potential employers can view.</li>
+<li>\*\*Project Management:\*\* GitHub provides tools for managing your projects, including issue tracking and project boards.</li>
 </ul>
 
 <h3>3. A Common GitHub Workflow: Your Step-by-Step Guide</h3>
@@ -66,9 +66,9 @@ Start by creating a new repository on GitHub. Think of a repository as a project
 
 To work on your code locally, you’ll need to clone (or download) the repository to your computer. This can be done using the command:
 
-1. *bash* 
-2. Copy Code
-3. *git clone \[URL_of_your_repo]*
+
+
+*git clone \[URL_of_your_repo]*
 
 ![](/assets/images/blog/clone.png)
 
@@ -78,9 +78,7 @@ Cloning creates a local copy of the repository, allowing you to make changes wit
 
 To work on a new feature or fix a bug without affecting the main codebase, create a branch using the command:
 
-1. *bash* 
-2. Copy Code
-3. *git checkout -b \[branch_name]*
+*git checkout -b \[branch_name]*
 
 For example, if you’re adding a new feature, you might name your branch feature/add-login. This command does two things: it creates a new branch and switches you to that branch.
 
@@ -96,9 +94,7 @@ For example, if you’re adding a new feature, you might name your branch featur
 
 Open your project in your code editor and start making changes. Once you’re happy with your progress, commit these changes to your local repository using:
 
-1. *bash* 
-2. Copy Code
-3. *git commit -m "Descriptive message about changes"*
+*git commit -m "Descriptive message about changes"*
 
 Make sure your commit message explains what changes you made; this helps others (and you) understand the project history.
 
@@ -106,9 +102,7 @@ Make sure your commit message explains what changes you made; this helps others 
 
 To share your updates with others or save them on GitHub, use:
 
-1. *bash* 
-2. Copy Code
-3. *git push origin \[branch_name]*
+* *git push origin \[branch_name]*
 
 This uploads your commits from your local machine to the GitHub repository, making your changes visible to anyone who has access.
 
@@ -150,7 +144,7 @@ Understanding some basic Git commands will make your experience with GitHub much
           </thead>
           <tbody>
               <tr class="cs-tr">
-                  <td class="cs-td">git clone [URL]</td>
+                  <td class="cs-td">git clone \[URL]</td>
                   <td class="cs-td">Copies a repository from GitHub to your local machine</td>
                   <td class="cs-td">git clone https://github.com/user/repo.git</td>
               </tr>
@@ -160,7 +154,7 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git status</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git add [file]</td>
+                  <td class="cs-td">git add \[file]</td>
                   <td class="cs-td">Stages a file for commit</td>
                   <td class="cs-td">git add index.html</td>
               </tr>
@@ -170,12 +164,12 @@ Understanding some basic Git commands will make your experience with GitHub much
                   <td class="cs-td">git commit -m "Add homepage layout"</td>
               </tr>
               <tr class="cs-tr">
-                  <td class="cs-td">git push origin [branch_name]</td>
+                  <td class="cs-td">git push origin \[branch_name]</td>
                   <td class="cs-td">Pushes your commits to the specified branch on GitHub</td>
                   <td class="cs-td">git push origin feature/add-login</td>
               </tr>
                <tr class="cs-tr">
-                  <td class="cs-td">git pull origin [branch_name]</td>
+                  <td class="cs-td">git pull origin \[branch_name]</td>
                   <td class="cs-td">Fetches changes from the remote repository and merges them</td>
                   <td class="cs-td">git pull origin main</td>
               </tr>
