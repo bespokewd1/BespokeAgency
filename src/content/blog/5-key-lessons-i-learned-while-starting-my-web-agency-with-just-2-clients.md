@@ -1,6 +1,6 @@
 ---
-title: 5 Key Lessons I Learned While Starting My Web Agency with Just 2 Clients
-url: 5 Key Lessons I Learned While Starting My Web Agency with Just 2 Clients
+title: 5 Key Lessons I Learned While Starting My Small Business
+url: Some things I Learned While Starting My Web Agency with Just 2 Clients
 description: Thinking of starting a web agency? Here are the 5 game-changing
   lessons I learned with just 2 clients to kickstart growth and build lasting
   value!
