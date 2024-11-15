@@ -66,9 +66,9 @@ An advanced fee scam tricks you by making you pay money upfront for something th
 
 ### Real Stories:
 
-* This is not an isolated story. Check out these examples:\
-  \
-  https://www.reddit.com/r/VancouverJobs/comments/zb3fmd/has_anyone_heard_of_elevate_marketing/
+<a href="https://www.reddit.com/r/VancouverJobs/comments/zb3fmd/has_anyone_heard_of_elevate_marketing/" target="_blank">Real Stories: This is not an isolated story. Check out these examples.</a>
+
+
 
 ### Tips to Stay Safe:
 
@@ -126,9 +126,11 @@ Here’s a quick checklist for reporting a scam website in Alberta:
 
      [bbb.org](https://www.bbb.org/)
 
-### Support Real Businesses
+#### **Support Real Businesses**  
 
-To help people find legitimate businesses, I created [yegbusiness.org](https://yegbusiness.org/), a free web site where trusted local companies can register. It’s a way for people to know who’s real in the community. For those in Edmonton, I also run **Pinoy Yeg Tek**, a group sharing job leads and tech tips.
+To help people find legitimate businesses, I created <a href="https://yegbusiness.org" target="_blank">yegbusiness.org</a>, a free website where trusted local companies can register. It’s a way for people to know who’s real in the community. For those in Edmonton, I also run <a href="https://www.facebook.com/groups/pinoyyegtek" target="_blank">Pinoy Yeg Tek</a>, a group sharing job leads and tech tips.
+
+
 
 ### Stay Smart:
 
