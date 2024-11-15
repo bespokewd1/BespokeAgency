@@ -58,7 +58,13 @@ An advanced fee scam tricks you by making you pay money upfront for something th
   : They might show up here too.
 * **Emails**
 
-  : Be careful with unsolicited job offers in your inbox.
+  : Be careful with unsolicited job offers in your inbox.\
+  \
+  \
+
+  This is the interface that was sent to me. If you see this and have signed up, please log out, block, and delete your contacts—it's a scam.
+
+
 
   ![sample image, posting jobs scam](/assets/images/blog/scam.jpg "WFH Job where you get tasks to post links? if you see this interface, It's a scam!")
 
