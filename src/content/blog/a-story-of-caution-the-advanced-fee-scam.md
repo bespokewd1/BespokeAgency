@@ -1,7 +1,8 @@
 ---
 title: "A Story of Caution: The Advanced Fee Scam"
 url: "A Story of Caution: The Advanced Fee Scam"
-description: "A Story of Caution: The Advanced Fee Scam"
+description: Beware of job scams on Facebook Marketplace and Messenger that ask
+  for upfront payments before you can 'cash out' your earnings
 author: Bespoke Web Design Team
 date: 2024-11-15T10:40:00.000Z
 tags:
