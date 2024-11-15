@@ -59,15 +59,15 @@ An advanced fee scam tricks you by making you pay money upfront for something th
 
   : Be careful with unsolicited job offers in your inbox.
 
-  ![sample image, posting jobs scam](/assets/images/blog/scam.jpg)
+  ![sample image, posting jobs scam](/assets/images/blog/scam.jpg "WFH Job where you get tasks to post links? if you see this interface, It's a scam!")
 
-
-
-  ![sample interface of the scam posting jobs site](/assets/images/blog/f030a1c0-63b5-4113-a6dd-914e471f2802.jpeg)
+  ![sample interface of the scam posting jobs site](/assets/images/blog/f030a1c0-63b5-4113-a6dd-914e471f2802.jpeg "You will get paid training, and when it's pay out, you will also pay. It's definitely a scam, so be wary.")
 
 ### Real Stories:
 
-* This is not an isolated story. Check out these examples:
+* This is not an isolated story. Check out these examples:\
+  \
+  https://www.reddit.com/r/VancouverJobs/comments/zb3fmd/has_anyone_heard_of_elevate_marketing/
 
 ### Tips to Stay Safe:
 
