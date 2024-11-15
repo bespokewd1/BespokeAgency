@@ -59,6 +59,12 @@ An advanced fee scam tricks you by making you pay money upfront for something th
 
   : Be careful with unsolicited job offers in your inbox.
 
+  ![sample image, posting jobs scam](/assets/images/blog/scam.jpg)
+
+
+
+  ![sample interface of the scam posting jobs site](/assets/images/blog/f030a1c0-63b5-4113-a6dd-914e471f2802.jpeg)
+
 ### Real Stories:
 
 * This is not an isolated story. Check out these examples:
@@ -77,11 +83,11 @@ An advanced fee scam tricks you by making you pay money upfront for something th
 
 ### Quick Safety Checklist:
 
-*  Google the company + “scam.”
-*  Check if the company is active on LinkedIn.
-*  Look for posts or warnings on Reddit.
-*  Ask questions in trusted online groups.
-*  Never pay upfront fees to get your earnings.
+* Google the company + “scam.”
+* Check if the company is active on LinkedIn.
+* Look for posts or warnings on Reddit.
+* Ask questions in trusted online groups.
+* Never pay upfront fees to get your earnings.
 
 ### No Easy Money
 
@@ -95,8 +101,6 @@ Here’s a quick checklist for reporting a scam website in Alberta:
    * Website: 
 
      [antifraudcentre.ca](<>)
-
-
    * Phone: 1-888-495-8501
 2. **Consumer Protection Alberta**
    Report consumer fraud or misleading businesses.
@@ -104,16 +108,12 @@ Here’s a quick checklist for reporting a scam website in Alberta:
    * Website: 
 
      [alberta.ca/consumer-protection](<>)
-
-
 3. **Competition Bureau Canada**
    Report deceptive marketing and false advertising.
 
    * Website: 
 
      [competitionbureau.gc.ca](<>)
-
-
 4. **Local Police**
    Report if you’ve lost money due to the scam.
 
@@ -124,10 +124,6 @@ Here’s a quick checklist for reporting a scam website in Alberta:
    * Website: 
 
      [bbb.org](https://www.bbb.org/)
-
-
-
-
 
 ### Support Real Businesses
 
