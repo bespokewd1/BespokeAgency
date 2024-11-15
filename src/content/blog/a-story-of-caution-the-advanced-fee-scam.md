@@ -48,7 +48,10 @@ An advanced fee scam tricks you by making you pay money upfront for something th
 
   : They use pictures and names that look familiar but aren’t real.
 
-### Where Scammers Operate:
+
+
+
+### **Where Scammers Operate:**
 
 * **Facebook Messenger Groups**
 
@@ -58,15 +61,14 @@ An advanced fee scam tricks you by making you pay money upfront for something th
   : They might show up here too.
 * **Emails**
 
-  : Be careful with unsolicited job offers in your inbox.\
-  \
-  \
+  : Be careful with unsolicited job offers in your inbox.
 
-  This is the interface that was sent to me. If you see this and have signed up, please log out, block, and delete your contacts—it's a scam.
+**This is the interface that was sent to me.** If you see this and have signed up, please log out, block, and delete your contacts—*it's a scam.*
 
 
 
-  ![sample image, posting jobs scam](/assets/images/blog/scam.jpg "WFH Job where you get tasks to post links? if you see this interface, It's a scam!")
+
+* ![sample image, posting jobs scam](/assets/images/blog/scam.jpg "WFH Job where you get tasks to post links? if you see this interface, It's a scam!")
 
   ![sample interface of the scam posting jobs site](/assets/images/blog/f030a1c0-63b5-4113-a6dd-914e471f2802.jpeg "You will get paid training, and when it's pay out, you will also pay. It's definitely a scam, so be wary.")
 
