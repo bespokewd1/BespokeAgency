@@ -14,11 +14,14 @@ One day, while discussing a project with a client, he shared how he was scammed 
 
 The job promised good pay for simple tasks. He applied, got the job fast, and after just one day of training, they even paid him $200. This payment made the job seem legit and built his trust. But after a few days, when he tried to cash out his full pay and a promised bonus, he was told there was a fee he had to pay first. Believing it was just a routine part of the job process, he paid it. That’s when they blocked him, and he never saw his money again.
 
-### What Is an Advanced Fee Scam?
+#### 
+**What Is a Salary Advance Scam?**\
 
-An advanced fee scam tricks you by making you pay money upfront for something that doesn’t exist. In this type of scam, the scammer builds your trust by paying you first, only to later ask for a “release fee” or other charges when you want to cash out your earnings.
 
-### How This Scam Works:
+A salary advance scam tricks you into paying money after receiving an initial payment. In this type of scam, the scammer builds your trust by paying you a small salary for a short period, but then demands a "release fee" or other charges before you can receive your full earnings after a week.
+
+\
+How This Scam Works:
 
 1. **Job Offer**
 
@@ -48,9 +51,6 @@ An advanced fee scam tricks you by making you pay money upfront for something th
 
   : They use pictures and names that look familiar but aren’t real.
 
-
-
-
 ### **Where Scammers Operate:**
 
 * **Facebook Messenger Groups**
@@ -65,9 +65,6 @@ An advanced fee scam tricks you by making you pay money upfront for something th
 
 **This is the interface that was sent to me.** If you see this and have signed up, please log out, block, and delete your contacts—*it's a scam.*
 
-
-
-
 * ![sample image, posting jobs scam](/assets/images/blog/scam.jpg "WFH Job where you get tasks to post links? if you see this interface, It's a scam!")
 
   ![sample interface of the scam posting jobs site](/assets/images/blog/f030a1c0-63b5-4113-a6dd-914e471f2802.jpeg "You will get paid training, and when it's pay out, you will also pay. It's definitely a scam, so be wary.")
@@ -75,8 +72,6 @@ An advanced fee scam tricks you by making you pay money upfront for something th
 ### Real Stories:
 
 <a href="https://www.reddit.com/r/VancouverJobs/comments/zb3fmd/has_anyone_heard_of_elevate_marketing/" target="_blank">Real Stories: This is not an isolated story. Check out these examples.</a>
-
-
 
 ### Tips to Stay Safe:
 
@@ -134,11 +129,9 @@ Here’s a quick checklist for reporting a scam website in Alberta:
 
      [bbb.org](https://www.bbb.org/)
 
-#### **Support Real Businesses**  
+#### **Support Real Businesses**
 
 To help people find legitimate businesses, I created <a href="https://yegbusiness.org" target="_blank">yegbusiness.org</a>, a free website where trusted local companies can register. It’s a way for people to know who’s real in the community. For those in Edmonton, I also run <a href="https://www.facebook.com/groups/pinoyyegtek" target="_blank">Pinoy Yeg Tek</a>, a group sharing job leads and tech tips.
-
-
 
 ### Stay Smart:
 
