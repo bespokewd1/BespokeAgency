@@ -10,13 +10,11 @@ tags:
 image: /assets/images/blog/office.jpg
 imageAlt: Michael Scott from the Office
 ---
-One day, while discussing a project with a client, he shared how he was scammed out of $2,600 by what seemed like a perfect work-from-home job. It started with a job offer posted in a Facebook group for Filipinos, using a profile that looked real and friendly.
+Last night, One of my contacts sent me a message in Facebook and shared how he was scammed out of $2,600 by what seemed like a perfect work-from-home job. It started with a job offer posted in a Facebook group for Filipinos, using a profile that looked real and friendly.
 
 The job promised good pay for simple tasks. He applied, got the job fast, and after just one day of training, they even paid him $200. This payment made the job seem legit and built his trust. But after a few days, when he tried to cash out his full pay and a promised bonus, he was told there was a fee he had to pay first. Believing it was just a routine part of the job process, he paid it. That’s when they blocked him, and he never saw his money again.
 
-#### 
-**What Is a Salary Advance Scam?**\
-
+**What Is a Salary Advance Scam?**
 
 A salary advance scam tricks you into paying money after receiving an initial payment. In this type of scam, the scammer builds your trust by paying you a small salary for a short period, but then demands a "release fee" or other charges before you can receive your full earnings after a week.
 
