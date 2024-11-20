@@ -34,6 +34,6 @@ For instance:
 
 <h3>Stay Safe with NordVPN</h3>
 
-To keep hackers at bay, consider using a top-tier VPN like NordVPN. It’s designed for ease of use while offering robust protection. With NordVPN, you can browse securely, even when connected to public Wi-Fi.
+To keep hackers at bay, consider using a top-tier VPN like <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=111266&url_id=902" target="_blank">NordVPN</a>. It’s designed for ease of use while offering robust protection. With NordVPN, you can browse securely, even when connected to public Wi-Fi.
 
 In the digital age, your data is as valuable as the hottest Taylor Swift tickets. Don’t let hackers be the ones singing a happy tune.
