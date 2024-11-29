@@ -61,8 +61,12 @@ eleventyNavigation:
             </div>
            
         </div>
-        <div class="cs-content cs-video-wrapper">
-            <video src="/assets/videos/vs-code.mp4" class="cs-video" autoplay loop muted alt="coding video"></video>
+        <div class="cs-content cs-picture-wrapper">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/hero-bg.webp" width="600">
+                <source media="(min-width: 601px)" srcset="/assets/images/hero-bg.webp" width="1920">
+                <img decoding="async" src="/assets/images/hero-bg.webp" alt="domain banner" width="1920">
+            </picture>
         </div>
     </div>
 </section>
