@@ -8,7 +8,6 @@ date: 2024-11-01T12:34:00.000Z
 tags:
   - post
   - featured
-  - latest
 image: /assets/images/blog/earnings-per-second.jpg
 imageAlt: Tech Earn Money
 ---

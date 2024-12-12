@@ -9,7 +9,6 @@ date: 2024-11-01T15:28:00.000Z
 tags:
   - post
   - featured
-  - latest
 image: /assets/images/blog/man-working-in-a-dark-room.jpg
 imageAlt: man working in a dark room
 ---

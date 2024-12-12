@@ -9,7 +9,6 @@ date: 2024-11-04T17:34:00.000Z
 tags:
   - post
   - featured
-  - latest
 image: /assets/images/blog/git_workflow.png
 imageAlt: Placeholder
 ---

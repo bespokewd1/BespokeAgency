@@ -7,7 +7,6 @@ date: 2024-10-30T10:27:00.000Z
 tags:
   - post
   - featured
-  - latest
 image: /assets/images/blog/secure-a-domain.jpg
 imageAlt: secure domain
 ---
