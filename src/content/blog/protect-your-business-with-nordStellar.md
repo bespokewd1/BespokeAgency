@@ -6,6 +6,7 @@ author: Bespoke Web Design Team
 date: 2024-12-12T10:40:00.000Z
 tags:
   - post
+  - latest
 image: /assets/images/blog/nordstellar.jpg
 imageAlt: NordStellar
 
