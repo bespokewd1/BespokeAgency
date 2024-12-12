@@ -7,7 +7,7 @@ date: 2024-12-12T12:40:00.000Z
 tags:
   - post
   - latest
-image: /assets/images/blog/holiday-namecheap.jpg
+image: /assets/images/blog/namecheap-holiday.jpg
 imageAlt: NameCheap Holiday Deal
 
 ---
