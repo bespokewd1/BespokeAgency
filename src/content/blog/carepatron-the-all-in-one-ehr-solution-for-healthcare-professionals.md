@@ -1,6 +1,6 @@
 ---
 title: "Carepatron: The All-in-One EHR Solution for Healthcare Professionals"
-url: carepartron
+url: carepatron
 description: Carepatron is an all-in-one solution to managing your practice in one place.
 author: Bespoke Web Design Team
 date: 2025-01-09T16:25:00.000Z
