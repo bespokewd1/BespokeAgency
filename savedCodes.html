@@ -1,0 +1,282 @@
+<!-- ============================================ -->
+<!--                  Affiliate Slider            -->
+<!-- ============================================ -->
+
+<div id="logo-carousel">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Affiliates</span>
+            <h2 class="cs-title">We’re Proud Affiliates of These Trusted Brands</h2>
+            <p class="cs-text">
+                If you choose to sign up through our links, we may earn a small commission at no additional cost to you. We recommend these tools based on our experience and commitment to quality for our clients.
+            </p>
+        </div>
+    </div>
+    <div class="blaze-slider">
+        <div class="blaze-container">
+            <div class="blaze-track-container">
+                <div class="blaze-track">
+                    <div class="blaze-slide">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)"
+                                    srcset="/assets/images/siteground-logo.png" width=480 height=160>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)"
+                                    srcset="/assets/images/siteground-logo.png" width=480 height=160>
+                            <img loading="lazy" decoding="async"
+                                    src="/assets/images/siteground-logo.png" alt="siteground logo"
+                                    width=480 height=160>
+                        </picture>
+                    </div>
+                    <div class="blaze-slide">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)"
+                                    srcset="/assets/images/nordvpn-logo.png" width=480 height=160>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)"
+                                    srcset="/assets/images/nordvpn-logo.png" width=480 height=160>
+                            <img loading="lazy" decoding="async"
+                                    src="/assets/images/nordvpn-logo.png" alt="nordvpn logo"
+                                    width=480 height=160>
+                        </picture>
+                    </div>
+                    <div class="blaze-slide">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)"
+                                    srcset="/assets/images/kinsta-logo.png" width=480  height=160>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)"
+                                    srcset="/assets/images/kinsta-logo.png" width=480 height=160>
+                            <img loading="lazy" decoding="async"
+                                    src="/assets/images/kinsta-logo.png" alt="kinsta logo"
+                                    width=480 height=160>
+                        </picture>
+                    </div>
+                    <div class="blaze-slide">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)"
+                                    srcset="/assets/images/surfshark-logo.png" width=480 height=160>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)"
+                                    srcset="/assets/images/surfshark-logo.png" width=480 height=160>
+                            <img loading="lazy" decoding="async"
+                                    src="/assets/images/surfshark-logo.png" alt="surfshark logo"
+                                    width=480 height=160>
+                        </picture>
+                    </div>
+                    <div class="blaze-slide">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)"
+                                    srcset="/assets/images/namecheap-logo.png" width=480 height=160>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)"
+                                    srcset="/assets/images/namecheap-logo.png" width=480 height=160>
+                            <img loading="lazy" decoding="async"
+                                    src="/assets/images/namecheap-logo.png" alt="nordvpn logo"
+                                    width=480 height=160>
+                        </picture>
+                    </div>
+                    <div class="blaze-slide">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)"
+                                    srcset="/assets/images/shopify-logo.png" width=480  height=160>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)"
+                                    srcset="/assets/images/shopify-logo.png" width=480 height=160>
+                            <img loading="lazy" decoding="async"
+                                    src="/assets/images/shopify-logo.png" alt="shopify logo"
+                                    width=480 height=160>
+                        </picture>
+                    </div>
+                    <div class="blaze-slide">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)"
+                                    srcset="/assets/images/namecheap-logo.png" width=480 height=160>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)"
+                                    srcset="/assets/images/namecheap-logo.png" width=480 height=160>
+                            <img loading="lazy" decoding="async"
+                                    src="/assets/images/namecheap-logo.png" alt="namecheap logo"
+                                    width=480 height=160>
+                        </picture>
+                    </div>
+                    <div class="blaze-slide">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)"
+                                    srcset="/assets/images/bluehost-logo.png" width=480 height=160>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)"
+                                    srcset="/assets/images/bluehost-logo.png" width=480 height=160>
+                            <img loading="lazy" decoding="async"
+                                    src="/assets/images/bluehost-logo.png" alt="bluehost logo"
+                                    width=480 height=160>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        <div class="blaze-nav">
+            <div class="blaze-pagination"></div>
+        </div>
+        </div>
+    </div>
+    <!--Slider Initialization Script-->
+    <script>
+        const sliderEl = document.querySelector('.blaze-slider')
+        const blazeSlider = new BlazeSlider(sliderEl, {
+        all: {
+          enableAutoplay: true,
+          slidesToScroll: 1,
+          slidesToShow: 4,
+          transitionDuration: 300,
+          loop: true
+        },
+        "(max-width: 1024px)": {
+          slidesToShow: 3,
+          slidesToShow: 1,
+          slidesGap: "20px"
+        },
+        "(max-width: 768px)": {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      });
+    </script>
+</div>
+
+<style>
+/*-- -------------------------- -->
+<---  Affiliate Slider Style    -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #logo-carousel {
+    .cs-text{
+      color: #ffffff !important;
+    }
+    .blaze-slide img{
+      filter: grayscale(1) contrast(0) brightness(10);
+  }
+  }
+
+  #logo-carousel{
+    padding: var(--sectionPadding);
+    padding-left: 0;
+    padding-right: 0;
+
+      .cs-container{
+        width: 100%;
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 4rem);
+
+        padding: var(--sectionPadding);
+        padding-bottom: 0;
+        padding-top: 0;
+
+        .cs-content{
+          text-align: center;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .cs-text{
+            font-size: clamp(1rem, 1.95vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: left;
+            width: 100%;
+            max-width: 39.375rem;
+            margin: 0 0 2rem 0;
+            color: #000000;
+            font-weight: normal;
+          }
+        }
+      }
+      .blaze-nav {
+        padding: 1.5rem 1rem
+      }
+      .blaze-pagination {
+          display:flex;
+          justify-content:center;
+          gap: 5px
+      }
+      .blaze-pagination button{
+          border-radius: 50%; /* Makes the button round */
+          background-color: #ccc; /* Default background color */
+          color: transparent;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease; /* Smooth transition when active */;
+          font-size: 0;
+          padding: 5px;
+      }
+      .blaze-pagination button.active{
+          background:var(--primary);
+      }
+      .blaze-slide {
+        max-width:100%;
+        flex: 0 0 100%;
+        display:flex;
+        justify-content:center;
+
+        .cs-picture{
+          display: flex;
+          padding: 2rem;
+
+          img{
+            max-width: 100%;
+            height: auto;
+            max-height: 160px;
+            object-fit: contain;
+          }
+        }
+      }
+  }
+}        
+@media only screen and (min-width: 48rem) {
+  #logo-carousel{
+    .blaze-slide {
+      max-width:50%;
+      flex: 0 0 50%;
+    }
+    .cs-container{
+      max-width: 80rem;
+
+      .cs-content {
+          text-align: left;
+          align-items: flex-start;
+      }
+    }
+  }    
+}
+@media only screen and (min-width: 64rem) {
+  #logo-carousel{
+    .blaze-slide {
+      max-width:33%;
+      flex: 0 0 33%;
+    }
+  }
+}
+@media only screen and (min-width: 100rem) {
+  #logo-carousel{
+    .blaze-slide {
+      max-width:25%;
+      flex: 0 0 25%;
+    }
+    .cs-picture{
+      padding: 5rem !important;
+  }
+}
+}
+</style>
