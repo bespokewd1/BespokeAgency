@@ -1,11 +1,11 @@
 ---
 title: "Carepatron: The All-in-One EHR Solution for Healthcare Professionals"
-url: https://bespokewebdesign.ca/blog/carepatron/
 description: Carepatron is an all-in-one solution to managing your practice in one place.
 author: Bespoke Web Design Team
-date: 2025-01-09T14:05:00.000Z
+date: 2025-01-09T16:25:00.000Z
 tags:
   - post
+  - featured
 image: /assets/images/blog/carepatron.png
 imageAlt: Healthcare Professional
 ---
@@ -81,5 +81,5 @@ If you're a healthcare provider in Edmonton (or the surrounding areas), you know
 **Ready to Make Your Practice Easier?**
 
 Start using [Carepatron](https://get.carepatron.com/bespokewebdesign) today and see how it can help streamline your workflow and improve patient care. Whether you're a therapist, chiropractor, or nutritionist, Carepatron is here to **save you time, reduce stress, and make your patients even happier!**\
-\
+
 Check out this link: <https://get.carepatron.com/bespokewebdesign>

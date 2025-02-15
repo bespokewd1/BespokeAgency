@@ -116,7 +116,7 @@
     }
   }
   
-
+    
 
 /*-- -------------------------- -->
 <---          Contact           -->
@@ -124,612 +124,275 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #contact-1333 {
-      padding: var(--sectionPadding);
-      position: relative;
-      z-index: 1;
-  }
-  #contact-1333 .cs-container {
-      width: 100%;
-      /* changes to 1280px at desktop */
-      max-width: 36.5rem;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      flex-direction: column;
-      /* 48px - 80px */
-      gap: clamp(3rem, 6vw, 5rem);
-      position: relative;
-  }
-  #contact-1333 .cs-content {
-      /* set text align to left if content needs to be left aligned */
-      text-align: left;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      /* centers content horizontally, set to flex-start to left align */
-      align-items: flex-start;
-  }
+    #contact-1388 {
+        padding: var(--sectionPadding);
+        background-color: #f7f7f7;
+        position: relative;
+        z-index: 1;
+    }
+    #contact-1388 .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: 36.5rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        column-gap: auto;
+        /* 48px - 64px */
+        gap: clamp(2rem, 3vw, 3rem);
+        position: relative;
+    }
+    #contact-1388 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
 
-  #contact-1333 .cs-title {
-      max-width: 23ch;
-      margin: 0 0 1.75rem 0;
-  }
-  #contact-1333 .cs-form {
-      width: 100%;
-      max-width: 40.625rem;
-      /* 32px - 48px top and bottom */
-      /* 16px - 60px left and right */
-      padding: clamp(2rem, 5.18vw, 3rem) clamp(1rem, 5vw, 3.75rem);
-      /* prevents flexbox from affecting height and width */
-      box-sizing: border-box;
-      background-color: #5f5f5f;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
-      /* prevents flexbox from squishing it */
-      flex: none;
-      gap: 0.75rem;
-      border-radius: 50px;
-  }
-  #contact-1333 .cs-form .cs-title {
-      /* 16px - 28px */
-      margin: 0 0 clamp(1rem, 3vw, 1.75rem) 0;
-      color: #fff;
-  }
-  #contact-1333 .cs-label {
-      /* 14px - 16px */
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      width: 100%;
-      color: #ffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 0.25rem;
-  }
-  #contact-1333 .cs-input {
-      font-size: 1rem;
-      width: 100%;
-      height: 3.5rem;
-      padding: 0;
-      padding-left: 1.5rem;
-      color: var(--headerColor);
-      background-color: #fff;
-      border: none;
-      /* prevents padding from adding to height and width */
-      box-sizing: border-box;
-      border-radius: 10px;
-  }
-  #contact-1333 .cs-input::placeholder {
-      color: #767676;
-      opacity: 0.6;
-  }
-  #contact-1333 .cs-textarea {
-      min-height: 7.5rem;
-      padding-top: 1.5rem;
-      /* 16px - 28px */
-      margin: 0 0 clamp(1rem, 3vw, 1.75rem) 0;
-      font-family: inherit;
-  }
-  #contact-1333 .cs-button-solid {
-      font-size: 1rem;
-      /* 46px - 56px */
-      line-height: clamp(2.875em, 5.5vw, 3.5em);
-      text-decoration: none;
-      font-weight: 700;
-      text-align: center;
-      margin: 0;
-      color: #1a1a1a;
-      border: none;
-      min-width: 9.375rem;
-      padding: 0 1.5rem;
-      background-color: var(--primary);
-      overflow: hidden;
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      /* prevents padding from adding to the width */
-      box-sizing: border-box;
-      transition: color 0.3s;
-  }
-  #contact-1333 .cs-button-solid:before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 0%;
-      background: #000;
-      opacity: 1;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: width 0.3s;
-  }
-  #contact-1333 .cs-button-solid:hover {
-      color: #fff;
-  }
-  #contact-1333 .cs-button-solid:hover:before {
-      width: 100%;
-  }
-  #contact-1333 .cs-submit {
-      width: 100%;
-      min-width: fit-content;
-      border-radius: 10px;
-  }
-  #contact-1333 .cs-submit:hover {
-      cursor: pointer;
-  }
-  #contact-1333 .cs-faq-group {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-  }
-  #contact-1333 .cs-faq-item {
-      list-style: none;
-      width: 100%;
-      border-bottom: 1px solid #e8e8e8;
-      transition: border-bottom 0.3s;
-  }
-  #contact-1333 .cs-faq-item.active {
-      border-color: var(--primary);
-  }
-  #contact-1333 .cs-faq-item.active .cs-button {
-      color: var(--primary);
-  }
-  #contact-1333 .cs-faq-item.active .cs-button:before {
-      background-color: var(--primary);
-      transform: rotate(315deg);
-  }
-  #contact-1333 .cs-faq-item.active .cs-button:after {
-      background-color: var(--primary);
-      transform: rotate(-315deg);
-  }
-  #contact-1333 .cs-faq-item.active .cs-item-p {
-      height: auto;
-      /* 20px - 24px bottom */
-      /* 16px - 24px left & right */
-      padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 2vw, 1.5rem) 0;
-      opacity: 1;
-  }
-  #contact-1333 .cs-button {
-      font-size: 1rem;
-      line-height: 1.2em;
-      text-align: left;
-      font-weight: bold;
-      /* 16px - 24px */
-      padding: clamp(1rem, 2vw, 1.5rem);
-      padding-left: 0;
-      border: none;
-      background: transparent;
-      color: var(--headerColor);
-      display: block;
-      width: 100%;
-      position: relative;
-      transition:
-          background-color 0.3s,
-          color 0.3s;
-  }
-  #contact-1333 .cs-button:hover {
-      cursor: pointer;
-  }
-  #contact-1333 .cs-button:before {
-      /* left line */
-      content: "";
-      width: 0.5rem;
-      height: 0.125rem;
-      background-color: var(--headerColor);
-      opacity: 1;
-      border-radius: 50%;
-      position: absolute;
-      display: block;
-      top: 45%;
-      right: 1.5rem;
-      transform: rotate(45deg);
-      /* animate the transform from the left side of the x axis, and the center of the y */
-      transform-origin: left center;
-      transition: transform 0.5s;
-  }
-  #contact-1333 .cs-button:after {
-      /* right line */
-      content: "";
-      width: 0.5rem;
-      height: 0.125rem;
-      background-color: var(--headerColor);
-      opacity: 1;
-      border-radius: 50%;
-      position: absolute;
-      display: block;
-      top: 45%;
-      right: 1.3125rem;
-      transform: rotate(-45deg);
-      /* animate the transform from the right side of the x axis, and the center of the y */
-      transform-origin: right center;
-      transition: transform 0.5s;
-  }
-  #contact-1333 .cs-button-text {
-      width: 80%;
-      display: block;
-  }
-  #contact-1333 .cs-item-p {
-      /* 14px - 16px */
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      line-height: 1.5em;
-      width: 90%;
-      height: 0;
-      margin: 0;
-      /* 16px - 24px */
-      padding: 0 clamp(1rem, 2vw, 1.5rem);
-      opacity: 0;
-      color: var(--bodyTextColor);
-      /* clips the text so it doesn't show up */
-      overflow: hidden;
-      transition:
-          opacity 0.3s,
-          padding-bottom 0.3s;
-  }
-  #contact-1333 .cs-input option {
-    color: var(--headerColor);
+    #contact-1388 .cs-title {
+        max-width: 23ch;
+    }
+    #contact-1388 .cs-text {
+        margin-bottom: 1rem;
+    }
+    #contact-1388 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #contact-1388 .cs-ul {
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        position: relative;
+    }
+    #contact-1388 .cs-li {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    #contact-1388 .cs-li:hover .cs-icon-wrapper {
+        transform: scale(1.1);
+    }
+    #contact-1388 .cs-header {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.2em;
+        margin-bottom: 0.75rem;
+        color: var(--headerColor);
+        display: block;
+    }
+    #contact-1388 .cs-link {
+        font-size: 1rem;
+        line-height: 1.5em;
+        text-decoration: none;
+        color: #767676;
+        display: block;
+        position: relative;
+    }
+    #contact-1388 .cs-link:hover {
+        text-decoration: underline;
+    }
+    #contact-1388 .cs-icon-wrapper {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0;
+        border-radius: 50%;
+        border: 1px solid #bababa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        transition: transform 0.3s;
+    }
+    #contact-1388 .cs-icon {
+        width: 1.5rem;
+        height: auto;
+        display: block;
+    }
+    #contact-1388 .cs-form {
+        width: 100%;
+        max-width: 39.375rem;
+        /* 24px - 48px top and bottom */
+        /* 16px - 48px left and right */
+        padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
+        /* prevents flexbox from affecting height and width */
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    #contact-1388 .cs-h3 {
+        /* 20px - 39px */
+        font-size: clamp(1.25rem, 3vw, 2.4375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 0.25rem 0;
+        color: var(--headerColor);
+    }
+    #contact-1388 .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    #contact-1388 .cs-input {
+        font-size: 1rem;
+        width: 100%;
+        height: 3.5rem;
+        padding: 0;
+        padding-left: 1.5rem;
+        color: var(--headerColor);
+        background-color: #f7f7f7;
+        border-radius: 0.5rem;
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+    }
+    #contact-1388 .cs-input::placeholder {
+        color: #7d799c;
+        opacity: 0.6;
+    }
+    #contact-1388 .cs-textarea {
+        min-height: 7.5rem;
+        padding-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-family: inherit;
+    }
+    #contact-1388 .cs-button-solid {
+        font-size: 1rem;
+        line-height: 3.5rem;
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 3rem;
+        border-radius: 1.875rem;
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+    }
+    #contact-1388 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 0%;
+        background: #1a1a1a;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+    }
+    #contact-1388 .cs-button-solid:hover {
+        color: var(--primary);
+    }
+    #contact-1388 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #contact-1388 .cs-submit {
+        width: 100%;
+        min-width: 12.5rem;
+        border: none;
+    }
+    #contact-1388 .cs-submit:hover {
+        color: #fff;
+        cursor: pointer;
+    }
 }
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #contact-1388 .cs-container {
+        max-width: 80rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #contact-1388 .cs-content {
+        width: 47%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+    }
+    #contact-1388 .cs-submit {
+        width: auto;
+    }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #contact-1333 .cs-container {
-      max-width: 80rem;
-      flex-direction: row;
-      justify-content: space-between;
-  }
-  #contact-1333 .cs-form {
-      width: 45vw;
-  }
-  #contact-1333 .cs-submit {
-      width: auto;
-  }
+    #contact-1388 .cs-form {
+        width: 46%;
+        max-width: 36.125rem;
+    }
+    #contact-1388 .cs-submit {
+        width: auto;
+    }
+}
+/* Large Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+    #contact-1388 .cs-graphic {
+        display: block;
+    }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #contact-1333 .cs-title,
-  body.dark-mode #contact-1333 .cs-item-p,
-  body.dark-mode #contact-1333 .cs-button,
-  body.dark-mode #contact-1333 label {
-      color: var(--bodyTextColorWhite);
-      
-      
-  }
-  body.dark-mode #contact-1333 .cs-button:before,
-  body.dark-mode #contact-1333 .cs-button:after {
-      background-color: var(--bodyTextColorWhite);
-      
-  }
-  body.dark-mode #contact-1333 .cs-item-p {
-      opacity: 0.8;
-  }
-  body.dark-mode #contact-1333 .cs-form {
-      background-color: var(--medium);
-  }
-  body.dark-mode #contact-1333 .cs-input {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #fff;
-  }
-  body.dark-mode #contact-1333 .cs-input::placeholder {
-      color: #fff;
-      opacity: 0.8;
-  }
-  body.dark-mode #contact-1333 .cs-graphic {
-      opacity: 0.4;
-  }
-
-
-  
+    body.dark-mode #contact-1388 {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    body.dark-mode #contact-1388 .cs-title,
+    body.dark-mode #contact-1388 .cs-text,
+    body.dark-mode #contact-1388 .cs-header,
+    body.dark-mode #contact-1388 .cs-link,
+    body.dark-mode #contact-1388 .cs-label,
+    body.dark-mode #contact-1388 .cs-h3 {
+        color: var(--bodyTextColorWhite);
+    }
+    body.dark-mode #contact-1388 .cs-contact-text,
+    body.dark-mode #contact-1388 .cs-link {
+        opacity: 0.8;
+    }
+    body.dark-mode #contact-1388 .cs-icon-wrapper {
+        border-color: #fff;
+    }
+    body.dark-mode #contact-1388 .cs-icon {
+        /* makes it white */
+        filter: grayscale(1) brightness(1000%);
+    }
+    body.dark-mode #contact-1388 .cs-form {
+        background-color: var(--medium);
+    }
+    body.dark-mode #contact-1388 .cs-input {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+    body.dark-mode #contact-1388 .cs-input::placeholder {
+        color: #fff;
+        opacity: 0.8;
+    }
+    body.dark-mode #contact-1388 .cs-graphic {
+        opacity: 0.4;
+    }
 }
-
-                              
-    /*-- -------------------------- -->
-    <---          Reviews           -->
-    <--- -------------------------- -*/
-
-    /* Mobile - 360px */
-    @media only screen and (min-width: 0rem) {
-        #reviews-1833 {
-            padding: var(--sectionPadding);
-            overflow: hidden;
-            background-color: #222222;
-            position: relative;
-            z-index: 1;
-
-            &:before {
-                /* gradient that softens the transition from the pattern to the edge of the section */
-                content: '';
-                width: 100%;
-                height: 20%;
-                background: linear-gradient(to bottom,  rgba(34, 34, 34,1) 0%,rgba(34, 34, 34,0) 100%);
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-            }
-
-            &:after {
-                /* gradient that softens the transition from the pattern to the edge of the section */
-                content: '';
-                width: 100%;
-                height: 20%;
-                background: linear-gradient(to bottom,  rgba(34, 34, 34,0) 0%,rgba(34, 34, 34,1) 100%);
-                opacity: 1;
-                position: absolute;
-                display: block;
-                bottom: 0;
-                left: 0;
-            }
-
-            .cs-container {
-                width: 100%;
-                /* changes to 1280px at tablet */
-                max-width: (550/16rem);
-                margin: auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                /* 48px - 64px */
-                gap: clamp(3rem, 6vw, 4rem);
-                position: relative;
-                z-index: 1;
-            }
-
-            .cs-content {
-                /* set text align to left if content needs to be left aligned */
-                text-align: center;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                /* centers content horizontally, set to flex-start to left align */
-                align-items: center;
-            }
-
-            .cs-title {
-                max-width: 26ch;
-                margin: 0;
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-flex-group {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: (48/16rem);
-            }
-
-            .cs-review-group {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                position: relative;
-                z-index: 1;
-            }
-
-            .cs-stars {
-                width: (162/16rem);
-                height: auto;
-                margin: 0 0 (24/16rem);
-                display: block;
-            }
-
-            .cs-quote {
-                /* 244px - 340px */
-                width: clamp(15.25rem, 25vw, 21.25rem);
-                height: auto;
-                margin: 0 0 (24/16rem) 0;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 50%;
-                z-index: -1;
-                transform: translateX(-50%);
-            }
-
-            .cs-review-text {
-                /* 25px - 39px */
-                font-size: clamp(1.2rem, 3vw, 2rem);
-                line-height: 1.2em;
-                font-weight: bold;
-                text-align: inherit;
-                margin: 0 0 (40/16rem) 0;
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-name {
-                font-size: (20/16rem);
-                line-height: 1.2em;
-                text-align: inherit;
-                font-weight: 700;
-                margin: 0 0 (4/16rem) 0;
-                color: var(--bodyTextColorWhite);
-                display: block;
-            }
-
-            .cs-job {
-                font-size: (16/16rem);
-                line-height: 1.2em;
-                text-align: inherit;
-                margin: 0;
-                color: var(--primary);
-                display: block;
-            }
-
-            .cs-image-group {
-                /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
-                font-size: ~"min(3.7vw, 1rem)";
-                /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
-                width: (372/16em);
-                height: (352/16em);
-                /* make a white shadow to fade over the texture background behind it so it hides the fact its a mask on top of the image */
-                box-shadow: rgba(34, 34, 34, 1) 0px -45px 90px 4px;
-                position: relative;
-                z-index: -1;
-            }
-
-            .cs-picture {
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    /* makes it act like a background image */
-                    object-fit: cover;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-            }
-
-            .cs-mask {
-                width: 101%;
-                height: 101%;
-                object-fit: cover;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                z-index: 1;
-                transform: translate(-50%, -50%);
-            }
-
-            .cs-dark {
-                display: none;
-            }
-
-            .cs-waves {
-                width: 55vw;
-                /* 400px - 566px */
-                max-width: clamp(25rem, 40vw, 35.375rem);
-                height: auto;
-                opacity: 0.5;
-                position: absolute;
-                top: 0;
-                /* 100px - 160px */
-                right: ~"calc(clamp(6.25rem, 17vw, 10rem)*-1)";
-                z-index: -1;
-
-                img {
-                    width: 100%;
-                }
-            }
-
-            .cs-background {
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    opacity: .32;
-                    /* Makes img tag act as a background image */
-                    object-fit: cover;
-                }
-            }
-        }
-    }
-
-    /* Tablet - 768px */
-    @media only screen and (min-width: 48rem) {
-        #reviews-1833 {
-            .cs-container {
-                max-width: (1280/16rem);
-            }
-
-            .cs-flex-group {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            .cs-image-group {
-                font-size: ~"min(1.68vw, 1rem)";
-                /* prevents flexbox from squishing it */
-                flex: none;
-            }
-
-            .cs-review-group {
-                text-align: left;
-                align-items: flex-start;
-            }
-
-            .cs-quote {
-                left: auto;
-                right: 0;
-                transform: none;
-            }
-        }
-    }
-
-    /* Dark Mode */
-    @media only screen and (min-width: 0rem) {
-        body.dark-mode {
-            #reviews-1833 {
-                background-color: rgba(0, 0, 0, .6);
-                &:before {
-                    /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                    background: linear-gradient(to bottom,  rgba(3, 13, 20,1) 0%,rgba(3, 13, 20,0) 100%);
-                }
-
-                &:after {
-                    /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                    background: linear-gradient(to bottom,  rgba(3, 13, 20,0) 0%,rgba(3, 13, 20,1) 100%);
-                }
-
-                .cs-title,
-                .cs-text,
-                .cs-review-text,
-                .cs-name,
-                .cs-job {
-                    color: var(--bodyTextColorWhite);
-                }
-
-                .cs-image-group {
-                    /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                    box-shadow: rgba(3, 13, 20, 1) 0px -45px 90px 4px;
-                }
-
-                .cs-quote {
-                    opacity: .05;
-                }
-
-                .cs-text {
-                    opacity: 0.8;
-                }
-
-                .cs-light {
-                    display: none;
-                }
-
-                .cs-dark {
-                    display: block;
-                }
-
-                .cs-background {
-                    img {
-                        filter: grayscale(1) brightness(1000%);
-                        opacity: .12;
-                    }
-                }
-            }
-        }
-    }
