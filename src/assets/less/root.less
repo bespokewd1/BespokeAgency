@@ -4095,6 +4095,7 @@ body.dark-mode #cta-403.cs-image-only{
 
       .cs-title {
           /* 39px - 61px */
+          min-height: 281px;
           font-size: clamp(2.4375rem, 6.4vw, 3rem);
           font-weight: 700;
           line-height: 1.2em;
@@ -4315,7 +4316,7 @@ body.dark-mode #cta-403.cs-image-only{
     }
 
     .cs-button-solid {
-        font-size: (8/16rem);
+        font-size: (12/16rem);
         /* 46px - 56px */
         line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         text-decoration: none;
@@ -4324,7 +4325,7 @@ body.dark-mode #cta-403.cs-image-only{
         margin: 0;
         color: #fff;
         min-width: (150/16rem);
-        padding: 0 (32/16rem);
+        padding: 0 (16/16rem);
         overflow: hidden;
         background-color: var(--primary);
         border-radius: (80/16rem);
@@ -4412,6 +4413,10 @@ body.dark-mode #cta-403.cs-image-only{
     }
     .cs-form {
       flex-direction: row;
+    }
+    .cs-button-solid {
+      font-size: (16/16rem);
+      padding: 0 (32/16rem);
     }
   }
 }
@@ -4651,5 +4656,45 @@ body.dark-mode #cta-403.cs-image-only{
     left: auto;
     right: 0;
     transform: none;
+  }
+}
+/*-- -------------------------- -->
+<---        Review Slider       -->
+<--- -------------------------- -*/
+@media only screen and (min-width: 0rem) {
+  /* Custom: make sure slider doesn't overflow out of the screen*/
+  #reviews-1833 .blaze-slider {
+    max-width: 100vw;
+  }
+  #reviews-1833 .blaze-nav {
+    padding: 1.5rem 1rem;
+  }
+  #reviews-1833 .blaze-pagination {
+    display: flex;
+    justify-content: center;
+  }
+  #reviews-1833 .blaze-nav {
+    padding: 1.5rem 1rem;
+  }
+  #reviews-1833 .blaze-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  #reviews-1833 .blaze-pagination button {
+    border-radius: 50%;
+    /* Makes the button round */
+    background-color: #ccc;
+    /* Default background color */
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition when active */
+    font-size: 0;
+    padding: 5px;
+  }
+  #reviews-1833 .blaze-pagination button.active {
+    background: var(--primary);
   }
 }
