@@ -1,140 +1,185 @@
 ---
-title: 'Blog | Bespoke Web Design'
-description: 'Get superior results with our premium, 100% hand-coded websites. Improve your brand and convert visitors into leads. Starting at just $149/month, our custom sites offer unmatched quality and ongoing support. Explore our services today!'
-preloadImg: '/assets/images/bespokelogo1234.png'
-permalink: 'blog/'
+title: "Blog | Bespoke Web Design"
+description: "Get superior results with our premium, 100% hand-coded websites. Improve your brand and convert visitors into leads. Starting at just $149/month, our custom sites offer unmatched quality and ongoing support. Explore our services today!"
+preloadImg: "/assets/images/bespokelogo1234.png"
+permalink: "blog/"
 image: /assets/images/ogimage2.png
 eleventyNavigation:
-    key: Blog
-    order: 500
+  key: Blog
+  order: 500
 ---
 
-{% extends "layouts/base.html" %}
-
-{% block head %}
-<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-ZMYC44ZRHF'); </script>
-    <link rel="stylesheet" href="/assets/css/blog.css">
-{% endblock %}
-
-{% block body %}
-   <!-- ============================================ -->
+{% extends "layouts/base.html" %} {% block head %}
+<!-- Google tag (gtag.js) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-ZMYC44ZRHF");
+</script>
+<link rel="stylesheet" href="/assets/css/blog.css" />
+{% endblock %} {% block body %}
+<!-- ============================================ -->
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
 <div id="banner-1106-1112">
-    <div class="cs-container">
-        <span class="cs-int-title">Blog</span>
-        <div class="cs-breadcrumbs">
-            <a href="/index" class="cs-link">Home</a>
-            <a href="/blog" class="cs-link cs-active">Blog</a>
-        </div>
+  <div class="cs-container">
+    <span class="cs-int-title">Blog</span>
+    <div class="cs-breadcrumbs">
+      <a href="/index" class="cs-link">Home</a>
+      <a href="/blog" class="cs-link cs-active">Blog</a>
     </div>
-    <!--Background Image-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg">
-        <img decoding="async" src="/assets/images/banner.jpg" alt="mechanic" width="1280" height="568" aria-hidden="true">
-    </picture>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg" />
+    <!--Tablet and above Image-->
+    <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg" />
+    <img
+      decoding="async"
+      src="/assets/images/banner.jpg"
+      alt="mechanic"
+      width="1280"
+      height="568"
+      aria-hidden="true"
+    />
+  </picture>
 </div>
 
 <section id="pricing-1690">
-    <div class="cs-container">
-        <div id="cs-content-1801">
-            <div class="cs-flex">
-                <span class="cs-topper">Latest News</span>
-                <h1 class="cs-title">Stay Updated on Business Tech & Web Design</h1>
-                <p class="cs-text">
-                    At Bespoke Web Design, we create custom websites tailored to your business goals. Check out our blog for the latest insights on web design, business tech, and more!
-                </p>
-            </div>
-        </div>
+  <div class="cs-container">
+    <div id="cs-content-1801">
+      <div class="cs-flex">
+        <span class="cs-topper">Latest News</span>
+        <h1 class="cs-title">Stay Updated on Business Tech & Web Design</h1>
+        <p class="cs-text">
+          At Bespoke Web Design, we create custom websites tailored to your
+          business goals. Check out our blog for the latest insights on web
+          design, business tech, and more!
+        </p>
+      </div>
+    </div>
 
     <!-- ============================================ -->
     <!--              Main Blog Content               -->
     <!-- ============================================ -->
 
-    <div class="blog-container main-content-wrapper">
-        
-        <div class="main-content">
-            <!-- ============================================ -->
-            <!--                 Blog Articles                -->
-            <!-- ============================================ -->
+    <div class="blog-container main-content-wrapper blog-preview">
+      <div class="main-content">
+        <!-- ============================================ -->
+        <!--                 Blog Articles                -->
+        <!-- ============================================ -->
 
-            {% if collections.post | length == 0 %}
-                <h1>No Recent Posts</h1>
-            {% else %}
-                {%- for post in collections.post | reverse -%}
-                    <article class="recent-articles">
-                        <!--Main Article Image-->
-                        <picture class="blog-mainImage">
-                            <img
-                            src="{{ post.data.image }}"
-                            alt="{{ post.data.imageAlt }}"
-                            width="795"
-                            height="400"
-                            decoding="async"/>
-                        </picture>
-                        <!--Article Info-->
-                        <div class="article-group">
-                            <div class="blog-authorGroup">
-                                <!--Author Image-->
-                                <picture class="blog-author-img">
-                                    <img
-                                    src="/assets/svgs/profile.svg"
-                                    alt="house"
-                                    width="32"
-                                    height="32"
-                                    decoding="async"/>
-                                </picture>
-                                <span class="blog-author">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="blog-dot"></span>
-                                <!--Blog Date-->
-                                <span class="blog-date">{{ post.date | postDate }}</span>
-                            </div>
-                            <h2 class="blog-h1">
-                                {{ post.data.title }}
-                            </h2>
-                            <p class="blog-desc">
-                                {{ post.data.description }}
-                            </p>
-                            <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {% endif %}
-        </div>
-</div>
-        {% include 'components/cta.html' %}
+        {% if collections.post | length == 0 %}
+        <h1>No Recent Posts</h1>
+        {% else %} {%- for post in collections.post | reverse -%}
+        <article class="recent-articles">
+          <!--Main Article Image-->
+          <picture class="blog-mainImage">
+            <img
+              src="{{ post.data.image }}"
+              alt="{{ post.data.imageAlt }}"
+              width="795"
+              height="400"
+              decoding="async"
+            />
+          </picture>
+          <!--Article Info-->
+          <div class="article-group">
+            <div class="blog-authorGroup">
+              <!--Author Image-->
+              <picture class="blog-author-img">
+                <img
+                  src="/assets/svgs/profile.svg"
+                  alt="house"
+                  width="32"
+                  height="32"
+                  decoding="async"
+                />
+              </picture>
+              <span class="blog-author">{{ post.data.author }}</span>
+              <span aria-hidden="true" class="blog-dot"></span>
+              <!--Blog Date-->
+              <span class="blog-date">{{ post.date | postDate }}</span>
+            </div>
+            <h2 class="blog-h1">{{ post.data.title }}</h2>
+            <p class="blog-desc">{{ post.data.description }}</p>
+            <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
+          </div>
+        </article>
+        {%- endfor -%} {% endif %}
+      </div>
+    </div>
+    {% include 'components/cta.html' %}
 
     <!-- ============================================ -->
     <!--                 SiteGround CTA                  -->
     <!-- ============================================ -->
 
     <section id="cta-403">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Host Your Webstite With SiteGround</span>
-                <h2 class="cs-title">Need Reliable Web Hosting? Start for as low as $3.99/month.</h2>
-                <p class="cs-text">
-                    We trust SiteGround for our own site’s hosting, and it’s been rock-solid! Get fast, secure, and dependable hosting for your website. Start with SiteGround and experience top-notch performance and support.
-                </p>
-                <a href="https://www.siteground.com/index.htm?afcode=5755263dd5d959d992ef64afec5ec047" class="cs-button-solid" target="_blank" class="affiliate_link" >Get Started</a>
-                <div class="cs-tooltip cs-text">Affiliate Disclosure
-                    <span class="cs-tooltiptext">Some of the links on this website are affiliate links, meaning, at no additional cost to you, I may earn a commission if you click through and make a purchase. I only recommend products and services that I trust and believe will add value to my readers. Your support by using these links helps me to continue providing valuable content.</span>
-                </div>
-            </div>
+      <div class="cs-container">
+        <div class="cs-content">
+          <span class="cs-topper">Host Your Webstite With SiteGround</span>
+          <h2 class="cs-title">
+            Need Reliable Web Hosting? Start for as low as $3.99/month.
+          </h2>
+          <p class="cs-text">
+            We trust SiteGround for our own site’s hosting, and it’s been
+            rock-solid! Get fast, secure, and dependable hosting for your
+            website. Start with SiteGround and experience top-notch performance
+            and support.
+          </p>
+          <a
+            href="https://www.siteground.com/index.htm?afcode=5755263dd5d959d992ef64afec5ec047"
+            class="cs-button-solid"
+            target="_blank"
+            class="affiliate_link"
+            >Get Started</a
+          >
+          <div class="cs-tooltip cs-text">
+            Affiliate Disclosure
+            <span class="cs-tooltiptext"
+              >Some of the links on this website are affiliate links, meaning,
+              at no additional cost to you, I may earn a commission if you click
+              through and make a purchase. I only recommend products and
+              services that I trust and believe will add value to my readers.
+              Your support by using these links helps me to continue providing
+              valuable content.</span
+            >
+          </div>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="../assets/images/blog/siteground.jpg">
-            <source media="(min-width: 601px)" srcset="../assets/images/blog/siteground.jpg">
-            <img loading="lazy" decoding="async" src="../assets/images/blog/siteground.jpg" alt="cleaner" width="1920" height="660" aria-hidden="true">
-        </picture>
+      </div>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <source
+          media="(max-width: 600px)"
+          srcset="../assets/images/blog/siteground.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="../assets/images/blog/siteground.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="../assets/images/blog/siteground.jpg"
+          alt="cleaner"
+          width="1920"
+          height="660"
+          aria-hidden="true"
+        />
+      </picture>
     </section>
 
+    {% include 'components/chatbot.html' %} {% endblock %}
+  </div>
+</section>
 
-        {% include 'components/chatbot.html' %}
-    
-    {% endblock %}
