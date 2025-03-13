@@ -440,6 +440,7 @@
     padding: clamp(1rem, 3vw, 2rem);
     background-color: #1a1a1a;
     position: relative;
+    border-radius: var(--buttonRounded);
   }
   #sbs-1014 .cs-quote-text {
     /* 14px - 16px */
@@ -484,6 +485,7 @@
   #sbs-1014 .cs-picture {
     position: absolute;
     display: block;
+    border-radius: var(--cardRounded);
   }
   #sbs-1014 .cs-picture img {
     position: absolute;
@@ -493,6 +495,7 @@
     width: 100%;
     /* makes image act like a background image */
     object-fit: cover;
+    border-radius: var(--cardRounded);
   }
   #sbs-1014 .cs-picture1 {
     width: 32.625em;
@@ -503,10 +506,10 @@
   #sbs-1014 .cs-picture2 {
     width: 25.875em;
     height: 25em;
-    background-color: #fff;
+    background-color: #6eacda;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
     /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #6EACDA;
+    border: clamp(0.375em, 1.5vw, 0.75em) solid #6eacda;
     right: 0;
     bottom: 0;
   }
@@ -589,6 +592,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
+    border-radius: var(--cardRounded);
   }
   #why-choose-1904 .cs-topper {
     color: var(--bodyTextColorWhite);
@@ -705,6 +709,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    border-radius: var(--cardRounded);
   }
   #why-choose-1904 .cs-picture {
     max-width: 100%;
@@ -735,6 +740,7 @@
     right: 50%;
     left: auto;
     z-index: -1;
+    border-radius: var(--cardRounded);
   }
   #why-choose-1904 .cs-content {
     width: 50%;

@@ -13,7 +13,7 @@
     z-index: 1;
     position: relative;
     display: inline-block;
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     margin: auto;
     background-color: var(--headerColor);
     min-width: 9.375rem;
@@ -37,7 +37,7 @@
     content: "";
     opacity: 0;
     border: 1px solid var(--headerColor);
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     background: #fff;
     height: 100%;
     width: 100%;
@@ -607,7 +607,7 @@
     z-index: 1;
     position: relative;
     display: inline-block;
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     margin: auto;
     background-color: #4295cd;
     min-width: 9.375rem;
@@ -629,7 +629,7 @@
     content: "";
     opacity: 0;
     border: 1px solid #4295cd;
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     background: #fff;
     height: 100%;
     width: 100%;

@@ -14,7 +14,7 @@
     z-index: 1;
     position: relative;
     display: inline-block;
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     margin: auto;
     background-color: var(--headerColor);
     min-width: 9.375rem;
@@ -38,7 +38,7 @@
     content: "";
     opacity: 0;
     border: 1px solid var(--headerColor);
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     background: #fff;
     height: 100%;
     width: 100%;
@@ -652,7 +652,7 @@
       z-index: 1;
       position: relative;
       display: inline-block;
-      border-radius: 0.25rem;
+      border-radius: var(--buttonRounded);
       margin: auto;
       background-color: @primary;
       min-width: 9.375rem;
@@ -674,7 +674,7 @@
         content: "";
         opacity: 0;
         border: 1px solid @headerColor;
-        border-radius: 0.25rem;
+        border-radius: var(--buttonRounded);
         background: #fff;
         height: 100%;
         width: 100%;
@@ -697,8 +697,10 @@
     text-wrap: pretty;
   }
 
-  .blog-date .date-part--year {
-    display: none;
+  .blog-date {
+    .date-part--year {
+      display: none;
+    }
   }
 }
 

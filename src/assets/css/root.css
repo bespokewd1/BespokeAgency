@@ -5,7 +5,7 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #4594F2;
+    --primary: #4594f2;
     --primaryLight: #000000;
     --secondary: #000000;
     --secondaryLight: #000000;
@@ -19,6 +19,8 @@
     --bodyFontSize: 1.1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(7rem, 7.82vw, 6.25rem) 1rem;
+    --cardRounded: 24px;
+    --buttonRounded: 12px;
   }
   .cs-topper {
     display: block;
@@ -66,6 +68,10 @@
     transition: color 0.3s;
     transition-delay: 0.1s;
     text-align: center;
+    border-radius: var(--buttonRounded);
+  }
+  .cs-button-solid:before {
+    border-radius: var(--buttonRounded);
   }
   .cs-button-solid:hover {
     color: #fff;
@@ -925,7 +931,7 @@
     text-decoration: none;
     width: 2rem;
     height: 2rem;
-    background-color: #4594F2;
+    background-color: #4594f2;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1481,7 +1487,7 @@
     /* 32px - 44px top & bottom, 24px - 32px left & right */
     padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2rem);
     margin: 0;
-    border-radius: 0;
+    border-radius: var(--cardRounded);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1493,7 +1499,7 @@
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
     transition: background-color 0.3s;
-    background: #4594F2;
+    background: #4594f2;
   }
   #why-choose-223 .cs-item:hover {
     background-color: var(--dark);
@@ -1674,7 +1680,7 @@
   }
   #services-1644 .cs-item:before {
     /* gradient line divider */
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
@@ -1802,6 +1808,7 @@
     background-color: #fff;
     grid-column: span 12;
     transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: var(--cardRounded);
   }
   #services-1331 .cs-item:hover {
     transform: translateY(-1rem);
@@ -1937,7 +1944,7 @@
   #cs-footer-309 .id {
     padding: var(--sectionPadding);
     background-color: #f8f8f8;
-    color: #6EACDA;
+    color: #6eacda;
     /* Navigation Links */
   }
   #cs-footer-309 .cs-container {
@@ -2063,7 +2070,7 @@
     transition: color 0.3s;
   }
   #cs-footer-309 .cs-copyright-link:hover {
-    color: #6EACDA;
+    color: #6eacda;
   }
   #cs-footer-309 .cs-top-social {
     display: flex;
@@ -2156,7 +2163,7 @@
     z-index: 1;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
-    border-radius: 5%;
+    border-radius: var(--cardRounded);
   }
   #cta-1014 .cs-background {
     width: 100%;
@@ -2220,7 +2227,7 @@
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     width: 100%;
   }
   #cta-1014 .cs-button-solid:before {
@@ -2319,17 +2326,17 @@
   margin-bottom: 8px;
 }
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/assets/fonts/montserrat-v26-latin-regular.woff2) format('truetype');
+  src: url(/assets/fonts/montserrat-v26-latin-regular.woff2) format("truetype");
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 /*-- -------------------------- -->
 <---           Blog             -->
@@ -2552,7 +2559,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    border-radius: 5%;
+    border-radius: var(--cardRounded);
   }
   #pricing-1690 .cs-item.cs-popular {
     background-color: #082032;
@@ -2713,7 +2720,7 @@
     max-width: 25ch;
   }
   #cs-content-1801 .cs-button-solid {
-    font-size: calc(16/16 * 1rem);
+    font-size: calc(16 / 16 * 1rem);
     /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
     text-decoration: none;
@@ -2721,10 +2728,10 @@
     text-align: center;
     margin: 0;
     color: #fff;
-    min-width: calc(150/16 * 1rem);
-    padding: 0 calc(24/16 * 1rem);
+    min-width: calc(150 / 16 * 1rem);
+    padding: 0 calc(24 / 16 * 1rem);
     background-color: var(--primary);
-    border-radius: calc(4/16 * 1rem);
+    border-radius: calc(4 / 16 * 1rem);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -2741,7 +2748,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: calc(4/16 * 1rem);
+    border-radius: calc(4 / 16 * 1rem);
     transition: width 0.3s;
   }
   #cs-content-1801 .cs-button-solid:hover:before {
@@ -2990,6 +2997,7 @@
   #cta-403 {
     padding: var(--sectionPadding);
     position: relative;
+    border-radius: var(--cardRounded);
   }
   #cta-403 .cs-background {
     width: 100%;
@@ -3000,6 +3008,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    border-radius: var(--cardRounded);
   }
   #cta-403 .cs-background:before {
     /* background color overlay */
@@ -3015,6 +3024,7 @@
     z-index: 1;
   }
   #cta-403 .cs-background img {
+    border-radius: var(--cardRounded);
     position: absolute;
     top: 0;
     left: 0;
@@ -3068,7 +3078,7 @@
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -3085,7 +3095,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     transition: width 0.3s;
   }
   #cta-403 .cs-button-solid:hover:before {
@@ -3168,7 +3178,7 @@
     object-fit: contain;
     max-width: 100vw;
     object-position: top;
-    border-radius: 5%;
+    border-radius: var(--cardRounded);
   }
 }
 @media only screen and (min-width: 48rem) {
@@ -3189,7 +3199,7 @@
   #cta-403.cs-image-only img {
     max-height: 540px;
     width: auto;
-    border-radius: 5%;
+    border-radius: var(--cardRounded);
   }
 }
 /*Custom Styles*/
@@ -3359,7 +3369,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     min-width: 12.5rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
-    border-radius: 0.5rem;
+    border-radius: var(--buttonRounded);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -3376,7 +3386,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.25rem;
+    border-radius: var(--buttonRounded);
     transition: width 0.3s;
   }
   #hero-1426 .cs-button-solid:hover:before {
@@ -3544,7 +3554,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     width: 11.25rem;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 0.5rem;
+    border-radius: var(--buttonRounded);
     /* clips corners of the before element */
     overflow: hidden;
     margin: 0;
@@ -3837,7 +3847,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
   #reviews-1833:before {
     /* gradient that softens the transition from the pattern to the edge of the section */
-    content: '';
+    content: "";
     width: 100%;
     height: 20%;
     background: linear-gradient(to bottom, #222222 0%, rgba(34, 34, 34, 0) 100%);
@@ -3849,7 +3859,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
   #reviews-1833:after {
     /* gradient that softens the transition from the pattern to the edge of the section */
-    content: '';
+    content: "";
     width: 100%;
     height: 20%;
     background: linear-gradient(to bottom, rgba(34, 34, 34, 0) 0%, #222222 100%);
@@ -3968,7 +3978,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     position: absolute;
     top: 0;
     /* 100px - 160px */
-    right: calc(clamp(6.25rem, 17vw, 10rem)*-1);
+    right: calc(clamp(6.25rem, 17vw, 10rem) * -1);
     z-index: -1;
   }
   #reviews-1833 .cs-waves img {
