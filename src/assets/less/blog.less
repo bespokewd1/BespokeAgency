@@ -563,10 +563,11 @@
   .recent-articles {
     max-width: 49.6875em;
     width: 100%;
-    overflow: hidden;
-    flex: none;
     display: grid;
     grid-template-rows: min-content;
+
+    /* Make this element a container for container queries */
+    container-type: inline-size;
 
     .blog-mainImage {
       .image-container();
@@ -578,7 +579,12 @@
     .article-group {
       border: 1px solid @borderColor;
       border-radius: 0 0 0.5em 0.5em;
-      padding: clamp(30px, 5vw, 50px);
+      padding: clamp(20px, 5vw, 50px);
+      display: flex;
+      flex-direction: column;
+      & > :last-child {
+        margin: auto auto 0;
+      }
     }
 
     .blog-author-img {
@@ -602,12 +608,29 @@
       color: @bodyTextColor;
     }
 
-    .blog-dot {
-      display: block;
-      border-radius: 50%;
-      background-color: @primary;
-      height: 3px;
-      width: 3px;
+    .blog-date {
+      display: inline-flex;
+      align-items: center;
+
+      &:before {
+        content: "•"; // You can change this to any other emoji or text dot
+        display: inline-block;
+        margin-right: 1ch;
+        font-size: 1rem; // Adjust font-size if needed
+        line-height: 1;
+        color: #4295cd; // Matching the text color
+      }
+
+      .date-part--day {
+        white-space: nowrap;
+      }
+
+      .date-part--year {
+        &:before {
+          content: ", ";
+          margin-right: 1ch;
+        }
+      }
     }
 
     .blog-h1 {
@@ -664,6 +687,18 @@
         .button-hover();
       }
     }
+  }
+}
+
+/* Container Query to hide the year on narrow containers */
+@container (max-width: 470px) {
+  .blog-author {
+    text-align: center;
+    text-wrap: pretty;
+  }
+
+  .blog-date .date-part--year {
+    display: none;
   }
 }
 

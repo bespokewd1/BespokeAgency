@@ -512,10 +512,10 @@
   .recent-articles {
     max-width: 49.6875em;
     width: 100%;
-    overflow: hidden;
-    flex: none;
     display: grid;
     grid-template-rows: min-content;
+    /* Make this element a container for container queries */
+    container-type: inline-size;
   }
   .recent-articles .blog-mainImage {
     position: relative;
@@ -536,7 +536,12 @@
   .recent-articles .article-group {
     border: 1px solid #ebebeb;
     border-radius: 0 0 0.5em 0.5em;
-    padding: clamp(30px, 5vw, 50px);
+    padding: clamp(20px, 5vw, 50px);
+    display: flex;
+    flex-direction: column;
+  }
+  .recent-articles .article-group > :last-child {
+    margin: auto auto 0;
   }
   .recent-articles .blog-author-img {
     position: relative;
@@ -566,12 +571,24 @@
     line-height: 1.5em;
     color: var(--bodyTextColor);
   }
-  .recent-articles .blog-dot {
-    display: block;
-    border-radius: 50%;
-    background-color: #4295cd;
-    height: 3px;
-    width: 3px;
+  .recent-articles .blog-date {
+    display: inline-flex;
+    align-items: center;
+  }
+  .recent-articles .blog-date:before {
+    content: "•";
+    display: inline-block;
+    margin-right: 1ch;
+    font-size: 1rem;
+    line-height: 1;
+    color: #4295cd;
+  }
+  .recent-articles .blog-date .date-part--day {
+    white-space: nowrap;
+  }
+  .recent-articles .blog-date .date-part--year:before {
+    content: ", ";
+    margin-right: 1ch;
   }
   .recent-articles .blog-h1 {
     margin: 1rem 0;
@@ -624,6 +641,16 @@
   }
   .recent-articles .blog-link:hover:before {
     opacity: 1;
+  }
+}
+/* Container Query to hide the year on narrow containers */
+@container (max-width: 470px) {
+  .blog-author {
+    text-align: center;
+    text-wrap: pretty;
+  }
+  .blog-date .date-part--year {
+    display: none;
   }
 }
 /* Mobile - 1024px */
