@@ -4279,7 +4279,6 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   transition-duration: var(--beam-duration);
   transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
   transition-delay: 0.1s;
-  z-index: -1;
 }
 #autoscroll-gallery .gallery-wrapper li:hover {
   z-index: 1;
