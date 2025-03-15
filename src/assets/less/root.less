@@ -680,6 +680,12 @@
   }
 }
 /* Dark Mode */
+
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #cs-navigation {
+    box-shadow: var(--medium) 0px 8px 24px;
+  }
+}
 @media only screen and (max-width: 63.9375rem) {
   body.dark-mode #cs-navigation:before {
     background-color: var(--dark);
