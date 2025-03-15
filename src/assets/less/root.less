@@ -10,7 +10,7 @@
     --secondary: #000000;
     --secondaryLight: #000000;
     --headerColor: #000000;
-    --bodyTextColor: #f9f9f9;
+    --bodyTextColor: #000000;
     --bodyTextColorWhite: #fafafa;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -4135,7 +4135,7 @@ body.dark-mode #cta-403.cs-image-only {
       margin: 0 0 clamp(2rem, 4vw, 2.5rem);
       /* 24px - 40px */
       margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
-      color: var(--headerColor);
+      color: var(--bodyTextColor);
     }
 
     .cs-button-group {
@@ -4838,7 +4838,7 @@ body.dark-mode {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--sectionPadding);
+  padding: 0 1rem clamp(7rem, 7.82vw, 6.25rem);
 
   // Using clamp to create fluid values based on viewport width
   --scroller-gap: clamp(1.5rem, calc(1rem + 2vw), 4rem);

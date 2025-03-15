@@ -10,7 +10,7 @@
     --secondary: #000000;
     --secondaryLight: #000000;
     --headerColor: #000000;
-    --bodyTextColor: #f9f9f9;
+    --bodyTextColor: #000000;
     --bodyTextColorWhite: #fafafa;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -3548,7 +3548,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     margin: 0 0 clamp(2rem, 4vw, 2.5rem);
     /* 24px - 40px */
     margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
-    color: var(--headerColor);
+    color: var(--bodyTextColor);
   }
   #hero-358 .cs-button-group {
     width: 100%;
@@ -4167,7 +4167,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--sectionPadding);
+  padding: 0 1rem clamp(7rem, 7.82vw, 6.25rem);
   --scroller-gap: clamp(1.5rem, calc(1rem + 2vw), 4rem);
   --scroller-max-width: clamp(300px, calc(500px + 30vw), 1200px);
 }
