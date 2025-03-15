@@ -10,7 +10,7 @@
     --secondary: #000000;
     --secondaryLight: #000000;
     --headerColor: #000000;
-    --bodyTextColor: #000000;
+    --bodyTextColor: #f9f9f9;
     --bodyTextColorWhite: #fafafa;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -221,8 +221,9 @@
   #dark-mode-toggle {
     display: block;
     position: absolute;
-    bottom: 1.25rem;
+    top: 50%;
     right: 5.625rem;
+    transform: translateY(-50%);
     width: 3rem;
     height: 3rem;
     background: transparent;
@@ -418,8 +419,8 @@
     object-fit: contain;
   }
   #cs-navigation .cs-toggle {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: clamp(2rem, 9vw, 3.5rem);
+    height: clamp(2rem, 9vw, 3.5rem);
     margin: 0 0 0 auto;
     background-color: #1a1a1a;
     border: none;
@@ -4089,8 +4090,8 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
 }
 /*-- -------------------------- -->
-<---  Auto Scroll Brands Images -->
-<--- -------------------------- -*/
+   <---  Auto Scroll Brands Images -->
+   <--- -------------------------- -*/
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -4110,10 +4111,21 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
 }
 body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: black;
+  background-color: transparent;
+  box-shadow: unset;
 }
-/* mobile*/
+body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link .brand-name {
+  background-color: var(--bodyTextColor);
+  color: var(--headerColor);
+}
+body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:after {
+  background-image: conic-gradient(from var(--angle), rgb(var(--brand-rgb)), transparent, var(--dark), transparent, rgb(var(--brand-rgb)));
+}
+body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
+  filter: blur(0.2em);
+}
+/* mobile and base styles */
 #autoscroll-gallery {
   width: 100%;
   max-width: 80rem;
@@ -4122,10 +4134,9 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Using clamp to create fluid values based on viewport width */
+  padding: var(--sectionPadding);
   --scroller-gap: clamp(1.5rem, calc(1rem + 2vw), 4rem);
   --scroller-max-width: clamp(300px, calc(500px + 30vw), 1200px);
-  /*animation starts here */
 }
 #autoscroll-gallery .cs-content {
   text-align: center;
@@ -4144,7 +4155,6 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
   transition: transform 200ms ease-in-out, filter 200ms linear;
   touch-action: pan-y;
   transform-style: preserve-3d;
-  /* Enable 3D for list items */
   position: relative;
   display: grid;
   grid-template-rows: min-content;
@@ -4156,20 +4166,19 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
 #autoscroll-gallery .gallery-wrapper li img {
   object-fit: contain;
   width: clamp(150px, calc(150px + 5vw), 250px);
-  /* Fluid image width */
   height: auto;
   transition: transform var(--lean-duration) ease;
-  /* Smooth transition for hover effect */
   transform-origin: bottom center;
-  /* Set origin for rotation */
   transform-style: preserve-3d;
-  /* Enable 3D for images */
 }
 #autoscroll-gallery .gallery-wrapper li .brand-link {
   position: absolute;
+  display: grid;
+  place-content: center;
+  grid-template-areas: "link";
   text-decoration: none;
   border-radius: 100px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px white;
   transform: translate(-50%, 0);
   top: calc(50% - var(--beam-height));
   left: 50%;
@@ -4177,35 +4186,33 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
   opacity: 0;
   transition: transform 0.2s calc(var(--lean-duration) + var(--beam-duration)) cubic-bezier(0.75, 0.25, 0.25, 0.75), opacity 0.2s calc(var(--lean-duration) + var(--beam-duration)) cubic-bezier(0.75, 0.25, 0.25, 0.75);
   z-index: 1;
-  width: fit-content;
 }
-#autoscroll-gallery .gallery-wrapper li .brand-link span {
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  color: black;
-  background-color: #ffffff;
-  border-radius: 100px;
-  color: inherit;
-  padding: 0.5em 1em;
+#autoscroll-gallery .gallery-wrapper li .brand-link .brand-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--headerColor);
+  color: var(--bodyTextColorWhite);
+  padding: 0.3em 0.5em;
+  border-radius: var(--buttonRounded);
+  font-weight: 500;
+  grid-area: link;
+  margin: 0.3em 0.5em;
+  position: relative;
 }
-#autoscroll-gallery .gallery-wrapper li .brand-link:after {
+#autoscroll-gallery .gallery-wrapper li .brand-link .brand-name:after,
+#autoscroll-gallery .gallery-wrapper li .brand-link .brand-name:before {
   content: "";
-  padding: 0.5em 1em;
+  grid-area: link;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  padding: 0.5rem 2rem 2rem;
-  background-image: conic-gradient(from var(--angle), rgb(var(--brand-rgb)), transparent, white, transparent, rgb(var(--brand-rgb)));
-  border-radius: 100px;
+  inset: 5px;
+  background-image: conic-gradient(from var(--angle), rgb(var(--brand-rgb)), transparent, var(--bodyTextColor), transparent, rgb(var(--brand-rgb)));
+  border-radius: var(--buttonRounded);
   z-index: -1;
   animation: 3s spin linear infinite;
 }
 #autoscroll-gallery .gallery-wrapper li .brand-link:before {
-  filter: blur(1.5rem);
+  filter: blur(1rem);
   opacity: 0.5;
 }
 #autoscroll-gallery .gallery-wrapper li .beam {
@@ -4222,9 +4229,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
   transition-delay: calc(0.1s + var(--lean-duration));
 }
 #autoscroll-gallery .gallery-wrapper li:hover img {
-  /* Apply hover effect to images on list item hover */
   transform: scale(0.9) rotateX(60deg) translateZ(20px);
-  /* Step back and lean effect */
 }
 #autoscroll-gallery .gallery-wrapper li:hover .brand-link {
   transform: translate(-50%, -50%);
@@ -4234,29 +4239,19 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
   transform: translate(-50%, -50%) scaleX(1);
   opacity: 1;
 }
-#autoscroll-gallery .gallery-wrapper li::after {
+#autoscroll-gallery .gallery-wrapper li:after {
   content: "";
   position: absolute;
   bottom: 0;
-  /* Start from the bottom of the li */
   left: 50%;
-  /* Center horizontally */
   transform: translate(-50%);
-  /* Adjust for perfect centering */
   width: 2px;
-  /* Laser beam width */
   height: 30px;
-  /* Laser beam length */
   background: linear-gradient(to top, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0));
-  /* Red gradient */
   box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.6);
-  /* Glow effect */
   pointer-events: none;
-  /* Make laser non-interactive */
   opacity: 0;
-  /* Initially hidden */
   transition: opacity 0.3s ease-in-out;
-  /* Smooth appearance transition */
 }
 #autoscroll-gallery .scroller .scroller-inner {
   display: flex;
@@ -4267,6 +4262,9 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+#autoscroll-gallery .scroller .scroller-inner:hover {
+  animation-play-state: paused;
+}
 #autoscroll-gallery [data-animated="true"] {
   overflow: hidden;
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
@@ -4275,9 +4273,6 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
   flex-wrap: nowrap;
   animation: scroll var(--animation-duration, 20s) var(--animation-direction, forwards) linear infinite;
   width: fit-content;
-}
-#autoscroll-gallery [data-animated="true"] .scroller-inner:hover {
-  animation-play-state: paused;
 }
 #autoscroll-gallery .scroller[data-direction="right"] {
   --animation-direction: reverse;
