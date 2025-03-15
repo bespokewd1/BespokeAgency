@@ -12,6 +12,7 @@
     --headerColor: #000000;
     --bodyTextColor: #000000;
     --bodyTextColorWhite: #fafafa;
+    --bodybg: #f9f9f9;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -115,6 +116,7 @@
     font-family: "Montserrat Georgian", Arial, sans-serif;
     font-size: 100%;
     color: var(--bodyTextColor);
+    background: var(--bodybg);
   }
   *,
   *:before,
@@ -4149,11 +4151,11 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link {
   box-shadow: unset;
 }
 body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link .brand-name {
-  background-color: var(--bodyTextColor);
+  background-color: var(--bodyTextColorWhite);
   color: var(--headerColor);
 }
 body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:after {
-  background-image: conic-gradient(from var(--angle), rgb(var(--brand-rgb)), transparent, var(--dark), transparent, rgb(var(--brand-rgb)));
+  background-image: conic-gradient(from var(--angle), rgb(var(--brand-rgb)), transparent, transparent, rgb(var(--brand-rgb)));
 }
 body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   filter: blur(0.2em);
@@ -4193,6 +4195,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   display: grid;
   grid-template-rows: min-content;
   place-content: end;
+  z-index: -1;
 }
 #autoscroll-gallery .gallery-wrapper li > * {
   grid-area: 1/1;
@@ -4248,7 +4251,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   top: 50%;
   translate: -50% -50%;
   padding-bottom: 3rem;
-  background-image: conic-gradient(from var(--angle), rgb(var(--brand-rgb)), transparent, var(--bodyTextColor), transparent, rgb(var(--brand-rgb)));
+  background-image: conic-gradient(from var(--angle), rgb(var(--brand-rgb)), transparent, transparent, rgb(var(--brand-rgb)));
   border-radius: var(--buttonRounded);
   z-index: -1;
   animation: 2s spin linear infinite;
@@ -4269,6 +4272,9 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   transition: transform var(--beam-duration) linear;
   opacity: 0;
   transition-delay: calc(0.1s + var(--lean-duration));
+}
+#autoscroll-gallery .gallery-wrapper li:hover {
+  z-index: 1;
 }
 #autoscroll-gallery .gallery-wrapper li:hover img {
   transform: scale(0.95) rotateX(60deg) translateZ(10px);

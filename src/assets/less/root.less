@@ -12,6 +12,7 @@
     --headerColor: #000000;
     --bodyTextColor: #000000;
     --bodyTextColorWhite: #fafafa;
+    --bodybg: #f9f9f9;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -116,6 +117,7 @@
     font-family: "Montserrat Georgian", Arial, sans-serif;
     font-size: 100%;
     color: var(--bodyTextColor);
+    background: var(--bodybg);
   }
   *,
   *:before,
@@ -4800,13 +4802,10 @@ body.dark-mode {
         .brand-link {
           color: black;
           background-color: transparent;
-          // box-shadow:
-          //   07px 07px 07px #0a0a0a,
-          //   -05px -05px 05px #2c394b;
           box-shadow: unset;
 
           .brand-name {
-            background-color: var(--bodyTextColor);
+            background-color: var(--bodyTextColorWhite);
             color: var(--headerColor);
           }
 
@@ -4815,7 +4814,6 @@ body.dark-mode {
               from var(--angle),
               rgb(var(--brand-rgb)),
               transparent,
-              var(--dark),
               transparent,
               rgb(var(--brand-rgb))
             );
@@ -4869,6 +4867,7 @@ body.dark-mode {
       display: grid;
       grid-template-rows: min-content;
       place-content: end;
+      z-index: -1;
 
       & > * {
         grid-area: 1/1;
@@ -4947,7 +4946,7 @@ body.dark-mode {
             from var(--angle),
             rgb(var(--brand-rgb)),
             transparent,
-            var(--bodyTextColor),
+            // var(--bodyTextColor),
             transparent,
             rgb(var(--brand-rgb))
           );
@@ -4983,6 +4982,7 @@ body.dark-mode {
       }
 
       &:hover {
+        z-index: 1;
         img {
           // Apply hover effect to images on list item hover
           transform: scale(0.95) rotateX(60deg) translateZ(10px); // Step back and lean effect
