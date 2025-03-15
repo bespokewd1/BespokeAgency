@@ -4877,9 +4877,14 @@ body.dark-mode {
         object-fit: contain;
         width: clamp(150px, calc(150px + 5vw), 250px); // Fluid image width
         height: auto;
-        transition: transform var(--lean-duration) ease; // Smooth transition for hover effect
+        transition-property: transform;
+        transition-duration: var(--lean-duration) ;
         transform-origin: bottom center;
         transform-style: preserve-3d;
+        transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+        // for unhover delay
+        transition-delay: 0.35s;
       }
 
       .brand-link {
@@ -4901,13 +4906,18 @@ body.dark-mode {
         white-space: nowrap;
         opacity: 0;
         visibility: hidden;
+
+        // for unhover: sequence: brand-link -> beam -> img
+        transition-delay: 0s;
         transition:
-          transform 0.2s calc(var(--lean-duration) + var(--beam-duration))
-            cubic-bezier(0.75, 0.25, 0.25, 0.75),
-          opacity 0.2s calc(var(--lean-duration) + var(--beam-duration))
-            cubic-bezier(0.75, 0.25, 0.25, 0.75),
-          visibility 0.2s calc(var(--lean-duration) + var(--beam-duration))
-            cubic-bezier(0.75, 0.25, 0.25, 0.75);
+          // transform 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75),
+          // opacity 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75),
+          // visibility 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+
+          transform 0.2s ,
+          opacity 0.2s ,
+          visibility 0.2s ;
+          transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
         // z-index: 1;
 
         .brand-name {
@@ -4946,14 +4956,12 @@ body.dark-mode {
             from var(--angle),
             rgb(var(--brand-rgb)),
             transparent,
-            // var(--bodyTextColor),
             transparent,
             rgb(var(--brand-rgb))
           );
           border-radius: var(--buttonRounded);
           z-index: -1;
           animation: 2s spin linear infinite;
-          // padding: 0.5em;
         }
       }
 
@@ -4964,8 +4972,7 @@ body.dark-mode {
 
       .beam {
         position: absolute;
-        padding: var(--beam-height) 1px 0;
-        // height: var(--beam-height);
+        padding: calc(var(--beam-height) + 8px) 1px 0;
         background: rgb(var(--brand-rgb));
         box-shadow:
           0 0 5px rgb(var(--brand-rgb)),
@@ -4976,26 +4983,33 @@ body.dark-mode {
         top: 50%;
         transform: translate(-50%, -50%) scaleX(0);
         transform-origin: bottom;
-        transition: transform var(--beam-duration) linear;
         opacity: 0;
-        transition-delay: calc(0.1s + var(--lean-duration));
+        transition-property: transform;
+        transition-duration: var(--beam-duration) ;
+        transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        // transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        //for unhovering
+        transition-delay: 0.1s;
       }
 
       &:hover {
         z-index: 1;
         img {
-          // Apply hover effect to images on list item hover
-          transform: scale(0.95) rotateX(60deg) translateZ(10px); // Step back and lean effect
+          transform: scale(0.95) rotateX(60deg) translateZ(10px);
+          transition-delay: 0s;
         }
 
         .brand-link {
           transform: translate(-50%, -50%);
           opacity: 1;
           visibility: visible;
+          transition-delay: calc(var(--lean-duration) + var(--beam-duration));
         }
+
         .beam {
           transform: translate(-50%, -50%) scaleX(1);
           opacity: 1;
+          transition-delay: calc(0.1s + var(--lean-duration));
         }
       }
 
