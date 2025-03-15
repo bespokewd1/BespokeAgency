@@ -4972,7 +4972,7 @@ body.dark-mode {
 
       .beam {
         position: absolute;
-        padding: calc(var(--beam-height) + 8px) 1px 0;
+        padding: calc(var(--beam-height) + 16px) 1px 0;
         background: rgb(var(--brand-rgb));
         box-shadow:
           0 0 5px rgb(var(--brand-rgb)),
@@ -4990,6 +4990,7 @@ body.dark-mode {
         // transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
         //for unhovering
         transition-delay: 0.1s;
+        z-index: -1;
       }
 
       &:hover {

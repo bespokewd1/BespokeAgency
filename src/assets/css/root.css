@@ -4267,7 +4267,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
 }
 #autoscroll-gallery .gallery-wrapper li .beam {
   position: absolute;
-  padding: calc(var(--beam-height) + 8px) 1px 0;
+  padding: calc(var(--beam-height) + 16px) 1px 0;
   background: rgb(var(--brand-rgb));
   box-shadow: 0 0 5px rgb(var(--brand-rgb)), 0 0 10px rgb(var(--brand-rgb)), 0 0 15px rgb(var(--brand-rgb)), 0 0 25px rgb(var(--brand-rgb));
   left: 50%;
@@ -4279,6 +4279,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   transition-duration: var(--beam-duration);
   transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
   transition-delay: 0.1s;
+  z-index: -1;
 }
 #autoscroll-gallery .gallery-wrapper li:hover {
   z-index: 1;
