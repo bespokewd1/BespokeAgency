@@ -4080,7 +4080,7 @@ body.dark-mode #cta-403.cs-image-only {
 
     .cs-flex-group {
       max-width: (626/16rem);
-      margin: auto;
+      // margin: auto;
       display: flex;
       align-items: flex-start;
       justify-content: center;
@@ -4111,6 +4111,7 @@ body.dark-mode #cta-403.cs-image-only {
       margin: 0 auto (16/16rem);
       color: var(--headerColor);
       position: relative;
+      text-wrap: balance;
     }
 
     .cs-accent {
@@ -4125,7 +4126,7 @@ body.dark-mode #cta-403.cs-image-only {
       /* changes to 442px at desktop */
       max-width: (700/16rem);
       /* 32px - 40px */
-      margin: 0 auto clamp(2rem, 4vw, 2.5rem);
+      margin: 0 0 clamp(2rem, 4vw, 2.5rem);
       /* 24px - 40px */
       margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
       color: var(--headerColor);
@@ -4387,6 +4388,7 @@ body.dark-mode #cta-403.cs-image-only {
       min-height: 188px;
       text-align: left;
       margin-left: 0;
+      padding: 0;
     }
     .cs-topper,
     .cs-text {
@@ -4855,7 +4857,8 @@ body.dark-mode {
         transform 200ms ease-in-out,
         filter 200ms linear;
       touch-action: pan-y;
-      transform-style: preserve-3d; // Enable 3D for list items
+      transform-style: preserve-3d;
+      perspective: 1000px;
       position: relative;
       display: grid;
       grid-template-rows: min-content;
@@ -4870,8 +4873,8 @@ body.dark-mode {
         width: clamp(150px, calc(150px + 5vw), 250px); // Fluid image width
         height: auto;
         transition: transform var(--lean-duration) ease; // Smooth transition for hover effect
-        transform-origin: bottom center; // Set origin for rotation
-        transform-style: preserve-3d; // Enable 3D for images
+        transform-origin: bottom center;
+        transform-style: preserve-3d;
       }
 
       .brand-link {
@@ -4892,12 +4895,15 @@ body.dark-mode {
         left: 50%;
         white-space: nowrap;
         opacity: 0;
+        visibility: hidden;
         transition:
           transform 0.2s calc(var(--lean-duration) + var(--beam-duration))
             cubic-bezier(0.75, 0.25, 0.25, 0.75),
           opacity 0.2s calc(var(--lean-duration) + var(--beam-duration))
+            cubic-bezier(0.75, 0.25, 0.25, 0.75),
+          visibility 0.2s calc(var(--lean-duration) + var(--beam-duration))
             cubic-bezier(0.75, 0.25, 0.25, 0.75);
-        z-index: 1;
+        // z-index: 1;
 
         .brand-name {
           display: inline-flex;
@@ -4911,41 +4917,43 @@ body.dark-mode {
           grid-area: link;
 
           // margin: 0.3em 0.5em;
+          width: 97%;
+          height: 100%;
+          margin: 0 auto;
+          position: relative;
+        }
+
+        &:after,
+        &:before {
+          content: "";
+
+          grid-area: link;
           width: 100%;
           height: 100%;
-          position: relative;
-
-          &:after,
-          &:before {
-            content: "";
-
-            grid-area: link;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            // inset: 5px;
-            left: 50%;
-            top: 50%;
-            translate: -50% -50%;
-            padding-bottom: 3rem;
-            background-image: conic-gradient(
-              from var(--angle),
-              rgb(var(--brand-rgb)),
-              transparent,
-              var(--bodyTextColor),
-              transparent,
-              rgb(var(--brand-rgb))
-            );
-            border-radius: var(--buttonRounded);
-            z-index: -1;
-            animation: 3s spin linear infinite;
-          }
+          position: absolute;
+          // inset: 5px;
+          left: 50%;
+          top: 50%;
+          translate: -50% -50%;
+          padding-bottom: 3rem;
+          background-image: conic-gradient(
+            from var(--angle),
+            rgb(var(--brand-rgb)),
+            transparent,
+            var(--bodyTextColor),
+            transparent,
+            rgb(var(--brand-rgb))
+          );
+          border-radius: var(--buttonRounded);
+          z-index: -1;
+          animation: 2s spin linear infinite;
+          // padding: 0.5em;
         }
+      }
 
-        &:before {
-          filter: blur(1rem);
-          opacity: 0.5;
-        }
+      &:before {
+        filter: blur(5rem);
+        opacity: 0.5;
       }
 
       .beam {
@@ -4970,12 +4978,13 @@ body.dark-mode {
       &:hover {
         img {
           // Apply hover effect to images on list item hover
-          transform: scale(0.9) rotateX(60deg) translateZ(20px); // Step back and lean effect
+          transform: scale(0.95) rotateX(60deg) translateZ(10px); // Step back and lean effect
         }
 
         .brand-link {
           transform: translate(-50%, -50%);
           opacity: 1;
+          visibility: visible;
         }
         .beam {
           transform: translate(-50%, -50%) scaleX(1);

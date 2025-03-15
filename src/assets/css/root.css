@@ -3499,7 +3499,6 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
   #hero-358 .cs-flex-group {
     max-width: 39.125rem;
-    margin: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -3528,6 +3527,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     margin: 0 auto 1rem;
     color: var(--headerColor);
     position: relative;
+    text-wrap: balance;
   }
   #hero-358 .cs-accent {
     color: var(--primaryLight);
@@ -3540,7 +3540,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     /* changes to 442px at desktop */
     max-width: 43.75rem;
     /* 32px - 40px */
-    margin: 0 auto clamp(2rem, 4vw, 2.5rem);
+    margin: 0 0 clamp(2rem, 4vw, 2.5rem);
     /* 24px - 40px */
     margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
     color: var(--headerColor);
@@ -3771,6 +3771,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     min-height: 188px;
     text-align: left;
     margin-left: 0;
+    padding: 0;
   }
   #hero-358 .cs-topper,
   #hero-358 .cs-text {
@@ -4182,6 +4183,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   transition: transform 200ms ease-in-out, filter 200ms linear;
   touch-action: pan-y;
   transform-style: preserve-3d;
+  perspective: 1000px;
   position: relative;
   display: grid;
   grid-template-rows: min-content;
@@ -4211,8 +4213,8 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   left: 50%;
   white-space: nowrap;
   opacity: 0;
-  transition: transform 0.2s calc(var(--lean-duration) + var(--beam-duration)) cubic-bezier(0.75, 0.25, 0.25, 0.75), opacity 0.2s calc(var(--lean-duration) + var(--beam-duration)) cubic-bezier(0.75, 0.25, 0.25, 0.75);
-  z-index: 1;
+  visibility: hidden;
+  transition: transform 0.2s calc(var(--lean-duration) + var(--beam-duration)) cubic-bezier(0.75, 0.25, 0.25, 0.75), opacity 0.2s calc(var(--lean-duration) + var(--beam-duration)) cubic-bezier(0.75, 0.25, 0.25, 0.75), visibility 0.2s calc(var(--lean-duration) + var(--beam-duration)) cubic-bezier(0.75, 0.25, 0.25, 0.75);
 }
 #autoscroll-gallery .gallery-wrapper li .brand-link .brand-name {
   display: inline-flex;
@@ -4224,12 +4226,13 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   border-radius: var(--buttonRounded);
   font-weight: 500;
   grid-area: link;
-  width: 100%;
+  width: 97%;
   height: 100%;
+  margin: 0 auto;
   position: relative;
 }
-#autoscroll-gallery .gallery-wrapper li .brand-link .brand-name:after,
-#autoscroll-gallery .gallery-wrapper li .brand-link .brand-name:before {
+#autoscroll-gallery .gallery-wrapper li .brand-link:after,
+#autoscroll-gallery .gallery-wrapper li .brand-link:before {
   content: "";
   grid-area: link;
   width: 100%;
@@ -4242,10 +4245,10 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   background-image: conic-gradient(from var(--angle), rgb(var(--brand-rgb)), transparent, var(--bodyTextColor), transparent, rgb(var(--brand-rgb)));
   border-radius: var(--buttonRounded);
   z-index: -1;
-  animation: 3s spin linear infinite;
+  animation: 2s spin linear infinite;
 }
-#autoscroll-gallery .gallery-wrapper li .brand-link:before {
-  filter: blur(1rem);
+#autoscroll-gallery .gallery-wrapper li:before {
+  filter: blur(5rem);
   opacity: 0.5;
 }
 #autoscroll-gallery .gallery-wrapper li .beam {
@@ -4262,11 +4265,12 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   transition-delay: calc(0.1s + var(--lean-duration));
 }
 #autoscroll-gallery .gallery-wrapper li:hover img {
-  transform: scale(0.9) rotateX(60deg) translateZ(20px);
+  transform: scale(0.95) rotateX(60deg) translateZ(10px);
 }
 #autoscroll-gallery .gallery-wrapper li:hover .brand-link {
   transform: translate(-50%, -50%);
   opacity: 1;
+  visibility: visible;
 }
 #autoscroll-gallery .gallery-wrapper li:hover .beam {
   transform: translate(-50%, -50%) scaleX(1);
