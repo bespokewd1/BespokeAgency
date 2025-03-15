@@ -1,4 +1,4 @@
-var typing=new Typed(".cs-changing-text", {
+var typing = new Typed(".cs-changing-text", {
     strings: ["Entrepreneurs", "Plumbers", "Contractors", "Small Businesses", "Startups"],
     typeSpeed: 100,
     backSpeed: 40,
@@ -18,3 +18,5 @@ document.getElementById('verify-button').addEventListener('click', function (eve
         alert('Please enter a domain to verify.');
     }
 });
+
+
