@@ -4090,6 +4090,28 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
 }
 /*-- -------------------------- -->
+   <--- review img -->
+   <--- -------------------------- -*/
+#review-img .cs-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+#review-img .cs-container picture {
+  width: 100%;
+  height: auto;
+}
+#review-img .cs-container picture img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-width: 350px;
+}
+/*-- -------------------------- -->
    <---  Auto Scroll Brands Images -->
    <--- -------------------------- -*/
 @property --angle {
