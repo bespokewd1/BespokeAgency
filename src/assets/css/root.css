@@ -4219,10 +4219,11 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
 #autoscroll-gallery .gallery-wrapper li .brand-link .brand-name {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background-color: var(--headerColor);
   color: var(--bodyTextColorWhite);
-  padding: 0.3em 0.5em;
+  padding: 0.28em 1em;
   border-radius: var(--buttonRounded);
   font-weight: 500;
   grid-area: link;
