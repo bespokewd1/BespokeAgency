@@ -4317,6 +4317,10 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+#autoscroll-gallery .scroller .scroller-inner img {
+  visibility: visible;
+  opacity: 1;
+}
 #autoscroll-gallery .scroller .scroller-inner:hover {
   animation-play-state: paused;
 }
@@ -4334,6 +4338,23 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
 }
 #autoscroll-gallery .scroller[data-direction="left"] {
   --animation-direction: reverse;
+}
+#autoscroll-gallery .cs-button-solid {
+  font-size: 1rem;
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 0 0;
+  color: #fff;
+  min-width: 9.375rem;
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  border-radius: 12px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 425px) {
   #autoscroll-gallery .scroller {
