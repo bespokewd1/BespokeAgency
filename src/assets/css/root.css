@@ -3756,6 +3756,30 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     width: 45%;
     border: none;
   }
+  #hero-358 .review-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero-358 .review-container .review-picture {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    display: block;
+    z-index: 1;
+  }
+  #hero-358 .review-container .review-picture img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 250px;
+    margin-inline: auto;
+    margin-top: -4rem;
+  }
 }
 /* Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
@@ -3765,6 +3789,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   #hero-358 .cs-container {
     flex-direction: row;
     justify-content: flex-start;
+    position: relative;
   }
   #hero-358 .cs-flex-group {
     justify-content: flex-start;
@@ -3808,6 +3833,11 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   #hero-358 .cs-button-solid {
     font-size: 1rem;
     padding: 0 2rem;
+  }
+  #hero-358 .review-container {
+    position: absolute;
+    bottom: -1.5rem;
+    left: -7rem;
   }
 }
 /* Dark Mode */
@@ -4097,28 +4127,6 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     align-items: center;
     gap: clamp(3rem, 6vw, 4rem);
   }
-}
-/*-- -------------------------- -->
-   <--- review img -->
-   <--- -------------------------- -*/
-#review-img .cs-container {
-  width: 100%;
-  max-width: 80rem;
-  margin: auto;
-  position: relative;
-  display: grid;
-  place-content: center;
-}
-#review-img .cs-container picture {
-  width: 100%;
-  height: auto;
-}
-#review-img .cs-container picture img {
-  object-fit: contain;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  max-width: 350px;
 }
 /*-- -------------------------- -->
    <---  Auto Scroll Brands Images -->

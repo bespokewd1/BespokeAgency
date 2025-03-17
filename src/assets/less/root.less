@@ -4376,6 +4376,33 @@ body.dark-mode #cta-403.cs-image-only {
       width: 45%;
       border: none;
     }
+
+    .review-container{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .review-picture {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        position: relative;
+        display: block;
+        z-index: 1;
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16 / 9;
+          max-width: 250px;
+          margin-inline: auto;
+          margin-top: -4rem;
+        }
+      }
+    }
   }
 }
 
@@ -4383,9 +4410,11 @@ body.dark-mode #cta-403.cs-image-only {
 @media only screen and (min-width: 81.25rem) {
   #hero-358 {
     padding-bottom: (160/16rem);
+
     .cs-container {
       flex-direction: row;
       justify-content: flex-start;
+      position: relative;
     }
 
     .cs-flex-group {
@@ -4435,6 +4464,12 @@ body.dark-mode #cta-403.cs-image-only {
     .cs-button-solid {
       font-size: (16/16rem);
       padding: 0 (32/16rem);
+    }
+    
+    .review-container{
+      position:absolute;
+      bottom: -1.5rem;
+      left: -7rem;
     }
   }
 }
@@ -4742,31 +4777,6 @@ body.dark-mode #cta-403.cs-image-only {
     flex-direction: column;
     align-items: center;
     gap: clamp(3rem, 6vw, 4rem);
-  }
-}
-/*-- -------------------------- -->
-   <--- review img -->
-   <--- -------------------------- -*/
-
-#review-img {
-  .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    position: relative;
-    display: grid;
-    place-content: center;
-    picture {
-      width: 100%;
-      height: auto;
-      img {
-        object-fit: contain;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        max-width: 350px;
-      }
-    }
   }
 }
 

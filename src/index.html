@@ -114,6 +114,29 @@ eleventyNavigation:
         />
       </picture>
     </div>
+
+    <div class="review-container">
+      <picture class="review-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/google-reviews-logo.webp"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/google-reviews-logo.webp"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/google-reviews-logo.webp"
+          alt="maid"
+          width="831"
+          height="674"
+          class="review-img"
+        />
+      </picture>
+    </div>
   </div>
 </section>
 
@@ -1239,31 +1262,6 @@ eleventyNavigation:
     />
   </picture>
 </section>
-
-<!-- <section id="review-img" class="review-img"> -->
-<!--   <div class="cs-container"> -->
-<!--     <picture class="cs-picture"> -->
-<!--       <source -->
-<!--         media="(max-width: 600px)" -->
-<!--         srcset="/assets/images/google-reviews-logo.webp" -->
-<!--       /> -->
-<!--       <source -->
-<!--         media="(min-width: 601px)" -->
-<!--         srcset="/assets/images/google-reviews-logo.webp" -->
-<!--       /> -->
-<!--       <img -->
-<!--         aria-hidden="true" -->
-<!--         loading="lazy" -->
-<!--         decoding="async" -->
-<!--         src="/assets/images/google-reviews-logo.webp" -->
-<!--         alt="maid" -->
-<!--         width="831" -->
-<!--         height="674" -->
-<!--         class="cs-img" -->
-<!--       /> -->
-<!--     </picture> -->
-<!--   </div> -->
-<!-- </section> -->
 
 {% include 'components/cta.html' %}
 
