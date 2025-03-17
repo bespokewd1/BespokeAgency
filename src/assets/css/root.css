@@ -3068,10 +3068,6 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
-  #cta-403 .cs-title,
-  #cta-403 .cs-text {
-    color: var(--bodyTextColorWhite);
-  }
   #cta-403 .cs-text {
     opacity: 0.8;
     margin-bottom: 1rem;
