@@ -418,133 +418,149 @@
 @accent: var(--accent);
 @dark: var(--dark);
 
-#sbs-1014 {
-  padding: @sectionPadding;
+@media only screen and (min-width: 0rem) {
+  #sbs-1014 {
+    padding: @sectionPadding;
 
-  .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-  }
-
-  .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: left;
-    width: 100%;
-    max-width: 33.875rem;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
-  }
-
-  .cs-text {
-    font-size: @bodyFontSize;
-    line-height: 1.5em;
-    text-align: left;
-    width: 100%;
-    max-width: 40.625rem;
-    margin: 0;
-    color: @bodyTextColor;
-    margin-bottom: 1rem;
-
-    &:last-of-type {
-      margin-bottom: 2rem;
-    }
-  }
-
-  .cs-quote {
-    margin: 0 0 2rem 0;
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
-    background-color: #1a1a1a;
-    position: relative;
-    border-radius: @buttonRounded;
-  }
-
-  .cs-quote-text {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 1rem;
-    color: @bodyTextColorWhite;
-    display: block;
-  }
-
-  .cs-name {
-    font-size: 1rem;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 0 0.25rem;
-    color: @primary;
-    display: block;
-  }
-
-  .cs-job {
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    color: @bodyTextColorWhite;
-    display: block;
-  }
-
-  .cs-quote-icon {
-    /* 60px - 136px */
-    width: clamp(3.75rem, 10vw, 8.5rem);
-    height: auto;
-    position: absolute;
-    bottom: 0rem;
-    /* 16px - 32px */
-    right: clamp(1rem, 4vw, 2rem);
-  }
-
-  .cs-image-group {
-    /* scaling the font size with the view width */
-    font-size: min(2.31vw, 0.7em);
-    /* using ems so we can use font size to scale the whole section */
-    width: 39.4375em;
-    height: 39.75em;
-    position: relative;
-  }
-
-  .cs-picture {
-    position: absolute;
-    display: block;
-    border-radius: @cardRounded;
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
+    .cs-container {
       width: 100%;
-      /* makes image act like a background image */
-      object-fit: cover;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      max-width: 33.875rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
+
+    .cs-text {
+      font-size: @bodyFontSize;
+      line-height: 1.5em;
+      text-align: left;
+      width: 100%;
+      max-width: 40.625rem;
+      margin: 0;
+      color: @bodyTextColor;
+      margin-bottom: 1rem;
+
+      &:last-of-type {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .cs-quote {
+      margin: 0 0 2rem 0;
+      /* 16px - 32px */
+      padding: clamp(1rem, 3vw, 2rem);
+      background-color: #1a1a1a;
+      position: relative;
+      border-radius: @buttonRounded;
+    }
+
+    .cs-quote-text {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.5em;
+      margin: 0 0 1rem;
+      color: @bodyTextColorWhite;
+      display: block;
+    }
+
+    .cs-button-solid {
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      padding: 0 clamp(1.475rem, 5vw, 1.775rem);
+      white-space: nowrap;
+    }
+
+    .cs-name {
+      font-size: 1rem;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0 0 0.25rem;
+      color: @primary;
+      display: block;
+    }
+
+    .cs-job {
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      color: @bodyTextColorWhite;
+      display: block;
+    }
+
+    .cs-quote-icon {
+      /* 60px - 136px */
+      width: clamp(3.75rem, 10vw, 8.5rem);
+      height: auto;
+      position: absolute;
+      bottom: 0rem;
+      /* 16px - 32px */
+      right: clamp(1rem, 4vw, 2rem);
+    }
+
+    .cs-image-group {
+      /* scaling the font size with the view width */
+      font-size: min(2.31vw, 0.7em);
+      /* using ems so we can use font size to scale the whole section */
+      width: 39.4375em;
+      height: 39.75em;
+      position: relative;
+    }
+
+    .cs-picture {
+      position: absolute;
+      display: block;
       border-radius: @cardRounded;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* makes image act like a background image */
+        object-fit: cover;
+        border-radius: @cardRounded;
+      }
+    }
+
+    .cs-picture1 {
+      width: 32.625em;
+      height: 36.3125em;
+      left: 0;
+      top: 0;
+    }
+
+    .cs-picture2 {
+      width: 25.875em;
+      height: 25em;
+      background-color: #6eacda;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+      /* 6px - 12px */
+      border: clamp(0.375em, 1.5vw, 0.75em) solid #6eacda;
+      right: 0;
+      bottom: 0;
     }
   }
+}
 
-  .cs-picture1 {
-    width: 32.625em;
-    height: 36.3125em;
-    left: 0;
-    top: 0;
-  }
-
-  .cs-picture2 {
-    width: 25.875em;
-    height: 25em;
-    background-color: #6eacda;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #6eacda;
-    right: 0;
-    bottom: 0;
+@media only screen and (max-width: 375px) {
+  #sbs-1014 {
+    .cs-button-solid {
+      font-size: 0.75rem;
+    }
   }
 }
 
@@ -568,43 +584,45 @@
   }
 }
 
-/* Dark Mode */
-body.dark-mode {
-  #sbs-1014 {
-    background-color: rgba(0, 0, 0, 0.2);
+@media only screen and (min-width: 0rem) {
+  /* Dark Mode */
+  body.dark-mode {
+    #sbs-1014 {
+      background-color: rgba(0, 0, 0, 0.2);
 
-    .cs-image-group {
-      &:before,
-      &:after {
-        background: @accent;
+      .cs-image-group {
+        &:before,
+        &:after {
+          background: @accent;
+        }
       }
-    }
 
-    .cs-picture2 {
-      background-color: @dark;
-      /* 6px - 12px */
-      border: clamp(0.375em, 1.5vw, 0.75em) solid @dark;
-    }
+      .cs-picture2 {
+        background-color: @dark;
+        /* 6px - 12px */
+        border: clamp(0.375em, 1.5vw, 0.75em) solid @dark;
+      }
 
-    .cs-title,
-    .cs-text,
-    .cs-h3,
-    .cs-quote-text,
-    .cs-name {
-      color: @bodyTextColorWhite;
-    }
+      .cs-title,
+      .cs-text,
+      .cs-h3,
+      .cs-quote-text,
+      .cs-name {
+        color: @bodyTextColorWhite;
+      }
 
-    .cs-quote {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
+      .cs-quote {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
 
-    .cs-job {
-      color: @bodyTextColorWhite;
-      opacity: 0.8;
-    }
+      .cs-job {
+        color: @bodyTextColorWhite;
+        opacity: 0.8;
+      }
 
-    .cs-quote-icon {
-      opacity: 0.2;
+      .cs-quote-icon {
+        opacity: 0.2;
+      }
     }
   }
 }
