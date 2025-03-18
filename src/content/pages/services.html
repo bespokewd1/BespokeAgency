@@ -11,44 +11,51 @@ eleventyNavigation:
     order: 300
 ---
 
-{% extends "layouts/base.html" %}
-
-{% block head %}
+{% extends "layouts/base.html" %} {% block head %}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"></script>
-<script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-ZMYC44ZRHF'); </script>
-<link rel="stylesheet" href="/assets/css/services.css">
-{% endblock %}
-
-{% block body %}
-
-
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-ZMYC44ZRHF");
+</script>
+<link rel="stylesheet" href="/assets/css/services.css" />
+{% endblock %} {% block body %}
 
 <!-- ============================================ -->
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
 <div id="banner-1106-1112">
-    <div class="cs-container">
-        <span class="cs-int-title">Services</span>
-        <div class="cs-breadcrumbs">
-            <a href="/index" class="cs-link">Home</a>
-            <a href="/services" class="cs-link cs-active">Services</a>
-        </div>
+  <div class="cs-container">
+    <span class="cs-int-title">Services</span>
+    <div class="cs-breadcrumbs">
+      <a href="/index" class="cs-link">Home</a>
+      <a href="/services" class="cs-link cs-active">Services</a>
     </div>
-    <!--Background Image-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg">
-        <img decoding="async" src="/assets/images/banner.jpg" alt="mechanic" width="1280" height="568"
-            aria-hidden="true">
-    </picture>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg" />
+    <!--Tablet and above Image-->
+    <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg" />
+    <img
+      decoding="async"
+      src="/assets/images/banner.jpg"
+      alt="mechanic"
+      width="1280"
+      height="568"
+      aria-hidden="true"
+    />
+  </picture>
 </div>
-
-
-
 
 <!-- ============================================ -->
 <!--                 Content Page                 -->
@@ -64,198 +71,352 @@ eleventyNavigation:
     about making the content accessible and easy to read.
  ================================================= -->
 
-
-
-
 <!-- ============================================ -->
 <!--                   Pricing                    -->
 <!-- ============================================ -->
 
 <section id="pricing-1690">
-    <div class="cs-container">
-        <div id="cs-content-1801">
-            <div class="cs-flex">
-                <span class="cs-topper">Pricing</span>
-                <h1 class="cs-title">Custom Web Design & Development for Your Business</h1>
-                <p class="cs-text">
-                    At Bespoke Web Design, we build fully custom websites—no limitations, no hassle. We don’t just
-                    create websites; we become your technology partner, helping your business grow with solutions
-                    designed around your goals and vision.
-                </p>
-            </div>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <span class="cs-package">BRAND & IDENTITY PACKAGE</span>
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        Includes everything in Standard Package.
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Business Logo - All designs will align with and complement your company logo.
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Business Card Design: Double-sided with two custom designs.
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Social Media Covers: for Facebook, LinkedIn, Instagram, and YouTube.
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Email Signature: Professional and branded.
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Each month, receive 5 custom social media assets tailored to your events and promotions.
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                </ul>
-                <span class="cs-price">$200
-                    <span class="cs-duration">Per Month</span>
-                </span>
-                <a href="/contact/" class="cs-link">
-                    <span class="cs-link-text">Get Started</span>
-                    <img class="cs-arrow" loading="lazy" decoding="async"
-                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-                        alt="icon" width="20" height="20" aria-hidden="true" />
-                </a>
-            </li>
-            <li class="cs-item cs-popular">
-                <span class="cs-package">STANDARD</span>
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        Custom 5-page Business website
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Responsive design for mobile and desktop
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Hosting included
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Additional Page - Starts at $150
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Support and Maintenance
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Custom CMS Blog - Starts at $300 (recommended for SEO)
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Custom Request Call for a Quote
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li cs-disabled">
-                        Advanced Copywriting (Coming Soon)
-                    </li>
-                </ul>
-                <span class="cs-price">$149
-                    <span class="cs-duration">Per Month</span>
-                </span>
-                <a href="/contact/" class="cs-link">
-                    <span class="cs-link-text">Get Started</span>
-                    <img class="cs-arrow" loading="lazy" decoding="async"
-                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-                        alt="icon" width="20" height="20" aria-hidden="true" />
-                </a>
-            </li>
-            <li class="cs-item">
-                <span class="cs-package">LUMP SUM</span>
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        Custom 5-page Business website
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        $20/mo Hosting
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Additional Page - Starts at $150
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        +$75/mo Unlimited Edits Add-on
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Custom CMS Blog - Starts at $300 (recommended for SEO)
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li">
-                        Custom Request Call for a Quote
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-                            alt="checkmark" width="18" height="18">
-                    </li>
-                    <li class="cs-li cs-disabled">
-                        Advanced Copywriting (Coming Soon)
-                    </li>
-                </ul>
-                <span class="cs-price">$2000
-                    <span class="cs-duration">+ $20/month hosting</span>
-                </span>
-                <a href="/contact/" class="cs-link">
-                    <span class="cs-link-text">Get Started</span>
-                    <img class="cs-arrow" loading="lazy" decoding="async"
-                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-                        alt="icon" width="20" height="20" aria-hidden="true" />
-                </a>
-            </li>
-        </ul>
+  <div class="cs-container">
+    <div id="cs-content-1801">
+      <div class="cs-flex">
+        <span class="cs-topper">Pricing</span>
+        <h1 class="cs-title">
+          Custom Web Design & Development for Your Business
+        </h1>
+        <p class="cs-text">
+          At Bespoke Web Design, we build fully custom websites—no limitations,
+          no hassle. We don’t just create websites; we become your technology
+          partner, helping your business grow with solutions designed around
+          your goals and vision.
+        </p>
+      </div>
     </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-package">BRAND & IDENTITY PACKAGE</span>
+        <ul class="cs-ul">
+          <li class="cs-li">
+            Includes everything in Standard Package.
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Business Logo - All designs will align with and complement your
+            company logo.
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Business Card Design: Double-sided with two custom designs.
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Social Media Covers: for Facebook, LinkedIn, Instagram, and YouTube.
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Email Signature: Professional and branded.
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Each month, receive 5 custom social media assets tailored to your
+            events and promotions.
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+        </ul>
+        <span class="cs-price"
+          >$200
+          <span class="cs-duration">Per Month</span>
+        </span>
+        <a href="/contact/" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item cs-popular">
+        <span class="cs-package">STANDARD</span>
+        <ul class="cs-ul">
+          <li class="cs-li">
+            Custom 5-page Business website
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Responsive design for mobile and desktop
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Hosting included
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Additional Page - Starts at $150
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Support and Maintenance
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Custom CMS Blog - Starts at $300 (recommended for SEO)
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Custom Request Call for a Quote
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li cs-disabled">Advanced Copywriting (Coming Soon)</li>
+        </ul>
+        <span class="cs-price"
+          >$149
+          <span class="cs-duration">Per Month</span>
+        </span>
+        <a href="/contact/" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+      <li class="cs-item">
+        <span class="cs-package">LUMP SUM</span>
+        <ul class="cs-ul">
+          <li class="cs-li">
+            Custom 5-page Business website
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            $20/mo Hosting
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Additional Page - Starts at $150
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            +$75/mo Unlimited Edits Add-on
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Custom CMS Blog - Starts at $300 (recommended for SEO)
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li">
+            Custom Request Call for a Quote
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+              alt="checkmark"
+              width="18"
+              height="18"
+            />
+          </li>
+          <li class="cs-li cs-disabled">Advanced Copywriting (Coming Soon)</li>
+        </ul>
+        <span class="cs-price"
+          >$2000
+          <span class="cs-duration">+ $20/month hosting</span>
+        </span>
+        <a href="/contact/" class="cs-link">
+          <span class="cs-link-text">Get Started</span>
+          <img
+            class="cs-arrow"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+            alt="icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
 </section>
 
-<div style="background-color: var(--primary-color); padding: var(--section-padding); text-align: center; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    <h2 style="font-size: var(--header-font-size); color: var(--body-text-color-white); margin: 0;">Get 1 Year of Free Hosting!</h2>
-    <p style="font-size: var(--body-font-size); color: var(--body-text-color-white); margin-top: 10px;">All designs in Figma are 100% custom—no templates, just unique creations.</p>
-  </div>
-  
+<!-- <div style="background-color: var(--primary-color); padding: var(--section-padding); text-align: center; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"> -->
+<!--     <h2 style="font-size: var(--header-font-size); color: var(--body-text-color-white); margin: 0;">Get 1 Year of Free Hosting!</h2> -->
+<!--     <p style="font-size: var(--body-font-size); color: var(--body-text-color-white); margin-top: 10px;">All designs in Figma are 100% custom—no templates, just unique creations.</p> -->
+<!--   </div> -->
 
 <!-- <section id="gallery-1446">
     <div class="cs-container">
@@ -344,8 +505,5 @@ eleventyNavigation:
 <!--                 BlueHost CTA                 -->
 <!-- ============================================ -->
 
- 
+{% include 'components/chatbot.html' %} {% endblock %}
 
-{% include 'components/chatbot.html' %}
-
-{% endblock %}
