@@ -3017,7 +3017,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
     border-radius: var(--cardRounded);
   }
   #cta-403 .cs-background:before {
@@ -3027,11 +3026,12 @@
     display: block;
     height: 100%;
     width: 100%;
-    background: #1a1a1a;
     opacity: 0.8;
     top: 0;
     left: 0;
     z-index: 1;
+    background-image: linear-gradient(to bottom, #1e293bc2 100%, transparent);
+    border-radius: var(--cardRounded);
   }
   #cta-403 .cs-background img {
     border-radius: var(--cardRounded);
@@ -3044,6 +3044,7 @@
     object-fit: cover;
     /* positions the image inside the parent */
     object-position: 0% 30%;
+    filter: brightness(0.8);
   }
   #cta-403 .cs-container {
     width: 100%;
@@ -3054,6 +3055,8 @@
     align-items: center;
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
+    z-index: 2;
+    position: relative;
   }
   #cta-403 .cs-content {
     /* set text align to left if content needs to be left aligned */
@@ -3064,6 +3067,12 @@
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
+  }
+  #cta-403 .cs-button-solid,
+  #cta-403 .cs-title,
+  #cta-403 .cs-text {
+    color: var(--bodyTextColorWhite);
+    backdrop-filter: blur(5px);
   }
   #cta-403 .cs-text {
     opacity: 0.8;
@@ -3080,7 +3089,6 @@
     font-weight: 700;
     text-align: center;
     margin: 0;
-    color: #000;
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
@@ -3115,16 +3123,14 @@
     max-width: unset;
     width: 80%;
   }
-  #cta-403 {
-    background: #00000070;
-  }
   #cta-403 .cs-background {
     /* clips the black slant so it doesnt overflow */
     overflow: hidden;
   }
   #cta-403 .cs-background:before {
-    width: 40%;
+    width: 80%;
     opacity: 1;
+    background-image: linear-gradient(to right, #1e293b 50%, #1e293be0 70%, transparent);
   }
   #cta-403 .cs-background:after {
     /* black slant */
@@ -3137,10 +3143,10 @@
     background: linear-gradient(to right, #1a1a1a 0%, #1a1a1a 57%, rgba(26, 26, 26, 0) 100%);
     opacity: 1;
     position: absolute;
-    display: block;
     top: 50%;
     right: 50%;
     transform: rotate(10deg) translateY(-50%);
+    display: none;
   }
   #cta-403 .cs-background img {
     width: 60%;

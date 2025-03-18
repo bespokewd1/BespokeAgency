@@ -3551,7 +3551,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -1;
+      // z-index: -1;
       border-radius: var(--cardRounded);
 
       &:before {
@@ -3561,11 +3561,13 @@
         display: block;
         height: 100%;
         width: 100%;
-        background: #1a1a1a;
+        // background: #1a1a1a;
         opacity: 0.8;
         top: 0;
         left: 0;
         z-index: 1;
+        background-image: linear-gradient(to bottom,  #1e293bc2 100%, transparent);
+        border-radius: @cardRounded;
       }
 
       img {
@@ -3579,6 +3581,7 @@
         object-fit: cover;
         /* positions the image inside the parent */
         object-position: 0% 30%;
+        filter: brightness(0.8);
       }
     }
 
@@ -3591,6 +3594,8 @@
       align-items: center;
       /* 48px - 64px */
       gap: clamp(3rem, 6vw, 4rem);
+      z-index: 2;
+      position: relative;
     }
 
     .cs-content {
@@ -3604,9 +3609,11 @@
       align-items: center;
     }
 
+    .cs-button-solid,
     .cs-title,
     .cs-text {
-      // color: var(--bodyTextColorWhite);
+      color: var(--bodyTextColorWhite);
+      backdrop-filter: blur(5px);
     }
 
     .cs-text {
@@ -3625,7 +3632,7 @@
       font-weight: 700;
       text-align: center;
       margin: 0;
-      color: #000;
+      // color: #000;
       min-width: (150/16rem);
       padding: 0 (24/16rem);
       background-color: var(--primary);
@@ -3673,14 +3680,15 @@
     }
   }
   #cta-403 {
-    background: #00000070;
+    // background: #00000070;
 
     .cs-background {
       /* clips the black slant so it doesnt overflow */
       overflow: hidden;
       &:before {
-        width: 40%;
+        width: 80%;
         opacity: 1;
+        background-image: linear-gradient(to right, #1e293b 50%, #1e293be0 70%, transparent);
       }
 
       &:after {
@@ -3709,10 +3717,11 @@
         );
         opacity: 1;
         position: absolute;
-        display: block;
         top: 50%;
         right: 50%;
         transform: rotate(10deg) translateY(-50%);
+
+        display: none;
       }
 
       img {
