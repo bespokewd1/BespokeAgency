@@ -1386,7 +1386,7 @@
 /* mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-962 {
-    padding: var(--sectionpadding);
+    padding: var(--sectionPadding);
 
     position: relative;
     z-index: 1;
@@ -1438,7 +1438,7 @@
     border: 1px solid #484848;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
-    border-radius: 5%;
+    border-radius: var(--cardRounded);
     position: relative;
     z-index: 1;
     transition:
@@ -4004,7 +4004,6 @@ body.dark-mode #cta-403.cs-image-only {
     text-align: center;
     /* 150px - 350px */
     padding: clamp(9rem, 25.95vw, 16rem) (16/16rem);
-    padding-bottom: 0;
     position: relative;
     z-index: 1;
     /* prevents overflow from the lines extending past the screen width */
