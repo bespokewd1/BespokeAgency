@@ -1176,7 +1176,7 @@
   line-height: 1.2em;
   margin: 0;
   margin-bottom: 0.75rem;
-  color: var(--bodytextcolorwhite);
+  color: var(--bodyTextColorWhite);
   font-weight: bold;
 }
 #services-962 .cs-item-text {
@@ -1184,7 +1184,7 @@
   font-size: clamp(0.875rem, 1.5vw, 1rem);
   line-height: 1.5em;
   margin: 0;
-  color: var(--bodytextcolorwhite);
+  color: var(--bodyTextColorWhite);
   opacity: 0.8;
 }
 #services-962 .cs-background {
@@ -1249,7 +1249,7 @@
   body.dark-mode #services-962 .cs-title,
   body.dark-mode #services-962 .cs-h3,
   body.dark-mode #services-962 .cs-item-text {
-    color: var(--bodytextcolorwhite);
+    color: var(--bodyTextColorWhite);
   }
   body.dark-mode #services-962 .cs-item:hover {
     background-color: var(--primary);
