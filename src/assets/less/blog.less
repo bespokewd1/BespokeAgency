@@ -500,6 +500,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 3.125em;
+    min-height: 100vh;
   }
   .main-content {
     //display: grid;
@@ -869,6 +870,9 @@
 @media only screen and (min-width: 64rem) {
   .blog-sidebar {
     max-width: 22.5em;
+    position: sticky;
+    top: 5rem;
+    align-self: flex-start;
   }
 }
 
