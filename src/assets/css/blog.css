@@ -139,17 +139,9 @@
     display: block;
     height: 100%;
     width: 100%;
-    background: -moz-linear-gradient(
-      left,
-      rgba(26, 26, 26, 0.94) 0%,
-      rgba(26, 26, 26, 0) 100%
-    );
+    background: -moz-linear-gradient(left, rgba(26, 26, 26, 0.94) 0%, rgba(26, 26, 26, 0) 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      left,
-      rgba(26, 26, 26, 0.94) 10%,
-      rgba(254, 254, 254, 0.221) 100%
-    );
+    background: -webkit-linear-gradient(left, rgba(26, 26, 26, 0.94) 10%, rgba(254, 254, 254, 0.221) 100%);
     /* Chrome10-25,Safari5.1-6 */
     opacity: 1;
     top: 0;
@@ -493,20 +485,17 @@
     justify-content: center;
     align-items: center;
     row-gap: 3.125em;
+    min-height: 100vh;
   }
   .main-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
     width: 100%;
     gap: 3.125em;
-    order: 2;
   }
 }
 /* Tablet - 1024px */
 @media only screen and (min-width: 64rem) {
-  .main-content {
-    order: 1;
-  }
   .main-content-wrapper {
     flex-direction: row;
     align-items: flex-start;
@@ -723,7 +712,6 @@
     width: 100%;
     box-sizing: border-box;
     row-gap: 3.125em;
-    order: 1;
   }
   .blog-sidebar .blog-featured-group {
     display: flex;
@@ -809,7 +797,9 @@
 @media only screen and (min-width: 64rem) {
   .blog-sidebar {
     max-width: 22.5em;
-    order: 2;
+    position: sticky;
+    top: 5rem;
+    align-self: flex-start;
   }
 }
 /*-- -------------------------- -->
@@ -1059,9 +1049,7 @@
     background-color: #4e4b66;
     height: 1.5rem;
     width: 1.5rem;
-    transition:
-      transform 0.3s,
-      background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
   }
   #cs-footer .cs-social-link:hover {
     transform: translateY(calc(-3 / 16 * 1rem));
@@ -1194,10 +1182,7 @@
     display: inline-block;
     position: relative;
     z-index: 1;
-    transition:
-      color 0.3s,
-      border-color 0.3s,
-      background-color 0.3s;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
     background-color: #4295cd;
     color: #fff;
     border-color: #4295cd;
