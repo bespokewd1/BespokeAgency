@@ -3426,6 +3426,11 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
 }
 .cs-changing-text {
+  background: linear-gradient(to top, var(--primary) 35%, var(--headerColor) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
   color: var(--primary) !important;
 }
 /*-- -------------------------- -->
