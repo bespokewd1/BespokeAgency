@@ -2309,8 +2309,9 @@
 #cta-1014 .cs-container.cta-container .cs-button-box {
   grid-area: link;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 #cta-1014 .cs-container.cta-container .cs-content {
   grid-area: hours;
@@ -2437,6 +2438,7 @@
   }
   #cta-1014 .cs-container.cta-container .cs-button-box {
     flex-wrap: nowrap;
+    padding-inline: 0;
   }
   #cta-1014 .cs-container.cta-container .cs-button-box > * {
     margin: 0;
@@ -2453,6 +2455,16 @@
   #cta-1014 .cs-button-solid {
     width: 80%;
     margin-inline: auto;
+  }
+}
+@media only screen and (min-width: 64rem) and (max-width: 1170px) {
+  #cta-1014 .cs-container.cta-container .cs-button-box {
+    padding-inline: 2em;
+  }
+}
+@media only screen and (min-width: 1171px) {
+  #cta-1014 .cs-container.cta-container .cs-button-box {
+    padding-inline: min(3.5em, 6%);
   }
 }
 @media only screen and (min-width: 0rem) {

@@ -2,6 +2,12 @@
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
+// to enable sticky position
+html:has(.blog-sidebar),
+body:has(.blog-sidebar) {
+  overflow: unset;
+}
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   .blog-container {
@@ -500,7 +506,6 @@
     justify-content: center;
     align-items: center;
     row-gap: 3.125em;
-    min-height: 100vh;
   }
   .main-content {
     //display: grid;
@@ -871,7 +876,7 @@
   .blog-sidebar {
     max-width: 22.5em;
     position: sticky;
-    top: 5rem;
+    top: 7rem;
     align-self: flex-start;
   }
 }

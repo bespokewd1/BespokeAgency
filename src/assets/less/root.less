@@ -1380,7 +1380,6 @@
   // }}
 }
 
-
 /*-- -------------------------- -->
 <---        what we do          -->
 <--- -------------------------- -*/
@@ -1392,7 +1391,8 @@
 
 /* Animation keyframes for the blobs */
 @keyframes blob1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   33% {
@@ -1404,7 +1404,8 @@
 }
 
 @keyframes blob2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   33% {
@@ -1416,7 +1417,8 @@
 }
 
 @keyframes blob3 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   33% {
@@ -1457,7 +1459,7 @@
     backdrop-filter: blur(10px);
     padding: 2rem;
   }
-  
+
   .cs-container {
     width: 100%;
     /* changes to 1280px at tablet */
@@ -1563,9 +1565,11 @@
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    
+
     /* Create the three blobs */
-    &:before, &:after, .blob {
+    &:before,
+    &:after,
+    .blob {
       content: "";
       position: absolute;
       border-radius: 50%;
@@ -1573,7 +1577,7 @@
       opacity: 0.7;
       mix-blend-mode: multiply;
     }
-    
+
     /* First blob - purple */
     &:before {
       width: 40vw;
@@ -1585,7 +1589,7 @@
       right: 10%;
       animation: blob1 15s ease-in-out infinite;
     }
-    
+
     /* Second blob - pink */
     &:after {
       width: 35vw;
@@ -1597,7 +1601,7 @@
       right: 30%;
       animation: blob2 18s ease-in-out infinite;
     }
-    
+
     /* Third blob - yellow/orange */
     .blob {
       width: 30vw;
@@ -1669,9 +1673,11 @@
     .cs-text {
       color: #ffff;
     }
-    
+
     .cs-background {
-      &:before, &:after, .blob {
+      &:before,
+      &:after,
+      .blob {
         opacity: 0.5; /* Reduce opacity in dark mode */
       }
     }
@@ -2709,8 +2715,9 @@
     .cs-button-box {
       grid-area: link;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      gap: 2rem;
     }
 
     .cs-content {
@@ -2860,6 +2867,7 @@
 
       .cs-button-box {
         flex-wrap: nowrap;
+        padding-inline: 0;
 
         & > * {
           margin: 0;
@@ -2881,6 +2889,25 @@
     .cs-button-solid {
       width: 80%;
       margin-inline: auto;
+    }
+  }
+}
+@media only screen and (min-width: 64rem) and (max-width: 1170px) {
+  #cta-1014 {
+    .cs-container.cta-container {
+      .cs-button-box {
+        padding-inline: 2em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1171px) {
+  #cta-1014 {
+    .cs-container.cta-container {
+      .cs-button-box {
+        padding-inline: min(3.5em, 6%);
+      }
     }
   }
 }
@@ -4659,8 +4686,9 @@ body.dark-mode #cta-403.cs-image-only {
           animation: floatImg 8s ease-in-out infinite;
           border-radius: 20px;
           background: white;
-          box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-
+          box-shadow:
+            0 4px 6px -1px rgb(0 0 0 / 0.1),
+            0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
 
         &:after {
@@ -4669,8 +4697,8 @@ body.dark-mode #cta-403.cs-image-only {
           bottom: 0px;
           left: 50%;
           transform: translateX(-50%);
-          width: 60%; 
-          height: 10px; 
+          width: 60%;
+          height: 10px;
           background: radial-gradient(
             ellipse at center,
             rgba(0, 0, 0, 0.15) 0%,
@@ -4749,10 +4777,9 @@ body.dark-mode #cta-403.cs-image-only {
       bottom: -1.5rem;
       left: -7rem;
 
-      .review-picture{
-        &:after{
-
-          width: 20%; 
+      .review-picture {
+        &:after {
+          width: 20%;
         }
       }
     }
