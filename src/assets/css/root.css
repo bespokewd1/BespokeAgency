@@ -4688,7 +4688,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
     border-radius: var(--cardRounded);
   }
   #three-cards .cs-item:hover .cs-info {
-    background-color: #4594f2cc;
+    background-color: #4594f2b3;
   }
   #three-cards .cs-item:hover .cs-info:before {
     opacity: 1;
@@ -4874,7 +4874,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
 /*when hover is not available*/
 @media (hover: none) {
   #three-cards .cs-item .cs-info {
-    background-color: #4594f2cc;
+    background-color: #4594f2b3;
   }
   #three-cards .cs-item .cs-info:before {
     opacity: 1;
