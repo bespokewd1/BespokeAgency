@@ -1,0 +1,40 @@
+{% set latestPosts = collections.post | reverse %} {% if latestPosts.length > 3
+%} {% set latestPosts = latestPosts.slice(0, 3) %} {% endif %}
+
+<ul class="cs-card-group">
+  {% for post in latestPosts %}
+  <li class="cs-item">
+    <picture class="cs-picture">
+      <source media="(max-width: 600px)" srcset="{{ post.data.image }}" />
+      <source media="(min-width: 601px)" srcset="{{ post.data.image }}" />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="{{ post.data.image }}"
+        alt="{{ post.data.title }}"
+        width="334"
+        height="380"
+      />
+    </picture>
+    <div class="cs-info">
+      <h3 class="cs-h3">{{ post.data.title }}</h3>
+      <span class="cs-desc">{{ post.data.description }}</span>
+      <a href="{{ post.url }}" class="cs-button-solid">
+        Check our blog
+        <span class="arrow-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

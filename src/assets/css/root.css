@@ -3700,7 +3700,8 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     font-size: clamp(2.4375rem, 6.4vw, 3rem);
     font-weight: 700;
     line-height: 1.2em;
-    text-align: center;
+    text-align: left;
+    padding-left: 0.5em;
     width: 100%;
     margin: 0 auto 1rem;
     color: var(--headerColor);
@@ -3968,6 +3969,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
+    max-width: 250px;
     height: 10px;
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 80%);
     z-index: 1;
@@ -4568,5 +4570,336 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
 @media screen and (min-width: 426px) {
   #autoscroll-gallery .scroller {
     max-width: var(--scroller-max-width);
+  }
+}
+/*-- -------------------------- -->
+<---            Three Cards            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #three-cards {
+    padding: var(--sectionPadding);
+  }
+  #three-cards .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #three-cards .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #three-cards .cs-title {
+    margin-bottom: 2rem;
+    max-width: 20ch;
+    color: var(--headerColor);
+    transition: color 0.2s;
+  }
+  #three-cards .cs-button-solid {
+    font-size: 0.8rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    background-color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    border-radius: var(--buttonRounded);
+    white-space: nowrap;
+    padding: 0 min(2em, 10%);
+    transition: color 0.2s ease;
+  }
+  #three-cards .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    height: 100%;
+    width: 0%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 4px;
+    transition: width 0.3s;
+  }
+  #three-cards .cs-button-solid .arrow-wrapper {
+    position: relative;
+    display: flex;
+    transition: transform 0.3s ease;
+    margin-left: 0.5rem;
+  }
+  #three-cards .cs-button-solid svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+  }
+  #three-cards .cs-button-solid {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #three-cards .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+    position: relative;
+  }
+  #three-cards .cs-h3,
+  #three-cards .cs-desc {
+    transition: color 0.2s ease;
+  }
+  #three-cards .cs-item {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    border-radius: var(--cardRounded);
+  }
+  #three-cards .cs-item:hover .cs-info {
+    background-color: #4594f2cc;
+  }
+  #three-cards .cs-item:hover .cs-info:before {
+    opacity: 1;
+    box-shadow: -4px -4px 6px 0px rgba(0, 0, 0, 0.5);
+  }
+  #three-cards .cs-item:hover .cs-picture img {
+    transform: scale(1.15);
+  }
+  #three-cards .cs-item:hover .cs-date {
+    color: #fff;
+  }
+  #three-cards .cs-item:hover .cs-icon {
+    filter: brightness(150%);
+  }
+  #three-cards .cs-item:hover .cs-link {
+    color: #fff;
+  }
+  #three-cards .cs-item:hover .cs-h3,
+  #three-cards .cs-item:hover .cs-desc {
+    color: #000;
+  }
+  #three-cards .cs-item:hover .cs-button-solid {
+    color: #000;
+  }
+  #three-cards .cs-item:hover .cs-button-solid:before {
+    width: 100%;
+  }
+  #three-cards .cs-item:hover .cs-button-solid .arrow-wrapper {
+    transform: translateX(0.5rem);
+  }
+  #three-cards .cs-picture {
+    width: 100%;
+    height: 30rem;
+    /* removed at tablet */
+    aspect-ratio: 0.68333333;
+    /* clips img tag from overflowing it on hover */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #three-cards .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.9s;
+  }
+  #three-cards .cs-info {
+    width: 83%;
+    max-width: 26.25rem;
+    /* 16px - 24px */
+    padding: clamp(1rem, 2vw, 1.5rem);
+    /* prevents padding from affecting the height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    border-top-left-radius: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    background-color: rgba(40, 40, 40, 0.65);
+    transition: background-color 250ms ease;
+  }
+  #three-cards .cs-info:before {
+    /* background-color */
+    border-top-left-radius: 8px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: box-shadow 0.3s, background-color 0.3s, opacity 0.3s;
+  }
+  #three-cards .cs-date {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1.25rem 0;
+    color: #bababa;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+  }
+  #three-cards .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    transition: filter 0.3s;
+  }
+  #three-cards .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: #fff;
+    display: block;
+  }
+  #three-cards .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 1.25rem 0;
+    color: #f7f7f7;
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+  #three-cards .cs-link {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    width: auto;
+    margin: 0;
+    color: var(--primary);
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s;
+  }
+  #three-cards .cs-link:hover {
+    color: #fff;
+  }
+  #three-cards .cs-link:before {
+    /* underline */
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.3s;
+  }
+}
+/* Tablet - 550px */
+@media only screen and (min-width: 34.375rem) {
+  #three-cards .cs-content {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+  }
+  #three-cards .cs-title {
+    margin: 0;
+  }
+  #three-cards .cs-picture {
+    /* remove the aspect ratio so the height can be squished */
+    aspect-ratio: initial;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #three-cards .cs-container {
+    max-width: 80rem;
+  }
+  #three-cards .cs-card-group {
+    flex-direction: row;
+  }
+}
+/*when hover is not available*/
+@media (hover: none) {
+  #three-cards .cs-item .cs-info {
+    background-color: #4594f2cc;
+  }
+  #three-cards .cs-item .cs-info:before {
+    opacity: 1;
+    box-shadow: -2px -2px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+  #three-cards .cs-item .cs-icon {
+    filter: brightness(150%);
+  }
+  #three-cards .cs-item .cs-link {
+    color: #fff;
+  }
+  #three-cards .cs-item .cs-h3,
+  #three-cards .cs-item .cs-desc {
+    color: #000;
+  }
+  #three-cards .cs-item .cs-button-solid {
+    font-size: 1rem;
+    color: #000;
+    padding-inline: min(1.5rem, 6%);
+  }
+  #three-cards .cs-item .cs-button-solid:before {
+    width: 100%;
+  }
+  #three-cards .cs-item .cs-button-solid .arrow-wrapper {
+    transform: translateX(0.5rem);
+  }
+}
+/* dark mode for three-cards*/
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #three-cards .cs-title {
+    color: var(--bodyTextColorWhite);
   }
 }

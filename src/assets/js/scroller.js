@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-   console.log("foo")
 
    const scrollers = document.querySelectorAll('.scroller')
 

@@ -1267,7 +1267,28 @@ eleventyNavigation:
   </picture>
 </section>
 
-{% include 'components/cta.html' %}
+<!-- ============================================ -->
+<!--                Three Cards                   -->
+<!-- ============================================ -->
+
+{% if collections.post | length == 0 %} {# if there is no post we will not show
+this section #}
+<p style="display: none">No Recent Posts</p>
+
+{% else %}
+<section id="three-cards">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Exclusive Articles</span>
+        <h2 class="cs-title">Latest News</h2>
+      </div>
+    </div>
+    {% include "components/latest-blog-card.html" %}
+  </div>
+</section>
+
+{% endif %} {% include 'components/cta.html' %}
 
 <!-- ============================================ -->
 <!--                 Shopify CTA                  -->
