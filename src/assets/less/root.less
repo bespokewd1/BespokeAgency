@@ -2818,6 +2818,13 @@
         width: 100%;
       }
     }
+
+    &.cta-btn {
+      white-space: nowrap;
+      font-size: 0.9rem;
+      padding-block: 0.2rem;
+      // font-size: 0.8rem;
+    }
   }
 
   .cs-content {
@@ -2859,19 +2866,33 @@
 @media only screen and (min-width: 48rem) {
   #cta-1014 {
     .cs-container.cta-container {
+      max-width: 65rem;
       // flex-direction: row;
       // justify-content: space-between;
       grid-template-areas:
-        "title hours"
-        "link link";
+        "title link"
+        "title hours";
 
       .cs-button-box {
         flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
         padding-inline: 0;
+        // display: contents;
 
         & > * {
+          max-height: 56px;
+          height: 100%;
           margin: 0;
+          // place-self: center;
         }
+
+        // .cta-btn {
+        //   grid-area: link1;
+        // }
+        // .contact-btn {
+        //   grid-area: link2;
+        // }
       }
 
       .cs-content {
@@ -2889,25 +2910,6 @@
     .cs-button-solid {
       width: 80%;
       margin-inline: auto;
-    }
-  }
-}
-@media only screen and (min-width: 64rem) and (max-width: 1170px) {
-  #cta-1014 {
-    .cs-container.cta-container {
-      .cs-button-box {
-        padding-inline: 2em;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1171px) {
-  #cta-1014 {
-    .cs-container.cta-container {
-      .cs-button-box {
-        padding-inline: min(3.5em, 6%);
-      }
     }
   }
 }
@@ -4087,13 +4089,16 @@ body.dark-mode #cta-403.cs-image-only {
 }
 
 .cs-changing-text {
- background: linear-gradient(to top, var(--primary) 35%, var(--headerColor) 100%);
+  background: linear-gradient(
+    to top,
+    var(--primary) 35%,
+    var(--headerColor) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: var(--primary) !important;
-
 }
 
 /*-- -------------------------- -->
@@ -4705,7 +4710,7 @@ body.dark-mode #cta-403.cs-image-only {
           left: 50%;
           transform: translateX(-50%);
           width: 60%;
-          max-width:250px;
+          max-width: 250px;
           height: 10px;
           background: radial-gradient(
             ellipse at center,
@@ -5450,8 +5455,6 @@ body.dark-mode {
   }
 }
 
-
-
 /*-- -------------------------- -->
 <---            Three Cards            -->
 <--- -------------------------- -*/
@@ -5504,7 +5507,7 @@ body.dark-mode {
       min-width: (150/16rem);
       // padding: 0 (32/16rem);
 
-        background-color: var(--primary);
+      background-color: var(--primary);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -5514,7 +5517,7 @@ body.dark-mode {
       box-sizing: border-box;
       border-radius: var(--buttonRounded);
       white-space: nowrap;
-      padding: 0 min(2em,10%);
+      padding: 0 min(2em, 10%);
       transition: color 0.2s ease;
 
       &:before {
@@ -5562,7 +5565,8 @@ body.dark-mode {
       position: relative;
     }
 
-    .cs-h3,.cs-desc{
+    .cs-h3,
+    .cs-desc {
       transition: color 0.2s ease;
     }
     .cs-item {
@@ -5606,7 +5610,8 @@ body.dark-mode {
         .cs-link {
           color: #fff;
         }
-        .cs-h3,.cs-desc{
+        .cs-h3,
+        .cs-desc {
           color: #000;
         }
 
@@ -5804,9 +5809,8 @@ body.dark-mode {
 @media (hover: none) {
   #three-cards {
     .cs-item {
-
       .cs-info {
-          background-color: #4594f2b3;
+        background-color: #4594f2b3;
         &:before {
           opacity: 1;
           // background-color: var(--primary);
@@ -5823,14 +5827,15 @@ body.dark-mode {
         color: #fff;
       }
 
-      .cs-h3,.cs-desc{
+      .cs-h3,
+      .cs-desc {
         color: #000;
       }
 
       .cs-button-solid {
         font-size: 1rem;
         color: #000;
-        padding-inline: min(1.5rem,6%);
+        padding-inline: min(1.5rem, 6%);
         &:before {
           width: 100%;
         }

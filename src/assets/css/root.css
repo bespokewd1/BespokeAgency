@@ -2401,6 +2401,11 @@
 #cta-1014 .cs-button-solid:hover:before {
   width: 100%;
 }
+#cta-1014 .cs-button-solid.cta-btn {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  padding-block: 0.2rem;
+}
 #cta-1014 .cs-content {
   display: flex;
   flex-direction: column;
@@ -2434,13 +2439,18 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #cta-1014 .cs-container.cta-container {
-    grid-template-areas: "title hours" "link link";
+    max-width: 65rem;
+    grid-template-areas: "title link" "title hours";
   }
   #cta-1014 .cs-container.cta-container .cs-button-box {
     flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
     padding-inline: 0;
   }
   #cta-1014 .cs-container.cta-container .cs-button-box > * {
+    max-height: 56px;
+    height: 100%;
     margin: 0;
   }
   #cta-1014 .cs-container.cta-container .cs-content {
@@ -2455,16 +2465,6 @@
   #cta-1014 .cs-button-solid {
     width: 80%;
     margin-inline: auto;
-  }
-}
-@media only screen and (min-width: 64rem) and (max-width: 1170px) {
-  #cta-1014 .cs-container.cta-container .cs-button-box {
-    padding-inline: 2em;
-  }
-}
-@media only screen and (min-width: 1171px) {
-  #cta-1014 .cs-container.cta-container .cs-button-box {
-    padding-inline: min(3.5em, 6%);
   }
 }
 @media only screen and (min-width: 0rem) {
