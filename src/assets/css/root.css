@@ -5026,47 +5026,25 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
 }
 #gallery-45 .trust-signals {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
   row-gap: 1rem;
-}
-#gallery-45 .trust-signals > *:last-child {
-  grid-column: 1 / -1;
-  justify-self: center;
+  width: 100%;
 }
 #gallery-45 .trust-signals .trust-signals-contents {
-  width: 150px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: min-content;
 }
 #gallery-45 .trust-signals .trust-signals-contents .cs-text {
   text-align: center;
 }
 @media only screen and (min-width: 40rem) {
   #gallery-45 {
-    padding: var(--sectionPadding);
+    padding: clamp(7rem, 7.82vw, 6.25rem) 1rem 0;
   }
   #gallery-45 .trust-signals {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
-  }
-  #gallery-45 .trust-signals > *:nth-child(1) {
-    grid-column: 1 / span 2;
-  }
-  #gallery-45 .trust-signals > *:nth-child(2) {
-    grid-column: 3 / span 2;
-  }
-  #gallery-45 .trust-signals > *:nth-child(3) {
-    grid-column: 5 / span 2;
-  }
-  #gallery-45 .trust-signals > *:nth-child(4) {
-    grid-column: 1 / span 3;
-    justify-self: end;
-  }
-  #gallery-45 .trust-signals > *:nth-child(5) {
-    grid-column: 4 / span 3;
-    justify-self: start;
-  }
-  #gallery-45 .trust-signals .trust-signals-contents {
-    width: 200px;
   }
   #gallery-45 .trust-signals .trust-signals-contents .cs-text {
     text-align: center;
@@ -5078,50 +5056,19 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
     grid-column: span 2;
   }
   #gallery-45 .cs-picture img {
-    position: absolute;
-    top: -75%;
-    left: 0;
-    height: 150%;
     width: 100%;
     object-fit: contain;
-  }
-  #gallery-45 .trust-signals {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    row-gap: 2rem;
-  }
-  #gallery-45 .trust-signals .trust-signals-contents {
-    width: 125px;
-  }
-  #gallery-45 .trust-signals .trust-signals-contents .cs-text {
-    display: none;
   }
 }
 @media only screen and (min-width: 64rem) {
   #gallery-45 .cs-picture img {
-    position: absolute;
-    top: -75%;
-    left: 0;
-    height: 175%;
     width: 100%;
     object-fit: contain;
-  }
-  #gallery-45 .trust-signals .trust-signals-contents {
-    width: 150px;
   }
 }
 @media only screen and (min-width: 80rem) {
   #gallery-45 .cs-picture img {
-    position: absolute;
-    top: -75%;
-    left: 0;
-    height: 200%;
     width: 100%;
     object-fit: contain;
-  }
-  #gallery-45 .trust-signals .trust-signals-contents {
-    width: 200px;
   }
 }
