@@ -3259,6 +3259,7 @@
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
+    transition: color 0.3s;
   }
   #cta-403 .cs-button-solid:before {
     content: "";
@@ -3272,6 +3273,9 @@
     z-index: -1;
     border-radius: var(--buttonRounded);
     transition: width 0.3s;
+  }
+  #cta-403 .cs-button-solid:hover {
+    color: #000;
   }
   #cta-403 .cs-button-solid:hover:before {
     width: 100%;
@@ -4578,7 +4582,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   }
 }
 /*-- -------------------------- -->
-<---            Three Cards            -->
+<---     Three Cards            -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -4906,5 +4910,218 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
 @media only screen and (min-width: 0rem) {
   body.dark-mode #three-cards .cs-title {
     color: var(--bodyTextColorWhite);
+  }
+}
+/*-- -------------------------- -->
+<---     Trust Icons            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+#gallery-45 {
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+#gallery-45 .cs-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 4rem);
+}
+#gallery-45 .cs-content {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#gallery-45 .cs-content .cs-h3 {
+  color: var(--headerColor);
+}
+#gallery-45 .cs-image-group {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  gap: clamp(1rem, 1.5vw, 1.25rem);
+}
+#gallery-45 .cs-item {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  margin: 0;
+  position: relative;
+  display: block;
+  background-color: #0067ff70;
+  padding: 1rem;
+  grid-column: span 6;
+}
+#gallery-45 .cs-item:hover .cs-hover-box {
+  opacity: 1;
+}
+#gallery-45 .cs-item:hover .cs-icon {
+  transform: rotateY(0);
+}
+#gallery-45 .cs-item:hover .cs-h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+#gallery-45 .cs-item:hover .cs-hover-box-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+#gallery-45 .cs-picture {
+  margin: auto;
+  width: 100%;
+  height: 75px;
+  display: block;
+  position: relative;
+}
+#gallery-45 .cs-picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  object-fit: contain;
+}
+#gallery-45 .cs-button-solid {
+  font-size: 1rem;
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  min-width: 9.375rem;
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  border-radius: 0.25rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+#gallery-45 .cs-button-solid:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: #000;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0.25rem;
+  transition: width 0.3s;
+}
+#gallery-45 .cs-button-solid:hover:before {
+  width: 100%;
+}
+#gallery-45 .trust-signals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+}
+#gallery-45 .trust-signals > *:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+#gallery-45 .trust-signals .trust-signals-contents {
+  width: 150px;
+}
+#gallery-45 .trust-signals .trust-signals-contents .cs-text {
+  text-align: center;
+}
+@media only screen and (min-width: 40rem) {
+  #gallery-45 {
+    padding: var(--sectionPadding);
+  }
+  #gallery-45 .trust-signals {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+  #gallery-45 .trust-signals > *:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+  #gallery-45 .trust-signals > *:nth-child(2) {
+    grid-column: 3 / span 2;
+  }
+  #gallery-45 .trust-signals > *:nth-child(3) {
+    grid-column: 5 / span 2;
+  }
+  #gallery-45 .trust-signals > *:nth-child(4) {
+    grid-column: 1 / span 3;
+    justify-self: end;
+  }
+  #gallery-45 .trust-signals > *:nth-child(5) {
+    grid-column: 4 / span 3;
+    justify-self: start;
+  }
+  #gallery-45 .trust-signals .trust-signals-contents {
+    width: 200px;
+  }
+  #gallery-45 .trust-signals .trust-signals-contents .cs-text {
+    text-align: center;
+  }
+}
+/* laptop - 769px and up */
+@media only screen and (min-width: 48.1rem) {
+  #gallery-45 .cs-item {
+    grid-column: span 2;
+  }
+  #gallery-45 .cs-picture img {
+    position: absolute;
+    top: -75%;
+    left: 0;
+    height: 150%;
+    width: 100%;
+    object-fit: contain;
+  }
+  #gallery-45 .trust-signals {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+  #gallery-45 .trust-signals .trust-signals-contents {
+    width: 125px;
+  }
+  #gallery-45 .trust-signals .trust-signals-contents .cs-text {
+    display: none;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  #gallery-45 .cs-picture img {
+    position: absolute;
+    top: -75%;
+    left: 0;
+    height: 175%;
+    width: 100%;
+    object-fit: contain;
+  }
+  #gallery-45 .trust-signals .trust-signals-contents {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  #gallery-45 .cs-picture img {
+    position: absolute;
+    top: -75%;
+    left: 0;
+    height: 200%;
+    width: 100%;
+    object-fit: contain;
+  }
+  #gallery-45 .trust-signals .trust-signals-contents {
+    width: 200px;
   }
 }
