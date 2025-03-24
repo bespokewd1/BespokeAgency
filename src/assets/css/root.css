@@ -2451,6 +2451,7 @@
   #cta-1014 .cs-container.cta-container .cs-button-box > * {
     max-height: 56px;
     height: 100%;
+    width: 100%;
     margin: 0;
   }
   #cta-1014 .cs-container.cta-container .cs-content {
@@ -4987,7 +4988,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 80%;
+  height: 100%;
   width: 100%;
   object-fit: contain;
 }
