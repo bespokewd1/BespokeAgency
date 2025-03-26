@@ -117,4 +117,6 @@ A **Google Business Profile is powerful**, but combining it with a **professiona
 * Integrating your website with your GBP improves conversions and credibility.
 
 📢 **Need a professional website + GBP optimization?**
-Let us help you build a website that converts and a GBP that ranks! **Contact us today!**
+Let us help you build a website that converts and a GBP that ranks! **Contact us today!**\
+\
+Send us an email [info@bespokewebdesign.ca](mailto:info@bespokewebdesign.ca)
