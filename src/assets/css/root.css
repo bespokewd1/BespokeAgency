@@ -2035,6 +2035,9 @@
   .cs-step-icon {
     width: 100px;
     margin: 3rem 0 2rem;
+    height: auto;
+    aspect-ratio: 5/4;
+    object-fit: contain;
   }
   body.dark-mode .cs-step-icon {
     filter: grayscale(1) contrast(0) brightness(10);
