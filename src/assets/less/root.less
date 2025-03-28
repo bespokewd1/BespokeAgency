@@ -5889,10 +5889,16 @@ body.dark-mode {
     text-align: center;
     width: 100%;
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     align-items: center;
 
+    .cs-topper{
+      font-size: clamp(1.5375rem, 3.5vw, 2.0625rem);
+    }
+
     .cs-h3 {
+      font-size: clamp(1.2rem, 3vw, 1.5625rem);
       color: var(--headerColor);
     }
   }
@@ -5941,9 +5947,13 @@ body.dark-mode {
   .cs-picture {
     margin: auto;
     width: 100%;
-    height: 75px;
+    height: auto;
     display: block;
     position: relative;
+    background: #222222;
+    aspect-ratio: 4/4;
+    max-width: 150px;
+    border-radius: 50%;
 
     img {
       position: absolute;
@@ -5994,8 +6004,8 @@ body.dark-mode {
   .trust-signals {
     display: grid;
     // grid-template-columns: 1fr 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
-    row-gap: (16/16rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: (16/16rem);
     width: 100%;
 
 
@@ -6006,6 +6016,15 @@ body.dark-mode {
       grid-template-rows: min-content;
       .cs-text {
         text-align: center;
+        color: white;
+        background: #222222;
+        border-radius: var(--buttonRounded);
+        margin-top: -0.5rem;
+        padding: 0.4rem 0;
+        z-index: 1;
+        display: grid;
+        place-content: center;
+        font-size: 1rem;
       }
     }
   }
