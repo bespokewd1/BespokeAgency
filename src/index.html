@@ -50,6 +50,19 @@ eleventyNavigation:
   }
 </script>
 
+<link
+  rel="preload"
+  as="image"
+  href="/assets/images/hero-bg.webp"
+  media="(max-width: 600px)"
+/>
+<link
+  rel="preload"
+  as="image"
+  href="/assets/images/hero-bg.webp"
+  media="(min-width: 601px)"
+/>
+
 {% endblock %} {% block body %}
 
 <!-- Blaze Assets for carousel -->
@@ -106,7 +119,8 @@ eleventyNavigation:
         />
         <img
           aria-hidden="true"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           decoding="async"
           src="/assets/images/hero-bg.webp"
           alt="maid"
