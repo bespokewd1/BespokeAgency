@@ -1117,6 +1117,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent, #000 3% 97%, transparent);
 }
 #services-962:after {
   z-index: -1;
@@ -2035,7 +2036,8 @@
 /* Services Custom */
 @media only screen and (min-width: 0rem) {
   .cs-step-icon {
-    width: 100px;
+    max-width: 100px;
+    width: 100%;
     margin: 3rem 0 2rem;
     height: auto;
     aspect-ratio: 5/4;
