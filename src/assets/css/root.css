@@ -3303,7 +3303,7 @@
   #cta-403 .cs-background:before {
     width: 80%;
     opacity: 1;
-    background-image: linear-gradient(to right, #1e293b 50%, #1e293be0 70%, transparent);
+    background-image: linear-gradient(to right, #1e293b 50%, #1e293be0 60%, transparent);
   }
   #cta-403 .cs-background:after {
     /* black slant */
