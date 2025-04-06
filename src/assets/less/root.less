@@ -6304,3 +6304,143 @@ body.dark-mode {
     }
   }
 }
+
+
+
+/*-- -------------------------- -->
+<---    Final Call To Action    -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #cta {
+      position: relative;
+      padding: (50/16rem) 0;
+
+      .container {
+          text-align: center;
+      }
+
+      picture {
+          z-index: -2;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+
+          img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+          }
+      }
+
+      .title {
+          position: relative;
+          margin-bottom: (36/16rem);
+          font-size: ~"min(9vw, 3rem)";
+          line-height: (58/48em);
+          font-weight: 900;
+          color: #fff;
+          text-align: center;
+      }
+
+      p {
+          opacity: 1;
+          margin: auto;
+          margin-bottom: (36/16rem);
+          max-width: (598/16rem);
+          width: 96%;
+          color: #fff;
+          text-align: center;
+      }
+
+      &:before {
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          opacity: 0.7;
+          display: block;
+          background: #000;
+          height: 100%;
+          width: 100%;
+      }
+  }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64rem) {
+  #cta {
+      padding: (168/16rem) 0;
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+  #cta {
+      position: relative;
+      margin-top: (100/16rem);
+
+      .container {
+          margin: auto;
+          width: 90.0625%;
+      }
+
+      picture {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90.0625%;
+
+          &:before {
+              z-index: 1;
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: "";
+              opacity: 0.7;
+              display: block;
+              background: #000;
+              height: 100%;
+              width: 100%;
+          }
+      }
+
+      &:before {
+          display: none;
+      }
+
+      &:after {
+          z-index: -3;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          content: "";
+          opacity: 1;
+          transform: translateX(-50%);
+          display: block;
+          background: url("/assets/svgs/cta-squares.svg");
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: (1108/16rem);
+          width: (2000/16rem);
+      }
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode {
+      #cta {
+          &:after {
+              display: none;
+          }
+      }
+  }
+}
