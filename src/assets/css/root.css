@@ -3019,8 +3019,6 @@
     column-gap: clamp(1rem, 2.5vw, 1.25rem);
     /* 28px - 40px */
     row-gap: clamp(1.75rem, 2.5vw, 2.5rem);
-    padding-bottom: 5em;
-    border-bottom: 1px solid var(--secondary);
   }
   #services-1626 .cs-item {
     list-style: none;
