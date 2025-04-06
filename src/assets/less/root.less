@@ -1449,7 +1449,7 @@
   .cs-title {
     margin: 0;
     max-width: 20ch;
-    color: #000000;
+    color: #ffffff;
   }
 
   .cs-card-group {
@@ -1631,7 +1631,11 @@
     width: 100%;
     max-width: 39.375rem;
     margin: 0 0 2rem 0;
-    color: #000000;
+    color: #ffffff;
+
+    a {
+      color: #ffffff;
+    }
   }
 }
 
@@ -5359,7 +5363,7 @@ body.dark-mode {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem clamp(7rem, 7.82vw, 6.25rem);
+  padding: clamp(7rem, 7.82vw, 6.25rem) 1rem;
 
   // Using clamp to create fluid values based on viewport width
   --scroller-gap: clamp(1.5rem, calc(1rem + 2vw), 4rem);
