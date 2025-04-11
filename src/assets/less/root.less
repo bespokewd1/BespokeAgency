@@ -4630,7 +4630,9 @@ body.dark-mode #cta-403.cs-image-only {
     }
 
     .cs-text {
-      font-size: (20/16rem);
+      display: grid;
+      place-content: center;
+      font-size: (18/16rem);
       line-height: 1.5em;
       text-align: center;
       width: 100%;
@@ -4641,6 +4643,12 @@ body.dark-mode #cta-403.cs-image-only {
       /* 24px - 40px */
       margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
       color: var(--bodyTextColor);
+
+      .cs-text-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.3rem;
+      }
     }
 
     .cs-button-group {
