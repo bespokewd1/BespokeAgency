@@ -3538,7 +3538,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #pricing-1690 {
-    
+
     .cs-option2 {
       top: auto;
       bottom: 0;
@@ -6322,6 +6322,7 @@ body.dark-mode {
 
       .container {
           text-align: center;
+          z-index: 2;
       }
 
       picture {
@@ -6330,6 +6331,19 @@ body.dark-mode {
           left: 0;
           height: 100%;
           width: 100%;
+
+          &:before {
+            z-index: ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            opacity: 0.7;
+            display: block;
+            background: #000;
+            height: 100%;
+            width: 100%;
+        }
 
           img {
               position: absolute;
@@ -6359,19 +6373,6 @@ body.dark-mode {
           width: 96%;
           color: #fff;
           text-align: center;
-      }
-
-      &:before {
-          z-index: -1;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "";
-          opacity: 0.7;
-          display: block;
-          background: #000;
-          height: 100%;
-          width: 100%;
       }
   }
 }
