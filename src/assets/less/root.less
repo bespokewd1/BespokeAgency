@@ -3962,7 +3962,7 @@
       height: 100%;
       background-blend-mode: multiply;
       display: block;
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       // z-index: -1;
@@ -3990,7 +3990,7 @@
 
       img {
         border-radius: var(--cardRounded);
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         height: 100%;
@@ -4105,6 +4105,8 @@
     .cs-background {
       /* clips the black slant so it doesnt overflow */
       overflow: hidden;
+      position:absolute;
+
       &:before {
         width: 80%;
         opacity: 1;
@@ -4154,6 +4156,7 @@
         object-position: right;
         left: auto;
         right: 0;
+        position: absolute;
       }
     }
 
