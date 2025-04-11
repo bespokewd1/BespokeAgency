@@ -6,8 +6,8 @@ permalink: "/"
 tags: "sitemap" # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 image: /assets/images/blog/ogimage2.png
 eleventyNavigation:
-  key: Home
-  order: 100
+    key: Home
+    order: 100
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
@@ -19,56 +19,56 @@ eleventyNavigation:
 
 <!-- Google tag (gtag.js) -->
 <script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"
 ></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-ZMYC44ZRHF");
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-ZMYC44ZRHF");
 </script>
 <link rel="stylesheet" href="/assets/css/local.css" />
 <link rel="stylesheet" href="/assets/css/critical.css" />
 
 <!-- Script for Netlify Identity -->
 <script
-  defer
-  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    defer
+    src="https://identity.netlify.com/v1/netlify-identity-widget.js"
 ></script>
 <script defer>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
         });
-      }
-    });
-  }
+    }
 </script>
 
 <link
-  rel="preload"
-  as="image"
-  href="/assets/images/hero-bg.webp"
-  media="(max-width: 600px)"
+    rel="preload"
+    as="image"
+    href="/assets/images/hero-bg.webp"
+    media="(max-width: 600px)"
 />
 <link
-  rel="preload"
-  as="image"
-  href="/assets/images/hero-bg.webp"
-  media="(min-width: 601px)"
+    rel="preload"
+    as="image"
+    href="/assets/images/hero-bg.webp"
+    media="(min-width: 601px)"
 />
 
 {% endblock %} {% block body %}
 
 <!-- Blaze Assets for carousel -->
 <link
-  rel="stylesheet"
-  href="https://unpkg.com/blaze-slider@latest/dist/blaze.css"
+    rel="stylesheet"
+    href="https://unpkg.com/blaze-slider@latest/dist/blaze.css"
 />
 <script src="https://unpkg.com/blaze-slider@latest/dist/blaze-slider.dev.js"></script>
 
@@ -77,82 +77,90 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="hero-358">
-  <div class="cs-container">
-    <div class="cs-flex-group">
-      <h1 class="cs-title">
-        Elevate your Business! Custom Built Websites for
-        <br />
-        <span class="cs-changing-text"></span>
-      </h1>
-      <p class="cs-text">
-        Get superior results with our 100% hand-coded websites. No page builders
-        or WordPress. Call for Free Consultation.
-      </p>
-      <div class="cs-button-group">
-        <form class="cs-form" name="Contact Form" method="post">
-          <!-- <input class="cs-input" type="text" id="cs-domain-check" name="find-us" placeholder="Check Domain Availability">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <h1 class="cs-title">
+                Elevate your Business! Custom Built Websites for
+                <br />
+                <span class="cs-changing-text"></span>
+            </h1>
+            <p class="cs-text">
+                <!-- Get superior results with our 100% hand-coded websites. No page builders
+        or WordPress. Call for Free Consultation. -->
+                {% include 'components/circle-check-big.html' %} Professional,
+                High-Performance Business Websites
+                <br />
+                {% include 'components/circle-check-big.html' %} SEO Optimized –
+                Rank Higher, Get More Clients
+                <br />
+                {% include 'components/circle-check-big.html' %} Unlimited
+                Designs – Your Vision, Our Creation
+            </p>
+            <div class="cs-button-group">
+                <form class="cs-form" name="Contact Form" method="post">
+                    <!-- <input class="cs-input" type="text" id="cs-domain-check" name="find-us" placeholder="Check Domain Availability">
                     <a id="verify-button" href="https://namecheap.pxf.io/Kjov1a" class="cs-button-solid cs-submit cs-domain-check" target="_blank">Verify</a> -->
-          <a href="/portfolio/" class="cs-button-solid cs-submit"
-            >Our Portfolio</a
-          >
-          <a
-            href="sms:+17802638028?body=Good%20day,%20I%20would%20like%20to%20have%20a%20website%20for%20my%20business"
-            class="cs-button-solid cs-submit"
-          >
-            Let's Talk
-          </a>
-        </form>
-      </div>
-    </div>
-    <div class="cs-image-group">
-      <!-- SVG Paint Splash-->
-      <!-- Maid Picture -->
-      <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
-      <picture class="cs-person">
-        <source
-          media="(max-width: 600px)"
-          srcset="/assets/images/hero-bg.webp"
-        />
-        <source
-          media="(min-width: 601px)"
-          srcset="/assets/images/hero-bg.webp"
-        />
-        <img
-          aria-hidden="true"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          src="/assets/images/hero-bg.webp"
-          alt="maid"
-          width="831"
-          height="674"
-        />
-      </picture>
-    </div>
+                    <a href="/portfolio/" class="cs-button-solid cs-submit"
+                        >Our Portfolio</a
+                    >
+                    <a
+                        href="sms:+17802638028?body=Good%20day,%20I%20would%20like%20to%20have%20a%20website%20for%20my%20business"
+                        class="cs-button-solid cs-submit"
+                    >
+                        Let's Talk
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="cs-image-group">
+            <!-- SVG Paint Splash-->
+            <!-- Maid Picture -->
+            <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
+            <picture class="cs-person">
+                <source
+                    media="(max-width: 600px)"
+                    srcset="/assets/images/hero-bg.webp"
+                />
+                <source
+                    media="(min-width: 601px)"
+                    srcset="/assets/images/hero-bg.webp"
+                />
+                <img
+                    aria-hidden="true"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    src="/assets/images/hero-bg.webp"
+                    alt="maid"
+                    width="831"
+                    height="674"
+                />
+            </picture>
+        </div>
 
-    <div class="review-container">
-      <picture class="review-picture">
-        <source
-          media="(max-width: 600px)"
-          srcset="/assets/images/google-review.avif"
-        />
-        <source
-          media="(min-width: 601px)"
-          srcset="/assets/images/google-review.avif"
-        />
-        <img
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="/assets/images/google-review.avif"
-          alt="maid"
-          width="831"
-          height="674"
-          class="review-img"
-        />
-      </picture>
+        <div class="review-container">
+            <picture class="review-picture">
+                <source
+                    media="(max-width: 600px)"
+                    srcset="/assets/images/google-review.avif"
+                />
+                <source
+                    media="(min-width: 601px)"
+                    srcset="/assets/images/google-review.avif"
+                />
+                <img
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                    src="/assets/images/google-review.avif"
+                    alt="maid"
+                    width="831"
+                    height="674"
+                    class="review-img"
+                />
+            </picture>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- ============================================ -->
@@ -160,83 +168,87 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="services-962">
-  <div class="cs-container">
-    <div class="cs-content">
-      <span class="cs-topper"
-        >100% Custom Web Design & Development for Edmonton Entrepreneurs</span
-      >
-      <h3 class="cs-title">OUR SERVICES</h3>
-      <br /><br />
-      <p class="cs-text">
-        We help Edmonton-based entrepreneurs get the custom websites they
-        deserve. Unlike other web developers, we create fully custom websites
-        with NO LIMITATIONS. Our hand-crafted designs ensure your business
-        stands out, boosts your online presence, and drives growth.
-        <a href="/about">LEARN MORE</a>
-      </p>
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"
+                >100% Custom Web Design & Development for Edmonton
+                Entrepreneurs</span
+            >
+            <h3 class="cs-title">OUR SERVICES</h3>
+            <br /><br />
+            <p class="cs-text">
+                We help Edmonton-based entrepreneurs get the custom websites
+                they deserve. Unlike other web developers, we create fully
+                custom websites with NO LIMITATIONS. Our hand-crafted designs
+                ensure your business stands out, boosts your online presence,
+                and drives growth.
+                <a href="/about">LEARN MORE</a>
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-item-link" href="">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=fUN1LM3gWXOW&format=png&color=000000"
+                        alt="phone logo"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                    />
+                    <h3 class="cs-h3">Custom Website Design</h3>
+                    <p class="cs-item-text">
+                        A website built with your vision and our design
+                        expertise. Custom-designed to match your brand, without
+                        templates. We analyze your audience, competitors, and
+                        unique strengths to create a site that drives leads and
+                        growth.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-item-link">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=aGVa91FU6Vg8&format=png&color=000000"
+                        alt="computer logo"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                    />
+                    <h3 class="cs-h3">Branding & Logo Design</h3>
+                    <p class="cs-item-text">
+                        Custom logo, color scheme, and design elements as part
+                        of our Brand & Identity Package, all included with your
+                        website for a complete, all-in-one solution.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-item-link">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=M3qWtBeOi6ll&format=png&color=000000"
+                        alt="</> in logo"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                    />
+                    <h3 class="cs-h3">Ongoing Support & Marketing</h3>
+                    <p class="cs-item-text">
+                        – 1 year of free hosting, website maintenance, security,
+                        and SEO. Monthly social media asset support to keep your
+                        business growing.
+                    </p>
+                </a>
+            </li>
+        </ul>
     </div>
-    <ul class="cs-card-group">
-      <li class="cs-item">
-        <a class="cs-item-link" href="">
-          <img
-            src="https://img.icons8.com/?size=100&id=fUN1LM3gWXOW&format=png&color=000000"
-            alt="phone logo"
-            width="40"
-            height="40"
-            loading="lazy"
-            decoding="async"
-            aria-hidden="true"
-          />
-          <h3 class="cs-h3">Custom Website Design</h3>
-          <p class="cs-item-text">
-            A website built with your vision and our design expertise.
-            Custom-designed to match your brand, without templates. We analyze
-            your audience, competitors, and unique strengths to create a site
-            that drives leads and growth.
-          </p>
-        </a>
-      </li>
-      <li class="cs-item">
-        <a href="" class="cs-item-link">
-          <img
-            src="https://img.icons8.com/?size=100&id=aGVa91FU6Vg8&format=png&color=000000"
-            alt="computer logo"
-            width="40"
-            height="40"
-            loading="lazy"
-            decoding="async"
-            aria-hidden="true"
-          />
-          <h3 class="cs-h3">Branding & Logo Design</h3>
-          <p class="cs-item-text">
-            Custom logo, color scheme, and design elements as part of our Brand
-            & Identity Package, all included with your website for a complete,
-            all-in-one solution.
-          </p>
-        </a>
-      </li>
-      <li class="cs-item">
-        <a href="" class="cs-item-link">
-          <img
-            src="https://img.icons8.com/?size=100&id=M3qWtBeOi6ll&format=png&color=000000"
-            alt="</> in logo"
-            width="40"
-            height="40"
-            loading="lazy"
-            decoding="async"
-            aria-hidden="true"
-          />
-          <h3 class="cs-h3">Ongoing Support & Marketing</h3>
-          <p class="cs-item-text">
-            – 1 year of free hosting, website maintenance, security, and SEO.
-            Monthly social media asset support to keep your business growing.
-          </p>
-        </a>
-      </li>
-    </ul>
-  </div>
 
-  <!-- <div class="cs-background">
+    <!-- <div class="cs-background">
     <ul class="circles">
       <li></li>
       <li></li>
@@ -257,26 +269,37 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="cta">
-  <picture>
-    <source media="(max-width: 600px)" srcset="/assets/images/cta-bg.webp">
-    <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp">
-    <img aria-hidden="true" decoding="async" src="/assets/images/cta-bg.webp" alt="cta bg"
-        loading="lazy" width="2500" height="1667">
-</picture>
-  <div class="container">
-      <h2 class="title">
-        New business in Edmonton?
+    <picture>
+        <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/cta-bg.webp"
+        />
+        <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/cta-bg.webp"
+        />
+        <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/cta-bg.webp"
+            alt="cta bg"
+            loading="lazy"
+            width="2500"
+            height="1667"
+        />
+    </picture>
+    <div class="container">
+        <h2 class="title">
+            New business in Edmonton?
 
-          <br />
-          🎉 Get 20% OFF your first website!
-      </h2>
-      <p>
-        📩 Message us with "NEWBUSINESS" on WhatsApp or Call Now!
-      </p>
-      <a href="https://wa.me/+17802638028" class="cs-button-solid">Claim your 20% discount!</a>
-  </div>
-
-
+            <br />
+            🎉 Get 20% OFF your first website!
+        </h2>
+        <p>📩 Message us with "NEWBUSINESS" on WhatsApp or Call Now!</p>
+        <a href="https://wa.me/+17802638028" class="cs-button-solid"
+            >Claim your 20% discount!</a
+        >
+    </div>
 </section>
 
 <!-- ============================================ -->
@@ -284,286 +307,286 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="autoscroll-gallery">
-  <div class="cs-content">
-    <span class="cs-topper">
-      Proud to Work With Edmonton’s Top Entrepreneurs
-    </span>
-    <h2 class="cs-title">Our Valued Clients</h2>
-  </div>
-  <div class="scroller">
-    <ul class="gallery-wrapper scroller-inner">
-      <li style="--brand-rgb: 255, 0, 0">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/client-logo/benjie-live.avif"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/client-logo/benjie-live.avif"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/client-icon/client-logo/benjie-live.avif"
-            alt="benji live logo"
-            height="80"
-            width="160"
-          />
-        </picture>
+    <div class="cs-content">
+        <span class="cs-topper">
+            Proud to Work With Edmonton’s Top Entrepreneurs
+        </span>
+        <h2 class="cs-title">Our Valued Clients</h2>
+    </div>
+    <div class="scroller">
+        <ul class="gallery-wrapper scroller-inner">
+            <li style="--brand-rgb: 255, 0, 0">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/client-logo/benjie-live.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/client-logo/benjie-live.avif"
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/client-icon/client-logo/benjie-live.avif"
+                        alt="benji live logo"
+                        height="80"
+                        width="160"
+                    />
+                </picture>
 
-        <a
-          class="brand-link"
-          href="https://benjielindolive.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="brand-name">
-            <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-external-link"
-              >
-                <path d="M15 3h6v6" />
-                <path d="M10 14 21 3" />
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                />
-              </svg>
-            </span>
-            benjielindolive.ca
-          </div>
-        </a>
+                <a
+                    class="brand-link"
+                    href="https://benjielindolive.ca/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="brand-name">
+                        <span
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-external-link"
+                            >
+                                <path d="M15 3h6v6" />
+                                <path d="M10 14 21 3" />
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                />
+                            </svg>
+                        </span>
+                        benjielindolive.ca
+                    </div>
+                </a>
 
-        <span class="beam"></span>
-      </li>
+                <span class="beam"></span>
+            </li>
 
-      <li style="--brand-rgb: 208, 105, 40">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/client-logo/kms.avif"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/client-logo/kms.avif"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/client-logo/kms.avif"
-            alt="kms logo"
-            height="80"
-            width="160"
-          />
-        </picture>
+            <li style="--brand-rgb: 208, 105, 40">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/client-logo/kms.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/client-logo/kms.avif"
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/client-logo/kms.avif"
+                        alt="kms logo"
+                        height="80"
+                        width="160"
+                    />
+                </picture>
 
-        <a
-          class="brand-link"
-          href="https://kmsplumbingyeg.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="brand-name">
-            <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-external-link"
-              >
-                <path d="M15 3h6v6" />
-                <path d="M10 14 21 3" />
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                />
-              </svg>
-            </span>
-            <!-- kms-draft.netlify.app -->
-          </div>
-        </a>
+                <a
+                    class="brand-link"
+                    href="https://kmsplumbingyeg.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="brand-name">
+                        <span
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-external-link"
+                            >
+                                <path d="M15 3h6v6" />
+                                <path d="M10 14 21 3" />
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                />
+                            </svg>
+                        </span>
+                        <!-- kms-draft.netlify.app -->
+                    </div>
+                </a>
 
-        <span class="beam"></span>
-      </li>
+                <span class="beam"></span>
+            </li>
 
-      <li style="--brand-rgb: 19, 89, 193">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/client-logo/mpc.avif"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/client-logo/mpc.avif"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/client-logo/mpc.avif"
-            alt="mpc logo"
-            height="80"
-            width="160"
-          />
-        </picture>
+            <li style="--brand-rgb: 19, 89, 193">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/client-logo/mpc.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/client-logo/mpc.avif"
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/client-logo/mpc.avif"
+                        alt="mpc logo"
+                        height="80"
+                        width="160"
+                    />
+                </picture>
 
-        <a
-          class="brand-link"
-          href="https://montanoplumbing.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="brand-name">
-            <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-external-link"
-              >
-                <path d="M15 3h6v6" />
-                <path d="M10 14 21 3" />
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                />
-              </svg>
-            </span>
-            montanoplumbing.ca
-          </div>
-        </a>
+                <a
+                    class="brand-link"
+                    href="https://montanoplumbing.ca/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="brand-name">
+                        <span
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-external-link"
+                            >
+                                <path d="M15 3h6v6" />
+                                <path d="M10 14 21 3" />
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                />
+                            </svg>
+                        </span>
+                        montanoplumbing.ca
+                    </div>
+                </a>
 
-        <span class="beam"></span>
-      </li>
+                <span class="beam"></span>
+            </li>
 
-      <li style="--brand-rgb: 254, 222, 15">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/client-logo/waffle-house.avif"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/client-logo/waffle-house.avif"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/client-logo/waffle-house.avif"
-            alt="waffle house logo"
-            height="80"
-            width="160"
-          />
-        </picture>
+            <li style="--brand-rgb: 254, 222, 15">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/client-logo/waffle-house.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/client-logo/waffle-house.avif"
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/client-logo/waffle-house.avif"
+                        alt="waffle house logo"
+                        height="80"
+                        width="160"
+                    />
+                </picture>
 
-        <a
-          class="brand-link"
-          href="https://wafflehousesherwood.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="brand-name">
-            <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-external-link"
-              >
-                <path d="M15 3h6v6" />
-                <path d="M10 14 21 3" />
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                />
-              </svg>
-            </span>
-            wafflehousesherwood.ca
-          </div>
-        </a>
+                <a
+                    class="brand-link"
+                    href="https://wafflehousesherwood.ca/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="brand-name">
+                        <span
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-external-link"
+                            >
+                                <path d="M15 3h6v6" />
+                                <path d="M10 14 21 3" />
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                />
+                            </svg>
+                        </span>
+                        wafflehousesherwood.ca
+                    </div>
+                </a>
 
-        <span class="beam"></span>
-      </li>
+                <span class="beam"></span>
+            </li>
 
-      <li style="--brand-rgb: 66, 160, 208">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/client-logo/yeg.avif"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/client-logo/yeg.avif"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/client-logo/yeg.avif"
-            alt="yeg logo"
-            height="80"
-            width="160"
-          />
-        </picture>
+            <li style="--brand-rgb: 66, 160, 208">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/client-logo/yeg.avif"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/client-logo/yeg.avif"
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/client-logo/yeg.avif"
+                        alt="yeg logo"
+                        height="80"
+                        width="160"
+                    />
+                </picture>
 
-        <a
-          class="brand-link"
-          href="https://yegcarpetcleaningservices.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="brand-name">
-            <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-external-link"
-              >
-                <path d="M15 3h6v6" />
-                <path d="M10 14 21 3" />
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                />
-              </svg>
-            </span>
-            yegcarpetcleaningservices.ca
-          </div>
-        </a>
+                <a
+                    class="brand-link"
+                    href="https://yegcarpetcleaningservices.ca/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="brand-name">
+                        <span
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-external-link"
+                            >
+                                <path d="M15 3h6v6" />
+                                <path d="M10 14 21 3" />
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                />
+                            </svg>
+                        </span>
+                        yegcarpetcleaningservices.ca
+                    </div>
+                </a>
 
-        <span class="beam"></span>
-      </li>
-    </ul>
-  </div>
-  <a href="/portfolio" class="cs-button-solid">Our Portfolio</a>
+                <span class="beam"></span>
+            </li>
+        </ul>
+    </div>
+    <a href="/portfolio" class="cs-button-solid">Our Portfolio</a>
 </section>
 
 <!-- ============================================ -->
@@ -571,99 +594,104 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="services-1644">
-  <div class="cs-container">
-    <div class="cs-content">
-      <span class="cs-topper">Choose Us</span>
-      <h2 class="cs-title">Why choose Bespoke Web Design?</h2>
-      <p class="cs-text"></p>
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Choose Us</span>
+            <h2 class="cs-title">Why choose Bespoke Web Design?</h2>
+            <p class="cs-text"></p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <img
+                        class="cs-icon"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://img.icons8.com/?size=100&id=7692&format=png&color=4594F2"
+                        alt="</> icon"
+                        width="48"
+                        height="48"
+                        aria-hidden="true"
+                    />
+                </div>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">Hand-Coded for Speed & Performance</h2>
+                    <p class="cs-item-text">
+                        Our websites are built from scratch to ensure the
+                        fastest loading times and best performance. No bloated
+                        code or unnecessary plugins.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <img
+                        class="cs-icon"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://img.icons8.com/?size=100&id=69184&format=png&color=4594F2"
+                        alt="brand design icon"
+                        width="48"
+                        height="48"
+                        aria-hidden="true"
+                    />
+                </div>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">100% Custom Design to Fit Your Brand</h2>
+                    <p class="cs-item-text">
+                        Designs that capture your business’s values and goals,
+                        reflecting your unique identity. We also do Brand and
+                        Identity Package.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <img
+                        class="cs-icon"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://img.icons8.com/?size=100&id=57007&format=png&color=4594F2"
+                        alt="dollar sign icon"
+                        width="48"
+                        height="48"
+                        aria-hidden="true"
+                    />
+                </div>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">Affordable Pricing</h2>
+                    <p class="cs-item-text">
+                        Transparent pricing with no hidden fees. Start with a
+                        professional website for a monthly fee that fits your
+                        budget.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <img
+                        class="cs-icon"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://img.icons8.com/?size=100&id=11683&format=png&color=4594F2"
+                        alt="wrench icon"
+                        width="48"
+                        height="48"
+                        aria-hidden="true"
+                    />
+                </div>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">
+                        Ongoing Support & Maintenance Included
+                    </h2>
+                    <p class="cs-item-text">
+                        We provide continuous support and updates to keep your
+                        website running smoothly and securely.
+                    </p>
+                </div>
+            </li>
+        </ul>
     </div>
-    <ul class="cs-card-group">
-      <li class="cs-item">
-        <div class="cs-image-group">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://img.icons8.com/?size=100&id=7692&format=png&color=4594F2"
-            alt="</> icon"
-            width="48"
-            height="48"
-            aria-hidden="true"
-          />
-        </div>
-        <div class="cs-flex">
-          <h2 class="cs-h2">Hand-Coded for Speed & Performance</h2>
-          <p class="cs-item-text">
-            Our websites are built from scratch to ensure the fastest loading
-            times and best performance. No bloated code or unnecessary plugins.
-          </p>
-        </div>
-      </li>
-      <li class="cs-item">
-        <div class="cs-image-group">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://img.icons8.com/?size=100&id=69184&format=png&color=4594F2"
-            alt="brand design icon"
-            width="48"
-            height="48"
-            aria-hidden="true"
-          />
-        </div>
-        <div class="cs-flex">
-          <h2 class="cs-h2">100% Custom Design to Fit Your Brand</h2>
-          <p class="cs-item-text">
-            Designs that capture your business’s values and goals, reflecting
-            your unique identity. We also do Brand and Identity Package.
-          </p>
-        </div>
-      </li>
-      <li class="cs-item">
-        <div class="cs-image-group">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://img.icons8.com/?size=100&id=57007&format=png&color=4594F2"
-            alt="dollar sign icon"
-            width="48"
-            height="48"
-            aria-hidden="true"
-          />
-        </div>
-        <div class="cs-flex">
-          <h2 class="cs-h2">Affordable Pricing</h2>
-          <p class="cs-item-text">
-            Transparent pricing with no hidden fees. Start with a professional
-            website for a monthly fee that fits your budget.
-          </p>
-        </div>
-      </li>
-      <li class="cs-item">
-        <div class="cs-image-group">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://img.icons8.com/?size=100&id=11683&format=png&color=4594F2"
-            alt="wrench icon"
-            width="48"
-            height="48"
-            aria-hidden="true"
-          />
-        </div>
-        <div class="cs-flex">
-          <h2 class="cs-h2">Ongoing Support & Maintenance Included</h2>
-          <p class="cs-item-text">
-            We provide continuous support and updates to keep your website
-            running smoothly and securely.
-          </p>
-        </div>
-      </li>
-    </ul>
-  </div>
 </section>
 
 <!-- ============================================ -->
@@ -671,80 +699,83 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="why-choose-223">
-  <div class="cs-container">
-    <div class="cs-content">
-      <span class="cs-topper">Perks and Benefits</span>
-      <h2 class="cs-title">Benefits of Having a Professional Business Site</h2>
-      <p class="cs-text"></p>
-      <a href="/about" class="cs-button-solid">More About Us</a>
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Perks and Benefits</span>
+            <h2 class="cs-title">
+                Benefits of Having a Professional Business Site
+            </h2>
+            <p class="cs-text"></p>
+            <a href="/about" class="cs-button-solid">More About Us</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img
+                    class="cs-icon"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://img.icons8.com/?size=100&id=gcHk3KXPciim&format=png&color=000000"
+                    alt="thumbs up with a checkmark icon"
+                    width="72"
+                    height="72"
+                />
+                <h3 class="cs-h3">Enhanced Credibility</h3>
+                <p class="cs-item-text">
+                    A professional business website enhances your brand's
+                    credibility and gives a trustworthy impression to clients.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img
+                    class="cs-icon"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://img.icons8.com/?size=100&id=mYqnHc1fapB8&format=png&color=000000"
+                    alt="map icon"
+                    width="72"
+                    height="72"
+                />
+                <h3 class="cs-h3">Increased Visibility</h3>
+                <p class="cs-item-text">
+                    Reach a broader audience and improve your online presence
+                    with a well-designed website that ranks well in search
+                    engines.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img
+                    class="cs-icon"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://img.icons8.com/?size=100&id=34028&format=png&color=000000"
+                    alt="a person holding money bill"
+                    width="72"
+                    height="72"
+                />
+                <h3 class="cs-h3">Better Customer Engagement</h3>
+                <p class="cs-item-text">
+                    Engage visitors effectively with an intuitive design that
+                    encourages interaction and conversion.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img
+                    class="cs-icon"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://img.icons8.com/?size=100&id=114214&format=png&color=000000"
+                    alt="arrow going up presenting growth"
+                    width="72"
+                    height="72"
+                />
+                <h3 class="cs-h3">Growth and Scalability</h3>
+                <p class="cs-item-text">
+                    Scale your business effortlessly with a website that can
+                    grow alongside your company's needs and objectives.
+                </p>
+            </li>
+        </ul>
     </div>
-    <ul class="cs-card-group">
-      <li class="cs-item">
-        <img
-          class="cs-icon"
-          loading="lazy"
-          decoding="async"
-          src="https://img.icons8.com/?size=100&id=gcHk3KXPciim&format=png&color=000000"
-          alt="thumbs up with a checkmark icon"
-          width="72"
-          height="72"
-        />
-        <h3 class="cs-h3">Enhanced Credibility</h3>
-        <p class="cs-item-text">
-          A professional business website enhances your brand's credibility and
-          gives a trustworthy impression to clients.
-        </p>
-      </li>
-      <li class="cs-item">
-        <img
-          class="cs-icon"
-          loading="lazy"
-          decoding="async"
-          src="https://img.icons8.com/?size=100&id=mYqnHc1fapB8&format=png&color=000000"
-          alt="map icon"
-          width="72"
-          height="72"
-        />
-        <h3 class="cs-h3">Increased Visibility</h3>
-        <p class="cs-item-text">
-          Reach a broader audience and improve your online presence with a
-          well-designed website that ranks well in search engines.
-        </p>
-      </li>
-      <li class="cs-item">
-        <img
-          class="cs-icon"
-          loading="lazy"
-          decoding="async"
-          src="https://img.icons8.com/?size=100&id=34028&format=png&color=000000"
-          alt="a person holding money bill"
-          width="72"
-          height="72"
-        />
-        <h3 class="cs-h3">Better Customer Engagement</h3>
-        <p class="cs-item-text">
-          Engage visitors effectively with an intuitive design that encourages
-          interaction and conversion.
-        </p>
-      </li>
-      <li class="cs-item">
-        <img
-          class="cs-icon"
-          loading="lazy"
-          decoding="async"
-          src="https://img.icons8.com/?size=100&id=114214&format=png&color=000000"
-          alt="arrow going up presenting growth"
-          width="72"
-          height="72"
-        />
-        <h3 class="cs-h3">Growth and Scalability</h3>
-        <p class="cs-item-text">
-          Scale your business effortlessly with a website that can grow
-          alongside your company's needs and objectives.
-        </p>
-      </li>
-    </ul>
-  </div>
 </section>
 
 <!-- ============================================ -->
@@ -752,115 +783,120 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="services-1331">
-  <div class="cs-container">
-    <div class="cs-content">
-      <div class="cs-flex-group">
-        <span class="cs-topper">Our Process</span>
-        <h2 class="cs-title">We Handle Everything, So You Don’t Have To</h2>
-      </div>
-      <p class="cs-text">
-        Once the contract is signed, we send over a short questionnaire about
-        your business and what you offer. From there, we’ll handle the rest:
-        we’ll write the content, design the layout, get your feedback, and then
-        build your site. The whole process usually takes about 2-3 weeks.
-      </p>
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Our Process</span>
+                <h2 class="cs-title">
+                    We Handle Everything, So You Don’t Have To
+                </h2>
+            </div>
+            <p class="cs-text">
+                Once the contract is signed, we send over a short questionnaire
+                about your business and what you offer. From there, we’ll handle
+                the rest: we’ll write the content, design the layout, get your
+                feedback, and then build your site. The whole process usually
+                takes about 2-3 weeks.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <span class="cs-step">Step 1</span>
+                    <img
+                        class="cs-step-icon"
+                        src="/assets/images/icons/call-contact.svg"
+                        alt="green phone icon"
+                        width="40"
+                        height="40"
+                    />
+                    <h3 class="cs-h3">Call for a FREE Consultation!</h3>
+                    <p class="cs-item-text">
+                        Let’s discuss your business goals and vision. Once you
+                        sign the contract, we’ll create a customized plan
+                        tailored to your needs
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <span class="cs-step">Step 2</span>
+                    <div>
+                        <img
+                            class="cs-step-icon"
+                            src="/assets/images/trust-icons/vscode.svg"
+                            alt="vscode icon"
+                            width="40"
+                            height="40"
+                        />
+                        <img
+                            class="cs-step-icon"
+                            src="/assets/images/trust-icons/figma.svg"
+                            alt="figma icon"
+                            width="40"
+                            height="40"
+                            style="scale: 2; margin-left: -1rem"
+                        />
+                    </div>
+                    <div>
+                        <h3 class="cs-h3">Design & Development</h3>
+                        <p class="cs-item-text">
+                            We bring your vision to life with a fully customized
+                            website that fits your business needs
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <span class="cs-step">Step 3</span>
+                    <img
+                        class="cs-step-icon"
+                        alt="person with a headset doing phone call"
+                        src="/assets/images/icons/tech-sup.svg"
+                        width="40"
+                        height="40"
+                        style="scale: 1.3"
+                    />
+                    <div>
+                        <h3 class="cs-h3">Launch & Grow!</h3>
+                        <p class="cs-item-text">
+                            Your website goes live! Enjoy
+                            <strong
+                                >ongoing maintenance, unlimited edits, and
+                                social media support
+                            </strong>
+                            with our Brand & Identity Package. 1 Yr FREE Hosting
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
     </div>
-    <ul class="cs-card-group">
-      <li class="cs-item">
-        <a href="" class="cs-link">
-          <span class="cs-step">Step 1</span>
-          <img
-            class="cs-step-icon"
-            src="/assets/images/icons/call-contact.svg"
-            alt="green phone icon"
-            width="40"
-            height="40"
-          />
-          <h3 class="cs-h3">Call for a FREE Consultation!</h3>
-          <p class="cs-item-text">
-            Let’s discuss your business goals and vision. Once you sign the
-            contract, we’ll create a customized plan tailored to your needs
-          </p>
-        </a>
-      </li>
-      <li class="cs-item">
-        <a href="" class="cs-link">
-          <span class="cs-step">Step 2</span>
-          <div>
-            <img
-              class="cs-step-icon"
-              src="/assets/images/trust-icons/vscode.svg"
-              alt="vscode icon"
-              width="40"
-              height="40"
-            />
-            <img
-              class="cs-step-icon"
-              src="/assets/images/trust-icons/figma.svg"
-              alt="figma icon"
-              width="40"
-              height="40"
-              style="scale: 2; margin-left: -1rem"
-            />
-          </div>
-          <div>
-            <h3 class="cs-h3">Design & Development</h3>
-            <p class="cs-item-text">
-              We bring your vision to life with a fully customized website that
-              fits your business needs
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="cs-item">
-        <a href="" class="cs-link">
-          <span class="cs-step">Step 3</span>
-          <img
-            class="cs-step-icon"
-            alt="person with a headset doing phone call"
-            src="/assets/images/icons/tech-sup.svg"
-            width="40"
-            height="40"
-            style="scale: 1.3"
-          />
-          <div>
-            <h3 class="cs-h3">Launch & Grow!</h3>
-            <p class="cs-item-text">
-              Your website goes live! Enjoy
-              <strong
-                >ongoing maintenance, unlimited edits, and social media support
-              </strong>
-              with our Brand & Identity Package. 1 Yr FREE Hosting
-            </p>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <picture class="cs-background">
-    <!--Mobile Image-->
-    <source
-      media="(max-width: 600px)"
-      srcset="
-        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-white.jpg
-      "
-    />
-    <!--Tablet and above Image-->
-    <source
-      media="(min-width: 601px)"
-      srcset="
-        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-white.jpg
-      "
-    />
-    <img
-      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-white.jpg"
-      alt="building"
-      width="1920"
-      height="700"
-      decoding="async"
-      loading="lazy"
-    />
-  </picture>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source
+            media="(max-width: 600px)"
+            srcset="
+                https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-white.jpg
+            "
+        />
+        <!--Tablet and above Image-->
+        <source
+            media="(min-width: 601px)"
+            srcset="
+                https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-white.jpg
+            "
+        />
+        <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-white.jpg"
+            alt="building"
+            width="1920"
+            height="700"
+            decoding="async"
+            loading="lazy"
+        />
+    </picture>
 </section>
 
 <!-- ============================================ -->
@@ -868,335 +904,343 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="pricing-1690">
-  <div class="cs-container">
-    <div id="cs-content-1801">
-      <div class="cs-flex">
-        <span class="cs-topper">Pricing</span>
-        <h3 class="cs-title">It’s Easy to Get Started</h3>
-        <p class="cs-text">
-          At Bespoke web design, we create professional sites hassle-free, so
-          you can focus on what matters most—your business!
-        </p>
-      </div>
+    <div class="cs-container">
+        <div id="cs-content-1801">
+            <div class="cs-flex">
+                <span class="cs-topper">Pricing</span>
+                <h3 class="cs-title">It’s Easy to Get Started</h3>
+                <p class="cs-text">
+                    At Bespoke web design, we create professional sites
+                    hassle-free, so you can focus on what matters most—your
+                    business!
+                </p>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-package">BRAND & IDENTITY PACKAGE</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Includes everything in Standard Package.
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Business Logo - All designs will align with and
+                        complement your company logo.
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Business Card Design: Double-sided with two custom
+                        designs.
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Social Media Covers: for Facebook, LinkedIn, Instagram,
+                        and YouTube.
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Email Signature: Professional and branded.
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Letterhead: Custom design for consistency.
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                </ul>
+                <span class="cs-price" style="opacity: 0; visibility: hidden"
+                    >$200
+                    <span class="cs-duration">Per Month</span>
+                </span>
+                <a href="/contact/" class="cs-link">
+                    <span class="cs-link-text">Call for Free Consultation</span>
+                    <img
+                        class="cs-arrow"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                        alt="icon"
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                    />
+                </a>
+            </li>
+            <li class="cs-item cs-popular">
+                <span class="cs-package">STANDARD</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Custom 5-page Business website
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Responsive design for mobile and desktop
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Hosting included
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Additional Page - Starts at $150
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Support and Maintenance
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Custom CMS Blog - Starts at $300 (recommended for SEO)
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Custom Request Call for a Quote
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Advanced Copywriting (Coming Soon)
+                    </li>
+                </ul>
+                <span class="cs-price" style="opacity: 0; visibility: hidden"
+                    >$149
+                    <span class="cs-duration">Per Month</span>
+                </span>
+                <a href="/contact/" class="cs-link">
+                    <span class="cs-link-text">Call for Free Consultation</span>
+                    <img
+                        class="cs-arrow"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                        alt="icon"
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                    />
+                </a>
+            </li>
+            <li class="cs-item">
+                <span class="cs-package">LUMP SUM</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Custom 5-page Business website
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        $20/mo Hosting
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Additional Page - Starts at $150
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        +$75/mo Unlimited Edits Add-on
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Custom CMS Blog - Starts at $300 (recommended for SEO)
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li">
+                        Custom Request Call for a Quote
+                        <img
+                            class="cs-icon"
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
+                            alt="checkmark"
+                            width="18"
+                            height="18"
+                        />
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Advanced Copywriting (Coming Soon)
+                    </li>
+                </ul>
+                <span class="cs-price" style="opacity: 0; visibility: hidden"
+                    >$2000
+                    <span class="cs-duration">+ $20/month hosting</span>
+                </span>
+                <a href="/contact/" class="cs-link">
+                    <span class="cs-link-text">Call for Free Consultation</span>
+                    <img
+                        class="cs-arrow"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                        alt="icon"
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                    />
+                </a>
+            </li>
+        </ul>
     </div>
-    <ul class="cs-card-group">
-      <li class="cs-item">
-        <span class="cs-package">BRAND & IDENTITY PACKAGE</span>
-        <ul class="cs-ul">
-          <li class="cs-li">
-            Includes everything in Standard Package.
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Business Logo - All designs will align with and complement your
-            company logo.
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Business Card Design: Double-sided with two custom designs.
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Social Media Covers: for Facebook, LinkedIn, Instagram, and YouTube.
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Email Signature: Professional and branded.
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Letterhead: Custom design for consistency.
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-        </ul>
-        <span class="cs-price" style="opacity: 0; visibility: hidden"
-          >$200
-          <span class="cs-duration">Per Month</span>
-        </span>
-        <a href="/contact/" class="cs-link">
-          <span class="cs-link-text">Call for Free Consultation</span>
-          <img
-            class="cs-arrow"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-            alt="icon"
-            width="20"
-            height="20"
-            aria-hidden="true"
-          />
-        </a>
-      </li>
-      <li class="cs-item cs-popular">
-        <span class="cs-package">STANDARD</span>
-        <ul class="cs-ul">
-          <li class="cs-li">
-            Custom 5-page Business website
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Responsive design for mobile and desktop
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Hosting included
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Additional Page - Starts at $150
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Support and Maintenance
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Custom CMS Blog - Starts at $300 (recommended for SEO)
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Custom Request Call for a Quote
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li cs-disabled">Advanced Copywriting (Coming Soon)</li>
-        </ul>
-        <span class="cs-price" style="opacity: 0; visibility: hidden">$149
-          <span class="cs-duration">Per Month</span>
-        </span>
-        <a href="/contact/" class="cs-link">
-          <span class="cs-link-text">Call for Free Consultation</span>
-          <img
-            class="cs-arrow"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-            alt="icon"
-            width="20"
-            height="20"
-            aria-hidden="true"
-          />
-        </a>
-      </li>
-      <li class="cs-item">
-        <span class="cs-package">LUMP SUM</span>
-        <ul class="cs-ul">
-          <li class="cs-li">
-            Custom 5-page Business website
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            $20/mo Hosting
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Additional Page - Starts at $150
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            +$75/mo Unlimited Edits Add-on
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Custom CMS Blog - Starts at $300 (recommended for SEO)
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li">
-            Custom Request Call for a Quote
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-tick.svg"
-              alt="checkmark"
-              width="18"
-              height="18"
-            />
-          </li>
-          <li class="cs-li cs-disabled">Advanced Copywriting (Coming Soon)</li>
-        </ul>
-        <span class="cs-price" style="opacity: 0; visibility: hidden"
-          >$2000
-          <span class="cs-duration">+ $20/month hosting</span>
-        </span>
-        <a href="/contact/" class="cs-link">
-          <span class="cs-link-text">Call for Free Consultation</span>
-          <img
-            class="cs-arrow"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-            alt="icon"
-            width="20"
-            height="20"
-            aria-hidden="true"
-          />
-        </a>
-      </li>
-    </ul>
-  </div>
 </section>
 
 <!-- ============================================ -->
@@ -1204,286 +1248,311 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="reviews-1833">
-  <div class="cs-container">
-    <div class="cs-content">
-      <span class="cs-topper">Testimonials</span>
-      <h2 class="cs-title">Our Members Testimonials</h2>
-    </div>
-    <div class="blaze-slider">
-      <div class="blaze-container">
-        <div class="blaze-track-container">
-          <div class="blaze-track">
-            <div class="blaze-slide">
-              <div class="cs-flex-group">
-                <div class="cs-review-group">
-                  <!--Stars-->
-                  <img
-                    class="cs-stars"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                    alt="quotes"
-                    width="97"
-                    height="80"
-                    aria-hidden="true"
-                  />
-                  <p class="cs-review-text">
-                    ”My husband and I have been on the market for webdesign for
-                    quite awhile before knowing Charles of BeSpoke. We made the
-                    right choice in signing up with him! Our small business
-                    offers a variety of services and we wanted a website that
-                    will showcase it all in a straightforward yet sophisticated
-                    fashion. One more good thing to note is that, Charles is
-                    responsive and delivers on time. 5 stars all the way!”
-                  </p>
-                  <span class="cs-name"> Michelle Superales </span>
-                  <span class="cs-job">Montano Plumbing & Contracting LTD</span>
-                  <img
-                    src="{{ client.domain }}/assets/images/google-review-icon.webp"
-                    height="50"
-                    alt="google review"
-                  />
-                  <!--Quote-->
-                  <img
-                    class="cs-quote"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                    alt="quotes"
-                    width="97"
-                    height="80"
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="blaze-slide">
-              <div class="cs-flex-group">
-                <div class="cs-review-group">
-                  <!--Stars-->
-                  <img
-                    class="cs-stars"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                    alt="quotes"
-                    width="97"
-                    height="80"
-                    aria-hidden="true"
-                  />
-                  <p class="cs-review-text">
-                    ”I highly recommend Bespoke Wed Design Edmonton! Please
-                    contact charles… and he will help you with your
-                    Business Website!”
-                  </p>
-                  <span class="cs-name"> Kelvin Canlas </span>
-                  <span class="cs-job">YEG Carpet Cleaning Services</span>
-                  <img
-                    src="{{ client.domain }}/assets/images/google-review-icon.webp"
-                    height="50"
-                  />
-                  <!--Quote-->
-                  <img
-                    class="cs-quote"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                    alt="quotes"
-                    width="97"
-                    height="80"
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="blaze-slide">
-              <div class="cs-flex-group">
-                <div class="cs-review-group">
-                  <!--Stars-->
-                  <img
-                    class="cs-stars"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                    alt="quotes"
-                    width="97"
-                    height="80"
-                    aria-hidden="true"
-                  />
-                  <p class="cs-review-text">
-                    ” I’ve worked with many website creators over the course of
-                    our 10 year business and without a doubt, Charles is the
-                    BEST. I am so happy with our decision to have Charles create
-                    our new website as we’ve found a long term partner in him
-                    and will continue to utilize his services. If you are
-                    thinking of elevating your business - you need Charles! 5
-                    stars for service, 5 stars for an outstanding product - 5
-                    stars for overall experience. I wish I could rate higher!
-                    Thank you so much Charles!!!!”
-                  </p>
-                  <span class="cs-name"> Sal K.</span>
-                  <span class="cs-job">KMS Plumbing & Gasfitting Ltd.</span>
-                  <img
-                    src="{{ client.domain }}/assets/images/google-review-icon.webp"
-                    height="50"
-                  />
-                  <!--Quote-->
-                  <img
-                    class="cs-quote"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                    alt="quotes"
-                    width="97"
-                    height="80"
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Our Members Testimonials</h2>
         </div>
-        <div class="blaze-nav">
-          <div class="blaze-pagination"></div>
+        <div class="blaze-slider">
+            <div class="blaze-container">
+                <div class="blaze-track-container">
+                    <div class="blaze-track">
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img
+                                        class="cs-stars"
+                                        loading="lazy"
+                                        decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes"
+                                        width="97"
+                                        height="80"
+                                        aria-hidden="true"
+                                    />
+                                    <p class="cs-review-text">
+                                        ”My husband and I have been on the
+                                        market for webdesign for quite awhile
+                                        before knowing Charles of BeSpoke. We
+                                        made the right choice in signing up with
+                                        him! Our small business offers a variety
+                                        of services and we wanted a website that
+                                        will showcase it all in a
+                                        straightforward yet sophisticated
+                                        fashion. One more good thing to note is
+                                        that, Charles is responsive and delivers
+                                        on time. 5 stars all the way!”
+                                    </p>
+                                    <span class="cs-name">
+                                        Michelle Superales
+                                    </span>
+                                    <span class="cs-job"
+                                        >Montano Plumbing & Contracting
+                                        LTD</span
+                                    >
+                                    <img
+                                        src="{{ client.domain }}/assets/images/google-review-icon.webp"
+                                        height="50"
+                                        alt="google review"
+                                    />
+                                    <!--Quote-->
+                                    <img
+                                        class="cs-quote"
+                                        loading="lazy"
+                                        decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes"
+                                        width="97"
+                                        height="80"
+                                        aria-hidden="true"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img
+                                        class="cs-stars"
+                                        loading="lazy"
+                                        decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes"
+                                        width="97"
+                                        height="80"
+                                        aria-hidden="true"
+                                    />
+                                    <p class="cs-review-text">
+                                        ”I highly recommend Bespoke Wed Design
+                                        Edmonton! Please contact charles… and he
+                                        will help you with your
+                                        Business Website!”
+                                    </p>
+                                    <span class="cs-name"> Kelvin Canlas </span>
+                                    <span class="cs-job"
+                                        >YEG Carpet Cleaning Services</span
+                                    >
+                                    <img
+                                        src="{{ client.domain }}/assets/images/google-review-icon.webp"
+                                        height="50"
+                                    />
+                                    <!--Quote-->
+                                    <img
+                                        class="cs-quote"
+                                        loading="lazy"
+                                        decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes"
+                                        width="97"
+                                        height="80"
+                                        aria-hidden="true"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img
+                                        class="cs-stars"
+                                        loading="lazy"
+                                        decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes"
+                                        width="97"
+                                        height="80"
+                                        aria-hidden="true"
+                                    />
+                                    <p class="cs-review-text">
+                                        ” I’ve worked with many website creators
+                                        over the course of our 10 year business
+                                        and without a doubt, Charles is the
+                                        BEST. I am so happy with our decision to
+                                        have Charles create our new website as
+                                        we’ve found a long term partner in him
+                                        and will continue to utilize his
+                                        services. If you are thinking of
+                                        elevating your business - you need
+                                        Charles! 5 stars for service, 5 stars
+                                        for an outstanding product - 5 stars for
+                                        overall experience. I wish I could rate
+                                        higher! Thank you so much Charles!!!!”
+                                    </p>
+                                    <span class="cs-name"> Sal K.</span>
+                                    <span class="cs-job"
+                                        >KMS Plumbing & Gasfitting Ltd.</span
+                                    >
+                                    <img
+                                        src="{{ client.domain }}/assets/images/google-review-icon.webp"
+                                        height="50"
+                                    />
+                                    <!--Quote-->
+                                    <img
+                                        class="cs-quote"
+                                        loading="lazy"
+                                        decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes"
+                                        width="97"
+                                        height="80"
+                                        aria-hidden="true"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blaze-nav">
+                    <div class="blaze-pagination"></div>
+                </div>
+            </div>
         </div>
-      </div>
+        <script>
+            const el = document.querySelector(".blaze-slider");
+            new BlazeSlider(el);
+        </script>
+        <a
+            href="{{ client.google_review }}"
+            class="cs-button-solid"
+            target="_blank"
+            >See More Reviews</a
+        >
     </div>
-    <script>
-      const el = document.querySelector(".blaze-slider");
-      new BlazeSlider(el);
-    </script>
-    <a href="{{ client.google_review }}" class="cs-button-solid" target="_blank"
-      >See More Reviews</a
-    >
-  </div>
-  <!--Texture Graphic-->
-  <picture class="cs-background">
-    <!--Mobile Image-->
-    <source
-      media="(max-width: 1023px)"
-      srcset="
-        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png
-      "
-    />
-    <!--Tablet and above Image-->
-    <source
-      media="(min-width: 1024px)"
-      srcset="
-        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png
-      "
-    />
-    <img
-      loading="lazy"
-      decoding="async"
-      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png"
-      alt="dotted texture"
-      width="1920"
-      height="600"
-    />
-  </picture>
+    <!--Texture Graphic-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source
+            media="(max-width: 1023px)"
+            srcset="
+                https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png
+            "
+        />
+        <!--Tablet and above Image-->
+        <source
+            media="(min-width: 1024px)"
+            srcset="
+                https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png
+            "
+        />
+        <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png"
+            alt="dotted texture"
+            width="1920"
+            height="600"
+        />
+    </picture>
 </section>
 
 <!-- ============================================ -->
 <!--                Trust Icons                   -->
 <!-- ============================================ -->
 <section id="gallery-45">
-  <div class="cs-container">
-    <div class="cs-content">
-      <span class="cs-topper"
-        >Experience the Bespoke Web Design Difference</span
-      >
-      <h2 class="cs-h3">
-        We create high-quality, long-term solutions—bringing your vision to
-        life.
-      </h2>
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"
+                >Experience the Bespoke Web Design Difference</span
+            >
+            <h2 class="cs-h3">
+                We create high-quality, long-term solutions—bringing your vision
+                to life.
+            </h2>
+        </div>
+        <div class="trust-signals">
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            /assets/images/trust-icons/satisfaction-guarantee.png
+                        "
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            /assets/images/trust-icons/satisfaction-guarantee.png
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/trust-icons/satisfaction-guarantee.png"
+                        alt="red-seal-certified"
+                        height="90"
+                        style="transform: scale(1.3)"
+                    />
+                </picture>
+                <p class="cs-text">Your Vision, Our creation</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/trust-icons/figma.svg"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/trust-icons/figma.svg"
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/trust-icons/figma.svg"
+                        alt="fully-insured"
+                        height="90"
+                        style="transform: scale(1.6)"
+                    />
+                </picture>
+                <p class="cs-text">Precision, Creativity, No Limits</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/trust-icons/vscode.svg"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/trust-icons/vscode.svg"
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/trust-icons/vscode.svg"
+                        alt="service-warranty"
+                        height="90"
+                        style="scale: 0.85"
+                    />
+                </picture>
+                <p class="cs-text">Clean, Scalable, High-Performance</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="/assets/images/trust-icons/google-business.svg"
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="/assets/images/trust-icons/google-business.svg"
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/images/trust-icons/google-business.svg"
+                        alt="edmonton-chamber-logo"
+                        height="90"
+                        style="scale: 0.9"
+                    />
+                </picture>
+                <p class="cs-text">Trusted Local Business</p>
+            </div>
+        </div>
     </div>
-    <div class="trust-signals">
-      <div class="trust-signals-contents">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/trust-icons/satisfaction-guarantee.png"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/trust-icons/satisfaction-guarantee.png"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/trust-icons/satisfaction-guarantee.png"
-            alt="red-seal-certified"
-            height="90"
-            style="transform: scale(1.3)"
-          />
-        </picture>
-        <p class="cs-text">Your Vision, Our creation</p>
-      </div>
-      <div class="trust-signals-contents">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/trust-icons/figma.svg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/trust-icons/figma.svg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/trust-icons/figma.svg"
-            alt="fully-insured"
-            height="90"
-            style="transform: scale(1.6)"
-          />
-        </picture>
-        <p class="cs-text">Precision, Creativity, No Limits</p>
-      </div>
-      <div class="trust-signals-contents">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/trust-icons/vscode.svg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/trust-icons/vscode.svg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/trust-icons/vscode.svg"
-            alt="service-warranty"
-            height="90"
-            style="scale: 0.85"
-          />
-        </picture>
-        <p class="cs-text">Clean, Scalable, High-Performance</p>
-      </div>
-      <div class="trust-signals-contents">
-        <picture class="cs-picture">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/trust-icons/google-business.svg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/trust-icons/google-business.svg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/assets/images/trust-icons/google-business.svg"
-            alt="edmonton-chamber-logo"
-            height="90"
-            style="scale: 0.9"
-          />
-        </picture>
-        <p class="cs-text">Trusted Local Business</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- ============================================ -->
@@ -1496,15 +1565,15 @@ this section #}
 
 {% else %}
 <section id="three-cards">
-  <div class="cs-container">
-    <div class="cs-content">
-      <div class="cs-flex">
-        <span class="cs-topper">Exclusive Articles</span>
-        <h2 class="cs-title">Latest News</h2>
-      </div>
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Exclusive Articles</span>
+                <h2 class="cs-title">Latest News</h2>
+            </div>
+        </div>
+        {% include "components/latest-blog-card.html" %}
     </div>
-    {% include "components/latest-blog-card.html" %}
-  </div>
 </section>
 
 {% endif %} {% include 'components/cta.html' %}
@@ -1596,42 +1665,48 @@ this section #}
 <!-- ============================================ -->
 
 <section id="cta-403">
-  <div class="cs-container">
-    <div class="cs-content">
-      <span class="cs-topper">Find top rated businesses in Edmonton</span>
-      <h2 class="cs-title">
-        Join the Latest, Premium Business Listing Website for Edmonton and
-        nearby!
-      </h2>
-      <p class="cs-text">
-        Are you a business in Edmonton or nearby? Join the YEG Business Org and
-        get listed on the newest platform to increase your online visibility,
-        connect with other top rated businesses, boost your SEO, and offer your
-        services to the community.
-      </p>
-      <a
-        href="https://www.yegbusiness.org"
-        class="cs-button-solid"
-        target="_blank"
-        class="affiliate_link"
-        >List your Business here!</a
-      >
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Find top rated businesses in Edmonton</span>
+            <h2 class="cs-title">
+                Join the Latest, Premium Business Listing Website for Edmonton
+                and nearby!
+            </h2>
+            <p class="cs-text">
+                Are you a business in Edmonton or nearby? Join the YEG Business
+                Org and get listed on the newest platform to increase your
+                online visibility, connect with other top rated businesses,
+                boost your SEO, and offer your services to the community.
+            </p>
+            <a
+                href="https://www.yegbusiness.org"
+                class="cs-button-solid"
+                target="_blank"
+                class="affiliate_link"
+                >List your Business here!</a
+            >
+        </div>
     </div>
-  </div>
-  <!--Background Image-->
-  <picture class="cs-background">
-    <source media="(max-width: 600px)" srcset="/assets/images/yeg-photo.webp" />
-    <source media="(min-width: 601px)" srcset="/assets/images/yeg-photo.webp" />
-    <img
-      loading="lazy"
-      decoding="async"
-      src="/assets/images/yeg-photo.webp"
-      alt="cleaner"
-      width="1920"
-      height="660"
-      aria-hidden="true"
-    />
-  </picture>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/yeg-photo.webp"
+        />
+        <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/yeg-photo.webp"
+        />
+        <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/yeg-photo.webp"
+            alt="cleaner"
+            width="1920"
+            height="660"
+            aria-hidden="true"
+        />
+    </picture>
 </section>
 
 {% include 'components/chatbot.html' %} {% endblock %}
