@@ -6507,3 +6507,43 @@ body.dark-mode {
       }
   }
 }
+
+//Secondary Banner
+@media only screen and (min-weidth: 0rem) {
+  #secondary-banner{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--primary);
+    flex-wrap: wrap;
+    .cs-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .cs-title{
+      color: var(--bodyTextColorWhite);
+      text-align: center;
+      font-size: clamp(1.5375rem, 3.9vw, 3.0625rem);
+      margin: 0;
+    }
+    .cs-button-solid{
+      background-color: var(--bodyTextColorWhite);
+      color: var(--headerColor);
+      margin: auto;
+    }
+  }
+}
+@media only screen and (min-width: 601px){
+  #secondary-banner{
+    padding: 2rem;
+    .cs-content{
+      flex-direction: row;
+    }
+    .cs-title{
+      text-align: left;
+    }
+    
+  }
+}
