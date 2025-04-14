@@ -111,6 +111,51 @@ pagination:
         <!--                 Blog Articles                -->
         <!-- ============================================ -->
 
+        {% if collections.post | length == 0 %}
+          <h1>No Recent Posts</h1>
+        {% else %}
+          {%- for post in collections.post | reverse -%}
+              <article class="recent-articles">
+                  <!--Main Article Image-->
+                  <picture class="blog-mainImage">
+                      <img
+                      src="{{ post.data.image }}"
+                      alt="{{ post.data.imageAlt }}"
+                      width="795"
+                      height="400"
+                      decoding="async" />
+                  </picture>
+                  <!--Article Info-->
+                  <div class="article-group">
+                      <div class="blog-authorGroup">
+                          <!--Author Image-->
+                          <picture class="blog-author-img">
+                              <img
+                              src="{{ client.domain }}/assets/images/main_logo.png"
+                              alt="Team KMS"
+                              width="32"
+                              height="32"
+                              decoding="async" />
+                          </picture>
+                          <span class="blog-author">{{ post.data.author }}</span>
+                          <span aria-hidden="true" class="blog-dot"></span>
+                          <!--Blog Date-->
+                          <span class="blog-date">{{ post.date | formatDate }}</span>
+                      </div>
+                      <h2 class="blog-h1">
+                          {{ post.data.title }}
+                      </h2>
+                      <p class="blog-desc">
+                          {{ post.data.description }}
+                      </p>
+                      <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
+                  </div>
+              </article>
+          {%- endfor -%}
+        {% endif %}
+
+
+
         {% if posts | length == 0 %}
         <h1>No Recent Posts</h1>
         {% else %} {%- for post in posts -%}
