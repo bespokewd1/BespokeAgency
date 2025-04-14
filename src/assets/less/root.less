@@ -1445,9 +1445,14 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
+  .cs-topper{
+    margin: auto;
+    margin-bottom: 0.25rem;
+  }
 
   .cs-title {
-    margin: 0;
+    margin: auto;
+    margin-bottom: 1rem;
     max-width: 20ch;
     color: #000000;
   }
@@ -1627,8 +1632,8 @@
   .cs-text {
     font-size: clamp(1rem, 1.95vw, 1.25rem);
     line-height: 1.5em;
-    text-align: left;
-    width: 100%;
+    text-align: center;
+    min-width: 100%;
     max-width: 39.375rem;
     margin: 0 0 2rem 0;
     color: #000000;
