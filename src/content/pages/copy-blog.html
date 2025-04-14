@@ -5,7 +5,7 @@ preloadImg: "/assets/images/bespokelogo1234.png"
 permalink: "copy-blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
 image: /assets/images/ogimage2.png
 eleventyNavigation:
-  key: Blog
+  key: Blog Test
   order: 550
 pagination:
   data: collections.post
@@ -105,160 +105,59 @@ pagination:
     <!--              Main Blog Content               -->
     <!-- ============================================ -->
 
-    <div class="blog-container main-content-wrapper blog-preview">
+    <div class="blog-container main-content-wrapper">
+      <!--Main content -->
       <div class="main-content">
-        <!-- ============================================ -->
-        <!--                 Blog Articles                -->
-        <!-- ============================================ -->
+          <!-- ============================================ -->
+          <!--                 Blog Articles                -->
+          <!-- ============================================ -->
 
-        {% if posts | length == 0 %}
-        <h1>No Recent Posts</h1>
-        {% else %} {%- for post in posts -%}
-        <article class="recent-articles">
-          <!--Main Article Image-->
-          <picture class="blog-mainImage">
-            <img
-              src="{{ post.data.image }}"
-              alt="{{ post.data.imageAlt }}"
-              width="795"
-              height="400"
-              decoding="async"
-            />
-          </picture>
-          <!--Article Info-->
-          <div class="article-group">
-            <div class="blog-authorGroup">
-              <!--Author Image-->
-              <picture class="blog-author-img">
-                <img
-                  src="/assets/svgs/profile.svg"
-                  alt="house"
-                  width="32"
-                  height="32"
-                  decoding="async"
-                />
-              </picture>
-              <span class="blog-author">{{ post.data.author }}</span>
-              {% set formattedDate = post.date | postDate %} {% set dateParts =
-              formattedDate.split(", ") %}
-              <div class="blog-date">
-                <span class="date-part date-part--day">{{ dateParts[0] }}</span>
-                <span class="date-part date-part--year"
-                  >{{ dateParts[1] }}</span
-                >
-              </div>
-            </div>
-            <h2 class="blog-h1">{{ post.data.title }}</h2>
-            <p class="blog-desc">{{ post.data.description }}</p>
-            <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
-          </div>
-        </article>
-        {%- endfor -%} {% endif %}
-      </div>
-    </div>
-
-    <!-- Pagination Navigation -->
-    {% if pagination.pages.length > 1 %}
-    <nav class="pagination" aria-label="Pagination Navigation">
-      <div class="pagination-container">
-        {% if pagination.href.previous %}
-        <a
-          href="{{ pagination.href.previous }}"
-          class="pagination-button prev"
-          aria-label="Previous page"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-          <span>Previous</span>
-        </a>
-        {% else %}
-        <span class="pagination-button prev disabled">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-          <span>Previous</span>
-        </span>
-        {% endif %}
-
-        <div class="pagination-numbers">
-          {% for pageEntry in pagination.pages %} {% set pageNumber = loop.index
-          %} {% if loop.index0 == pagination.pageNumber %}
-          <span class="pagination-number current" aria-current="page"
-            >{{ pageNumber }}</span
-          >
+          {% if posts | length == 0 %}
+              <h1>No Recent Posts</h1>
           {% else %}
-          <a
-            class="pagination-number"
-            href="{{ pagination.hrefs[loop.index0] }}"
-            >{{ pageNumber }}</a
-          >
-          {% endif %} {% endfor %}
-        </div>
-
-        {% if pagination.href.next %}
-        <a
-          href="{{ pagination.href.next }}"
-          class="pagination-button next"
-          aria-label="Next page"
-        >
-          <span>Next</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </a>
-        {% else %}
-        <span class="pagination-button next disabled">
-          <span>Next</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </span>
-        {% endif %}
+              {%- for post in posts | reverse -%}
+                  <article class="recent-articles">
+                      <!--Main Article Image-->
+                      <picture class="blog-mainImage">
+                          <img
+                          src="{{ post.data.image }}"
+                          alt="{{ post.data.imageAlt }}"
+                          width="795"
+                          height="400"
+                          decoding="async" />
+                      </picture>
+                      <!--Article Info-->
+                      <div class="article-group">
+                          <div class="blog-authorGroup">
+                              <!--Author Image-->
+                              <picture class="blog-author-img">
+                                  <img
+                                  src="/assets/svgs/profile.svg"
+                                  alt="Team KMS"
+                                  width="32"
+                                  height="32"
+                                  decoding="async" />
+                              </picture>
+                              <span class="blog-author">{{ post.data.author }}</span>
+                              <span aria-hidden="true" class="blog-dot"></span>
+                              <!--Blog Date-->
+                              <span class="blog-date">{{ post.date | formatDate }}</span>
+                          </div>
+                          <h2 class="blog-h1">
+                              {{ post.data.title }}
+                          </h2>
+                          <p class="blog-desc">
+                              {{ post.data.description }}
+                          </p>
+                          <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
+                      </div>
+                  </article>
+              {%- endfor -%}
+          {% endif %}
       </div>
-    </nav>
-    {% endif %} {% include 'components/cta.html' %} {% include
-    'components/chatbot.html' %} {% endblock %}
+
+      {% include 'components/featured-post.html' %}
+    </div>
   </div>
 </section>
 
