@@ -140,8 +140,12 @@ pagination:
                           <span class="blog-author">{{ post.data.author }}</span>
                           <span aria-hidden="true" class="blog-dot"></span>
                           <!--Blog Date-->
-                          <span class="blog-date">{{ post.date | postDate %} {% set dateParts =
-                            formattedDate.split(", ") }}</span>
+                          {% set formattedDate = post.date | postDate %} {% set dateParts =
+                            formattedDate.split(", ") %}
+                            <div class="blog-date">
+                              <span class="date-part date-part--day">{{ dateParts[0] }}</span>
+                              <span class="date-part date-part--year">{{ dateParts[1] }}</span>
+                            </div>
                       </div>
                       <h2 class="blog-h1">
                           {{ post.data.title }}
@@ -190,9 +194,7 @@ pagination:
               formattedDate.split(", ") %}
               <div class="blog-date">
                 <span class="date-part date-part--day">{{ dateParts[0] }}</span>
-                <span class="date-part date-part--year"
-                  >{{ dateParts[1] }}</span
-                >
+                <span class="date-part date-part--year">{{ dateParts[1] }}</span>
               </div>
             </div>
             <h2 class="blog-h1">{{ post.data.title }}</h2>
