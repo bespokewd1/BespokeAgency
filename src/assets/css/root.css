@@ -4149,7 +4149,6 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     object-fit: contain;
     position: relative;
     display: block;
-    z-index: 1;
     border-radius: 20px;
   }
   #hero-358 .review-container .review-picture img {
