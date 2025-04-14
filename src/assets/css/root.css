@@ -5422,6 +5422,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
       gap: 1rem;
     }
     #secondary-banner .cs-title{
+      font-size: 30px;
       color: var(--bodyTextColorWhite);
       text-align: center;
       font-size: clamp(1.5375rem, 3.9vw, 3.0625rem);
