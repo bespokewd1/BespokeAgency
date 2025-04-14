@@ -114,7 +114,7 @@ pagination:
         {% if posts | length == 0 %}
           <h1>No Recent Posts</h1>
         {% else %}
-          {%- for posts in posts | reverse -%}
+          {%- for post in posts | reverse -%}
               <article class="recent-articles">
                   <!--Main Article Image-->
                   <picture class="blog-mainImage">
