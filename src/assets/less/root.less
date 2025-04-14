@@ -6550,3 +6550,21 @@ body.dark-mode {
     
   }
 }
+
+// Sticky cta
+@media only screen and (min-width: 0rem){
+  #sticky-cta{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    left: 0;
+    .btn-container{
+      display: flex;
+      .cs-button-solid{
+        width: 50%;
+      }
+    }
+  }
+}
