@@ -19,7 +19,7 @@
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1.1rem;
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(7rem, 7.82vw, 6.25rem) 1rem;
+    --sectionPadding: clamp(3rem, 7.82vw, 6.25rem) 1rem;
     --cardRounded: 24px;
     --buttonRounded: 12px;
   }
@@ -238,7 +238,7 @@
     position: absolute;
     // bottom: 1.25rem;
     top: 50%;
-    right: 5.625rem;
+    right: 3rem;
     transform: translateY(-50%);
     width: 3rem;
     height: 3rem;
@@ -3538,6 +3538,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #pricing-1690 {
+
     .cs-option2 {
       top: auto;
       bottom: 0;
@@ -3961,7 +3962,7 @@
       height: 100%;
       background-blend-mode: multiply;
       display: block;
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       // z-index: -1;
@@ -3989,7 +3990,7 @@
 
       img {
         border-radius: var(--cardRounded);
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         height: 100%;
@@ -4085,6 +4086,22 @@
   }
 }
 
+/* Mobile Only - 360px */
+@media only screen and (max-width: 48rem) {
+  #cta-403 .cs-background{
+    margin-top: 2rem;
+  }
+  #cta-403 .cs-background:before{
+    background-image: none;
+  }
+  #cta-403 .cs-background img{
+    filter:brightness(1);
+  }
+  #cta-403 .cs-button-solid, #cta-403 .cs-title, #cta-403 .cs-text{
+    color: var(--bodyTextColor);
+  }
+}
+
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #cta-403.cs-image-only {
@@ -4104,6 +4121,8 @@
     .cs-background {
       /* clips the black slant so it doesnt overflow */
       overflow: hidden;
+      position:absolute;
+
       &:before {
         width: 80%;
         opacity: 1;
@@ -4153,6 +4172,7 @@
         object-position: right;
         left: auto;
         right: 0;
+        position: absolute;
       }
     }
 
@@ -4610,9 +4630,11 @@ body.dark-mode #cta-403.cs-image-only {
     }
 
     .cs-text {
-      font-size: (20/16rem);
+      display: grid;
+      place-content: center;
+      font-size: (18/16rem);
       line-height: 1.5em;
-      text-align: center;
+      text-align: left;
       width: 100%;
       /* changes to 442px at desktop */
       max-width: (700/16rem);
@@ -4621,6 +4643,13 @@ body.dark-mode #cta-403.cs-image-only {
       /* 24px - 40px */
       margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
       color: var(--bodyTextColor);
+      gap: 0.5rem;
+
+      .cs-text-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.3rem;
+      }
     }
 
     .cs-button-group {
@@ -6323,6 +6352,7 @@ body.dark-mode {
 
       .container {
           text-align: center;
+          z-index: 2;
       }
 
       picture {
@@ -6331,6 +6361,19 @@ body.dark-mode {
           left: 0;
           height: 100%;
           width: 100%;
+
+          &:before {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            opacity: 0.7;
+            display: block;
+            background: #000;
+            height: 100%;
+            width: 100%;
+        }
 
           img {
               position: absolute;
@@ -6360,19 +6403,6 @@ body.dark-mode {
           width: 96%;
           color: #fff;
           text-align: center;
-      }
-
-      &:before {
-          z-index: -1;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "";
-          opacity: 0.7;
-          display: block;
-          background: #000;
-          height: 100%;
-          width: 100%;
       }
   }
 }
