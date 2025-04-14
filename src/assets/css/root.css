@@ -5404,3 +5404,43 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
     display: none;
   }
 }
+/* ---------------- */
+/* Seconday banner  */
+/* ---------------- */
+@media only screen and (min-width: 0rem){
+    #secondary-banner{
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      background-color: var(--primary);
+      flex-wrap: wrap;
+    }
+    #secondary-banner .cs-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+    #secondary-banner .cs-title{
+      color: var(--bodyTextColorWhite);
+      text-align: center;
+      font-size: clamp(1.5375rem, 3.9vw, 3.0625rem);
+      margin: 0;
+    }
+    #secondary-banner .cs-button-solid{
+      background-color: var(--bodyTextColorWhite);
+      color: var(--headerColor);
+      margin: auto;
+    }
+}
+@media only screen and (min-width: 601px){
+  #secondary-banner{
+    padding: 2rem;
+  }
+  #secondary-banner .cs-content{
+    flex-direction: row;
+  }
+  #secondary-banner .cs-title{
+    text-align: left;
+  }
+}
