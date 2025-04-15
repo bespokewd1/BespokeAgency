@@ -6553,12 +6553,11 @@ body.dark-mode {
 
 // Sticky cta
 @media only screen and (min-width: 0rem){
-  #body.scroll #sticky-cta{
-    width: 100%;
-    max-width: 100%;
+  body.scroll #sticky-cta{
     bottom: 0;
     .btn-container{
       gap: 0;
+      width: 100%;
       .cs-button-solid{
         border-radius: 0;
         &:before{
@@ -6568,7 +6567,7 @@ body.dark-mode {
     }
   }
   #sticky-cta{
-    width: 94%;
+    width: 100%;
     box-sizing: border-box;
     position: fixed;
     height: 74px;
@@ -6577,14 +6576,15 @@ body.dark-mode {
     z-index: 10000;
     left: 0;
     padding-top: 10px;
-    transition: 
-      bottom 0.3,
-      width 0.3s,
-      max-width 0.3s;
+    transition: bottom 0.3;
     .btn-container{
+      width: 94%;
+      margin: auto;
       display: flex;
       gap: 1rem;
-      transition: gap 0.3s;
+      transition:
+       gap 0.3s,
+       width 0.3s;
       .cs-button-solid{
         width: 50%;
         font-size: .55rem;
