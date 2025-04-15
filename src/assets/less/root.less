@@ -6553,28 +6553,48 @@ body.dark-mode {
 
 // Sticky cta
 @media only screen and (min-width: 0rem){
+  #body.scroll #sticky-cta{
+    width: 100%;
+    max-width: 100%;
+    bottom: 0;
+    .btn-container{
+      gap: 0;
+      .cs-button-solid{
+        border-radius: 0;
+        &:before{
+          border-radius: 0;
+        }
+      }
+    }
+  }
   #sticky-cta{
+    width: 94%;
+    box-sizing: border-box;
     position: fixed;
     height: 50px;
     width: 100%;
-    bottom: 0;
-    z-index: 10;
+    bottom: 2rem;
+    z-index: 10000;
     left: 0;
     padding-top: 10px;
+    transition: 
+      bottom 0.3,
+      width 0.3s,
+      max-width 0.3s;
     .btn-container{
       display: flex;
+      gap: 1rem;
+      transition: gap 0.3s;
       .cs-button-solid{
         width: 50%;
         font-size: .55rem;
-        border-radius: 0;
+        border-radius: clamp(0.75rem, 2vw, 1.5rem);
         line-height: 50px;
         color: #fff;
         padding: 0;
-        &:hover{
-          border-radius: 0;
-        }
+        transition: border-radius 0.3s;
         &:before{
-          border-radius: 0;
+          border-radius: clamp(0.75rem, 2vw, 1.5rem);
         }
       }
     }
