@@ -6556,9 +6556,14 @@ body.dark-mode {
   body.scroll #sticky-cta{
     bottom: 0;
     .btn-container{
-      gap: 0;
       width: 100%;
-      .cs-button-solid{
+      .left-btn{
+        border-radius: 0;
+        &:before{
+          border-radius: 0;
+        }
+      }
+      .right-btn{
         border-radius: 0;
         &:before{
           border-radius: 0;
@@ -6581,20 +6586,28 @@ body.dark-mode {
       width: 94%;
       margin: auto;
       display: flex;
-      gap: 1rem;
-      transition:
-       gap 0.3s,
-       width 0.3s;
+      transition: width 0.3s;
       .cs-button-solid{
         width: 50%;
-        font-size: .55rem;
-        border-radius: clamp(0.75rem, 2vw, 1.5rem);
         line-height: 74px;
         color: #fff;
         padding: 0;
+      }
+      .left-btn{
+        background: var(--dark);
+        border-radius: clamp(0.75rem, 2vw, 1.5rem) 0 0 clamp(0.75rem, 2vw, 1.5rem);
         transition: border-radius 0.3s;
         &:before{
-          border-radius: clamp(0.75rem, 2vw, 1.5rem);
+          border-radius: clamp(0.75rem, 2vw, 1.5rem) 0 0 clamp(0.75rem, 2vw, 1.5rem);
+          transition: border-radius 0.3s;
+        }
+      }
+      .right-btn{
+        border-radius: 0 clamp(0.75rem, 2vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem) 0;
+        transition: border-radius 0.3s;
+        &:before{
+          border-radius: 0 clamp(0.75rem, 2vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem) 0;
+          transition: border-radius 0.3s;
         }
       }
     }
