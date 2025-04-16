@@ -63,45 +63,51 @@ eleventyNavigation:
 <!-- ------------- -->
 <!--      sbs      -->
 <!-- ------------- -->
-<section id="sbs-r">
+
+<section id="sbs-1014">
     <div class="cs-container">
-        <div class="cs-flex-group">
-            <h2 class="cs-title">Professional Web Design for Plumbers & Trades – Tailored Solutions to Grow Your Business</h2>
-            <h3>Do you have a website that actually works for you?</h3>
-            <p class="cs-text">
-                If your website is outdated or you don’t have one yet, 
-                you’re missing out on valuable opportunities. 
-                A custom-built website doesn’t just look good—it works to bring you more clients, 
-                boost your SEO, and build long-term success. 
-                Let us help you craft a powerful digital presence that brings in customers
-            </p>
-        </div>
-        <div class="cs-image-group" style="background-color: gray;">
-            <!-- SVG Paint Splash-->
-            <!-- Maid Picture -->
-            <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
-            <picture class="cs-person">
-                <source
-                    media="(max-width: 600px)"
-                    srcset="/assets/images/"
-                />
-                <source
-                    media="(min-width: 601px)"
-                    srcset="/assets/images/"
-                />
-                <img
-                    aria-hidden="true"
-                    loading="eager"
-                    fetchpriority="high"
-                    decoding="async"
-                    src="/assets/images/"
-                    alt="maid"
-                    width="831"
-                    height="674"
-                />
-            </picture>
-        </div>
+      <!-- Left Image Section -->
+      <div class="cs-image-group">
+        <picture class="cs-picture cs-picture1">
+          <source media="(max-width: 600px)" srcset="/assets/images/about2.jpg" />
+          <source media="(min-width: 601px)" srcset="/assets/images/about2.jpg" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/about2.jpg"
+            alt="breakfast"
+            width="522"
+            height="581"
+            aria-hidden="true"
+          />
+        </picture>
+        <picture class="cs-picture cs-picture2">
+          <source media="(max-width: 600px)" srcset="/assets/images/about.png" />
+          <source media="(min-width: 601px)" srcset="/assets/images/about.png" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/about.png"
+            alt="breakfast"
+            width="414"
+            height="400"
+            aria-hidden="true"
+          />
+        </picture>
+      </div>
+      <!-- Right Content Section-->
+      <div class="cs-content">
+        <h2 class="cs-title">Professional Web Design for Plumbers & Trades – Tailored Solutions to Grow Your Business</h2>
+        <h3 class="cs-title">Do you have a website that actually works for you?</h3>
+        <p class="cs-text">
+            If your website is outdated or you don’t have one yet, 
+            you’re missing out on valuable opportunities. 
+            A custom-built website doesn’t just look good—it works to bring you more clients, 
+            boost your SEO, and build long-term success. 
+            Let us help you craft a powerful digital presence that brings in customers
+        </p>
+      </div>
     </div>
-</section>
+  </section>
 
 {% include 'components/chatbot.html' %} {% endblock %}
