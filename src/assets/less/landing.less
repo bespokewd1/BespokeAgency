@@ -896,7 +896,7 @@
   #sbs-r {
     padding: var(--sectionPadding);
   }
-  #sbs-r .bespoke-container {
+  #sbs-r .cs-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -906,7 +906,7 @@
     width: 100%;
     row-gap: 2.5rem;
   }
-  #sbs-r .bespoke-left {
+  #sbs-r .cs-left {
     position: relative;
     height: 39.75em;
     /* using ems so we can use font size to scale the whole section */
@@ -914,14 +914,14 @@
     /* scaling the font size with the view width */
     font-size: min(2.31vw, 0.7em);
   }
-  #sbs-r .bespoke-picture {
+  #sbs-r .cs-picture {
     position: absolute;
     display: block;
     border-radius: 1.5em;
     /* clips img tag corners */
     overflow: hidden;
   }
-  #sbs-r .bespoke-picture img {
+  #sbs-r .cs-picture img {
     position: absolute;
     top: 0;
     left: 0;
@@ -930,13 +930,13 @@
     /* makes image act like a background image */
     object-fit: cover;
   }
-  #sbs-r .bespoke-picture1 {
+  #sbs-r .cs-picture1 {
     top: 0;
     right: 0;
     height: 36.3125em;
     width: 32.625em;
   }
-  #sbs-r .bespoke-picture2 {
+  #sbs-r .cs-picture2 {
     bottom: 0;
     left: 0;
     /* 6px - 12px */
@@ -946,45 +946,45 @@
     width: 25.875em;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
   }
-  #sbs-r .bespoke-right {
+  #sbs-r .cs-right {
     margin: auto;
     max-width: 33.875rem;
   }
-  #sbs-r .bespoke-right ul {
+  #sbs-r .cs-right ul {
     width: 90%;
     margin: auto;
   }
-  #sbs-r .bespoke-topper {
+  #sbs-r .cs-topper {
     margin-bottom: 0.25rem;
     text-align: left;
   }
-  #sbs-r .bespoke-title {
+  #sbs-r .cs-title {
     max-width: 50rem;
     text-align: left;
   }
-  #sbs-r .bespoke-text {
+  #sbs-r .cs-text {
     margin-bottom: 1rem;
     max-width: 46.875rem;
     text-align: left;
   }
-  #sbs-r .bespoke-text:last-of-type {
+  #sbs-r .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
-  #sbs-r .bespoke-flex-group {
+  #sbs-r .cs-flex-group {
     position: relative;
     border-radius: 1rem;
     background-color: #f7f7f7;
     /* 16px - 32px */
     padding: clamp(1rem, 3vw, 2rem);
   }
-  #sbs-r .bespoke-flex-p {
+  #sbs-r .cs-flex-p {
     margin: 0 0 1rem;
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5em;
     color: #353535;
   }
-  #sbs-r .bespoke-name {
+  #sbs-r .cs-name {
     display: block;
     margin: 0 0 0.25rem;
     text-transform: uppercase;
@@ -993,13 +993,13 @@
     font-weight: bold;
     color: var(--headerColor);
   }
-  #sbs-r .bespoke-job {
+  #sbs-r .cs-job {
     display: block;
     font-size: 0.875rem;
     line-height: 1.5em;
     color: #353535;
   }
-  #sbs-r .bespoke-quote-icon {
+  #sbs-r .cs-quote-icon {
     position: absolute;
     bottom: 0rem;
     /* 16px - 32px */
@@ -1011,47 +1011,47 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #sbs-r .bespoke-container {
+  #sbs-r .cs-container {
     flex-flow: row;
     justify-content: space-between;
     gap: 3.25rem;
   }
-  #sbs-r .bespoke-left {
+  #sbs-r .cs-left {
     /* sends it to the right */
     order: 2;
     font-size: min(1.2vw, 1em);
     flex: none;
   }
-  #sbs-r .bespoke-right {
+  #sbs-r .cs-right {
     margin: 0;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #sbs-r .bespoke-left:before,
-  body.dark-mode #sbs-r .bespoke-left:after {
+  body.dark-mode #sbs-r .cs-left:before,
+  body.dark-mode #sbs-r .cs-left:after {
     background: var(--accent);
   }
-  body.dark-mode #sbs-r .bespoke-picture2 {
+  body.dark-mode #sbs-r .cs-picture2 {
     /* 6px - 12px */
     border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
     background-color: var(--dark);
   }
-  body.dark-mode #sbs-r .bespoke-title,
-  body.dark-mode #sbs-r .bespoke-text,
-  body.dark-mode #sbs-r .bespoke-h3,
-  body.dark-mode #sbs-r .bespoke-flex-p,
-  body.dark-mode #sbs-r .bespoke-name {
+  body.dark-mode #sbs-r .cs-title,
+  body.dark-mode #sbs-r .cs-text,
+  body.dark-mode #sbs-r .cs-h3,
+  body.dark-mode #sbs-r .cs-flex-p,
+  body.dark-mode #sbs-r .cs-name {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs-r .bespoke-flex-group {
+  body.dark-mode #sbs-r .cs-flex-group {
     background-color: var(--accent);
   }
-  body.dark-mode #sbs-r .bespoke-job {
+  body.dark-mode #sbs-r .cs-job {
     opacity: 0.8;
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs-r .bespoke-quote-icon {
+  body.dark-mode #sbs-r .cs-quote-icon {
     opacity: 0.2;
   }
 }
