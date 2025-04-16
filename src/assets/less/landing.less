@@ -1087,3 +1087,26 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+@media only screen and (min-width:0rem){
+  #cta{
+    .container{
+      .cta-btn-container{
+        display: inline-flex;
+        flex-direction: column;
+        gap: 2rem;
+        .cs-button-solid{
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 64rem){
+  #cta{
+    .container{
+      .cta-btn-container{
+        flex-direction: row;
+      }
+    }
+  }
+}
