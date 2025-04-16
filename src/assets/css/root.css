@@ -604,6 +604,10 @@
     color: var(--headerColor);
     display: inline-block;
     position: relative;
+
+    /* for parent/drop down nav */
+    background: transparent;
+    border: none;
   }
   #cs-navigation .cs-li-link.cs-active {
     color: var(--primary);
