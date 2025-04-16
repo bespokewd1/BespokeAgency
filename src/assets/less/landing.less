@@ -1244,20 +1244,24 @@
 /*-- -------------------------------- -->
 <---     Trusted                      -->
 <--- -------------------------------- -*/
-@media only screen and (max-width:0rem){
+@media only screen and (min-width:0rem){
   #secondary-banner{
-    .cs-content{
-      gap: 2rem;
-      .cs-image-group{
-        display: flex;
-        justify-content: center;
-        .cs-picture{
+    padding: 2rem;
+    .cs-container{
+      .cs-content{
+        gap: 2rem;
+        .cs-image-group{
+          display: flex;
+          justify-content: center;
           padding: 1rem;
           border-radius: 1rem;
           background: #fff;
         }
+        .cs-text{
+          display: flex;
+          align-items: center;
+        }
       }
-
     }
   }
 }
