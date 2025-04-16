@@ -28,6 +28,7 @@ eleventyNavigation:
   gtag("config", "G-ZMYC44ZRHF");
 </script>
 <link rel="stylesheet" href="/assets/css/landing.css" />
+<link rel="stylesheet" href="/assets/less/landing.less">
 {% endblock %} {% block body %}
 
 <!-- ============================================ -->
@@ -197,9 +198,9 @@ eleventyNavigation:
 <!-- Design Features -->
 <!-- --------------- -->
 
-<section id="sbs-r">
+<section id="sbs">
     <div class="container">
-        <div class="cs-left">
+        <div class="cs-content">
             <h2 class="cs-title">Our Web Design Features</h2>
             <p class="cs-text">
                 • <b>Mobile-Responsive Design: </b> 
@@ -222,8 +223,8 @@ eleventyNavigation:
                 like online booking, quote requests, and payment processing!
             </p>
         </div>
-        <div class="cs-right">
-            <picture class="cs-picture">
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
                 <source media="(max-width: 600px)" srcset="/assets/images/about2.jpg" />
                 <source media="(min-width: 601px)" srcset="/assets/images/about2.jpg" />
                 <img
