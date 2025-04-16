@@ -1158,11 +1158,60 @@
           margin-top: 2rem;
           text-align: center;
         }
+      }
+    }
+  }
+  
+}
+
+/*-- -------------------------------- -->
+<---       Special Offer              -->
+<--- -------------------------------- -*/
+/*--       Mobile             -*/
+@media only screen and (min-width:0rem){
+  #cta-20{
+    padding: var(--sectionPadding);
+    background: var(--primary);
+    .cs-container{
+      width: 96%;
+      margin: auto;
+      .cs-content{
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        .cs-title{
+          max-width: 100%;
+          text-align: center;
+          color: #fff;
+        }
+        .cs-text{
+          max-width: 60rem;
+          width: 100%;
+          margin: auto;
+          text-align: center;
+          color: #fff;
+
+        }
+        .cs-subtitle{
+          font-weight: 700;
+          max-width: 100%;
+          color: #fff;
+
+        }
+        .cs-h3{
+          max-width: 100%;
+          margin-top: 2rem;
+          text-align: center;
+          color: #fff;
+
+        }
 
         // For Special Offer section button
         .cs-button-solid{
           margin: auto;
-          color: #fff;
+          color: #var(--primary);
+          background: #fff;
         }
       }
     }
