@@ -6,9 +6,6 @@ services today!'
 preloadImg: '/assets/images/bespokelogo1234.png'
 permalink: 'review/'
 image: /assets/images/ogimage2.png
-eleventyNavigation:
-    key: Review
-    order: 800
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
@@ -30,34 +27,7 @@ eleventyNavigation:
 
 {% endblock %} {% block body %}
 
-<!-- ============================================ -->
-<!--                   Banner                     -->
-<!-- ============================================ -->
 
-<div id="banner-1106-1112">
-  <div class="cs-container">
-    <span class="cs-int-title">Reviews</span>
-    <div class="cs-breadcrumbs">
-      <a href="/index" class="cs-link">Home</a>
-      <a href="/about" class="cs-link cs-active">Reviews</a>
-    </div>
-  </div>
-  <!--Background Image-->
-  <picture class="cs-background">
-    <!--Mobile Image-->
-    <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg" />
-    <!--Tablet and above Image-->
-    <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg" />
-    <img
-      decoding="async"
-      src="/assets/images/banner.jpg"
-      alt="mechanic"
-      width="1280"
-      height="568"
-      aria-hidden="true"
-    />
-  </picture>
-</div>
 
 <!-- ============================================ -->
 <!--                 Review                       -->
@@ -68,7 +38,7 @@ eleventyNavigation:
         <h1 class="review-h1">Congratulations on Your New Website!</h1>
         <p class="review-subheader">
             Thank you for choosing Bespoke Web Design Edmonton! We appreciate your business and would love to hear your feedback.
-          <br /><br />
+          <br />
           <strong>Your feedback helps us serve you better.</strong><br />
           <strong>Please take a moment to share your review and let us know how we did.</strong>
         </p>
