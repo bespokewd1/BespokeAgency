@@ -43,6 +43,9 @@ p.review-subheader {
     display: none;
     margin-top: 1rem;
 }
+.feedback-section {
+    display: none;
+}
 .textarea,
 input[type="text"],
 input[type="email"] {
