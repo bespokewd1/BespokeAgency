@@ -27,7 +27,7 @@ stars.forEach(star => {
     })
 
 
-    if (rating >= 4) {
+    if (rating >= 5) {
       goodFeedback.style.display = 'block';
       badFeedback.style.display = 'none';
     } else {
