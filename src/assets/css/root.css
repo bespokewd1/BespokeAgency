@@ -69,10 +69,10 @@
     transition: color 0.3s;
     transition-delay: 0.1s;
     text-align: center;
-    border-radius: var(--buttonRounded);
+    border-radius: 5rem;
   }
   .cs-button-solid:before {
-    border-radius: var(--buttonRounded);
+    border-radius: 5rem;
   }
   .cs-button-solid:hover {
     color: #fff;
@@ -604,8 +604,6 @@
     color: var(--headerColor);
     display: inline-block;
     position: relative;
-
-    /* for parent/drop down nav */
     background: transparent;
     border: none;
   }
@@ -686,6 +684,7 @@
     display: block;
   }
   #cs-navigation .cs-dropdown {
+    display: none;
     color: var(--bodyTextColorWhite);
     position: relative;
   }
@@ -1157,8 +1156,13 @@
   /* centers content horizontally, set to flex-start to left align */
   align-items: center;
 }
+#services-962 .cs-topper {
+  margin: auto;
+  margin-bottom: 0.25rem;
+}
 #services-962 .cs-title {
-  margin: 0;
+  margin: auto;
+  margin-bottom: 1rem;
   max-width: 20ch;
   color: #000000;
 }
@@ -1314,8 +1318,8 @@
 #services-962 .cs-text {
   font-size: clamp(1rem, 1.95vw, 1.25rem);
   line-height: 1.5em;
-  text-align: left;
-  width: 100%;
+  text-align: center;
+  min-width: 100%;
   max-width: 39.375rem;
   margin: 0 0 2rem 0;
   color: #000000;
@@ -1663,7 +1667,7 @@
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
-    border-radius: 12px;
+    border-radius: 5rem;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -1680,7 +1684,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 12px;
+    border-radius: 5rem;
     transition: width 0.3s;
   }
   #why-choose-223 .cs-button-solid:hover {
@@ -1742,7 +1746,6 @@
 @media only screen and (min-width: 0rem) {
   #services-1644 {
     padding: var(--sectionPadding);
-    padding-top: 0%;
   }
   #services-1644 .cs-container {
     width: 100%;
@@ -2176,6 +2179,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 2rem;
   }
   #cs-footer-309 .cs-copyright,
   #cs-footer-309 .temp,
@@ -2379,6 +2383,7 @@
 }
 #cta-1014 .cs-left-section .contact .cs-button-solid {
   margin: 0 0;
+  border-radius: 5rem;
 }
 #cta-1014 .cs-left-section .contact .cs-button-solid:hover {
   color: #000;
@@ -3433,7 +3438,7 @@
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
-    border-radius: var(--buttonRounded);
+    border-radius: 5rem;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -3451,7 +3456,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: var(--buttonRounded);
+    border-radius: 5rem;
     transition: width 0.3s;
   }
   #cta-403 .cs-button-solid:hover {
@@ -3576,6 +3581,16 @@
     max-height: 540px;
     width: auto;
     border-radius: var(--cardRounded);
+  }
+}
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #cta-403 .cs-button-solid,
+  body.dark-mode #cta-403 .cs-title,
+  body.dark-mode #cta-403 .cs-text {
+    color: #fff;
+  }
+  body.dark-mode #cta-403 .cs-button-solid:hover {
+    color: #000;
   }
 }
 /*Custom Styles*/
@@ -3737,6 +3752,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    display: none;
   }
   #hero-1426 .cs-button-solid {
     font-size: 1rem;
@@ -3797,6 +3813,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     /* 150px - 350px */
     padding: clamp(9rem, 25.95vw, 16rem) 1rem;
     padding-bottom: 0;
+    padding-top: clamp(7rem, 25.95vw, 16rem);
     position: relative;
     z-index: 1;
     /* prevents overflow from the lines extending past the screen width */
@@ -3911,7 +3928,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     text-align: left;
     padding-left: 0.5em;
     width: 100%;
-    margin: 0 auto 1rem;
+    margin: 0 auto 0;
     color: var(--headerColor);
     position: relative;
     text-wrap: balance;
@@ -3920,10 +3937,13 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     color: var(--primaryLight);
   }
   #hero-358 .cs-text {
-    font-size: 1.25rem;
+    display: grid;
+    place-content: center;
+    font-size: 1.125rem;
     line-height: 1.5em;
-    text-align: center;
+    text-align: left;
     width: 100%;
+    padding-left: 1rem;
     /* changes to 442px at desktop */
     max-width: 43.75rem;
     /* 32px - 40px */
@@ -3932,6 +3952,11 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
     color: var(--bodyTextColor);
   }
+  #hero-358 .cs-text .cs-text-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.3rem;
+  }
   #hero-358 .cs-button-group {
     width: 100%;
     display: flex;
@@ -3939,6 +3964,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    display: none;
   }
   #hero-358 .cs-button-solid {
     font-size: 1rem;
@@ -4080,6 +4106,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     gap: 0.75rem;
     position: relative;
     z-index: 1;
+    justify-content: center;
   }
   #hero-358 .cs-input {
     font-size: 1rem;
@@ -4179,13 +4206,13 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     max-width: 250px;
     height: 10px;
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 80%);
-    z-index: 1;
     border-radius: 50%;
   }
 }
 /* Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
   #hero-358 {
+    padding-top: 10rem;
     padding-bottom: 10rem;
   }
   #hero-358 .cs-container {
@@ -4200,6 +4227,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   #hero-358 .cs-title {
     min-height: 188px;
     text-align: left;
+    margin: 0 auto 1rem;
     margin-left: 0;
     padding: 0;
   }
@@ -4210,11 +4238,15 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
   #hero-358 .cs-text {
     max-width: 27.625rem;
+    padding-left: 0;
+    gap: 0.5rem;
   }
   #hero-358 .cs-button-group {
+    display: flex;
     justify-content: flex-start;
   }
   #hero-358 .cs-image-group {
+    padding-top: 4rem;
     font-size: min(1.4vw, 1em);
     position: absolute;
     bottom: -9.375em;
@@ -4231,6 +4263,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
   }
   #hero-358 .cs-form {
     flex-direction: row;
+    justify-content: left;
   }
   #hero-358 .cs-button-solid {
     font-size: 1rem;
@@ -4763,7 +4796,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
   min-width: 9.375rem;
   padding: 0 1.5rem;
   background-color: var(--primary);
-  border-radius: 12px;
+  border-radius: 5rem;
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -4831,7 +4864,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
-    border-radius: var(--buttonRounded);
+    border-radius: 5rem;
     white-space: nowrap;
     padding: 0 min(2em, 10%);
     transition: color 0.2s ease;
@@ -4846,7 +4879,7 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 4px;
+    border-radius: 5rem;
     transition: width 0.3s;
   }
   #three-cards .cs-button-solid .arrow-wrapper {
@@ -5289,6 +5322,12 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
     object-fit: contain;
   }
 }
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #gallery-45 .cs-h3,
+  body.dark-mode #gallery-45 .cs-text {
+    color: #fff !important;
+  }
+}
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
@@ -5410,41 +5449,156 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
 /* ---------------- */
 /* Seconday banner  */
 /* ---------------- */
-@media only screen and (min-width: 0rem){
-    #secondary-banner{
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      background-color: var(--primary);
-      flex-wrap: wrap;
-    }
-    #secondary-banner .cs-content{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
-    }
-    #secondary-banner .cs-title{
-      font-size: 30px;
-      color: var(--bodyTextColorWhite);
-      text-align: center;
-      font-size: clamp(1.5375rem, 3.9vw, 3.0625rem);
-      margin: 0;
-    }
-    #secondary-banner .cs-button-solid{
-      background-color: var(--bodyTextColorWhite);
-      color: var(--headerColor);
-      margin: auto;
-    }
+@media only screen and (min-width: 0rem) {
+  #secondary-banner {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--primary);
+    flex-wrap: wrap;
+  }
+  #secondary-banner .cs-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  #secondary-banner .cs-title {
+    color: var(--bodyTextColorWhite);
+    text-align: center;
+    font-size: clamp(1.5375rem, 3.9vw, 3.0625rem);
+    margin: 0;
+  }
+  #secondary-banner .cs-button-solid {
+    background-color: var(--bodyTextColorWhite);
+    color: var(--primary);
+    margin: auto;
+  }
+  #secondary-banner .cs-button-solid:hover {
+    color: var(--bodyTextColorWhite);
+  }
 }
-@media only screen and (min-width: 601px){
-  #secondary-banner{
+@media only screen and (min-width: 601px) {
+  #secondary-banner {
     padding: 2rem;
   }
-  #secondary-banner .cs-content{
+  #secondary-banner .cs-content {
     flex-direction: row;
   }
-  #secondary-banner .cs-title{
+  #secondary-banner .cs-title {
+    font-size: 30px;
     text-align: left;
+  }
+}
+@media only screen and (min-width: 0rem) {
+  body.scroll #sticky-cta {
+    bottom: 0;
+  }
+  body.scroll #sticky-cta .btn-container {
+    width: 100%;
+  }
+  body.scroll #sticky-cta .btn-container .left-btn {
+    border-radius: 0;
+  }
+  body.scroll #sticky-cta .btn-container .left-btn:before {
+    border-radius: 0;
+  }
+  body.scroll #sticky-cta .btn-container .right-btn {
+    border-radius: 0;
+  }
+  body.scroll #sticky-cta .btn-container .right-btn:before {
+    border-radius: 0;
+  }
+  #sticky-cta {
+    box-sizing: border-box;
+    position: fixed;
+    height: 3.75rem;
+    width: 100%;
+    bottom: 2rem;
+    z-index: 10000;
+    left: 0;
+    transition: bottom 0.3;
+  }
+  #sticky-cta .btn-container {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    transition: width 0.3s;
+  }
+  #sticky-cta .btn-container .cs-button-solid {
+    width: 50%;
+    font-size: 0.65rem;
+    line-height: 3.75rem;
+    color: #fff;
+    padding: 0;
+  }
+  #sticky-cta .btn-container .left-btn {
+    background: var(--dark);
+    border-radius: clamp(0.75rem, 2vw, 1.5rem) 0 0 clamp(0.75rem, 2vw, 1.5rem);
+    transition: border-radius 0.3s;
+  }
+  #sticky-cta .btn-container .left-btn:before {
+    border-radius: clamp(0.75rem, 2vw, 1.5rem) 0 0 clamp(0.75rem, 2vw, 1.5rem);
+    transition: border-radius 0.3s;
+  }
+  #sticky-cta .btn-container .right-btn {
+    border-radius: 0 clamp(0.75rem, 2vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem) 0;
+    transition: border-radius 0.3s;
+  }
+  #sticky-cta .btn-container .right-btn:before {
+    border-radius: 0 clamp(0.75rem, 2vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem) 0;
+    transition: border-radius 0.3s;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  #sticky-cta {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0rem) {
+  #sbs padding:var(--sectionPadding) .cs-container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+    flex-direction: column-reverse;
+    max-width: 80rem;
+  }
+  #sbs padding:var(--sectionPadding) .cs-container .cs-content {
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #sbs padding:var(--sectionPadding) .cs-container .cs-content .cs-text {
+    margin-bottom: 2rem;
+  }
+  #sbs padding:var(--sectionPadding) .cs-container .cs-image-group {
+    font-size: min(2.31vw, 0.7em);
+    width: 39.4375em;
+    height: 39.75em;
+    position: relative;
+  }
+  #sbs padding:var(--sectionPadding) .cs-container .cs-image-group .cs-picture {
+    position: absolute;
+    display: block;
+    border-radius: var(--cardRounded);
+  }
+}
+@media only screen and (min-width: 64rem) {
+  #sbs .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+  }
+  #sbs .cs-container .cs-content {
+    margin: 0;
+  }
+  #sbs .cs-container .cs-image-group {
+    font-size: min(1.2vw, 1em);
+    flex: none;
   }
 }
