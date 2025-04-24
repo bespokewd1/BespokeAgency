@@ -1,24 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const observer = new MutationObserver((mutationsList, observer) => {
-        const chatBtn = document.getElementById("chatbase-bubble-button");
+    // Watch the entire body for any new subtree nodes
+    const observer = new MutationObserver((mutations, obs) => {
+        const btn = document.getElementById("chatbase-bubble-button");
+        if (!btn) return; // not there yet
+        const wrapper = btn.firstElementChild;
+        if (!wrapper) return; // double-check
 
-        if (chatBtn) {
-            const directChild = chatBtn.children[0];
-
-            if (directChild) {
-                // directChild.setAttribute("src", "/assets/images/bespokeog.png");
-                directChild.innerHTML = "Chat us";
-                chatBtn.classList.add("chat-btn");
-                directChild.classList.add("chat-btn-wrapper");
-                observer.disconnect(); // Stop observing once changes are made
-            }
-        }
+        // 1) Change the text
+        wrapper.innerHTML = "Chat Us";
+        // 2) Add your classes
+        btn.classList.add("chat-btn");
+        wrapper.classList.add("chat-btn-wrapper");
+        // 3) stop observing
+        obs.disconnect();
     });
 
-    const chatBtn = document.getElementById("chatbase-bubble-button");
-    if (chatBtn) {
-        observer.observe(chatBtn, { childList: true, subtree: true }); // Observe child elements and their descendants
-    } else {
-        console.log("chatbase-bubble-button element not found initially!"); // Optional log
-    }
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+    });
 });
