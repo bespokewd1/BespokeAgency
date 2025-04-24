@@ -23,13 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const btn = document.getElementById("chatbase-bubble-button");
         if (!btn) return; // Not found yet
 
-        // Found it! Apply customization once...
         customize(btn);
 
-        // ...stop watching the body...
         obs.disconnect();
 
-        // ...and now watch *just* that button for child/subtree changes
+        // watch *just* that button for child/subtree changes
         // This observer will catch when Chatbase reverts the button's content
         const btnObserver = new MutationObserver(() => {
             // Re-run customize whenever Chatbase changes the button internals

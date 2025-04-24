@@ -6660,8 +6660,8 @@ body.dark-mode {
             writing-mode: vertical-lr !important;
             text-orientation: sideways-right !important;
             transform: translateY(-50%) rotate(180deg) !important;
-            padding: 0.5em !important;
-            // color: white !important;
+            padding: 0.5em 1em !important;
+            color: white !important;
             border-radius: 4px !important;
             font-weight: bold !important;
             height: fit-content !important;
@@ -6674,6 +6674,13 @@ body.dark-mode {
 @media only screen and (max-width: 639px) {
     #chatbase-bubble-window {
         min-height: 100dvh !important;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    #chatbase-bubble-window {
+        min-height: 85dvh !important;
+        right: 2.5rem !important;
     }
 }
 
