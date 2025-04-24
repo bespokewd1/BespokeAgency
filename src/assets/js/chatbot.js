@@ -1,21 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Watch the entire body for any new subtree nodes
-    const observer = new MutationObserver((mutations, obs) => {
-        const btn = document.getElementById("chatbase-bubble-button");
-        if (!btn) return; // not there yet
-        const wrapper = btn.firstElementChild;
-        if (!wrapper) return; // double-check
-
-        // 1) Change the text
-        wrapper.innerHTML = "Chat Us";
-        // 2) Add your classes
+    const customize = (btn) => {
+        const child = btn.firstElementChild;
+        if (!child) return;
+        child.innerHTML = "Chat Us";
         btn.classList.add("chat-btn");
-        wrapper.classList.add("chat-btn-wrapper");
-        // 3) stop observing
+        child.classList.add("chat-btn-wrapper");
+    };
+
+    // 1) Watch the whole body just long enough to catch the first insertion
+    const bodyObserver = new MutationObserver((_, obs) => {
+        const btn = document.getElementById("chatbase-bubble-button");
+        if (!btn) return;
+
+        customize(btn);
+
+        // Stop watching the body...
         obs.disconnect();
+
+        // ...and now watch *just* that button for child/subtree changes
+        //  making sure that it will always apply whenever it revert back to default
+        const btnObserver = new MutationObserver(() => customize(btn));
+        btnObserver.observe(btn, { childList: true, subtree: true });
     });
 
-    observer.observe(document.body, {
+    bodyObserver.observe(document.body, {
         childList: true,
         subtree: true,
     });

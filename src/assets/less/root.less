@@ -6648,28 +6648,29 @@ body.dark-mode {
 /* Ai chatbot
 /* ---------------- */
 
-@media only screen and (max-width: 639px) {
+@media only screen and (min-width: 0rem) {
     #chatbase-bubble-button {
         bottom: unset !important;
         right: 0 !important;
         top: 50% !important;
-        transform: translateY(-50%) !important;
 
         &.chat-btn {
             position: fixed !important;
-            top: 50% !important;
-            right: 0 !important;
-            writing-mode: vertical-rl !important;
+            writing-mode: vertical-lr !important;
             text-orientation: sideways-right !important;
-            transform: translateY(-50%) !important;
-            padding: 0.5em 1em !important;
-            background: purple !important;
-            color: white !important;
-            border-radius: 2em !important;
+            transform: translateY(-50%) rotate(180deg) !important;
+            padding: 0.5em !important;
+            // color: white !important;
+            border-radius: 4px !important;
             font-weight: bold !important;
+            height: fit-content !important;
+            width: fit-content !important;
+            font-size: (14/16rem) !important;
         }
     }
+}
 
+@media only screen and (max-width: 639px) {
     #chatbase-bubble-window {
         min-height: 100dvh !important;
     }
