@@ -5602,3 +5602,46 @@ body.dark-mode #autoscroll-gallery .gallery-wrapper li .brand-link:before {
     flex: none;
   }
 }
+/* ---------------- */
+/* Ai chatbot
+/* ---------------- */
+@media only screen and (min-width: 0rem) {
+  #chatbase-bubble-button {
+    bottom: unset !important;
+    right: 0.1rem !important;
+    top: 50% !important;
+    text-transform: uppercase !important;
+  }
+  #chatbase-bubble-button.chat-btn {
+    position: fixed !important;
+    writing-mode: vertical-lr !important;
+    text-orientation: sideways-right !important;
+    transform: translateY(-50%) rotate(180deg) !important;
+    padding: 1em 0.5em !important;
+    color: white !important;
+    border-radius: 4px !important;
+    font-weight: bold !important;
+    height: fit-content !important;
+    width: fit-content !important;
+    font-size: 0.875rem !important;
+  }
+}
+@media only screen and (max-width: 639px) {
+  #chatbase-bubble-window {
+    min-height: 100dvh !important;
+  }
+}
+@media only screen and (min-width: 640px) {
+  #chatbase-bubble-window {
+    min-height: 85dvh !important;
+    right: 2.5rem !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #chatbase-bubble-button {
+    bottom: 6rem !important;
+  }
+  #chatbase-bubble-window {
+    min-height: 10rem !important;
+  }
+}
