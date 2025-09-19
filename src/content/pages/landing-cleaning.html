@@ -537,11 +537,12 @@ eleventyNavigation:
                                         aria-hidden="true"
                                     />
                                     <p class="cs-review-text">
-                                        I’m thrilled with our new website—it’s beautiful and has boosted our inquiries. Working with the team was personal and reliable.                                    </p>
+                                      I highly recommend Bespoke WebN Design, please contact Charles and he will help you for your business website
+                                    </p>
                                     <span class="cs-name">
-                                        Alex M.
+                                        Kelvin Canlas
                                     </span>
-                                    <span class="cs-job">YEG Carpet Cleaning Services</span
+                                    <span class="cs-job">Yeg Carpet Cleaning Services</span
                                     >
                                     <img
                                         src="{{ client.domain }}/assets/images/google-review-icon.webp"
@@ -577,9 +578,10 @@ eleventyNavigation:
                                         aria-hidden="true"
                                     />
                                     <p class="cs-review-text">
-                                        Our custom website attracts new clients every day. It’s fast, easy to navigate, and truly reflects our service quality.”
+                                          I had an amazing experience with Bespoke Web design Edmonton. From start to finish! Very approachable, professional and skilled.
+                                          What I really liked the most is their ability to listen to what I want/need to better my website and always there to offer advise! Highly recommended! Top notch service!
                                     </p>
-                                    <span class="cs-name"> Jamie L.</span>
+                                    <span class="cs-name">Amarie Z</span>
                                     <span class="cs-job"
                                         >Dust It Off Cleaning Services</span
                                     >
@@ -678,10 +680,10 @@ eleventyNavigation:
             Don’t let your competition leave you behind—get a website that works as hard as you do. Click below to schedule a FREE consultation and let's talk about how we can help you grow your business.
         </p>
         <div class="cta-btn-container">
-            <a href="tel:+17802638028" class="cs-button-solid"
+            <a href="tel:{{client.phoneForTel}}" class="cs-button-solid"
             >Call for FREE Consultation</a
             >
-        <a href="sms:+17802638028" class="cs-button-solid"
+        <a href="sms:{{client.phoneForTel}}" class="cs-button-solid"
             >Send me a Message</a
             >
         </div>
@@ -729,7 +731,7 @@ eleventyNavigation:
             <p class="cs-text">
                 Fill out the quick form below or call us directly to get started.
             </p>
-            <a href="tel:7802638028" class="cs-button-solid">Call Now</a>
+            <a href="tel:{{client.phoneForTel}}" class="cs-button-solid">Call Now</a>
         </div>
     </div>
 </section>

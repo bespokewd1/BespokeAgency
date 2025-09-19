@@ -678,10 +678,10 @@ eleventyNavigation:
             Don’t let your competition leave you behind—get a website that works as hard as you do. Click below to schedule a FREE consultation and let's talk about how we can help you grow your business.
         </p>
         <div class="cta-btn-container">
-            <a href="tel:+17802638028" class="cs-button-solid"
+            <a href="tel:{{client.phoneForTel}}" class="cs-button-solid"
             >Call for FREE Consultation</a
             >
-        <a href="sms:+17802638028" class="cs-button-solid"
+        <a href="sms:{{client.phoneForTel}}" class="cs-button-solid"
             >Send me a Message</a
             >
         </div>
@@ -708,7 +708,7 @@ eleventyNavigation:
                 Fast, reliable, and built to grow with your business.
             </p>
             <h3 class="cs-h3">Call or Text Us Today:</h3>
-            <h2 class="cs-title">780-263-8028</h2>
+            <h2 class="cs-title">{{client.phoneFormatted}}</h2>
         </div>
     </div>
 </section>
@@ -729,7 +729,7 @@ eleventyNavigation:
             <p class="cs-text">
                 Fill out the quick form below or call us directly to get started.
             </p>
-            <a href="tel:7802638028" class="cs-button-solid">Call Now</a>
+            <a href="tel:{{client.phoneForTel}}" class="cs-button-solid">Call Now</a>
         </div>
     </div>
 </section>
@@ -745,12 +745,12 @@ eleventyNavigation:
         <p class="cs-text sub-title">Tell us a bit about your project—we’ll call you at your preferred time</p>
         <p class="cs-text">Submit the form to secure your 20% discount.</p>
         <p class="cs-text">We’ll be in touch shortly to get started!</p>
-        <h3 class="cs-title number">780-263-8028</h3>
+        <h3 class="cs-title number">{{client.phoneFormatted}}</h3>
         <div class="contact">
-          <a href="tel:7802638028" class="cs-button-solid">
+          <a href="tel:{{client.phoneForTel}}" class="cs-button-solid">
             Call
           </a>
-          <a href="sms:7802638028" class="cs-button-solid">
+          <a href="sms:{{client.phoneForTel}}" class="cs-button-solid">
             Text
           </a>
         </div>
