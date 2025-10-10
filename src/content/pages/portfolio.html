@@ -10,243 +10,443 @@ eleventyNavigation:
     order: 400
 ---
 
-{% extends "layouts/base.html" %}
-
-{% block head %}
+{% extends "layouts/base.html" %} {% block head %}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"></script>
-<script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-ZMYC44ZRHF'); </script>
-<link rel="stylesheet" href="/assets/css/portfolio.css">
-{% endblock %}
-
-{% block body %}
-
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-ZMYC44ZRHF");
+</script>
+<link rel="stylesheet" href="/assets/css/portfolio.css" />
+{% endblock %} {% block body %}
 
 <!-- ============================================ -->
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
 <div id="banner-1106-1112">
-    <div class="cs-container">
-        <span class="cs-int-title">Portfolio</span>
-        <div class="cs-breadcrumbs">
-            <a href="/index" class="cs-link">Home</a>
-            <a href="/portfolio" class="cs-link cs-active">Portfolio</a>
-        </div>
+  <div class="cs-container">
+    <span class="cs-int-title">Portfolio</span>
+    <div class="cs-breadcrumbs">
+      <a href="/index" class="cs-link">Home</a>
+      <a href="/portfolio" class="cs-link cs-active">Portfolio</a>
     </div>
-    <!--Background Image-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg">
-        <img decoding="async" src="/assets/images/banner.jpg" alt="mechanic" width="1280" height="568"
-            aria-hidden="true">
-    </picture>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg" />
+    <!--Tablet and above Image-->
+    <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg" />
+    <img
+      decoding="async"
+      src="/assets/images/banner.jpg"
+      alt="mechanic"
+      width="1280"
+      height="568"
+      aria-hidden="true"
+    />
+  </picture>
 </div>
 
+<!-- ============================================ -->
+<!--             Call to Action             -->
+<!-- ============================================ -->
 
+<section id="cta">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/assets/images/cta-bg.webp" />
+    <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp" />
+    <img
+      aria-hidden="true"
+      decoding="async"
+      src="/assets/images/cta-bg.webp"
+      alt="cta bg"
+      loading="lazy"
+      width="2500"
+      height="1667"
+    />
+  </picture>
+  <div class="container">
+    <h2 class="title">
+      🚀 Launch Your Website with 20% OFF!
+      <br />
+      For a limited time, <br />
+      get a fully custom site at a special discount!
+    </h2>
+    <p>📩 Send "NEWBUSINESS" to WhatsApp or Call Now!</p>
+    <a href="https://wa.me/{{client.phoneForTel}}" class="cs-button-solid"
+      >Get Started Today!</a
+    >
+  </div>
+</section>
 
 <!-- ============================================ -->
 <!--                  Portfolio                    -->
 <!-- ============================================ -->
 
 <section id="services-1626">
-    <div class="cs-container">
-        <div class="cs-content">
-            <div class="cs-flex">
-                <span class="cs-topper">Portfolio</span>
-                <h2 class="cs-title">Explore Our Portfolio</h2>
-            </div>
-            <p class="cs-text">Here’s a showcase of local entrepreneurs we've had the pleasure of working with, each contributing to our journey.</p>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <a href="https://wafflehousesherwood.ca/" class="cs-link" target="_blank">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/mockup-wafflehouse.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/mockup-wafflehouse.png">
-                        <img loading="lazy" decoding="async" src="/assets/images/mockup-wafflehouse.png" alt="room"
-                            width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Waffle House Bar & Grill</h3>
-                    <p class="cs-item-text">
-                        Sherwood Park’s yummy waffle and steak bar grill.
-                    </p>
-                    <span class="cs-fake-link">
-                        View Website
-                        <img class="cs-icon"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
-                            alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="https://montanoplumbing.ca/" class="cs-link" target="_blank">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/mockup-mpc.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/mockup-mpc.png">
-                        <img loading="lazy" decoding="async" src="/assets/images/mockup-mpc.png" alt="room" width="413"
-                            height="420">
-                    </picture>
-                    <h3 class="cs-h3">Montano Plumbing & Contracting LTD.</h3>
-                    <p class="cs-item-text">
-                        Trusted and Proven Plumbing & Renovation for Edmonton.
-                    </p>
-                    <span class="cs-fake-link">
-                        View Website
-                        <img class="cs-icon"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
-                            alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="https://yegcarpetcleaningservices.ca/" class="cs-link" target="_blank">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/mockup-yeg-carpet.webp">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/mockup-yeg-carpet.webp">
-                        <img loading="lazy" decoding="async" src="/assets/images/mockup-yeg-carpet.webp" alt="room"
-                            width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">YEG Carpet Cleaning Service</h3>
-                    <p class="cs-item-text">
-                        Offers home, office and carpet cleaning services in Edmonton
-                    </p>
-                    <span class="cs-fake-link">
-                        View Website
-                        <img class="cs-icon"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
-                            alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="https://yegbusiness.org/" class="cs-link" target="_blank">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/mockup-yeg.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/mockup-yeg.png">
-                        <img loading="lazy" decoding="async" src="/assets/images/mockup-yeg.png" alt="room" width="413"
-                            height="420">
-                    </picture>
-                    <h3 class="cs-h3">YEG Business</h3>
-                    <p class="cs-item-text">
-                        A modern, premium business listing platform designed to connect Edmonton businesses with their
-                        communities.
-                    </p>
-                    <span class="cs-fake-link">
-                        View Website
-                        <img class="cs-icon"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
-                            alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-
-            <li class="cs-item">
-                <a href="http://bespokeacademy.ca/" class="cs-link" target="_blank">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/mockup-bespoke_academy.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/mockup-bespoke_academy.png">
-                        <img loading="lazy" decoding="async" src="/assets/images/mockup-bespoke_academy.png" alt="room"
-                            width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Bespoke Academy</h3>
-                    <p class="cs-item-text">
-                        A skill development platform designed to help individuals learn remote skills, whether they’re
-                        changing careers or advancing their expertise.
-                    </p>
-                    <span class="cs-fake-link">
-                        View Website
-                        <img class="cs-icon"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
-                            alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="https://bespokeaffiliate.ca/" class="cs-link" target="_blank">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/mockup-bespoke_affiliate.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/mockup-bespoke_affiliate.png">
-                        <img loading="lazy" decoding="async" src="/assets/images/mockup-bespoke_affiliate.png"
-                            alt="room" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Bespoke Affiliate </h3>
-                    <p class="cs-item-text">
-                        A website for <strong>entrepreneurs</strong> to compare hosting, domains, and tech solutions,
-                        featuring informative tech blogs to help them understand their options and make smarter
-                        decisions for their online businesses.
-                    </p>
-                    <span class="cs-fake-link">
-                        View Website
-                        <img class="cs-icon"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
-                            alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="https://benjielindolive.ca/" class="cs-link" target="_blank">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/mockup-benjie.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/mockup-benjie.png">
-                        <img loading="lazy" decoding="async" src="/assets/images/mockup-benjie.png" alt="room"
-                            width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Benjie Lindo Live </h3>
-                    <p class="cs-item-text">
-                        Filipino promoter based in Edmonton, Alberta, Canada
-                    </p>
-                    <span class="cs-fake-link">
-                        View Website
-                        <img class="cs-icon"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
-                            alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <!-- KMS Portfolio -->
-            <!-- <li class="cs-item">
-                <a href="https://kms-draft.netlify.app/" class="cs-link" target="_blank">
-                    <picture class="cs-picture"> -->
-                        <!--Mobile Image-->
-                        <!-- <source media="(max-width: 600px)" srcset="/assets/images/mockup-kms.png"> -->
-                        <!--Tablet and above Image-->
-                        <!-- <source media="(min-width: 601px)" srcset="/assets/images/mockup-kms.png">
-                        <img loading="lazy" decoding="async" src="/assets/images/mockup-kms.png" alt="room"
-                            width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">KMS Plumbing & Gasfitting Ltd.</h3>
-                    <p class="cs-item-text">
-                        Expert Plumbing & Gasfitting – Red Seal Certified
-                    </p>
-                    <span class="cs-fake-link">
-                        View Website
-                        <img class="cs-icon"
-                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
-                            alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li> -->
-        </ul>
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Portfolio</span>
+        <h2 class="cs-title">Explore Our Portfolio</h2>
+      </div>
+      <p class="cs-text">
+        Here’s a showcase of local entrepreneurs we've had the pleasure of
+        working with, each contributing to our journey.
+      </p>
     </div>
+
+    <!-- Start of Portfolio Items -->
+    <ul class="cs-card-group">
+      <!-- Montano Plumbing & Contracting LTD -->
+      <li class="cs-item">
+        <a href="https://montanoplumbing.ca/" class="cs-link" target="_blank">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="/assets/images/mockup-mpc.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="/assets/images/mockup-mpc.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/images/mockup-mpc.png"
+              alt="room"
+              width="413"
+              height="420"
+            />
+          </picture>
+          <h3 class="cs-h3">Montano Plumbing & Contracting LTD.</h3>
+          <p class="cs-item-text">
+            Trusted and Proven Plumbing & Renovation for Edmonton.
+          </p>
+          <span class="cs-fake-link"
+            >View Website
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </span>
+        </a>
+      </li>
+
+      <!-- KMS Plumbing & Gasfitting Ltd -->
+      <li class="cs-item">
+        <a href="https://kmsplumbingyeg.com" class="cs-link" target="_blank">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="/assets/images/mockup-kms.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="/assets/images/mockup-kms.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/images/mockup-kms.png"
+              alt="room"
+              width="413"
+              height="420"
+            />
+          </picture>
+          <h3 class="cs-h3">KMS Plumbing & Gasfitting Ltd.</h3>
+          <p class="cs-item-text">
+            Expert Plumbing & Gasfitting – Red Seal Certified
+          </p>
+          <span class="cs-fake-link"
+            >View Website
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </span>
+        </a>
+      </li>
+
+      <!-- YEG Carpet Cleaning Service -->
+      <li class="cs-item">
+        <a
+          href="https://yegcarpetcleaningservices.ca/"
+          class="cs-link"
+          target="_blank"
+        >
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="/assets/images/mockup-yeg-carpet.webp"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="/assets/images/mockup-yeg-carpet.webp"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/images/mockup-yeg-carpet.webp"
+              alt="room"
+              width="413"
+              height="420"
+            />
+          </picture>
+          <h3 class="cs-h3">YEG Carpet Cleaning Service</h3>
+          <p class="cs-item-text">
+            Offers home, office, and carpet cleaning services in Edmonton
+          </p>
+          <span class="cs-fake-link"
+            >View Website
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </span>
+        </a>
+      </li>
+
+      <!-- YEG Business -->
+      <li class="cs-item">
+        <a href="https://yegbusiness.org/" class="cs-link" target="_blank">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="/assets/images/mockup-yeg.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="/assets/images/mockup-yeg.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/images/mockup-yeg.png"
+              alt="room"
+              width="413"
+              height="420"
+            />
+          </picture>
+          <h3 class="cs-h3">YEG Business</h3>
+          <p class="cs-item-text">
+            A modern, premium business listing platform designed to connect
+            Edmonton businesses with their communities.
+          </p>
+          <span class="cs-fake-link"
+            >View Website
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </span>
+        </a>
+      </li>
+
+      <!-- Dust it off Cleaning Services -->
+      <li class="cs-item">
+        <a
+          href="https://dustitoffcleaningservices.ca/"
+          class="cs-link"
+          target="_blank"
+        >
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="/assets/images/mockup-dustitoff.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="/assets/images/mockup-dustitoff.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/images/mockup-dustitoff.png"
+              alt="room"
+              width="413"
+              height="420"
+            />
+          </picture>
+          <h3 class="cs-h3">Dust it off Cleaning Services</h3>
+          <p class="cs-item-text">
+            Edmonton’s trusted choice for stress-free residential and commercial
+            cleaning solutions.
+          </p>
+          <span class="cs-fake-link"
+            >View Website
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </span>
+        </a>
+      </li>
+
+      <!-- Waffle House Bar & Grill -->
+      <li class="cs-item">
+        <a
+          href="https://wafflehousesherwood.ca/"
+          class="cs-link"
+          target="_blank"
+        >
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="/assets/images/mockup-wafflehouse.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="/assets/images/mockup-wafflehouse.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/images/mockup-wafflehouse.png"
+              alt="room"
+              width="413"
+              height="420"
+            />
+          </picture>
+          <h3 class="cs-h3">Waffle House Bar & Grill</h3>
+          <p class="cs-item-text">
+            Sherwood Park’s yummy waffle and steak bar grill.
+          </p>
+          <span class="cs-fake-link"
+            >View Website
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </span>
+        </a>
+      </li>
+
+      <!-- Benjie Lindo Live -->
+      <li class="cs-item">
+        <a href="https://benjielindolive.ca/" class="cs-link" target="_blank">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="/assets/images/mockup-benjie.png"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="/assets/images/mockup-benjie.png"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/images/mockup-benjie.png"
+              alt="room"
+              width="413"
+              height="420"
+            />
+          </picture>
+          <h3 class="cs-h3">Benjie Lindo Live</h3>
+          <p class="cs-item-text">
+            Connect your business to the right audience through
+            <strong>
+              Benjie’s expert social media marketing and live engagement.
+            </strong>
+          </p>
+          <span class="cs-fake-link"
+            >View Website
+            <img
+              class="cs-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </section>
 
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        No Design Limitation, Your Vision Our Creation! - Get the website you
+        have always wanted!
+      </h2>
+      <a
+        class="cs-button-solid"
+        href="tel:{{client.phoneForTel}}"
+        target="_blank"
+        >Call Now</a
+      >
+    </div>
+  </div>
+</section>
 
 {% include 'components/cta.html' %}
 
@@ -255,39 +455,81 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="cta-403" class="cs-image-only">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Sell Online With Shopify</span>
-            <h2 class="cs-title">Ready to Launch Your Online Store?</h2>
-            <p class="cs-text">
-                Take your business online with ease! Get started with a powerful eCommerce platform that’s built for
-                growth. Set up, customize, and manage your store—all in one place
-            </p>
-            <div class="cs-tooltip cs-text">Affiliate Disclosure
-                <span class="cs-tooltiptext">Some of the links on this website are affiliate links, meaning, at no
-                    additional cost to you, I may earn a commission if you click through and make a purchase. I only
-                    recommend products and services that I trust and believe will add value to my readers. Your support
-                    by using these links helps me to continue providing valuable content.</span>
-            </div>
-        </div>
-        <a href="https://shopify.pxf.io/c/5804036/1499945/13624" target="_blank"
-            class="affiliate_link cs-small-device-only" id="1499945"><img
-                src="../../assets/images/shopify-ad-mobile.jpg" border="0" alt="" width="320" height="480" /></a><img
-            height="0" width="0" src="https://imp.pxf.io/i/5804036/1499945/13624"
-            style="position:absolute;visibility:hidden;" border="0" />
-        <a href="https://shopify.pxf.io/c/5804036/1499950/13624" target="_blank"
-            class="affiliate_link cs-medium-device-only" id="1499950"><img
-                src="../../assets/images/shopify-ad-tablet.jpg" border="0" alt="" width="480" height="320" /></a><img
-            height="0" width="0" src="https://imp.pxf.io/i/5804036/1499950/13624"
-            style="position:absolute;visibility:hidden;" border="0" />
-        <a href="https://shopify.pxf.io/c/5804036/1499972/13624" target="_blank"
-            class="affiliate_link cs-large-device-only" id="1499972"><img src="../../assets/images/shopify-ad.jpg"
-                border="0" alt="" width="1200" height="628" /></a><img height="0" width="0"
-            src="https://imp.pxf.io/i/5804036/1499972/13624" style="position:absolute;visibility:hidden;" border="0" />
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Sell Online With Shopify</span>
+      <h2 class="cs-title">Ready to Launch Your Online Store?</h2>
+      <p class="cs-text">
+        Take your business online with ease! Get started with a powerful
+        eCommerce platform that’s built for growth. Set up, customize, and
+        manage your store—all in one place
+      </p>
+      <div class="cs-tooltip cs-text">
+        Affiliate Disclosure
+        <span class="cs-tooltiptext"
+          >Some of the links on this website are affiliate links, meaning, at no
+          additional cost to you, I may earn a commission if you click through
+          and make a purchase. I only recommend products and services that I
+          trust and believe will add value to my readers. Your support by using
+          these links helps me to continue providing valuable content.</span
+        >
+      </div>
     </div>
+    <a
+      href="https://shopify.pxf.io/c/5804036/1499945/13624"
+      target="_blank"
+      class="affiliate_link cs-small-device-only"
+      id="1499945"
+      ><img
+        src="../../assets/images/shopify-ad-mobile.jpg"
+        border="0"
+        alt=""
+        width="320"
+        height="480" /></a
+    ><img
+      height="0"
+      width="0"
+      src="https://imp.pxf.io/i/5804036/1499945/13624"
+      style="position: absolute; visibility: hidden"
+      border="0"
+    />
+    <a
+      href="https://shopify.pxf.io/c/5804036/1499950/13624"
+      target="_blank"
+      class="affiliate_link cs-medium-device-only"
+      id="1499950"
+      ><img
+        src="../../assets/images/shopify-ad-tablet.jpg"
+        border="0"
+        alt=""
+        width="480"
+        height="320" /></a
+    ><img
+      height="0"
+      width="0"
+      src="https://imp.pxf.io/i/5804036/1499950/13624"
+      style="position: absolute; visibility: hidden"
+      border="0"
+    />
+    <a
+      href="https://shopify.pxf.io/c/5804036/1499972/13624"
+      target="_blank"
+      class="affiliate_link cs-large-device-only"
+      id="1499972"
+      ><img
+        src="../../assets/images/shopify-ad.jpg"
+        border="0"
+        alt=""
+        width="1200"
+        height="628" /></a
+    ><img
+      height="0"
+      width="0"
+      src="https://imp.pxf.io/i/5804036/1499972/13624"
+      style="position: absolute; visibility: hidden"
+      border="0"
+    />
+  </div>
 </section>
 
-
-{% include 'components/chatbot.html' %}
-
-{% endblock %}
+{% include 'components/chatbot.html' %} {% endblock %}

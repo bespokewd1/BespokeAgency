@@ -4,7 +4,7 @@ description: "Get superior results with our premium, 100% hand-coded websites. I
 preloadImg: "/assets/images/bespokelogo1234.png"
 permalink: "/"
 tags: "sitemap" # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
-image: /assets/images/blog/ogimage2.png
+image: /assets/images/og/home-og.webp
 eleventyNavigation:
   key: Home
   order: 100
@@ -51,6 +51,20 @@ eleventyNavigation:
     });
   }
 </script>
+
+<link
+  rel="preload"
+  as="image"
+  href="/assets/images/hero-bg.webp"
+  media="(max-width: 600px)"
+/>
+<link
+  rel="preload"
+  as="image"
+  href="/assets/images/hero-bg.webp"
+  media="(min-width: 601px)"
+/>
+
 {% endblock %} {% block body %}
 
 <!-- Blaze Assets for carousel -->
@@ -72,10 +86,22 @@ eleventyNavigation:
         <br />
         <span class="cs-changing-text"></span>
       </h1>
-      <p class="cs-text">
-        Get superior results with our 100% hand-coded websites. No page builders
-        or WordPress. Starting at $149/month.
-      </p>
+      <div class="cs-text">
+        <!-- Get superior results with our 100% hand-coded websites. No page builders
+        or WordPress. Call for Free Consultation. -->
+        <p class="cs-text-item">
+          <span> {% include 'components/circle-check-big.html' %} </span>
+          Professional, High-Performance Business Websites
+        </p>
+        <p class="cs-text-item">
+          <span> {% include 'components/circle-check-big.html' %} </span>
+          SEO Optimized – Rank Higher, Get More Clients
+        </p>
+        <p class="cs-text-item">
+          <span> {% include 'components/circle-check-big.html' %} </span>
+          Unlimited Designs – Your Vision, Our Creation
+        </p>
+      </div>
       <div class="cs-button-group">
         <form class="cs-form" name="Contact Form" method="post">
           <!-- <input class="cs-input" type="text" id="cs-domain-check" name="find-us" placeholder="Check Domain Availability">
@@ -107,7 +133,8 @@ eleventyNavigation:
         />
         <img
           aria-hidden="true"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           decoding="async"
           src="/assets/images/hero-bg.webp"
           alt="maid"
@@ -115,6 +142,48 @@ eleventyNavigation:
           height="674"
         />
       </picture>
+    </div>
+
+    <div class="review-container">
+      <picture class="review-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/google-review.avif"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/google-review.avif"
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/google-review.avif"
+          alt="maid"
+          width="831"
+          height="674"
+          class="review-img"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Custom Websites, Affordable Installments – No Page Builders, No Limits.
+      </h2>
+      <a
+        class="cs-button-solid"
+        href="tel:{{client.phoneForTel}}"
+        target="_blank"
+        >Call Now!</a
+      >
     </div>
   </div>
 </section>
@@ -132,9 +201,10 @@ eleventyNavigation:
       <h3 class="cs-title">OUR SERVICES</h3>
       <br /><br />
       <p class="cs-text">
-        We help Edmonton-based entrepreneurs get the custom websites they deserve.
-Unlike other web developers, we create fully custom websites with NO LIMITATIONS. Our hand-crafted designs ensure your business stands out, boosts your online presence, and drives growth.
-        <a href="/about">LEARN MORE</a>
+        We empower entrepreneurs with custom websites that truly represent their
+        business. Unlike template-based solutions, we design fully personalized
+        websites with NO LIMITS, ensuring your brand stands out, attracts more
+        customers, and supports your growth.
       </p>
     </div>
     <ul class="cs-card-group">
@@ -142,7 +212,7 @@ Unlike other web developers, we create fully custom websites with NO LIMITATIONS
         <a class="cs-item-link" href="">
           <img
             src="https://img.icons8.com/?size=100&id=fUN1LM3gWXOW&format=png&color=000000"
-            alt=""
+            alt="phone logo"
             width="40"
             height="40"
             loading="lazy"
@@ -150,9 +220,15 @@ Unlike other web developers, we create fully custom websites with NO LIMITATIONS
             aria-hidden="true"
           />
           <h3 class="cs-h3">Custom Website Design</h3>
+          <p class="cs-item-text">• Fully custom, no templates</p>
           <p class="cs-item-text">
-            A website built with your vision and our design expertise.
-Custom-designed to match your brand, without templates. We analyze your audience, competitors, and unique strengths to create a site that drives leads and growth.
+            • Designed to match your brand vision & goals
+          </p>
+          <p class="cs-item-text">
+            • Focus on audience, competitors, and growth
+          </p>
+          <p class="cs-item-text">
+            • Generates leads and drives business growth
           </p>
         </a>
       </li>
@@ -160,7 +236,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
         <a href="" class="cs-item-link">
           <img
             src="https://img.icons8.com/?size=100&id=aGVa91FU6Vg8&format=png&color=000000"
-            alt=""
+            alt="computer logo"
             width="40"
             height="40"
             loading="lazy"
@@ -169,7 +245,12 @@ Custom-designed to match your brand, without templates. We analyze your audience
           />
           <h3 class="cs-h3">Branding & Logo Design</h3>
           <p class="cs-item-text">
-            Custom logo, color scheme, and design elements as part of our Brand & Identity Package, all included with your website for a complete, all-in-one solution.
+            • Custom logo, color scheme, and design elements
+          </p>
+          <p class="cs-item-text">• Complete Brand & Identity Package</p>
+          <p class="cs-item-text">• Includes monthly social media assets</p>
+          <p class="cs-item-text">
+            • Ensure consistent branding across all platforms
           </p>
         </a>
       </li>
@@ -177,7 +258,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
         <a href="" class="cs-item-link">
           <img
             src="https://img.icons8.com/?size=100&id=M3qWtBeOi6ll&format=png&color=000000"
-            alt=""
+            alt="</> in logo"
             width="40"
             height="40"
             loading="lazy"
@@ -186,26 +267,71 @@ Custom-designed to match your brand, without templates. We analyze your audience
           />
           <h3 class="cs-h3">Ongoing Support & Marketing</h3>
           <p class="cs-item-text">
-            – 1 year of free hosting, website maintenance, security, and SEO. Monthly social media asset support to keep your business growing.
+            • Continuous website maintenance and updates
+          </p>
+          <p class="cs-item-text">• Unlimited Edits</p>
+          <p class="cs-item-text">
+            • Monthly social media assets to maintain brand presence
+          </p>
+          <p class="cs-item-text">
+            • Allowing you to focus on your business while we handle the rest
           </p>
         </a>
       </li>
     </ul>
+    <p class="cs-text">
+      For the Brand & Identity Package, it includes 5 social media assets per
+      month, covering your events, promotions, and common posts, so they’re
+      ready to share.
+    </p>
   </div>
 
-  <picture class="cs-background">
-    <source media="(max-width: 630px)" srcset="/assets/images/wwd.png" />
-    <source media="(min-width: 601px)" srcset="/assets/images/servicess.png" />
+  <!-- <div class="cs-background">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div> -->
+</section>
+
+<!-- ============================================ -->
+<!--             Call to Action             -->
+<!-- ============================================ -->
+
+<section id="cta">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/assets/images/cta-bg.webp" />
+    <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp" />
     <img
-      loading="lazy"
-      decoding="async"
-      src="/assets/images/servicess.png"
-      alt=""
-      width="1920"
-      height="1200"
       aria-hidden="true"
+      decoding="async"
+      src="/assets/images/cta-bg.webp"
+      alt="cta bg"
+      loading="lazy"
+      width="2500"
+      height="1667"
     />
   </picture>
+  <div class="container">
+    <h2 class="title">
+      New business in Edmonton?
+
+      <br />
+      🎉 Get 20% OFF your first website!
+    </h2>
+    <p>📩 Message us with "NEWBUSINESS" on WhatsApp or Call Now!</p>
+    <a href="https://wa.me/{{client.phoneForTel}}" class="cs-button-solid"
+      >Claim your 20% discount!</a
+    >
+  </div>
 </section>
 
 <!-- ============================================ -->
@@ -215,7 +341,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
 <section id="autoscroll-gallery">
   <div class="cs-content">
     <span class="cs-topper">
-        Proud to Work With Edmonton’s Top Entrepreneurs
+      Proud to Work With Edmonton’s Top Entrepreneurs
     </span>
     <h2 class="cs-title">Our Valued Clients</h2>
   </div>
@@ -265,8 +391,9 @@ Custom-designed to match your brand, without templates. We analyze your audience
                 <path d="M10 14 21 3" />
                 <path
                   d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                /></svg
-            ></span>
+                />
+              </svg>
+            </span>
             benjielindolive.ca
           </div>
         </a>
@@ -296,7 +423,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
 
         <a
           class="brand-link"
-          href="https://kms-draft.netlify.app/"
+          href="https://kmsplumbingyeg.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -318,8 +445,9 @@ Custom-designed to match your brand, without templates. We analyze your audience
                 <path d="M10 14 21 3" />
                 <path
                   d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                /></svg
-            ></span>
+                />
+              </svg>
+            </span>
             <!-- kms-draft.netlify.app -->
           </div>
         </a>
@@ -371,8 +499,9 @@ Custom-designed to match your brand, without templates. We analyze your audience
                 <path d="M10 14 21 3" />
                 <path
                   d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                /></svg
-            ></span>
+                />
+              </svg>
+            </span>
             montanoplumbing.ca
           </div>
         </a>
@@ -424,8 +553,9 @@ Custom-designed to match your brand, without templates. We analyze your audience
                 <path d="M10 14 21 3" />
                 <path
                   d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                /></svg
-            ></span>
+                />
+              </svg>
+            </span>
             wafflehousesherwood.ca
           </div>
         </a>
@@ -477,8 +607,9 @@ Custom-designed to match your brand, without templates. We analyze your audience
                 <path d="M10 14 21 3" />
                 <path
                   d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                /></svg
-            ></span>
+                />
+              </svg>
+            </span>
             yegcarpetcleaningservices.ca
           </div>
         </a>
@@ -486,6 +617,24 @@ Custom-designed to match your brand, without templates. We analyze your audience
         <span class="beam"></span>
       </li>
     </ul>
+  </div>
+  <a href="/portfolio" class="cs-button-solid">Our Portfolio</a>
+</section>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        No Design Limitation, Your Vision Our Creation! - Get the website you
+        have always wanted!
+      </h2>
+      <a class="cs-button-solid" href="tel:7802638028" target="_blank"
+        >Call Now</a
+      >
+    </div>
   </div>
 </section>
 
@@ -508,7 +657,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
             loading="lazy"
             decoding="async"
             src="https://img.icons8.com/?size=100&id=7692&format=png&color=4594F2"
-            alt="icon"
+            alt="</> icon"
             width="48"
             height="48"
             aria-hidden="true"
@@ -529,7 +678,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
             loading="lazy"
             decoding="async"
             src="https://img.icons8.com/?size=100&id=69184&format=png&color=4594F2"
-            alt="icon"
+            alt="brand design icon"
             width="48"
             height="48"
             aria-hidden="true"
@@ -550,14 +699,14 @@ Custom-designed to match your brand, without templates. We analyze your audience
             loading="lazy"
             decoding="async"
             src="https://img.icons8.com/?size=100&id=57007&format=png&color=4594F2"
-            alt="icon"
+            alt="dollar sign icon"
             width="48"
             height="48"
             aria-hidden="true"
           />
         </div>
         <div class="cs-flex">
-          <h2 class="cs-h2">Affordable Pricing Starting at $149/month</h2>
+          <h2 class="cs-h2">Affordable Pricing</h2>
           <p class="cs-item-text">
             Transparent pricing with no hidden fees. Start with a professional
             website for a monthly fee that fits your budget.
@@ -571,7 +720,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
             loading="lazy"
             decoding="async"
             src="https://img.icons8.com/?size=100&id=11683&format=png&color=4594F2"
-            alt="icon"
+            alt="wrench icon"
             width="48"
             height="48"
             aria-hidden="true"
@@ -608,7 +757,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
           loading="lazy"
           decoding="async"
           src="https://img.icons8.com/?size=100&id=gcHk3KXPciim&format=png&color=000000"
-          alt="icon"
+          alt="thumbs up with a checkmark icon"
           width="72"
           height="72"
         />
@@ -624,7 +773,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
           loading="lazy"
           decoding="async"
           src="https://img.icons8.com/?size=100&id=mYqnHc1fapB8&format=png&color=000000"
-          alt="icon"
+          alt="map icon"
           width="72"
           height="72"
         />
@@ -640,7 +789,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
           loading="lazy"
           decoding="async"
           src="https://img.icons8.com/?size=100&id=34028&format=png&color=000000"
-          alt="icon"
+          alt="a person holding money bill"
           width="72"
           height="72"
         />
@@ -656,7 +805,7 @@ Custom-designed to match your brand, without templates. We analyze your audience
           loading="lazy"
           decoding="async"
           src="https://img.icons8.com/?size=100&id=114214&format=png&color=000000"
-          alt="icon"
+          alt="arrow going up presenting growth"
           width="72"
           height="72"
         />
@@ -694,32 +843,68 @@ Custom-designed to match your brand, without templates. We analyze your audience
           <span class="cs-step">Step 1</span>
           <img
             class="cs-step-icon"
-            src="/assets/images/questionnaire-icon.png"
+            src="/assets/images/icons/call-contact.svg"
+            alt="green phone icon"
+            width="40"
+            height="40"
           />
-          <h3 class="cs-h3">Call us for FREE Consultation</h3>
+          <h3 class="cs-h3">Call for a FREE Consultation!</h3>
           <p class="cs-item-text">
-            Let's discuss your business goals, vision, and what you need. We'll take it from there and create a plan tailored just for you
+            Let’s discuss your business goals and vision. Once you sign the
+            contract, we’ll create a customized plan tailored to your needs
           </p>
         </a>
       </li>
       <li class="cs-item">
         <a href="" class="cs-link">
           <span class="cs-step">Step 2</span>
-          <img class="cs-step-icon" src="/assets/images/web-design-icon.png" />
-          <h3 class="cs-h3">Design & Development</h3>
-          <p class="cs-item-text">
-            We’ll design and develop your website based on your vision and business goals, making adjustments until it’s just right for the long term. (3-4weeks)
-          </p>
+          <div>
+            <img
+              class="cs-step-icon"
+              src="/assets/images/trust-icons/vscode.svg"
+              alt="vscode icon"
+              width="40"
+              height="40"
+            />
+            <img
+              class="cs-step-icon"
+              src="/assets/images/trust-icons/figma.svg"
+              alt="figma icon"
+              width="40"
+              height="40"
+              style="scale: 2; margin-left: -1rem"
+            />
+          </div>
+          <div>
+            <h3 class="cs-h3">Design & Development</h3>
+            <p class="cs-item-text">
+              We bring your vision to life with a fully customized website that
+              fits your business needs
+            </p>
+          </div>
         </a>
       </li>
       <li class="cs-item">
         <a href="" class="cs-link">
           <span class="cs-step">Step 3</span>
-          <img class="cs-step-icon" src="/assets/images/coding-icon.png" />
-          <h3 class="cs-h3">Ongoing Support</h3>
-          <p class="cs-item-text">
-            Ongoing Support: We provide continuous maintenance and support after launch, including unlimited edits for any changes you need.
-          </p>
+          <img
+            class="cs-step-icon"
+            alt="person with a headset doing phone call"
+            src="/assets/images/icons/tech-sup.svg"
+            width="40"
+            height="40"
+            style="scale: 1.3"
+          />
+          <div>
+            <h3 class="cs-h3">Launch & Grow!</h3>
+            <p class="cs-item-text">
+              Your website goes live! Enjoy
+              <strong
+                >ongoing maintenance, unlimited edits, and social media support
+              </strong>
+              with our Brand & Identity Package. 1 Yr FREE Hosting
+            </p>
+          </div>
         </a>
       </li>
     </ul>
@@ -748,6 +933,25 @@ Custom-designed to match your brand, without templates. We analyze your audience
       loading="lazy"
     />
   </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Custom Websites, Affordable Installments – No Page Builders, No Limits.
+      </h2>
+      <a
+        class="cs-button-solid"
+        href="tel:{{client.phoneForTel}}"
+        target="_blank"
+        >Call Now!</a
+      >
+    </div>
+  </div>
 </section>
 
 <!-- ============================================ -->
@@ -850,12 +1054,12 @@ Custom-designed to match your brand, without templates. We analyze your audience
             />
           </li>
         </ul>
-        <span class="cs-price"
+        <span class="cs-price" style="opacity: 0; visibility: hidden"
           >$200
           <span class="cs-duration">Per Month</span>
         </span>
         <a href="/contact/" class="cs-link">
-          <span class="cs-link-text">Get Started</span>
+          <span class="cs-link-text">Call for Free Consultation</span>
           <img
             class="cs-arrow"
             loading="lazy"
@@ -964,12 +1168,12 @@ Custom-designed to match your brand, without templates. We analyze your audience
           </li>
           <li class="cs-li cs-disabled">Advanced Copywriting (Coming Soon)</li>
         </ul>
-        <span class="cs-price"
+        <span class="cs-price" style="opacity: 0; visibility: hidden"
           >$149
           <span class="cs-duration">Per Month</span>
         </span>
         <a href="/contact/" class="cs-link">
-          <span class="cs-link-text">Get Started</span>
+          <span class="cs-link-text">Call for Free Consultation</span>
           <img
             class="cs-arrow"
             loading="lazy"
@@ -1065,12 +1269,12 @@ Custom-designed to match your brand, without templates. We analyze your audience
           </li>
           <li class="cs-li cs-disabled">Advanced Copywriting (Coming Soon)</li>
         </ul>
-        <span class="cs-price"
+        <span class="cs-price" style="opacity: 0; visibility: hidden"
           >$2000
           <span class="cs-duration">+ $20/month hosting</span>
         </span>
         <a href="/contact/" class="cs-link">
-          <span class="cs-link-text">Get Started</span>
+          <span class="cs-link-text">Call for Free Consultation</span>
           <img
             class="cs-arrow"
             loading="lazy"
@@ -1126,6 +1330,11 @@ Custom-designed to match your brand, without templates. We analyze your audience
                   </p>
                   <span class="cs-name"> Michelle Superales </span>
                   <span class="cs-job">Montano Plumbing & Contracting LTD</span>
+                  <img
+                    src="{{ client.domain }}/assets/images/google-review-icon.webp"
+                    height="50"
+                    alt="google review"
+                  />
                   <!--Quote-->
                   <img
                     class="cs-quote"
@@ -1161,6 +1370,55 @@ Custom-designed to match your brand, without templates. We analyze your audience
                   </p>
                   <span class="cs-name"> Kelvin Canlas </span>
                   <span class="cs-job">YEG Carpet Cleaning Services</span>
+                  <img
+                    src="{{ client.domain }}/assets/images/google-review-icon.webp"
+                    height="50"
+                  />
+                  <!--Quote-->
+                  <img
+                    class="cs-quote"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                    alt="quotes"
+                    width="97"
+                    height="80"
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="blaze-slide">
+              <div class="cs-flex-group">
+                <div class="cs-review-group">
+                  <!--Stars-->
+                  <img
+                    class="cs-stars"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                    alt="quotes"
+                    width="97"
+                    height="80"
+                    aria-hidden="true"
+                  />
+                  <p class="cs-review-text">
+                    ” I’ve worked with many website creators over the course of
+                    our 10 year business and without a doubt, Charles is the
+                    BEST. I am so happy with our decision to have Charles create
+                    our new website as we’ve found a long term partner in him
+                    and will continue to utilize his services. If you are
+                    thinking of elevating your business - you need Charles! 5
+                    stars for service, 5 stars for an outstanding product - 5
+                    stars for overall experience. I wish I could rate higher!
+                    Thank you so much Charles!!!!”
+                  </p>
+                  <span class="cs-name"> Sal K.</span>
+                  <span class="cs-job">KMS Plumbing & Gasfitting Ltd.</span>
+                  <img
+                    src="{{ client.domain }}/assets/images/google-review-icon.webp"
+                    height="50"
+                  />
                   <!--Quote-->
                   <img
                     class="cs-quote"
@@ -1217,38 +1475,137 @@ Custom-designed to match your brand, without templates. We analyze your audience
   </picture>
 </section>
 
-<section id="review-img" class="review-img">
+<!-- ============================================ -->
+<!--                Trust Icons                   -->
+<!-- ============================================ -->
+<section id="gallery-45">
   <div class="cs-container">
-    <picture class="cs-picture">
-      <source
-        media="(max-width: 600px)"
-        srcset="/assets/images/google-reviews-logo.webp"
-      />
-      <source
-        media="(min-width: 601px)"
-        srcset="/assets/images/google-reviews-logo.webp"
-      />
-      <img
-        aria-hidden="true"
-        loading="lazy"
-        decoding="async"
-        src="/assets/images/google-reviews-logo.webp"
-        alt="maid"
-        width="831"
-        height="674"
-        class="cs-img"
-      />
-    </picture>
+    <div class="cs-content">
+      <span class="cs-topper"
+        >Experience the Bespoke Web Design Difference</span
+      >
+      <h2 class="cs-h3">
+        We create high-quality, long-term solutions—bringing your vision to
+        life.
+      </h2>
+    </div>
+    <div class="trust-signals">
+      <div class="trust-signals-contents">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/trust-icons/satisfaction-guarantee.png"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/trust-icons/satisfaction-guarantee.png"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/trust-icons/satisfaction-guarantee.png"
+            alt="red-seal-certified"
+            height="90"
+            style="transform: scale(1.3)"
+          />
+        </picture>
+        <p class="cs-text">Your Vision, Our creation</p>
+      </div>
+      <div class="trust-signals-contents">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/trust-icons/figma.svg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/trust-icons/figma.svg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/trust-icons/figma.svg"
+            alt="fully-insured"
+            height="90"
+            style="transform: scale(1.6)"
+          />
+        </picture>
+        <p class="cs-text">Precision, Creativity, No Limits</p>
+      </div>
+      <div class="trust-signals-contents">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/trust-icons/vscode.svg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/trust-icons/vscode.svg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/trust-icons/vscode.svg"
+            alt="service-warranty"
+            height="90"
+            style="scale: 0.85"
+          />
+        </picture>
+        <p class="cs-text">Clean, Scalable, High-Performance</p>
+      </div>
+      <div class="trust-signals-contents">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/trust-icons/google-business.svg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/trust-icons/google-business.svg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/trust-icons/google-business.svg"
+            alt="edmonton-chamber-logo"
+            height="90"
+            style="scale: 0.9"
+          />
+        </picture>
+        <p class="cs-text">Trusted Local Business</p>
+      </div>
+    </div>
   </div>
 </section>
 
-{% include 'components/cta.html' %}
+<!-- ============================================ -->
+<!--                Three Cards                   -->
+<!-- ============================================ -->
+
+{% if collections.post | length == 0 %} {# if there is no post we will not show
+this section #}
+<p style="display: none">No Recent Posts</p>
+
+{% else %}
+<section id="three-cards">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Exclusive Articles</span>
+        <h2 class="cs-title">Latest News</h2>
+      </div>
+    </div>
+    {% include "components/latest-blog-card.html" %}
+  </div>
+</section>
+
+{% endif %} {% include 'components/cta.html' %}
 
 <!-- ============================================ -->
 <!--                 Shopify CTA                  -->
 <!-- ============================================ -->
 
-<section id="cta-403" class="cs-image-only">
+<!-- <section id="cta-403" class="cs-image-only">
   <div class="cs-container">
     <div class="cs-content">
       <span class="cs-topper">Sell Online With Shopify</span>
@@ -1324,6 +1681,85 @@ Custom-designed to match your brand, without templates. We analyze your audience
       border="0"
     />
   </div>
+</section> -->
+
+<!-- ============================================ -->
+<!--                 Yeg Business org CTA         -->
+<!-- ============================================ -->
+
+<section id="cta-403">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Find top rated businesses in Edmonton</span>
+      <h2 class="cs-title">
+        Join the Latest, Premium Business Listing Website for Edmonton and
+        nearby!
+      </h2>
+      <p class="cs-text">
+        Are you a business in Edmonton or nearby? Join the YEG Business Org and
+        get listed on the newest platform to increase your online visibility,
+        connect with other top rated businesses, boost your SEO, and offer your
+        services to the community.
+      </p>
+      <a
+        href="https://www.yegbusiness.org"
+        class="cs-button-solid"
+        target="_blank"
+        class="affiliate_link"
+        >List your Business here!</a
+      >
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source media="(max-width: 600px)" srcset="/assets/images/yeg-photo.webp" />
+    <source media="(min-width: 601px)" srcset="/assets/images/yeg-photo.webp" />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="/assets/images/yeg-photo.webp"
+      alt="cleaner"
+      width="1920"
+      height="660"
+      aria-hidden="true"
+    />
+  </picture>
 </section>
 
+<section class="ai-chatbot">
+  <script>
+    (function () {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) {
+            window.chatbase.q = [];
+          }
+          window.chatbase.q.push(arguments);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") {
+              return target.q;
+            }
+            return (...args) => target(prop, ...args);
+          },
+        });
+      }
+      const onLoad = function () {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "XRX52bBWW6sQkxMHt_kn3";
+        script.domain = "http://www.chatbase.co/";
+        document.body.appendChild(script);
+      };
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    })();
+  </script>
+</section>
+
+<script defer src="/assets/js/chatbot.js"></script>
 {% include 'components/chatbot.html' %} {% endblock %}

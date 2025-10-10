@@ -2,6 +2,10 @@
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/blog.css">
+
+        <meta property="og:title" content="{{ title }}"/>
+        <meta property="og:image" content="{{ image }}"/>
+        <meta property="og:image:secure_url" content="{{ image }}"/>
 {% endblock %}
 
 {% block body %}
@@ -9,7 +13,7 @@
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
-<div id="banner-1106-1112">
+<div id="banner-1106-1112" >
     <div class="cs-container">
         <span class="cs-int-title">Blog</span>
         <div class="cs-breadcrumbs">
@@ -75,6 +79,7 @@
         {% include 'components/featured-post.html' %}
     </div>
 
+
     {% include 'components/featured-post-after-main-content.html' %}
 
     <!-- ============================================ -->
@@ -100,3 +105,5 @@
     </section>
 
     {% endblock %}
+
+

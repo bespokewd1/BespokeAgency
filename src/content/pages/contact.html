@@ -1,108 +1,91 @@
 ---
-title: 'Contact | Bespoke Web Design'
-description: 'Get superior results with our premium, 100% hand-coded websites. Improve your brand and convert visitors into leads. Starting at just $149/month, our custom sites offer unmatched quality and ongoing support. Explore our services today!'
-preloadImg: '/assets/images/bespokelogo1234.png'
-permalink: 'contact/'
+title: "Contact | Bespoke Web Design"
+description: "Get superior results with our premium, 100% hand-coded websites. Improve your brand and convert visitors into leads. Starting at just $149/month, our custom sites offer unmatched quality and ongoing support. Explore our services today!"
+preloadImg: "/assets/images/bespokelogo1234.png"
+permalink: "contact/"
 image: /assets/images/ogimage2.png
 eleventyNavigation:
-    key: Contact Us
-    order: 600
+  key: Contact Us
+  order: 600
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<!-- Google tag (gtag.js) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-ZMYC44ZRHF");
+</script>
+<link rel="stylesheet" href="/assets/css/contact.css" />
+{% endblock %} {% block body %}
 
-{% block head %}
-<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-ZMYC44ZRHF'); </script>
-    <link rel="stylesheet" href="/assets/css/contact.css">
-{% endblock %}
-
-{% block body %}
-
-
-
-   <!-- ============================================ -->
+<!-- ============================================ -->
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
 <div id="banner-1106-1112">
-    <div class="cs-container">
-        <span class="cs-int-title">Contact Us</span>
-        <div class="cs-breadcrumbs">
-            <a href="/index" class="cs-link">Home</a>
-            <a href="/contact" class="cs-link cs-active">Contact Us</a>
-        </div>
+  <div class="cs-container">
+    <span class="cs-int-title">Contact Us</span>
+    <div class="cs-breadcrumbs">
+      <a href="/index" class="cs-link">Home</a>
+      <a href="/contact" class="cs-link cs-active">Contact Us</a>
     </div>
-    <!--Background Image-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg">
-        <img decoding="async" src="/assets/images/banner.jpg" alt="mechanic" width="1280" height="568" aria-hidden="true">
-    </picture>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source media="(max-width: 600px)" srcset="/assets/images/banner.jpg" />
+    <!--Tablet and above Image-->
+    <source media="(min-width: 601px)" srcset="/assets/images/banner.jpg" />
+    <img
+      decoding="async"
+      src="/assets/images/banner.jpg"
+      alt="mechanic"
+      width="1280"
+      height="568"
+      aria-hidden="true"
+    />
+  </picture>
 </div>
 
 <!-- ============================================ -->
-<!--                   Contact                    -->
+<!--             Call to Action             -->
 <!-- ============================================ -->
 
-<section id="contact-1388">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Contact Us</span>
-            <h2 class="cs-title">Let’s Build Something Great Together!</h2>
-            <p class="cs-text">
-                Ready to elevate your business with a custom website? Tell us about your project and get a free consultation.
-            </p>
-            <ul class="cs-ul">
-                
-                <li class="cs-li">
-                    <picture class="cs-icon-wrapper">
-                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-76.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
-                    </picture>
-                    <div class="cs-flex-group">
-                        <span class="cs-header">Email</span>
-                        <a href="mailto:info@bespokewebdesign.ca" class="cs-link">info@bespokewebdesign.ca</a>
-                    </div>
-                </li>
-                <li class="cs-li">
-                    <picture class="cs-icon-wrapper">
-                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-76.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
-                    </picture>
-                    <div class="cs-flex-group">
-                        <span class="cs-header">Areas Served</span>
-                        <a href="" class="cs-link">Canada & USA</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!--Form-->
-        <form class="cs-form" id="cs-form-1388" name="Contact Form" method="post" netlify>
-            <h3 class="cs-h3">Make Appointment</h3>
-            <label class="cs-label">
-                Name
-                <input class="cs-input" required type="text" id="name-1388" name="name" placeholder="Name">
-            </label>
-            <label class="cs-label cs-email">
-                Email
-                <input class="cs-input" required type="email" id="email-1388" name="email" placeholder="Email">
-            </label>
-            <label class="cs-label cs-phone">
-                Phone
-                <input class="cs-input" required type="number" id="phone-1388" name="phone" placeholder="Phone">
-            </label>
-            <label class="cs-label">
-                Message
-                <textarea class="cs-input cs-textarea" required name="Message" id="message-1388" placeholder="Write message..."></textarea>
-            </label>
-            <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
-        </form>
-    </div>
-  </section>
-                  
-  
+<section id="cta">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/assets/images/cta-bg.webp" />
+    <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp" />
+    <img
+      aria-hidden="true"
+      decoding="async"
+      src="/assets/images/cta-bg.webp"
+      alt="cta bg"
+      loading="lazy"
+      width="2500"
+      height="1667"
+    />
+  </picture>
+  <div class="container">
+    <h2 class="title">
+      🚀 Launch Your Website with 20% OFF!
+      <br />
+      For a limited time, <br />
+      get a fully custom site at a special discount!
+    </h2>
+    <p>📩 Send "NEWBUSINESS" to WhatsApp or Call Now!</p>
+    <a href="https://wa.me/{{client.phoneForTel}}" class="cs-button-solid"
+      >Get Started Today!</a
+    >
+  </div>
+</section>
 
-
-{% include 'components/chatbot.html' %}
-                                
-{% endblock %}
+{% include 'components/cta.html' %} {% include 'components/chatbot.html' %} {%
+endblock %}

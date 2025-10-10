@@ -1,0 +1,82 @@
+---
+title: 'Review | Bespoke Web Design'
+description: 'Get superior results with our premium, 100% hand-coded websites. Improve your brand and convert visitors
+into leads. Starting at just $149/month, our custom sites offer unmatched quality and ongoing support. Explore our
+services today!'
+preloadImg: '/assets/images/bespokelogo1234.png'
+permalink: 'review/'
+image: /assets/images/ogimage2.png
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<!-- Google tag (gtag.js) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZMYC44ZRHF"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-ZMYC44ZRHF");
+</script>
+<link rel="stylesheet" href="/assets/css/about.css" />
+<link rel="stylesheet" href="/assets/css/review.css" />
+
+{% endblock %} {% block body %}
+
+
+
+<!-- ============================================ -->
+<!--                 Review                       -->
+<!-- ============================================ -->
+
+<section class="review-section">
+    <div class="review-container">
+        <h1 class="review-h1">Congratulations on Your New Website!</h1>
+        <p class="review-subheader">
+            Thank you for choosing Bespoke Web Design Edmonton! We appreciate your business and would love to hear your feedback.
+          <br />
+          <strong>Your feedback helps us serve you better.</strong><br />
+          <strong>Please take a moment to share your review and let us know how we did.</strong>
+        </p>
+    
+        <div class="review-stars" id="starContainer">
+          <span class="star" data-rating="1">★</span>
+          <span class="star" data-rating="2">★</span>
+          <span class="star" data-rating="3">★</span>
+          <span class="star" data-rating="4">★</span>
+          <!-- will add link later for writing of reviews -->
+          <a href="#" target="_blank" style="text-decoration: none; color: #000;">   
+            <span class="star" data-rating="5">★</span>
+          </a>
+        </div>
+    
+        <div id="goodFeedback" class="review-feedback-section">
+          <p>Thank you! We're thrilled you’re happy with our service. Please click below to leave us a Google review:</p>
+          <div class="review-buttons">
+            <a href="#" target="_blank">
+              <button class="review-button">Leave a Google Review</button>
+            </a>
+          </div>
+        </div>
+    
+        <div id="badFeedback" class="feedback-section">
+          <p>We’re sorry we didn’t meet your expectations. Please share your thoughts so we can improve our services.</p>
+          <textarea class="textarea" rows="4" placeholder="Tell us what happened..."></textarea>
+          <input type="text" placeholder="Your name (optional)" />
+          <input type="email" placeholder="Your email or phone (optional)" />
+          <button class="review-button" onclick="sendFeedback()">Submit Feedback</button>
+        </div>
+    
+        <div class="powered">
+          Powered by <a href="https://bespokewebdesign.ca/" target="_blank">Bespoke Web Design Edmonton</a>
+        </div>
+      </div>
+</section>
+
+<script src="/assets/js/review.js"></script>
+
+{% include 'components/chatbot.html' %} {% endblock %}

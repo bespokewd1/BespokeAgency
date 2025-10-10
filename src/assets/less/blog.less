@@ -2,6 +2,12 @@
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
+// to enable sticky position
+html:has(.blog-sidebar),
+body:has(.blog-sidebar) {
+  overflow: unset;
+}
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   .blog-container {
@@ -507,7 +513,7 @@
     // justify-content: center;
     // align-items: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
     width: 100%;
     gap: 3.125em;
   }
@@ -869,6 +875,9 @@
 @media only screen and (min-width: 64rem) {
   .blog-sidebar {
     max-width: 22.5em;
+    position: sticky;
+    top: 7rem;
+    align-self: flex-start;
   }
 }
 
@@ -1383,3 +1392,126 @@
   }
 }
 
+/* -------------------- 
+Pagination Styles 
+-------------------- */
+
+/* Pagination Styles */
+@primary-color: #007bff;
+@secondary-color: #6c757d;
+@light-color: #f8f9fa;
+@border-color: #dee2e6;
+@text-color: #212529;
+@disabled-color: #e9ecef;
+
+.pagination {
+  margin: 1rem 0;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: @text-color;
+    background-color: @light-color;
+    border: 1px solid @border-color;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: darken(@light-color, 5%);
+      border-color: darken(@border-color, 10%);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.prev {
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+
+    &.next {
+      svg {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+      color: @secondary-color;
+    }
+  }
+
+  &-numbers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  &-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    color: @text-color;
+    background-color: @light-color;
+    border: 1px solid @border-color;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: darken(@light-color, 5%);
+      border-color: darken(@border-color, 10%);
+    }
+
+    &.current {
+      color: white;
+      background-color: @primary-color;
+      border-color: @primary-color;
+      font-weight: 600;
+      cursor: default;
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .pagination {
+    &-container {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &-button,
+    &-numbers {
+      width: 100%;
+    }
+
+    &-button {
+      justify-content: center;
+    }
+
+    &-numbers {
+      justify-content: center;
+      margin: 0.5rem 0;
+    }
+  }
+}

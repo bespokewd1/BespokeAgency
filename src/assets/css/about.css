@@ -394,7 +394,6 @@
 /*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
-/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #sbs-1014 {
     padding: var(--sectionPadding);
@@ -427,8 +426,6 @@
     max-width: 40.625rem;
     margin: 0;
     color: var(--bodyTextColor);
-  }
-  #sbs-1014 .cs-text {
     margin-bottom: 1rem;
   }
   #sbs-1014 .cs-text:last-of-type {
@@ -449,6 +446,11 @@
     margin: 0 0 1rem;
     color: var(--bodyTextColorWhite);
     display: block;
+  }
+  #sbs-1014 .cs-button-solid {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    padding: 0 clamp(1.475rem, 5vw, 1.775rem);
+    white-space: nowrap;
   }
   #sbs-1014 .cs-name {
     font-size: 1rem;
@@ -514,6 +516,11 @@
     bottom: 0;
   }
 }
+@media only screen and (max-width: 375px) {
+  #sbs-1014 .cs-button-solid {
+    font-size: 0.75rem;
+  }
+}
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #sbs-1014 .cs-container {
@@ -529,8 +536,8 @@
     margin: 0;
   }
 }
-/* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  /* Dark Mode */
   body.dark-mode #sbs-1014 {
     background-color: rgba(0, 0, 0, 0.2);
   }

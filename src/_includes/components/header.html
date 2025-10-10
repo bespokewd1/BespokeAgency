@@ -133,7 +133,7 @@
                             {% endfor %}
 
                             {# Render the <button> with the active class, dropdown icon and child links #}
-                                <button class="cs-li-link cs-dropdown-button {{ activeClass }}" aria-expanded="false"
+                                <button style="background: transparent; border: none;" class="cs-li-link cs-dropdown-button {{ activeClass }}" aria-expanded="false"
                                     aria-controls="dropdown-{{ entry.key }}" aria-label="dropdown-{{ entry.key }}">
                                     {{ entry.key }}
                                     <img class="cs-drop-icon"
