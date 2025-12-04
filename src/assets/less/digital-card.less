@@ -1,0 +1,166 @@
+/* Import your core variables to ensure consistency */
+@import "root.less";
+@import "dark.less";
+
+/* DIGITAL CARD STYLES */
+/* This is a dedicated page style, detached from the main nav */
+
+body.digital-card-page {
+  background-color: var(--bodybg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.id-card-wrapper {
+  width: 100%;
+  max-width: 26rem; /* Mobile phone width sweet spot */
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  /* Center text specifically for the bio info */
+  text-align: center;
+}
+
+/* The Card Itself */
+.id-card {
+  background-color: #fff;
+  border-radius: var(--cardRounded, 24px);
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s;
+
+  /* Dark Mode Handling using your class structure */
+  body.dark-mode & {
+    background-color: var(--medium);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Profile Image */
+.id-profile-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem auto;
+  border: 4px solid var(--primary);
+  display: block;
+}
+
+/* Text Styles */
+.id-name {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--headerColor);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+
+  body.dark-mode & {
+    color: #fff;
+  }
+}
+
+.id-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.id-bio {
+  font-size: 1rem;
+  color: var(--bodyTextColor);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+
+  body.dark-mode & {
+    color: #eee;
+  }
+}
+
+/* Save Contact Button (The Hero Action) */
+.id-btn-save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  background-color: var(--primary);
+  color: #fff; /* Force white for contrast on primary */
+  padding: 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(69, 148, 242, 0.4);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(69, 148, 242, 0.6);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+}
+
+/* Social Links List */
+.id-social-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.id-social-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--headerColor);
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  body.dark-mode & {
+    background-color: var(--dark);
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: #ebebeb;
+    body.dark-mode & {
+      background-color: #1a2631;
+    }
+  }
+
+  img,
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    /* Simple filter to handle black icons in dark mode if using SVGs */
+    body.dark-mode & {
+      filter: invert(1);
+    }
+  }
+}

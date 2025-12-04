@@ -1,0 +1,27 @@
+{
+  "image": "/assets/images/profile/default-profile.webp",
+  "name": "Charles Magno",
+  "title": "CEO - Bespoke Agency",
+  "bio": "",
+  "phone": "+17802638028",
+  "email": "bespokewd1@gmail.com",
+  "website": "https://bespokewebdesign.ca",
+  "address": "Ellerslie RD,SW Edmonton,Alberta, Canada",
+  "socials": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=61561167136463",
+      "icon": "facebook"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/bespokewebdesign.ca/",
+      "icon": "instagram"
+    }
+  ]
+}

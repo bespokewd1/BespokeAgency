@@ -1,6 +1,6 @@
 backend:
-    name: git-gateway
-    branch: main
+  name: git-gateway
+  branch: main
 
 local_backend: true
 # change url to a link to the image you want to use, no file paths, must be a URL
@@ -10,23 +10,73 @@ media_folder: "src/assets/images/blog"
 public_folder: "/assets/images/blog"
 
 collections:
-    - name: "blog"
-      label: "Blog"
-      folder: "src/content/blog"
-      create: true
-      slug: "{{slug}}"
-      fields:
-          - { label: "Title", name: "title", widget: "string" }
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "URL Slug",
+          name: "url",
+          widget: "string",
+          hint: 'Specify where the page will be written to. If you use "Blog Post", the post will be accessible from "blog/blog-post"',
+        }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "digital_card"
+    label: "Digital ID Card"
+    media_folder: "src/assets/images/profile"
+    public_folder: "/assets/images/profile"
+    files:
+      - name: "profile"
+        label: "Profile Data"
+        file: "src/_data/digital_card.json"
+        fields:
+          - { label: "Profile Image", name: "image", widget: "image" }
+          - { label: "Full Name", name: "name", widget: "string" }
+          - { label: "Job Title", name: "title", widget: "string" }
+          - { label: "Short Bio", name: "bio", widget: "text" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Website URL", name: "website", widget: "string" }
           - {
-                label: "URL Slug",
-                name: "url",
-                widget: "string",
-                hint: 'Specify where the page will be written to. If you use "Blog Post", the post will be accessible from "blog/blog-post"',
+              label: "Address (Optional)",
+              name: "address",
+              widget: "string",
+              required: false,
             }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Author", name: "author", widget: "string" }
-          - { label: "Date", name: "date", widget: "datetime" }
-          - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-          - { label: "Featured Image", name: "image", widget: "image" }
-          - { label: "Image Caption", name: "imageAlt", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Social Links"
+            name: "socials"
+            widget: "list"
+            fields:
+              - {
+                  label: "Platform Name",
+                  name: "platform",
+                  widget: "string",
+                  hint: "e.g. LinkedIn",
+                }
+              - { label: "URL", name: "url", widget: "string" }
+              - {
+                  label: "Icon Name",
+                  name: "icon",
+                  widget: "select",
+                  options:
+                    [
+                      "linkedin",
+                      "instagram",
+                      "facebook",
+                      "twitter",
+                      "youtube",
+                      "github",
+                      "link",
+                    ],
+                  default: "link",
+                }
