@@ -11,19 +11,24 @@ title: "Digital ID Card"
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ digital_card.name }} - Digital Card</title>
 
+    <!-- Import styles -->
     <link rel="stylesheet" href="/assets/css/root.css" />
     <link rel="stylesheet" href="/assets/css/dark.css" />
     <link rel="stylesheet" href="/assets/css/digital-card.css" />
   </head>
   <body class="digital-card-page">
-    <!-- Dark Mode Toggle (Optional: Positioned Absolute Top Right) -->
-    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+    <!-- Optional: Dark Mode Toggle -->
+    <button
+      id="dark-mode-toggle"
+      aria-label="Toggle Dark Mode"
+      style="position: absolute; top: 1rem; right: 1rem"
+    >
       <svg
         class="cs-moon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 480 480"
-        width="20px"
-        height="20px"
+        width="24"
+        height="24"
       >
         <path
           d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"
@@ -34,8 +39,8 @@ title: "Digital ID Card"
         class="cs-sun"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        width="20px"
-        height="20px"
+        width="24"
+        height="24"
       >
         <g fill="none">
           <path
@@ -48,75 +53,167 @@ title: "Digital ID Card"
 
     <div class="id-card-wrapper">
       <main class="id-card">
-        <!-- Dynamic Data from CMS -->
-        <img
-          src="{{ digital_card.image }}"
-          alt="{{ digital_card.name }}"
-          class="id-profile-img"
-        />
+        <!-- === HEADER SECTION === -->
+        <header class="id-card-header">
+          <img
+            src="{{ digital_card.image }}"
+            alt="{{ digital_card.name }}"
+            class="id-profile-img"
+          />
+          <h1 class="id-name">{{ digital_card.name }}</h1>
+          <p class="id-title">{{ digital_card.title }}</p>
 
-        <h1 class="id-name">{{ digital_card.name }}</h1>
-        <p class="id-title">{{ digital_card.title }}</p>
-        <p class="id-bio">{{ digital_card.bio }}</p>
+          <!-- Animated Save Contact Button -->
+          <!-- <button id="save-contact-btn" class="id-btn-save"> -->
+          <button id="save-contact-btn" class="button-solid nav-button">
+            <!-- Helper span to hide the center of the conic gradient -->
+            <!-- <span class="btn-bg-hider"></span> -->
 
-        <!-- THE MAGIC ACTION -->
-        <button id="save-contact-btn" class="id-btn-save">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19 11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11C5 7.13401 8.13401 4 12 4C15.866 4 19 7.13401 19 11Z"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-            <path
-              d="M12 21V18M12 4V1M5 11H2M22 11H19"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-          Save Contact
-        </button>
+            <span class="link-text">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11C5 7.13401 8.13401 4 12 4C15.866 4 19 7.13401 19 11Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 21V18M12 4V1M5 11H2M22 11H19"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              Save Contact
+            </span>
+          </button>
+        </header>
 
-        <!-- Social Links -->
-        <div class="id-social-list">
-          <!-- Website Link (if exists) -->
-          {% if digital_card.website %}
-          <a
-            href="{{ digital_card.website }}"
-            target="_blank"
-            class="id-social-link"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-              />
-            </svg>
-            Website
-          </a>
-          {% endif %}
+        <!-- === TABS BUTTONS === -->
+        <div class="id-tabs-nav">
+          <button class="id-tab-btn active" onclick="openTab('about', this)">
+            About
+          </button>
+          <button class="id-tab-btn" onclick="openTab('contact', this)">
+            Contact
+          </button>
+        </div>
 
-          <!-- CMS Socials Loop -->
-          {% for item in digital_card.socials %}
-          <a href="{{ item.url }}" target="_blank" class="id-social-link">
-            <!-- Basic icon logic - normally you'd use an SVG sprite or include, using simplified placeholder here -->
-            <span>🔗</span>
-            {{ item.platform }}
-          </a>
-          {% endfor %}
+        <!-- === BODY CONTENT === -->
+        <div class="id-body">
+          <!-- Tab 1: ABOUT (Bio) -->
+          <div id="about" class="tab-content active">
+            <p class="bio-text">
+              {% if digital_card.bio %} {{ digital_card.bio }} {% else %}
+              Welcome to my digital card. I specialize in web design and
+              development. Check out the contact tab to connect with me! {%
+              endif %}
+            </p>
+            <!-- Optional Extra Details in About -->
+            <div
+              style="
+                margin-top: 1.5rem;
+                border-top: 1px solid #eee;
+                padding-top: 1rem;
+              "
+            >
+              <div
+                class="info-item"
+                style="background: transparent; padding-left: 0"
+              >
+                <span class="icon-box"
+                  ><img
+                    src="https://img.icons8.com/ios-filled/50/000000/map-pin.png"
+                    alt="loc"
+                /></span>
+                <span>{{ digital_card.address }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: CONTACT (Socials) -->
+          <div id="contact" class="tab-content">
+            <div class="info-grid">
+              <!-- Website -->
+              {% if digital_card.website %}
+              <a
+                href="{{ digital_card.website }}"
+                target="_blank"
+                class="info-item"
+              >
+                <span class="icon-box">
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/000000/globe-earth.png"
+                    alt="web"
+                  />
+                </span>
+                <span>Website</span>
+              </a>
+              {% endif %}
+
+              <!-- Socials Loop -->
+              {% for item in digital_card.socials %}
+              <a href="{{ item.url }}" target="_blank" class="info-item">
+                <span class="icon-box">
+                  <!-- Icon logic: attempting to match basic names, fallback to link icon -->
+                  {% if item.icon == 'linkedin' %}
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
+                    alt="linkedin"
+                  />
+                  {% elif item.icon == 'facebook' %}
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png"
+                    alt="facebook"
+                  />
+                  {% elif item.icon == 'instagram' %}
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png"
+                    alt="instagram"
+                  />
+                  {% else %}
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/000000/link.png"
+                    alt="link"
+                  />
+                  {% endif %}
+                </span>
+                <span>{{ item.platform }}</span>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </main>
     </div>
 
-    <!-- Dark Mode Script (Copy of your existing logic simplified for this page) -->
+    <!-- TABS LOGIC -->
+    <script>
+      function openTab(tabName, btnElement) {
+        // 1. Hide all tab contents
+        const contents = document.querySelectorAll(".tab-content");
+        contents.forEach((content) => content.classList.remove("active"));
+
+        // 2. Remove active class from all buttons
+        const buttons = document.querySelectorAll(".id-tab-btn");
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        // 3. Show specific tab content
+        document.getElementById(tabName).classList.add("active");
+
+        // 4. Add active class to clicked button
+        btnElement.classList.add("active");
+      }
+    </script>
+
+    <!-- DARK MODE LOGIC -->
     <script>
       const toggle = document.getElementById("dark-mode-toggle");
       const body = document.body;
 
-      // Check local storage
       if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
       }
@@ -130,24 +227,21 @@ title: "Digital ID Card"
       });
     </script>
 
-    <!-- vCARD GENERATION LOGIC -->
+    <!-- vCARD LOGIC (Same as before) -->
     <script>
       document
         .getElementById("save-contact-btn")
         .addEventListener("click", function () {
-          // 1. Grab data from Nunjucks variables rendered into JS strings
           const contact = {
             name: "{{ digital_card.name }}",
             phone: "{{ digital_card.phone }}",
             email: "{{ digital_card.email }}",
             title: "{{ digital_card.title }}",
-            org: "Company Name", // You can add this to CMS if needed
             url: "{{ digital_card.website }}",
             address: "{{ digital_card.address }}",
             note: "{{ digital_card.bio }}",
           };
 
-          // 2. Format as vCard 3.0
           const vCardData = [
             "BEGIN:VCARD",
             "VERSION:3.0",
@@ -162,24 +256,18 @@ title: "Digital ID Card"
             "END:VCARD",
           ].join("\n");
 
-          // 3. Create Blob and trigger download
           const blob = new Blob([vCardData], {
             type: "text/vcard;charset=utf-8",
           });
           const url = URL.createObjectURL(blob);
-
           const link = document.createElement("a");
           link.href = url;
-          // Sanitize filename
           const filename = contact.name
             .replace(/[^a-z0-9]/gi, "_")
             .toLowerCase();
           link.setAttribute("download", `${filename}.vcf`);
-
           document.body.appendChild(link);
           link.click();
-
-          // Cleanup
           document.body.removeChild(link);
           URL.revokeObjectURL(url);
         });
