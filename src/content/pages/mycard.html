@@ -296,6 +296,81 @@ title: "Digital ID Card"
       });
 
       // ===== VCARD SAVE =====
+      function generateVCard(contact) {
+        const vCardLines = [
+          "BEGIN:VCARD",
+          "VERSION:3.0",
+          `FN:${contact.fullName}`,
+          `N:${contact.lastName};${contact.firstName};;;`,
+          `ORG:${contact.company}`,
+          `TITLE:${contact.title}`,
+          `TEL;TYPE=WORK,VOICE:${contact.phone}`,
+          `EMAIL;TYPE=WORK,INTERNET:${contact.email}`,
+          `URL;TYPE=WORK:${contact.website}`,
+          `ADR;TYPE=WORK:;;${contact.address};;;;`,
+        ];
+
+        if (contact.note) {
+          vCardLines.push(`NOTE:${contact.note}`);
+        }
+
+        vCardLines.push("END:VCARD");
+        return vCardLines.join("\r\n");
+      }
+
+      async function handleSaveContact(contact) {
+        try {
+          const vCardData = generateVCard(contact);
+          const fileName = `${contact.fullName
+            .replace(/[^a-z0-9]/gi, "_")
+            .toLowerCase()}.vcf`;
+          const file = new File([vCardData], fileName, {
+            type: "text/vcard;charset=utf-8",
+          });
+
+          // Method 1: Web Share API (Mobile Native Experience)
+          if (
+            navigator.canShare &&
+            navigator.canShare({ files: [file] }) &&
+            isMobileDevice()
+          ) {
+            try {
+              await navigator.share({
+                files: [file],
+                title: `${contact.fullName} Contact`,
+                text: "Save this contact",
+              });
+              showToast("Shared successfully!");
+              return;
+            } catch (err) {
+              if (err.name !== "AbortError") {
+                console.error("Share failed:", err);
+                // Fallthrough to download method
+              } else {
+                return; // User cancelled share
+              }
+            }
+          }
+
+          // Method 2: Download Fallback (Desktop & Mobile Fallback)
+          const blob = new Blob([vCardData], {
+            type: "text/vcard;charset=utf-8",
+          });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+          showToast("Contact downloaded!", 3000);
+        } catch (error) {
+          console.error("Error saving contact:", error);
+          showToast("Could not save contact. Please try again.");
+        }
+      }
+
       document
         .getElementById("save-contact-btn")
         .addEventListener("click", function () {
@@ -312,68 +387,7 @@ title: "Digital ID Card"
             note: "{{ digital_card.bio }}",
           };
 
-          const vCardLines = [
-            "BEGIN:VCARD",
-            "VERSION:3.0",
-            `FN:${contact.fullName}`,
-            `N:${contact.lastName};${contact.firstName};;;`,
-            `ORG:${contact.company}`,
-            `TITLE:${contact.title}`,
-            `TEL;TYPE=WORK,VOICE:${contact.phone}`,
-            `EMAIL;TYPE=WORK,INTERNET:${contact.email}`,
-            `URL;TYPE=WORK:${contact.website}`,
-            `ADR;TYPE=WORK:;;${contact.address};;;;`,
-          ];
-
-          if (contact.note) {
-            vCardLines.push(`NOTE:${contact.note}`);
-          }
-
-          vCardLines.push("END:VCARD");
-
-          const vCardData = vCardLines.join("\r\n");
-
-          if (isMobileDevice()) {
-            // Mobile: Use data URI to trigger native contacts app
-            const encodedVCard = encodeURIComponent(vCardData);
-            const dataUri = `data:text/vcard;charset=utf-8,${encodedVCard}`;
-
-            // Create a hidden link and click it
-            const link = document.createElement("a");
-            link.href = dataUri;
-            link.download = `${contact.fullName
-              .replace(/[^a-z0-9]/gi, "_")
-              .toLowerCase()}.vcf`;
-
-            // For iOS, we need to use window.open for better compatibility
-            if (isIOS()) {
-              // iOS: Open in new window triggers "Add to Contacts"
-              window.open(dataUri, "_blank");
-              //              showToast("Opening contact...", 2000);
-            } else {
-              // Android: Click the link
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-              //              showToast("Contact ready to save!", 3000);
-            }
-          } else {
-            // Desktop: Use blob download
-            const blob = new Blob([vCardData], {
-              type: "text/vcard;charset=utf-8",
-            });
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = `${contact.fullName
-              .replace(/[^a-z0-9]/gi, "_")
-              .toLowerCase()}.vcf`;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
-            showToast("Contact downloaded!", 3000);
-          }
+          handleSaveContact(contact);
         });
     </script>
   </body>
