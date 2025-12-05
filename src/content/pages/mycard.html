@@ -75,44 +75,23 @@ title: "Digital ID Card"
             {{ digital_card.title }} - {{ digital_card.company }}
           </p>
 
-          <a
-            id="contact-link"
-            class="button-solid nav-button disabled-link"
-            href="javascript:void(0)"
-            target="_blank"
-          >
+          <button id="save-contact-btn" class="button-solid nav-button">
             <span class="link-text">
               <svg
-                id="btn-icon"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <!-- Loading Spinner (Hidden by default, shown while processing) -->
-                <g
-                  id="loading-spinner"
-                  style="display: none; transform-origin: center"
-                >
-                  <path
-                    d="M12 2V6M12 18V22M6 12H2M22 12H18M19.07 4.93L16.24 7.76M7.76 16.24L4.93 19.07M19.07 19.07L16.24 16.24M7.76 7.76L4.93 4.93"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                </g>
-                <!-- Save Icon (Default) -->
-                <g id="save-icon">
-                  <path
-                    d="M12 5V19M5 12H19"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                  />
-                </g>
+                <path
+                  d="M12 5V19M5 12H19"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
               </svg>
-              <span id="btn-text">Preparing Contact...</span>
+              Save Contact
             </span>
-          </a>
+          </button>
         </header>
 
         <!-- Tabs Navigation -->
@@ -244,21 +223,6 @@ title: "Digital ID Card"
         }, duration);
       }
 
-      // ===== DEVICE DETECTION =====
-      function isMobileDevice() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        );
-      }
-
-      function isIOS() {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent);
-      }
-
-      function isAndroid() {
-        return /Android/i.test(navigator.userAgent);
-      }
-
       // ===== TAB SWITCHING =====
       const tabsContainer = document.querySelector(".id-tabs-container");
       const tabButtons = document.querySelectorAll(".id-tab-btn");
@@ -316,90 +280,92 @@ title: "Digital ID Card"
         );
       });
 
-      // ===== VCARD SAVE =====
-      document.addEventListener("DOMContentLoaded", function () {
-        // 1. Gather Data
-        const contact = {
-          firstName: "{{ digital_card.name }}".split(" ")[0],
-          lastName: "{{ digital_card.name }}".split(" ").slice(1).join(" "),
-          fullName: "{{ digital_card.name }}",
-          phone: "{{ digital_card.phone }}",
-          email: "{{ digital_card.email }}",
-          title: "{{ digital_card.title }}",
-          company: "{{ digital_card.company }}",
-          website: "{{ digital_card.website }}",
-          address: "{{ digital_card.address }}",
-          note: "{{ digital_card.bio }}",
-        };
+      // ===== VCARD DOWNLOAD HELPER =====
+      function downloadVCard(blob, fileName) {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
 
-        const filename = `${contact.fullName
-          .replace(/[^a-z0-9]/gi, "_")
-          .toLowerCase()}.vcf`;
+      // ===== VCARD SAVE WITH WEB SHARE API =====
+      document
+        .getElementById("save-contact-btn")
+        .addEventListener("click", async function () {
+          const contact = {
+            firstName: "{{ digital_card.name }}".split(" ")[0],
+            lastName: "{{ digital_card.name }}".split(" ").slice(1).join(" "),
+            fullName: "{{ digital_card.name }}",
+            phone: "{{ digital_card.phone }}",
+            email: "{{ digital_card.email }}",
+            title: "{{ digital_card.title }}",
+            company: "{{ digital_card.company }}",
+            website: "{{ digital_card.website }}",
+            address: "{{ digital_card.address }}",
+            note: "{{ digital_card.bio }}",
+          };
 
-        // 2. Build vCard String
-        const vCardLines = [
-          "BEGIN:VCARD",
-          "VERSION:3.0",
-          `FN:${contact.fullName}`,
-          `N:${contact.lastName};${contact.firstName};;;`,
-          `ORG:${contact.company}`,
-          `TITLE:${contact.title}`,
-          `TEL;TYPE=WORK,VOICE:${contact.phone}`,
-          `EMAIL;TYPE=WORK,INTERNET:${contact.email}`,
-          `URL;TYPE=WORK:${contact.website}`,
-          `ADR;TYPE=WORK:;;${contact.address};;;;`,
-        ];
-        if (contact.note) vCardLines.push(`NOTE:${contact.note}`);
-        vCardLines.push("END:VCARD");
+          // Build vCard string
+          const vCardLines = [
+            "BEGIN:VCARD",
+            "VERSION:3.0",
+            `FN:${contact.fullName}`,
+            `N:${contact.lastName};${contact.firstName};;;`,
+            `ORG:${contact.company}`,
+            `TITLE:${contact.title}`,
+            `TEL;TYPE=CELL:${contact.phone}`,
+            `EMAIL;TYPE=WORK:${contact.email}`,
+            `URL:${contact.website}`,
+            `ADR;TYPE=WORK:;;${contact.address};;;;`,
+          ];
 
-        const vCardData = vCardLines.join("\r\n");
-
-        // 3. Select Elements
-        const link = document.getElementById("contact-link");
-        const text = document.getElementById("btn-text");
-        const icon = document.getElementById("save-icon");
-        const spinner = document.getElementById("loading-spinner");
-
-        // Show "Processing" state (Optional: artificially delay slightly so user sees it happened)
-        icon.style.display = "none";
-        spinner.style.display = "block";
-
-        setTimeout(() => {
-          // 4. Create File URL
-          // STRATEGY: Mobile prefers Data URI for direct "opening". Desktop prefers Blob.
-          const isMobile =
-            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-              navigator.userAgent
-            );
-
-          if (isMobile) {
-            // Mobile: Data URI often bypasses download managers and opens directly
-            const encodedData = encodeURIComponent(vCardData);
-            link.href = `data:text/vcard;charset=utf-8,${encodedData}`;
-          } else {
-            // Desktop: Blob is cleaner
-            const blob = new Blob([vCardData], {
-              type: "text/vcard;charset=utf-8",
-            });
-            link.href = URL.createObjectURL(blob);
+          if (contact.note) {
+            vCardLines.push(`NOTE:${contact.note}`);
           }
 
-          // 5. Update Link Attributes
-          link.download = filename; // Tells browser to download
-          // target="_blank" is already in HTML - helps mobile open in new "context"
+          vCardLines.push("END:VCARD");
+          const vCardData = vCardLines.join("\n");
 
-          // 6. Enable the Link
-          link.classList.remove("disabled-link");
-          text.textContent = "Save Contact";
-          spinner.style.display = "none";
-          icon.style.display = "block";
+          // Create blob and file
+          const blob = new Blob([vCardData], { type: "text/vcard" });
+          const fileName = `${contact.fullName
+            .replace(/[^a-z0-9]/gi, "_")
+            .toLowerCase()}.vcf`;
+          const file = new File([blob], fileName, { type: "text/vcard" });
 
-          // Optional: Add a click listener just for the Toast
-          link.addEventListener("click", () => {
-            showToast("Contact file ready!");
-          });
-        }, 800); // 800ms delay to simulate "processing" visual
-      });
+          // Check if Web Share API with files is supported
+          const canShareFiles =
+            navigator.canShare && navigator.canShare({ files: [file] });
+
+          if (navigator.share && canShareFiles) {
+            // Use Web Share API (works on iOS Safari 15+ & Android Chrome 93+)
+            try {
+              await navigator.share({
+                title: `${contact.fullName} - Contact`,
+                text: `Save ${contact.fullName}'s contact information`,
+                files: [file],
+              });
+              showToast("Contact shared!", 3000);
+            } catch (err) {
+              // User cancelled sharing or share failed
+              if (err.name !== "AbortError") {
+                console.error("Share failed:", err);
+                // Fallback to download
+                downloadVCard(blob, fileName);
+                showToast("Contact downloaded!", 3000);
+              }
+              // If AbortError, user just cancelled - do nothing
+            }
+          } else {
+            // Fallback: Direct download for desktop & unsupported browsers
+            downloadVCard(blob, fileName);
+            showToast("Contact downloaded!", 3000);
+          }
+        });
     </script>
   </body>
 </html>
