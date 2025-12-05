@@ -10,19 +10,17 @@ title: "Digital ID Card"
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ digital_card.name }} - Digital Card</title>
-
-    <!-- Import styles -->
-    <link rel="stylesheet" href="/assets/css/root.css" />
-    <link rel="stylesheet" href="/assets/css/dark.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/css/digital-card.css" />
   </head>
   <body class="digital-card-page">
-    <!-- Optional: Dark Mode Toggle -->
-    <button
-      id="dark-mode-toggle"
-      aria-label="Toggle Dark Mode"
-      style="position: absolute; top: 1rem; right: 1rem"
-    >
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
       <svg
         class="cs-moon"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +30,6 @@ title: "Digital ID Card"
       >
         <path
           d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"
-          fill="#000"
         />
       </svg>
       <svg
@@ -42,10 +39,9 @@ title: "Digital ID Card"
         width="24"
         height="24"
       >
-        <g fill="none">
+        <g>
           <path
             d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
-            fill="#000"
           />
         </g>
       </svg>
@@ -53,7 +49,7 @@ title: "Digital ID Card"
 
     <div class="id-card-wrapper">
       <main class="id-card">
-        <!-- === HEADER SECTION === -->
+        <!-- Header -->
         <header class="id-card-header">
           <img
             src="{{ digital_card.image }}"
@@ -61,14 +57,11 @@ title: "Digital ID Card"
             class="id-profile-img"
           />
           <h1 class="id-name">{{ digital_card.name }}</h1>
-          <p class="id-title">{{ digital_card.title }}</p>
+          <p class="id-title">
+            {{ digital_card.title }} - {{ digital_card.company }}
+          </p>
 
-          <!-- Animated Save Contact Button -->
-          <!-- <button id="save-contact-btn" class="id-btn-save"> -->
           <button id="save-contact-btn" class="button-solid nav-button">
-            <!-- Helper span to hide the center of the conic gradient -->
-            <!-- <span class="btn-bg-hider"></span> -->
-
             <span class="link-text">
               <svg
                 viewBox="0 0 24 24"
@@ -76,14 +69,9 @@ title: "Digital ID Card"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19 11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11C5 7.13401 8.13401 4 12 4C15.866 4 19 7.13401 19 11Z"
+                  d="M12 5V19M5 12H19"
                   stroke="currentColor"
-                  stroke-width="2"
-                />
-                <path
-                  d="M12 21V18M12 4V1M5 11H2M22 11H19"
-                  stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="2.5"
                   stroke-linecap="round"
                 />
               </svg>
@@ -92,19 +80,26 @@ title: "Digital ID Card"
           </button>
         </header>
 
-        <!-- === TABS BUTTONS === -->
+        <!-- Tabs Navigation -->
         <div class="id-tabs-nav">
-          <button class="id-tab-btn active" onclick="openTab('about', this)">
-            About
-          </button>
-          <button class="id-tab-btn" onclick="openTab('contact', this)">
-            Contact
-          </button>
+          <div class="id-tabs-container" data-active="about">
+            <div class="id-tab-indicator"></div>
+            <button
+              class="id-tab-btn active"
+              data-tab="about"
+              aria-selected="true"
+            >
+              About
+            </button>
+            <button class="id-tab-btn" data-tab="contact" aria-selected="false">
+              Contact
+            </button>
+          </div>
         </div>
 
-        <!-- === BODY CONTENT === -->
+        <!-- Body Content -->
         <div class="id-body">
-          <!-- Tab 1: ABOUT (Bio) -->
+          <!-- About Tab -->
           <div id="about" class="tab-content active">
             <p class="bio-text">
               {% if digital_card.bio %} {{ digital_card.bio }} {% else %}
@@ -112,32 +107,27 @@ title: "Digital ID Card"
               development. Check out the contact tab to connect with me! {%
               endif %}
             </p>
-            <!-- Optional Extra Details in About -->
-            <div
-              style="
-                margin-top: 1.5rem;
-                border-top: 1px solid #eee;
-                padding-top: 1rem;
-              "
+            <div class="info-divider"></div>
+            <a
+              class="info-item location-item"
+              href="{{ digital_card.mapLink }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Location"
             >
-              <div
-                class="info-item"
-                style="background: transparent; padding-left: 0"
-              >
-                <span class="icon-box"
-                  ><img
-                    src="https://img.icons8.com/ios-filled/50/000000/map-pin.png"
-                    alt="loc"
-                /></span>
-                <span>{{ digital_card.address }}</span>
-              </div>
-            </div>
+              <span class="icon-box">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/000000/marker.png"
+                  alt="location"
+                />
+              </span>
+              <span>{{ digital_card.address }}</span>
+            </a>
           </div>
 
-          <!-- Tab 2: CONTACT (Socials) -->
+          <!-- Contact Tab -->
           <div id="contact" class="tab-content">
             <div class="info-grid">
-              <!-- Website -->
               {% if digital_card.website %}
               <a
                 href="{{ digital_card.website }}"
@@ -146,19 +136,35 @@ title: "Digital ID Card"
               >
                 <span class="icon-box">
                   <img
-                    src="https://img.icons8.com/ios-filled/50/000000/globe-earth.png"
-                    alt="web"
+                    src="https://img.icons8.com/ios-filled/50/000000/globe.png"
+                    alt="website"
                   />
                 </span>
                 <span>Website</span>
               </a>
-              {% endif %}
-
-              <!-- Socials Loop -->
-              {% for item in digital_card.socials %}
+              {% endif %} {% if digital_card.email %}
+              <a href="mailto:{{ digital_card.email }}" class="info-item">
+                <span class="icon-box">
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/000000/email.png"
+                    alt="email"
+                  />
+                </span>
+                <span>{{ digital_card.email }}</span>
+              </a>
+              {% endif %} {% if digital_card.phone %}
+              <a href="tel:{{ digital_card.phone }}" class="info-item">
+                <span class="icon-box">
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/000000/phone.png"
+                    alt="phone"
+                  />
+                </span>
+                <span>{{ digital_card.phone }}</span>
+              </a>
+              {% endif %} {% for item in digital_card.socials %}
               <a href="{{ item.url }}" target="_blank" class="info-item">
                 <span class="icon-box">
-                  <!-- Icon logic: attempting to match basic names, fallback to link icon -->
                   {% if item.icon == 'linkedin' %}
                   <img
                     src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
@@ -190,31 +196,57 @@ title: "Digital ID Card"
       </main>
     </div>
 
-    <!-- TABS LOGIC -->
     <script>
-      function openTab(tabName, btnElement) {
-        // 1. Hide all tab contents
-        const contents = document.querySelectorAll(".tab-content");
-        contents.forEach((content) => content.classList.remove("active"));
+      // Tab Switching with Animation
+      const tabsContainer = document.querySelector(".id-tabs-container");
+      const tabButtons = document.querySelectorAll(".id-tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
+      let currentTab = "about";
 
-        // 2. Remove active class from all buttons
-        const buttons = document.querySelectorAll(".id-tab-btn");
-        buttons.forEach((btn) => btn.classList.remove("active"));
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const targetTab = btn.dataset.tab;
+          if (targetTab === currentTab) return;
 
-        // 3. Show specific tab content
-        document.getElementById(tabName).classList.add("active");
+          const direction = targetTab === "contact" ? "right" : "left";
 
-        // 4. Add active class to clicked button
-        btnElement.classList.add("active");
-      }
-    </script>
+          // Update active states
+          tabButtons.forEach((b) => {
+            b.classList.remove("active");
+            b.setAttribute("aria-selected", "false");
+          });
+          btn.classList.add("active");
+          btn.setAttribute("aria-selected", "true");
 
-    <!-- DARK MODE LOGIC -->
-    <script>
+          // Move indicator
+          tabsContainer.dataset.active = targetTab;
+
+          // Animate content
+          tabContents.forEach((content) => {
+            content.classList.remove("active", "slide-left", "slide-right");
+          });
+
+          const targetContent = document.getElementById(targetTab);
+          targetContent.classList.add(
+            "active",
+            direction === "right" ? "slide-right" : "slide-left"
+          );
+
+          currentTab = targetTab;
+        });
+      });
+
+      // Dark Mode Toggle
       const toggle = document.getElementById("dark-mode-toggle");
       const body = document.body;
 
-      if (localStorage.getItem("theme") === "dark") {
+      // Check saved preference or system preference
+      const savedTheme = localStorage.getItem("theme");
+      const systemPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+
+      if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
         body.classList.add("dark-mode");
       }
 
@@ -225,47 +257,64 @@ title: "Digital ID Card"
           body.classList.contains("dark-mode") ? "dark" : "light"
         );
       });
-    </script>
 
-    <!-- vCARD LOGIC (Same as before) -->
-    <script>
+      // vCard Download
       document
         .getElementById("save-contact-btn")
         .addEventListener("click", function () {
           const contact = {
-            name: "{{ digital_card.name }}",
+            firstName: "{{ digital_card.name }}".split(" ")[0],
+            lastName: "{{ digital_card.name }}".split(" ").slice(1).join(" "),
+            fullName: "{{ digital_card.name }}",
             phone: "{{ digital_card.phone }}",
             email: "{{ digital_card.email }}",
             title: "{{ digital_card.title }}",
-            url: "{{ digital_card.website }}",
+            company: "{{ digital_card.company }}",
+            website: "{{ digital_card.website }}",
             address: "{{ digital_card.address }}",
             note: "{{ digital_card.bio }}",
           };
 
+          // vCard 3.0 format with proper field placement
           const vCardData = [
             "BEGIN:VCARD",
             "VERSION:3.0",
-            `FN:${contact.name}`,
-            `N:;${contact.name};;;`,
-            `TITLE:${contact.title}`,
-            `TEL;TYPE=CELL:${contact.phone}`,
-            `EMAIL;TYPE=WORK:${contact.email}`,
-            `URL:${contact.url}`,
-            `ADR;TYPE=WORK:;;${contact.address};;;;`,
-            `NOTE:${contact.note}`,
-            "END:VCARD",
-          ].join("\n");
+            // === NAME FIELDS ===
+            `FN:${contact.fullName}`,
+            `N:${contact.lastName};${contact.firstName};;;`,
 
+            // === ORGANIZATION & TITLE ===
+            `ORG:${contact.company}`,
+            `TITLE:${contact.title}`,
+
+            // === CONTACT METHODS ===
+            `TEL;TYPE=WORK,VOICE:${contact.phone}`,
+            `EMAIL;TYPE=WORK,INTERNET:${contact.email}`,
+            `URL;TYPE=WORK:${contact.website}`,
+
+            // === ADDRESS ===
+            // Format: PO Box;Extended;Street;City;State;Postal;Country
+            `ADR;TYPE=WORK:;;${contact.address};;;;`,
+
+            // === ADDITIONAL ===
+            contact.note ? `NOTE:${contact.note}` : "",
+
+            "END:VCARD",
+          ]
+            .filter((line) => line !== "") // Remove empty lines
+            .join("\r\n"); // vCard uses CRLF line endings
+
+          // Create and download the file
           const blob = new Blob([vCardData], {
             type: "text/vcard;charset=utf-8",
           });
           const url = URL.createObjectURL(blob);
           const link = document.createElement("a");
           link.href = url;
-          const filename = contact.name
-            .replace(/[^a-z0-9]/gi, "_")
-            .toLowerCase();
-          link.setAttribute("download", `${filename}.vcf`);
+          link.setAttribute(
+            "download",
+            `${contact.fullName.replace(/[^a-z0-9]/gi, "_").toLowerCase()}.vcf`
+          );
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
