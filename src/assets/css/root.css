@@ -3932,6 +3932,7 @@ body.dark-mode #cta-403.cs-image-only .cs-text {
     color: var(--headerColor);
     position: relative;
     text-wrap: balance;
+    margin-bottom: 1rem;
   }
   #hero-358 .cs-accent {
     color: var(--primaryLight);
