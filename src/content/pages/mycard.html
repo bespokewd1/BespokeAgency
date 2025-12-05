@@ -349,13 +349,13 @@ title: "Digital ID Card"
             if (isIOS()) {
               // iOS: Open in new window triggers "Add to Contacts"
               window.open(dataUri, "_blank");
-              showToast("Opening contact...", 2000);
+              //              showToast("Opening contact...", 2000);
             } else {
               // Android: Click the link
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
-              showToast("Contact ready to save!", 3000);
+              //              showToast("Contact ready to save!", 3000);
             }
           } else {
             // Desktop: Use blob download
