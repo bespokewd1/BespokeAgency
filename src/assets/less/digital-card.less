@@ -307,6 +307,13 @@ body.digital-card-page {
   border: none;
   cursor: pointer;
 
+  &.disabled-link {
+    pointer-events: none; /* Prevents clicking */
+    opacity: 0.7;
+    filter: grayscale(0.5);
+    cursor: not-allowed;
+  }
+
   &:after,
   &:before {
     content: "";
