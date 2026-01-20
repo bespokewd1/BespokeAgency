@@ -1,30 +1,35 @@
 ---
 // Utils
-import { getImage } from "astro:assets";
+import { getImage } from 'astro:assets';
 
 // Components
-import BaseLayout from "@layouts/BaseLayout.astro";
-import Hero from "@components/Hero/Hero.astro";
-import Services from "@components/Services/Services.astro";
-import SideBySide from "@components/SideBySide/SideBySide.astro";
-import SideBySideReverse from "@components/SideBySideReverse/SideBySideReverse.astro";
-import Gallery from "@components/Gallery/Gallery.astro";
-import Testimonials from "@components/Testimonials/Testimonials.astro";
-import FAQ from "@components/FAQ/FAQ.astro";
-import CTASimple from "@components/CTA/CTASimple.astro";
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero/Hero.astro';
+import Services from '@components/Services/Services.astro';
+import SideBySide from '@components/SideBySide/SideBySide.astro';
+import SideBySideReverse from '@components/SideBySideReverse/SideBySideReverse.astro';
+import Gallery from '@components/Gallery/Gallery.astro';
+import Testimonials from '@components/Testimonials/Testimonials.astro';
+import FAQ from '@components/FAQ/FAQ.astro';
+import CTASimple from '@components/CTA/CTASimple.astro';
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Banner (for rendering)
-import heroImage from "@assets/images/hero/hero.jpg";
-const optimizedHeroImage = await getImage({ src: heroImage, format: "webp" });
+// import heroImage from "@assets/images/hero/hero.jpg";
+import heroImage from '@assets/images/section-divider/layered-waves-haikei.png';
+const optimizedHeroImage = await getImage({ src: heroImage, format: 'webp' });
 ---
 
-<BaseLayout title="Pixel Perfect Websites" description="Meta description for the page" heroImage={optimizedHeroImage}>
-	<Hero image={optimizedHeroImage} />
-	<Services />
-	<SideBySide />
-	<SideBySideReverse />
-	<Gallery />
-	<Testimonials />
-	<FAQ />
-	<CTASimple />
+<BaseLayout
+  title="Pixel Perfect Websites"
+  description="Meta description for the page"
+  heroImage={optimizedHeroImage}
+>
+  <Hero image={optimizedHeroImage} />
+  <Services />
+  <SideBySide />
+  <SideBySideReverse />
+  <Gallery />
+  <Testimonials />
+  <FAQ />
+  <CTASimple />
 </BaseLayout>

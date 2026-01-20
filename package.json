@@ -13,12 +13,18 @@
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^3.6.0",
+		"@tailwindcss/vite": "^4.1.18",
+		"@toolwind/corner-shape": "^0.0.8-3",
 		"astro": "^5.16.3",
 		"astro-icon": "^1.1.5",
 		"autoprefixer": "^10.4.22",
-		"less": "^4.4.2"
+		"less": "^4.4.2",
+		"tailwindcss": "^4.1.18"
 	},
 	"devDependencies": {
-		"netlify-plugin-cache": "^1.0.3"
+		"netlify-plugin-cache": "^1.0.3",
+		"prettier": "3.8.0",
+		"prettier-plugin-astro": "0.14.1",
+		"prettier-plugin-tailwindcss": "0.7.2"
 	}
 }

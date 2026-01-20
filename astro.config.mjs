@@ -2,17 +2,26 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineConfig({
-	site: "https://www.yourwebsite.com", // update me!
-	integrations: [
-		icon(),
-		sitemap({
-			filter: (page) => !page.includes("/admin"),
-			changefreq: "weekly",
-			priority: 0.7,
-		}),
+  // update me!
+  site: "https://www.yourwebsite.com",
+
+  integrations: [
+      icon(),
+      sitemap({
+          filter: (page) => !page.includes("/admin"),
+          changefreq: "weekly",
+          priority: 0.7,
+      }),
 	],
-	image: {
-		layout: "constrained",
+
+  image: {
+      layout: "constrained",
 	},
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

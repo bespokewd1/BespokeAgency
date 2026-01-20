@@ -1,0 +1,39 @@
+@import 'tailwindcss' important;
+@plugin '@toolwind/corner-shape';
+
+@theme {
+  --color-body-light: var(--bodyTextColorWhite);
+  --color-body-dark: var(--bodyTextColor);
+  --color-primary: var(--primary);
+  --color-header: var(--headerColor);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      oklch(0.65 0.02 248.57 / 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      oklch(0.65 0.02 248.57 / 0.08) 1px,
+      transparent 1px
+    );
+  background-size: 50px 50px;
+  position: relative;
+}
+
+.bg-grid::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    transparent 40%,
+    var(--dc-bg) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
