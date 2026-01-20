@@ -1,7 +1,16 @@
+# Netlify configuration
+
 [build]
-  publish = "public/"
   command = "npm run build"
+  publish = "dist"
 
 [[plugins]]
-  # Installs the Lighthouse Build Plugin for all deploy contexts
-  package = "@netlify/plugin-lighthouse"
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    # Cache Astro's build artifacts for faster rebuilds
+    paths = [
+      ".astro",              # Content Collections cache and build artifacts
+      "node_modules/.astro", # Image optimization cache (most critical)
+      "node_modules/.cache"  # Generic build tool caches
+    ]
+

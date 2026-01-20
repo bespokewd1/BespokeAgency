@@ -1,6 +1,5 @@
 ---
 title: Google Business Profile Checklist for 2025 – Get Found on Google!
-url: Google Business Profile Checklist for 2025
 description: Are you looking to rank higher on Google Search and Google Maps?
   Optimizing your Google Business Profile (GBP) is one of the easiest and most
   effective ways to boost your online visibility and attract more customers. A
@@ -11,8 +10,10 @@ date: 2025-03-26T17:25:00.000Z
 tags:
   - post
   - featured
-image: /assets/images/blog/whatsapp-image-2025-03-26-at-07.37.35.jpeg
+image: "@assets/images/blog/whatsapp-image-2025-03-26-at-07.37.35.jpeg"
+# image: "@assets/images/blog/placeholder.jpg"
 imageAlt: Google Business Profile
+isFeatured: true
 ---
 Are you looking to rank higher on Google Search and Google Maps? Optimizing your **Google Business Profile (GBP)** is one of the easiest and most effective ways to boost your online visibility and attract more customers. A well-optimized GBP can help your business appear in local searches, improve credibility, and drive more traffic to your website.
 
