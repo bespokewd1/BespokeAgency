@@ -8,7 +8,8 @@
 import { Icon } from 'astro-icon/components';
 import { Picture, Image } from 'astro:assets';
 import type { GetImageResult } from 'astro';
-// import LayaredWaves from '@components/SectionDivider/layered-waves-haikei.svg';
+import LayeredWaves from '@components/SectionDivider/layered-waves-haikei.astro';
+import CTALink from '@components/CTA/CTALink.astro';
 
 interface Props {
   image: GetImageResult; // pre-optimized image from getImage()
@@ -18,63 +19,44 @@ const { image } = Astro.props as Props;
 ---
 
 <section id="hero" class="relative">
-  <div class="cs-container">
-    <div class="cs-flex-group">
-      <span class="cs-topper text-primary">Intermediate Kit</span>
-      <h1 class="cs-title text-header">
-        Intermediate Astro v5 <br /> Decap CMS
+  <div class="cs-container flex max-w-360 before:hidden after:hidden">
+    <div class="cs-flex-group lg:justify-start">
+      <span class="cs-topper text-primary text-3xl lg:text-left"
+        >One Stop Web Solutions</span
+      >
+      <h1 class="cs-title text-header text-7xl lg:text-left">
+        Professional Web Design & Management
       </h1>
-      <p class="cs-text text-body-dark">
-        This intermediate kit includes a pre-configured Astro environment, which
-        allows for repeated components, centralized data and greater room to
-        scale as your clients grow. Decap CMS has been integrated to run a blog.
+      <p
+        class="cs-text text-body-dark text-[clamp(1.125rem,.5vw+1rem,1.25rem)] lg:text-left"
+      >
+        Professionally developed, custom-designed, fully managed websites with
+        unlimited edits, transparent pricing, 24/7 support, and a complete
+        commitment to your business's success.
       </p>
-      <a
-        href="/about/"
-        class:list={[
-          'inline-flex items-center gap-2 border border-neutral-50',
-          'corner-squircle cs-button-solid rounded-4xl supports-[corner-shape:squircle]:rounded-2xl',
-          'before:corner-squircle before:rounded-[inherit]',
-          'bg-linear-to-b from-blue-400 via-blue-500 to-blue-700',
-          'shadow-[0_2px_8px_rgba(0,0,0,0.4),0_1px_2px_rgba(0,0,0,0.3),inset_0_2px_0_rgba(255,255,255,0.5),inset_0_-2px_0_rgba(255,255,255,0.3),inset_0_-8px_16px_rgba(255,255,255,0.2),inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_1px_4px_rgba(0,0,0,0.1)]',
-        ]}
-      >
-        Explore More
-      </a>
+      <div class="inline-flex items-center gap-4">
+        <CTALink />
 
-      <!-- class="cs-button-transparent" -->
-
-      <a
-        href="/contact/"
-        class:list={[
-          'inline-flex items-center gap-2 border border-neutral-50',
-          'corner-squircle cs-button-solid rounded-4xl supports-[corner-shape:squircle]:rounded-2xl',
-          'before:corner-squircle before:rounded-[inherit]',
-          'bg-linear-to-b from-[#E8E8E8] via-[#C0C0C0] to-[#A0A0A0]',
-          'shadow-[0_2px_8px_rgba(0,0,0,0.4),0_1px_2px_rgba(0,0,0,0.3),inset_0_2px_0_rgba(255,255,255,0.5),inset_0_-2px_0_rgba(255,255,255,0.3),inset_0_-8px_16px_rgba(255,255,255,0.2),inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_1px_4px_rgba(0,0,0,0.1)]',
-        ]}
-        style="background-color: transparent;"
-      >
-        <Icon name="play" class="cs-img" />
-        Get in Touch
-      </a>
+        <CTALink variants={'light'} href="/contact">
+          <Icon name="play" class="cs-img" />
+          Get in Touch
+        </CTALink>
+      </div>
     </div>
+
+    <Picture
+      src={image.src}
+      alt="new home"
+      width={image.attributes.width}
+      height={image.attributes.height}
+      formats={['avif', 'webp']}
+      priority
+      class={'max-w-190'}
+      pictureAttributes={{ class: '' }}
+    />
   </div>
 
-  <!-- Using the preloaded image from the props -->
-  <!-- <Picture src={image.src} alt="new home" width={image.attributes.width} height={image.attributes.height} formats={["avif", "webp"]} priority pictureAttributes={{ class: "cs-picture" }} /> -->
-  <Picture
-    src={image.src}
-    alt="new home"
-    width={image.attributes.width}
-    height={image.attributes.height}
-    formats={['avif', 'webp']}
-    priority
-    pictureAttributes={{ class: 'cs-picture' }}
-  />
-
-  <!-- <div class="absolute right-0 bottom-0 left-0 w-full"> -->
-  <!-- </div> -->
+  <LayeredWaves class="pointer-events-none absolute bottom-0 left-0 -z-1" />
 </section>
 
 <style lang="less">
@@ -106,7 +88,7 @@ const { image } = Astro.props as Props;
         left: 0;
         z-index: -2;
 
-        /* Black Color Overlay 
+        /* Black Color Overlay
         &:before {
           content: '';
           width: 100%;
@@ -140,6 +122,7 @@ const { image } = Astro.props as Props;
         /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
         /* 144px - 280px - leaving extra space for the navigation */
         /* changes on tablet */
+        // padding: clamp(9em, 25.95vw, 17.5em) 0;
         padding: clamp(9em, 25.95vw, 17.5em) 0;
         position: relative;
 
@@ -267,7 +250,7 @@ const { image } = Astro.props as Props;
       padding: 0 clamp(2em, 5vw, 2.5em);
 
       .cs-container {
-        padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
+        padding: clamp(7em, 27.95vw, 13.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
         &:after {
           /* Right Line */
           content: '';

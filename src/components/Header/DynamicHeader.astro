@@ -23,6 +23,7 @@ import imgLogo from '@assets/images/bespokelogo1234.png';
 
 // Data
 import navData from '@data/navData.json';
+import CTALink from '@components/CTA/CTALink.astro';
 ---
 
 <header id="cs-navigation" class="bg-transparent shadow-none lg:mt-2 lg:py-2">
@@ -32,11 +33,11 @@ import navData from '@data/navData.json';
       href="/"
       class:list={[
         'cs-logo',
-        'lg:corner-squircle lg:relative lg:rounded-full lg:p-px',
-        'lg:shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),inset_0_-1px_2px_rgba(255,255,255,0.05)]',
-        'before:lg:corner-squircle before:lg:absolute before:lg:-inset-0.75 before:lg:-z-1 before:lg:rounded-[inherit]',
-        'before:lg:shadow-[0_8px_32px_rgba(0,0,0,0.6),0_2px_8px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_2px_rgba(0,0,0,0.5)]',
-        'before:lg:bg-linear-to-b before:lg:from-neutral-700 before:lg:to-neutral-800',
+        'corner-squircle relative rounded-full p-px',
+        'shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),inset_0_-1px_2px_rgba(255,255,255,0.05)]',
+        'before:corner-squircle before:absolute before:-inset-0.75 before:-z-1 before:rounded-[inherit]',
+        'before:shadow-[0_8px_32px_rgba(0,0,0,0.6),0_2px_8px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_2px_rgba(0,0,0,0.5)]',
+        'before:bg-linear-to-b before:from-neutral-700 before:to-neutral-800',
       ]}
       aria-label="Return to [Company Name] Home page"
     >
@@ -46,8 +47,8 @@ import navData from '@data/navData.json';
         loading={'eager'}
         fetchpriority={'high'}
         class:list={[
-          'lg:corner-squircle lg:rounded-full lg:bg-linear-to-b lg:from-neutral-800 lg:to-neutral-900',
-          'lg:size-full',
+          'corner-squircle rounded-full bg-linear-to-b from-neutral-800 to-neutral-900',
+          'size-full',
         ]}
       />
       <!-- <Icon name="logo-black" /> -->
@@ -186,27 +187,7 @@ import navData from '@data/navData.json';
         </ul>
       </div>
     </nav>
-
-    <!-- class:list={[ -->
-    <!--   'corner-squircle cs-button-solid hidden rounded-4xl supports-[corner-shape:squircle]:rounded-2xl lg:block lg:bg-linear-to-b lg:from-blue-400 lg:to-blue-500', -->
-    <!--   'before:corner-squircle before:rounded-[inherit]', -->
-    <!--   'before:shadow-[0_8px_32px_rgba(0,0,0,0.6),0_2px_8px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_2px_rgba(0,0,0,0.5)]', -->
-    <!-- ]} -->
-    <a
-      href="/contact/"
-      class:list={[
-        'hidden items-center gap-2 border border-neutral-50 lg:inline-flex',
-        'h-[3.8rem]',
-        'corner-squircle cs-button-solid rounded-4xl supports-[corner-shape:squircle]:rounded-2xl',
-        'before:corner-squircle before:rounded-[inherit]',
-        'bg-linear-to-b from-blue-400 via-blue-500 to-blue-700',
-        'shadow-[0_2px_8px_rgba(0,0,0,0.4),0_1px_2px_rgba(0,0,0,0.3),inset_0_2px_0_rgba(255,255,255,0.5),inset_0_-2px_0_rgba(255,255,255,0.3),inset_0_-8px_16px_rgba(255,255,255,0.2),inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_1px_4px_rgba(0,0,0,0.1)]',
-      ]}
-    >
-      Contact Us
-    </a>
-    <!--Dark Mode toggle: remove component if you don't want to enable a dark mode toggle-->
-    <!-- <DarkModeToggle /> -->
+    <CTALink class={'hidden lg:inline-flex h-[3.8rem]'}> Contact Us </CTALink>
   </div>
 </header>
 
