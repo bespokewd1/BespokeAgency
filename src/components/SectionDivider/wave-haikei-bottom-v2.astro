@@ -1,0 +1,22 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'svg'>;
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<svg
+  class={className}
+  {...rest}
+  viewBox="0 0 900 600"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 514L21.5 520.2C43 526.3 86 538.7 128.8 545C171.7 551.3 214.3 551.7 257.2 551C300 550.3 343 548.7 385.8 543.3C428.7 538 471.3 529 514.2 529.3C557 529.7 600 539.3 642.8 540.7C685.7 542 728.3 535 771.2 536C814 537 857 546 878.5 550.5L900 555L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z"
+    fill="#60a5fa"
+    stroke-linecap="round"
+    stroke-linejoin="miter"></path></svg
+>
+

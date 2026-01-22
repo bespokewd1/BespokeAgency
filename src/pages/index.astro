@@ -6,6 +6,8 @@ import { getImage } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Hero from '@components/Hero/Hero.astro';
 import Services from '@components/Services/Services.astro';
+
+import { SbsContent } from '@components/SideBySide/SbsContent.tsx';
 import SideBySide from '@components/SideBySide/SideBySide.astro';
 import SideBySideReverse from '@components/SideBySideReverse/SideBySideReverse.astro';
 import Gallery from '@components/Gallery/Gallery.astro';
@@ -13,6 +15,7 @@ import Testimonials from '@components/Testimonials/Testimonials.astro';
 import FAQ from '@components/FAQ/FAQ.astro';
 import CTASimple from '@components/CTA/CTASimple.astro';
 import WaveBottom from '@components/SectionDivider/wave-haikei-bottom.astro';
+import WaveBottom2 from '@components/SectionDivider/wave-haikei-bottom-v2.astro';
 import WaveTop from '@components/SectionDivider/wave-haikei-top.astro';
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Banner (for rendering)
@@ -36,13 +39,14 @@ const optimizedHeroImage = await getImage({ src: heroImage, format: 'webp' });
         on your business. &rdquo;
       </h2>
     </div>
-    <WaveBottom
+    <WaveBottom2
       class="fill-primary-light pointer-events-none absolute right-0 bottom-0 left-0 -z-1"
     />
     <WaveTop
       class="fill-primary-light pointer-events-none absolute top-0 right-0 left-0 -z-1"
     />
   </section>
+  <SbsContent client:visible />
 
   <!-- <Services /> -->
   <SideBySide />
