@@ -47,12 +47,22 @@ const optimizedHeroImage = await getImage({ src: heroImage, format: 'webp' });
     />
   </section>
   <SbsContent client:visible />
+  <section class="relative p-[clamp(9em,25.95vw,16.5em)_0]">
+    <div class="mx-auto max-w-5xl">
+      <h2 class="cs-title text-body-dark text-center text-5xl leading-normal">
+        &ldquo; We take care of all your website needs, so you can focus fully
+        on your business. &rdquo;
+      </h2>
+    </div>
+    <WaveTop
+      class="fill-primary-light pointer-events-none absolute top-0 right-0 left-0 -z-1"
+    />
+  </section>
 
   <!-- <Services /> -->
-  <SideBySide />
-  <SideBySideReverse />
-  <Gallery />
-  <Testimonials />
+  <!-- <SideBySide /> -->
+  <!-- <Gallery />
+  <Testimonials /> -->
   <FAQ />
   <CTASimple />
 </BaseLayout>

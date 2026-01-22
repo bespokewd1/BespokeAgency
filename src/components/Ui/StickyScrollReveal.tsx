@@ -46,9 +46,9 @@ export const StickyScroll = ({
   // 'var(--color-blue-600)',
   // 'var(--color-primary-light)',
   const backgroundColors = [
-    'linear-gradient(to bottom, var(--color-primary-light), var(--color-primary-light))',
-    'linear-gradient(to bottom, var(--color-primary-light), var(--color-blue-600))',
-    'linear-gradient(to bottom, var(--color-blue-600), var(--color-primary-light))',
+    'linear-gradient(to bottom, var(--color-primary-light) 20%, var(--color-primary))',
+    'linear-gradient(to bottom, var(--color-primary-light), var(--color-blue-700))',
+    'linear-gradient(to bottom, var(--color-blue-700), var(--color-primary-light))',
   ];
 
   // 'linear-gradient(to bottom right, #06b6d4, #10b981)',
@@ -104,6 +104,7 @@ export const StickyScroll = ({
       </div>
 
       {/* Right side - sticky content */}
+      {/*
       <AnimatePresence>
         <motion.div
           style={{ background: backgroundGradient }}
@@ -115,6 +116,28 @@ export const StickyScroll = ({
           {content[activeCard].content ?? null}
         </motion.div>
       </AnimatePresence>
+      */}
+
+      <div
+        className={cn(
+          'sticky top-[calc(25vh-7.5rem)] hidden size-160 self-start overflow-hidden rounded-md lg:block',
+          contentClassName
+        )}
+        style={{ background: backgroundGradient }}
+      >
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCard} // This is crucial - triggers animation on change
+            initial={{ opacity: 0, filter: 'blur(3px)' }}
+            animate={{ opacity: 1, filter: 'blur(0)' }}
+            exit={{ opacity: 0, filter: 'blur(3px)' }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            className="flex h-full w-full items-center justify-center"
+          >
+            {content[activeCard].content ?? null}
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </motion.div>
   );
 };

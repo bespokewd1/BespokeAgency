@@ -57,10 +57,29 @@ const content = [
     ),
   },
   {
-    topper: 'about us',
-    title: 'Real time changes',
-    description:
-      'See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.',
+    topper: 'Why Choose Us',
+    title: 'What Sets Us Apart',
+    description: (
+      <>
+        <p className="cs-text text-body-dark mb-4 text-left text-[clamp(1rem,.5vw+1rem,1.125rem)]">
+          I don’t just build websites—I build partnerships. I treat your
+          business like it’s my own, bringing the same level of care,
+          dedication, and attention to detail as you would.
+        </p>
+
+        <p className="cs-text text-body-dark mb-4 text-left text-[clamp(1rem,.5vw+1rem,1.125rem)]">
+          I develop every project from scratch—building it strategically around
+          your goals, your audience, and your long-term vision, with a focus on
+          results that matter.
+        </p>
+
+        <p className="cs-text text-body-dark mb-4 text-left text-[clamp(1rem,.5vw+1rem,1.125rem)]">
+          We’ll go over every detail, as many times as needed. You’ll have a
+          24/7 access to me and my skills—not just on day one, but a week, a
+          month, or even a year from now.
+        </p>
+      </>
+    ),
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <ProgressiveApp />
@@ -68,24 +87,40 @@ const content = [
     ),
   },
   {
-    topper: 'about us',
-    title: 'Version control',
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    topper: 'It All Starts With You',
+    title: 'A Website Built Around Your Goals And Vision',
+    description: (
+      <>
+        <p className="cs-text text-body-dark mb-4 text-left text-[clamp(1rem,.5vw+1rem,1.125rem)]">
+          Every business I work with is different. I start by getting to know
+          you and your goals. I want to understand not just what you do, but the
+          vision you have for your business and how we can make it more
+          successful.
+        </p>
+
+        <p className="cs-text text-body-dark text-left text-[clamp(1rem,.5vw+1rem,1.125rem)]">
+          Every decision I make—from design to layout—is focused on keeping
+          everything clear and intuitive while staying fully aligned with your
+          business goals. The aim is to create a website that actually works for
+          your business, your customers, and your bottom line.
+        </p>
+
+        <p className="cs-text text-body-dark mb-4 text-left text-[clamp(1rem,.5vw+1rem,1.125rem)]">
+          From page layout to the messaging, everything is built to guide your
+          customer to action. Whether it’s making a purchase, booking a service,
+          or reaching out for more information..
+        </p>
+
+        <p className="cs-text text-body-dark mb-4 text-left text-[clamp(1rem,.5vw+1rem,1.125rem)]">
+          At the end of the day, this isn’t just about a website—it’s about
+          creating an indispensable business asset that turns your vision into
+          results you can count on.
+        </p>
+      </>
+    ),
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <BuildingAWeb />
-      </div>
-    ),
-  },
-  {
-    topper: 'about us',
-    title: 'Running out of content',
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
       </div>
     ),
   },
@@ -93,7 +128,7 @@ const content = [
 
 export function SbsContent() {
   return (
-    <div className="w-full">
+    <div className="relative w-full">
       <StickyScroll content={content} />
     </div>
   );
