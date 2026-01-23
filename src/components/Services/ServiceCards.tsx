@@ -3,6 +3,7 @@ import {
   HoverEffect,
   type ItemProps,
 } from '@components/Ui/CardHoverEffect.tsx';
+import { cn } from '@lib/utils';
 
 export const ServiceCards = () => {
   const serviceItems: ItemProps[] = [
@@ -85,6 +86,22 @@ export const ServiceCards = () => {
       </div>
       <div className="mx-auto max-w-7xl">
         <HoverEffect items={serviceItems} />
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-6">
+        <a
+          href={'/'}
+          className={cn([
+            'cs-button-solid',
+            'inline-flex h-14.5 items-center gap-2 border border-neutral-50',
+            'corner-squircle rounded-2xl supports-[corner-shape:squircle]:rounded-4xl',
+            'before:corner-squircle before:rounded-[inherit]',
+            'bg-linear-to-b from-blue-400 via-blue-500 to-blue-700',
+            'shadow-[0_2px_8px_rgba(0,0,0,0.4),0_1px_2px_rgba(0,0,0,0.3),inset_0_2px_0_rgba(255,255,255,0.5),inset_0_-2px_0_rgba(255,255,255,0.3),inset_0_-8px_16px_rgba(255,255,255,0.2),inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_1px_4px_rgba(0,0,0,0.1)]',
+          ])}
+          style={{ backgroundColor: 'transparent' }}
+        >
+          Let's Talk
+        </a>
       </div>
     </section>
   );

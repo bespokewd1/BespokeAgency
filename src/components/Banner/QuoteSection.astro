@@ -16,9 +16,9 @@ const baseClass = cn('relative p-[clamp(9em,25.95vw,16.5em)_0]', className);
 <section class:list={baseClass}>
   <div class="mx-auto max-w-5xl">
     <h2 class="cs-title text-body-dark text-center text-5xl leading-normal">
-      &ldquo;
-      <TextGenerateEffect words={quote} client:visible />
-      &rdquo;
+      <!-- &ldquo; -->
+      <TextGenerateEffect words={`“ ${quote} ”`} client:visible />
+      <!-- &rdquo; -->
     </h2>
   </div>
   <WaveTop class="pointer-events-none absolute top-0 right-0 left-0" />

@@ -4,6 +4,7 @@ import about2 from '@assets/images/about2.jpg';
 import { ProgressiveApp } from '@components/Meta/progressive-app.tsx';
 import { motion } from 'motion/react';
 import { BuildingAWeb } from '@components/Meta/building-a-web.tsx';
+import { cn } from '@lib/utils';
 
 const content = [
   {
@@ -26,6 +27,23 @@ const content = [
           get a professional website that drives growth, and I become your
           long-term tech and marketing partner.
         </p>
+
+        <div className="mt-6 flex flex-wrap items-center justify-start gap-6">
+          <a
+            href={'/'}
+            className={cn([
+              'cs-button-solid',
+              'inline-flex h-14.5 items-center gap-2 border border-neutral-50',
+              'corner-squircle rounded-2xl supports-[corner-shape:squircle]:rounded-4xl',
+              'before:corner-squircle before:rounded-[inherit]',
+              'bg-linear-to-b from-blue-400 via-blue-500 to-blue-700',
+              'shadow-[0_2px_8px_rgba(0,0,0,0.4),0_1px_2px_rgba(0,0,0,0.3),inset_0_2px_0_rgba(255,255,255,0.5),inset_0_-2px_0_rgba(255,255,255,0.3),inset_0_-8px_16px_rgba(255,255,255,0.2),inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_1px_4px_rgba(0,0,0,0.1)]',
+            ])}
+            style={{ backgroundColor: 'transparent' }}
+          >
+            More About Us
+          </a>
+        </div>
       </>
     ),
     content: (
@@ -78,6 +96,23 @@ const content = [
           24/7 access to me and my skills—not just on day one, but a week, a
           month, or even a year from now.
         </p>
+
+        <div className="mt-6 flex flex-wrap items-center justify-start gap-6">
+          <a
+            href={'/'}
+            className={cn([
+              'cs-button-solid',
+              'inline-flex h-14.5 items-center gap-2 border border-neutral-50',
+              'corner-squircle rounded-2xl supports-[corner-shape:squircle]:rounded-4xl',
+              'before:corner-squircle before:rounded-[inherit]',
+              'bg-linear-to-b from-blue-400 via-blue-500 to-blue-700',
+              'shadow-[0_2px_8px_rgba(0,0,0,0.4),0_1px_2px_rgba(0,0,0,0.3),inset_0_2px_0_rgba(255,255,255,0.5),inset_0_-2px_0_rgba(255,255,255,0.3),inset_0_-8px_16px_rgba(255,255,255,0.2),inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_1px_4px_rgba(0,0,0,0.1)]',
+            ])}
+            style={{ backgroundColor: 'transparent' }}
+          >
+            Let's Talk
+          </a>
+        </div>
       </>
     ),
     content: (
@@ -116,6 +151,22 @@ const content = [
           creating an indispensable business asset that turns your vision into
           results you can count on.
         </p>
+        <div className="mt-6 flex flex-wrap items-center justify-start gap-6">
+          <a
+            href={'/'}
+            className={cn([
+              'cs-button-solid',
+              'inline-flex h-14.5 items-center gap-2 border border-neutral-50',
+              'corner-squircle rounded-2xl supports-[corner-shape:squircle]:rounded-4xl',
+              'before:corner-squircle before:rounded-[inherit]',
+              'bg-linear-to-b from-blue-400 via-blue-500 to-blue-700',
+              'shadow-[0_2px_8px_rgba(0,0,0,0.4),0_1px_2px_rgba(0,0,0,0.3),inset_0_2px_0_rgba(255,255,255,0.5),inset_0_-2px_0_rgba(255,255,255,0.3),inset_0_-8px_16px_rgba(255,255,255,0.2),inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_1px_4px_rgba(0,0,0,0.1)]',
+            ])}
+            style={{ backgroundColor: 'transparent' }}
+          >
+            Let's Talk
+          </a>
+        </div>
       </>
     ),
     content: (

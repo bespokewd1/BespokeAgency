@@ -19,7 +19,9 @@ const { image } = Astro.props as Props;
 ---
 
 <section id="hero" class="relative">
-  <div class="cs-container flex max-w-360 before:hidden after:hidden">
+  <div
+    class="cs-container flex max-w-360 flex-col before:hidden after:hidden lg:flex-row"
+  >
     <div class="cs-flex-group lg:justify-start">
       <span class="cs-topper text-primary text-3xl lg:text-left"
         >One Stop Web Solutions</span
@@ -35,12 +37,12 @@ const { image } = Astro.props as Props;
         commitment to your business's success.
       </p>
       <div class="inline-flex items-center gap-4">
-        <CTALink />
+        <CTALink>Let's Talk</CTALink>
 
-        <CTALink variants={'light'} href="/contact">
+        <!-- <CTALink variants={'light'} href="/contact">
           <Icon name="play" class="cs-img" />
           Get in Touch
-        </CTALink>
+        </CTALink> -->
       </div>
     </div>
 
@@ -52,7 +54,7 @@ const { image } = Astro.props as Props;
       formats={['avif', 'webp']}
       priority
       class={'max-w-190'}
-      pictureAttributes={{ class: '' }}
+      pictureAttributes={{ class: 'hidden md:block pb-30' }}
     />
   </div>
 

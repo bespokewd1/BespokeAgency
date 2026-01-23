@@ -5,13 +5,14 @@ import type { HTMLAttributes } from 'astro/types';
 type Props = HTMLAttributes<'svg'>;
 
 const { class: className, ...rest } = Astro.props;
-const tabletClass = cn('hidden sm:max-lg:block ');
+const mobileClass = cn(' block sm:hidden', className);
+const tabletClass = cn('hidden sm:max-lg:block ', className);
 const desktopClass = cn('hidden lg:block', className);
 ---
 
 <!-- mobile -->
 <svg
-  class={tabletClass}
+  class={mobileClass}
   {...rest}
   viewBox="0 0 450 900"
   xmlns="http://www.w3.org/2000/svg"
