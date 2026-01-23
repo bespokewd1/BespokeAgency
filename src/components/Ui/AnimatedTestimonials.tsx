@@ -84,7 +84,7 @@ export const AnimatedTestimonials = ({
                       rotate: rot,
                     }}
                     animate={{
-                      opacity: isActive(index) ? 1 : 0.7,
+                      opacity: isActive(index) ? 1 : 0.15,
                       scale: isActive(index) ? 1 : 0.95,
                       z: isActive(index) ? 0 : -100,
                       rotate: isActive(index) ? 0 : rot,
@@ -171,7 +171,12 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
 
-            <LinkPreview url={testimonials[active].link} isExternal>
+            <LinkPreview
+              height={175}
+              width={250}
+              url={testimonials[active].link}
+              isExternal
+            >
               <span className="group/link inline-flex items-center gap-2 text-lg font-bold text-blue-700">
                 <span className="underline">
                   {testimonials[active].linkLabel
