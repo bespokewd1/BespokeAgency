@@ -2,6 +2,8 @@
 @plugin '@toolwind/corner-shape';
 
 @theme {
+ --font-roboto: "Roboto", sans-serif;
+
   --color-body-light: var(--bodyTextColorWhite);
   --color-body-dark: var(--bodyTextColor);
   --color-primary: var(--primary);

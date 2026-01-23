@@ -66,7 +66,7 @@ export const ServiceCards = () => {
   ];
 
   return (
-    <section className="bg-primary-light relative p-(--sectionPadding) pt-4">
+    <section className="relative bg-blue-100 p-(--sectionPadding) pt-4">
       <div className="mx-auto max-w-5xl">
         <span className="cs-topper text-center text-2xl text-blue-700">
           No Headaches, No Hassles, No BS.

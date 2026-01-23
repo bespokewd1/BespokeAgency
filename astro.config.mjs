@@ -18,6 +18,9 @@ export default defineConfig({
 
   image: {
       layout: "constrained",
+      remotePatterns: [{
+        protocol:'https', hostname: 'api.microlink.io'
+      }]
     },
 
   vite: {

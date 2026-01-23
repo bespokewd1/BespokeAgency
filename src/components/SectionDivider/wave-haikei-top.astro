@@ -1,12 +1,65 @@
 ---
+import { cn } from '@lib/utils';
 import type { HTMLAttributes } from 'astro/types';
 
 type Props = HTMLAttributes<'svg'>;
 
 const { class: className, ...rest } = Astro.props;
+const tabletClass = cn('hidden sm:max-lg:block ');
+const desktopClass = cn('hidden lg:block', className);
 ---
 
+<!-- mobile -->
 <svg
+  class={tabletClass}
+  {...rest}
+  viewBox="0 0 450 900"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 75L45 75L45 79L90 79L90 67L135 67L135 80L180 80L180 77L225 77L225 102L270 102L270 70L315 70L315 113L360 113L360 67L405 67L405 89L450 89L450 71L450 0L450 0L405 0L405 0L360 0L360 0L315 0L315 0L270 0L270 0L225 0L225 0L180 0L180 0L135 0L135 0L90 0L90 0L45 0L45 0L0 0Z"
+    fill="#dbeafe"
+    stroke-linecap="square"
+    stroke-linejoin="miter"></path></svg
+>
+
+<!-- tablet -->
+<svg
+  class={tabletClass}
+  {...rest}
+  id="visual"
+  viewBox="0 0 675 900"
+  width="675"
+  height="900"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 75L68 75L68 79L135 79L135 67L203 67L203 80L270 80L270 77L338 77L338 102L405 102L405 70L472 70L472 113L540 113L540 67L608 67L608 89L675 89L675 71L675 0L675 0L608 0L608 0L540 0L540 0L472 0L472 0L405 0L405 0L338 0L338 0L270 0L270 0L203 0L203 0L135 0L135 0L68 0L68 0L0 0Z"
+    fill="#dbeafe"
+    stroke-linecap="square"
+    stroke-linejoin="miter"></path></svg
+>
+
+<!-- desktop -->
+<svg
+  class={desktopClass}
+  {...rest}
+  viewBox="0 0 960 540"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 45L96 45L96 47L192 47L192 40L288 40L288 48L384 48L384 46L480 46L480 61L576 61L576 42L672 42L672 67L768 67L768 40L864 40L864 53L960 53L960 42L960 0L960 0L864 0L864 0L768 0L768 0L672 0L672 0L576 0L576 0L480 0L480 0L384 0L384 0L288 0L288 0L192 0L192 0L96 0L96 0L0 0Z"
+    fill="#dbeafe"
+    stroke-linecap="square"
+    stroke-linejoin="miter"></path></svg
+>
+
+<!-- fill="#0066FF" -->
+
+<!-- <svg
   class={className}
   {...rest}
   viewBox="0 0 900 600"
@@ -17,6 +70,4 @@ const { class: className, ...rest } = Astro.props;
     d="M0 66L18.8 63.2C37.7 60.3 75.3 54.7 112.8 55C150.3 55.3 187.7 61.7 225.2 61C262.7 60.3 300.3 52.7 337.8 47.5C375.3 42.3 412.7 39.7 450.2 46.2C487.7 52.7 525.3 68.3 562.8 67.8C600.3 67.3 637.7 50.7 675.2 47.3C712.7 44 750.3 54 787.8 60.8C825.3 67.7 862.7 71.3 881.3 73.2L900 75L900 0L881.3 0C862.7 0 825.3 0 787.8 0C750.3 0 712.7 0 675.2 0C637.7 0 600.3 0 562.8 0C525.3 0 487.7 0 450.2 0C412.7 0 375.3 0 337.8 0C300.3 0 262.7 0 225.2 0C187.7 0 150.3 0 112.8 0C75.3 0 37.7 0 18.8 0L0 0Z"
     stroke-linecap="round"
     stroke-linejoin="miter"></path></svg
->
-
-<!-- fill="#0066FF" -->
+> -->

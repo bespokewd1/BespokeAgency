@@ -46,9 +46,9 @@ export const StickyScroll = ({
   // 'var(--color-blue-600)',
   // 'var(--color-primary-light)',
   const backgroundColors = [
-    'linear-gradient(to bottom, var(--color-primary-light) 20%, var(--color-primary))',
-    'linear-gradient(to bottom, var(--color-primary-light), var(--color-blue-700))',
-    'linear-gradient(to bottom, var(--color-blue-700), var(--color-primary-light))',
+    'linear-gradient(to bottom, var(--color-blue-100) , var(--color-blue-300)) 50%',
+    'linear-gradient(to bottom, var(--color-blue-300), var(--color-primary-light))',
+    'linear-gradient(to bottom, var(--color-primary), var(--color-blue-100))',
   ];
 
   // 'linear-gradient(to bottom right, #06b6d4, #10b981)',
@@ -81,9 +81,13 @@ export const StickyScroll = ({
         <div className="max-w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20 min-h-[40vh]">
-              <span className="cs-topper text-left text-2xl text-blue-700">
+              <motion.span
+                className="cs-topper text-left text-2xl text-blue-700"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
+              >
                 {item.topper}
-              </span>
+              </motion.span>
               <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}

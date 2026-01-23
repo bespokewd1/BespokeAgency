@@ -1,12 +1,60 @@
 ---
+import { cn } from '@lib/utils';
 import type { HTMLAttributes } from 'astro/types';
 
 type Props = HTMLAttributes<'svg'>;
 
 const { class: className, ...rest } = Astro.props;
+const mobileClass = cn('sm:hidden', className);
+const tabletClass = cn('hidden sm:max-lg:block ', className);
+const desktopClass = cn('hidden lg:block', className);
 ---
 
 <svg
+  class:list={[mobileClass]}
+  {...rest}
+  viewBox="0 0 450 900"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 783L45 783L45 818L90 818L90 790L135 790L135 782L180 782L180 792L225 792L225 785L270 785L270 810L315 810L315 797L360 797L360 796L405 796L405 831L450 831L450 805L450 901L450 901L405 901L405 901L360 901L360 901L315 901L315 901L270 901L270 901L225 901L225 901L180 901L180 901L135 901L135 901L90 901L90 901L45 901L45 901L0 901Z"
+    fill="#dbeafe"
+    stroke-linecap="square"
+    stroke-linejoin="miter"></path></svg
+>
+
+<!-- tablet -->
+<svg
+  class:list={[tabletClass]}
+  {...rest}
+  viewBox="0 0 675 900"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 783L68 783L68 818L135 818L135 790L203 790L203 782L270 782L270 792L338 792L338 785L405 785L405 810L472 810L472 797L540 797L540 796L608 796L608 831L675 831L675 805L675 901L675 901L608 901L608 901L540 901L540 901L472 901L472 901L405 901L405 901L338 901L338 901L270 901L270 901L203 901L203 901L135 901L135 901L68 901L68 901L0 901Z"
+    fill="#dbeafe"
+    stroke-linecap="square"
+    stroke-linejoin="miter"></path></svg
+>
+
+<!-- desktop -->
+<svg
+  class:list={[desktopClass]}
+  {...rest}
+  viewBox="0 0 960 540"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 469L96 469L96 490L192 490L192 474L288 474L288 469L384 469L384 475L480 475L480 471L576 471L576 485L672 485L672 478L768 478L768 477L864 477L864 498L960 498L960 483L960 541L960 541L864 541L864 541L768 541L768 541L672 541L672 541L576 541L576 541L480 541L480 541L384 541L384 541L288 541L288 541L192 541L192 541L96 541L96 541L0 541Z"
+    fill="#dbeafe"
+    stroke-linecap="square"
+    stroke-linejoin="miter"></path></svg
+>
+
+<!-- <svg
   class={className}
   {...rest}
   viewBox="0 0 900 600"
@@ -19,4 +67,4 @@ const { class: className, ...rest } = Astro.props;
     stroke-linecap="round"
     stroke-linejoin="miter"></path></svg
 >
-
+-->

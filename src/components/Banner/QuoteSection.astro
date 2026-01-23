@@ -1,0 +1,26 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import WaveBottom2 from '@components/SectionDivider/wave-haikei-bottom-v2.astro';
+import WaveTop from '@components/SectionDivider/wave-haikei-top.astro';
+import { cn } from '@lib/utils';
+import { TextGenerateEffect } from '@components/Ui/TextGenerateEffect';
+
+type Props = HTMLAttributes<'section'> & {
+  quote: string;
+};
+
+const { class: className, quote, ...rest } = Astro.props;
+const baseClass = cn('relative p-[clamp(9em,25.95vw,16.5em)_0]', className);
+---
+
+<section class:list={baseClass}>
+  <div class="mx-auto max-w-5xl">
+    <h2 class="cs-title text-body-dark text-center text-5xl leading-normal">
+      &ldquo;
+      <TextGenerateEffect words={quote} client:visible />
+      &rdquo;
+    </h2>
+  </div>
+  <WaveTop class="pointer-events-none absolute top-0 right-0 left-0" />
+  <WaveBottom2 class="pointer-events-none absolute right-0 bottom-0 left-0" />
+</section>

@@ -14,7 +14,6 @@ import Gallery from '@components/Gallery/Gallery.astro';
 import Testimonials from '@components/Testimonials/Testimonials.astro';
 import FAQ from '@components/FAQ/FAQ.astro';
 import CTASimple from '@components/CTA/CTASimple.astro';
-import WaveBottom from '@components/SectionDivider/wave-haikei-bottom.astro';
 import WaveBottom2 from '@components/SectionDivider/wave-haikei-bottom-v2.astro';
 import WaveTop from '@components/SectionDivider/wave-haikei-top.astro';
 
@@ -22,6 +21,8 @@ import WaveTop from '@components/SectionDivider/wave-haikei-top.astro';
 // import heroImage from "@assets/images/hero/hero.jpg";
 import heroImage from '@assets/images/hero-bg.webp';
 import { ServiceCards } from '@components/Services/ServiceCards';
+import QuoteSection from '@components/Banner/QuoteSection.astro';
+import { ClientTestimonials } from '@components/Testimonials/ClientTestimonials';
 const optimizedHeroImage = await getImage({ src: heroImage, format: 'webp' });
 ---
 
@@ -31,33 +32,20 @@ const optimizedHeroImage = await getImage({ src: heroImage, format: 'webp' });
   heroImage={optimizedHeroImage}
 >
   <Hero image={optimizedHeroImage} />
+
+  <ClientTestimonials client:visible />
+
+  <QuoteSection
+    quote="We take care of all your website needs, so you can focus fully on your business."
+  />
+
   <ServiceCards client:visible />
-  <section class="relative p-[clamp(9em,25.95vw,16.5em)_0]">
-    <div class="mx-auto max-w-5xl">
-      <h2 class="cs-title text-body-dark text-center text-5xl leading-normal">
-        &ldquo; We take care of all your website needs, so you can focus fully
-        on your business. &rdquo;
-      </h2>
-    </div>
-    <WaveBottom2
-      class="fill-primary-light pointer-events-none absolute right-0 bottom-0 left-0 -z-1"
-    />
-    <WaveTop
-      class="fill-primary-light pointer-events-none absolute top-0 right-0 left-0 -z-1"
-    />
-  </section>
+
+  <QuoteSection
+    quote="Behind every thriving business is a foundation built on strategy, solutions, and outcomes"
+  />
+
   <SbsContent client:visible />
-  <section class="relative p-[clamp(9em,25.95vw,16.5em)_0]">
-    <div class="mx-auto max-w-5xl">
-      <h2 class="cs-title text-body-dark text-center text-5xl leading-normal">
-        &ldquo; We take care of all your website needs, so you can focus fully
-        on your business. &rdquo;
-      </h2>
-    </div>
-    <WaveTop
-      class="fill-primary-light pointer-events-none absolute top-0 right-0 left-0 -z-1"
-    />
-  </section>
 
   <!-- <Services /> -->
   <!-- <SideBySide /> -->
