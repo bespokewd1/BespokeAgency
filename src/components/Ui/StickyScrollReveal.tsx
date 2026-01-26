@@ -74,7 +74,7 @@ export const StickyScroll = ({
       animate={{
         background: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex justify-center space-x-10 rounded-md p-10"
+      className="relative flex justify-center space-x-0 rounded-md px-2 py-10 lg:space-x-10 lg:px-10"
     >
       {/* Left side - scrollable content */}
       <div className="relative flex items-start px-4">
@@ -82,7 +82,7 @@ export const StickyScroll = ({
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20 min-h-[40vh]">
               <motion.span
-                className="cs-topper text-left text-2xl text-blue-700"
+                className="cs-topper text-center text-2xl text-blue-700 lg:text-left"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
               >
@@ -91,7 +91,7 @@ export const StickyScroll = ({
               <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                className="cs-title text-body-dark text-left text-5xl"
+                className="cs-title text-body-dark text-title text-center text-pretty lg:text-left"
               >
                 {item.title}
               </motion.h2>

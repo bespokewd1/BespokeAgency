@@ -10,7 +10,23 @@ const tabletClass = cn('hidden sm:max-lg:block ', className);
 const desktopClass = cn('hidden lg:block', className);
 ---
 
+<!-- mobile -->
 <svg
+  class:list={[mobileClass]}
+  {...rest}
+  viewBox="0 0 450 900"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 798L10.7 803.2C21.3 808.3 42.7 818.7 64.2 806.3C85.7 794 107.3 759 128.8 741.5C150.3 724 171.7 724 193 729.5C214.3 735 235.7 746 257 756.8C278.3 767.7 299.7 778.3 321.2 771.2C342.7 764 364.3 739 385.8 730.7C407.3 722.3 428.7 730.7 439.3 734.8L450 739L450 901L439.3 901C428.7 901 407.3 901 385.8 901C364.3 901 342.7 901 321.2 901C299.7 901 278.3 901 257 901C235.7 901 214.3 901 193 901C171.7 901 150.3 901 128.8 901C107.3 901 85.7 901 64.2 901C42.7 901 21.3 901 10.7 901L0 901Z"
+    fill="#dbeafe"
+    stroke-linecap="round"
+    stroke-linejoin="miter"></path></svg
+>
+
+<svg
+  style="display: none !important;"
   class:list={[mobileClass]}
   {...rest}
   viewBox="0 0 450 900"
@@ -33,6 +49,21 @@ const desktopClass = cn('hidden lg:block', className);
   xmlns:xlink="http://www.w3.org/1999/xlink"
   version="1.1"
   ><path
+    d="M0 825L16 817.5C32 810 64 795 96.2 792.3C128.3 789.7 160.7 799.3 192.8 792.2C225 785 257 761 289.2 755C321.3 749 353.7 761 385.8 769.2C418 777.3 450 781.7 482.2 784.8C514.3 788 546.7 790 578.8 784.7C611 779.3 643 766.7 659 760.3L675 754L675 901L659 901C643 901 611 901 578.8 901C546.7 901 514.3 901 482.2 901C450 901 418 901 385.8 901C353.7 901 321.3 901 289.2 901C257 901 225 901 192.8 901C160.7 901 128.3 901 96.2 901C64 901 32 901 16 901L0 901Z"
+    fill="#dbeafe"
+    stroke-linecap="round"
+    stroke-linejoin="miter"></path></svg
+>
+
+<svg
+  style="display: none !important;"
+  class:list={[tabletClass]}
+  {...rest}
+  viewBox="0 0 675 900"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
     d="M0 783L68 783L68 818L135 818L135 790L203 790L203 782L270 782L270 792L338 792L338 785L405 785L405 810L472 810L472 797L540 797L540 796L608 796L608 831L675 831L675 805L675 901L675 901L608 901L608 901L540 901L540 901L472 901L472 901L405 901L405 901L338 901L338 901L270 901L270 901L203 901L203 901L135 901L135 901L68 901L68 901L0 901Z"
     fill="#dbeafe"
     stroke-linecap="square"
@@ -41,6 +72,20 @@ const desktopClass = cn('hidden lg:block', className);
 
 <!-- desktop -->
 <svg
+  class:list={[desktopClass]}
+  {...rest}
+  viewBox="0 0 900 600"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  ><path
+    d="M0 550L21.5 545C43 540 86 530 128.8 528.2C171.7 526.3 214.3 532.7 257.2 527.8C300 523 343 507 385.8 503C428.7 499 471.3 507 514.2 512.3C557 517.7 600 520.3 642.8 522.5C685.7 524.7 728.3 526.3 771.2 522.8C814 519.3 857 510.7 878.5 506.3L900 502L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z"
+    fill="#dbeafe"
+    stroke-linecap="round"
+    stroke-linejoin="miter"></path></svg
+>
+<svg
+  style="display: none !important;"
   class:list={[desktopClass]}
   {...rest}
   viewBox="0 0 960 540"

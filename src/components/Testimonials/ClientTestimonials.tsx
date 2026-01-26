@@ -80,7 +80,7 @@ export function ClientTestimonials() {
         <span className="cs-topper text-center text-2xl text-blue-700">
           Our Portfolio
         </span>
-        <h2 className="cs-title text-body-dark text-center text-6xl">
+        <h2 className="cs-title text-body-dark text-title text-center">
           Delivering Results for Our Clients
         </h2>
       </div>

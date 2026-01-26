@@ -72,7 +72,7 @@ export const ServiceCards = () => {
         <span className="cs-topper text-center text-2xl text-blue-700">
           No Headaches, No Hassles, No BS.
         </span>
-        <h2 className="cs-title text-body-dark text-center text-6xl">
+        <h2 className="cs-title text-body-dark text-title text-center">
           Never Worry About Your Website Again
         </h2>
 

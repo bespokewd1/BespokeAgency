@@ -13,9 +13,9 @@ const { class: className, quote, ...rest } = Astro.props;
 const baseClass = cn('relative p-[clamp(9em,25.95vw,16.5em)_0]', className);
 ---
 
-<section class:list={baseClass}>
+<section class:list={baseClass} class="py-quote">
   <div class="mx-auto max-w-5xl">
-    <h2 class="cs-title text-body-dark text-center text-5xl leading-normal">
+    <h2 class="cs-title text-body-dark text-title text-center leading-normal">
       <!-- &ldquo; -->
       <TextGenerateEffect words={`“ ${quote} ”`} client:visible />
       <!-- &rdquo; -->

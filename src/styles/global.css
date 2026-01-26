@@ -9,6 +9,13 @@
   --color-primary: var(--primary);
   --color-primary-light:var(--primaryLight);
   --color-header: var(--headerColor);
+
+
+  --text-topper: clamp(var(--text-2xl), 1.5vw, 1.75rem);
+  --text-hero-heading: clamp(2.625rem , 1.5vw + 1rem, 4.75rem);
+  --text-title: clamp(2.625rem , 3vw + 1rem, 4.25rem);
+
+  --spacing-quote: clamp(12rem, 25.95vw, 18rem);
 }
 
 .bg-grid {

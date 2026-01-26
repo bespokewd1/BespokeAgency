@@ -18,19 +18,23 @@ interface Props {
 const { image } = Astro.props as Props;
 ---
 
-<section id="hero" class="relative">
+<section id="hero" class="relative px-2 sm:px-4">
   <div
-    class="cs-container flex max-w-360 flex-col before:hidden after:hidden lg:flex-row"
+    class="cs-container flex max-w-360 flex-col before:hidden after:hidden md:max-lg:pt-37.5 lg:flex-row lg:max-xl:pb-38"
   >
     <div class="cs-flex-group lg:justify-start">
-      <span class="cs-topper text-primary text-3xl lg:text-left"
-        >One Stop Web Solutions</span
+      <span
+        class="cs-topper text-primary text-topper lg:text-left lg:text-[1.75rem]"
       >
-      <h1 class="cs-title text-header text-7xl lg:text-left">
-        Professional Web Design & Management
+        Edmonton Digital Marketing
+      </span>
+      <h1
+        class="cs-title text-header text-hero-heading lg:text-left lg:text-[4.75rem]"
+      >
+        Professional Web Design & Social Media
       </h1>
       <p
-        class="cs-text text-body-dark text-[clamp(1.125rem,.5vw+1rem,1.25rem)] lg:text-left"
+        class="cs-text text-body-dark text-[clamp(1.125rem,.5vw+1rem,1.25rem)] leading-[1.75] lg:text-left"
       >
         Professionally developed, custom-designed, fully managed websites with
         unlimited edits, transparent pricing, 24/7 support, and a complete
