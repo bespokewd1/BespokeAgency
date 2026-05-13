@@ -6,6 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap');
 
+body {overflow-x:unset !important ;}
+
 .tf-page {
   /* Palette — sourced from src/index.html primary HSL + neutral system,
      supplemented with industrial cream + rust accent for foundry feel */
@@ -41,7 +43,7 @@
   text-rendering: optimizeLegibility;
   position: relative;
   min-height: 100vh;
-  overflow-x: clip;
+  /* overflow-x: clip; */
   font-feature-settings: 'ss01', 'cv05';
 }
 
