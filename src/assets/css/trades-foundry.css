@@ -128,17 +128,6 @@
 .tf-mast-strip-item {
   white-space: nowrap;
 }
-.tf-mast-blink::before {
-  content: '';
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  background: var(--tf-rust);
-  margin-right: 8px;
-  vertical-align: 1px;
-  animation: tfBlink 1.6s steps(2, end) infinite;
-}
-@keyframes tfBlink { 50% { opacity: 0.18; } }
 .tf-hide-sm { display: none; }
 @media (min-width: 920px) { .tf-hide-sm { display: inline; } }
 
