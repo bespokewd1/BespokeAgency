@@ -1155,7 +1155,7 @@ color: rgba(244,241,230,0.78);
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(min(250px,100%), 1fr));
   gap: 0;
   border: 0.125rem solid var(--tf-ink);
   background: var(--tf-paper-2);
