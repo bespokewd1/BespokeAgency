@@ -90,7 +90,7 @@
   color: var(--tf-muted);
 }
 
-.tf-page a {
+.tf-page :where(a) {
   color: inherit;
   text-decoration: none;
 }
@@ -135,8 +135,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  padding: 16px 32px;
+  gap: 2rem;
+padding: 1rem min(2rem,3vw);
 }
 
 .tf-mast-logo {
@@ -150,18 +150,14 @@
   text-transform: uppercase;
   color: var(--tf-ink);
 }
-.tf-mast-mark {
-  display: inline-grid;
-  grid-template-columns: repeat(2, 8px);
-  grid-template-rows: repeat(2, 8px);
-  gap: 2px;
+.tf-mast-logo .cs-logo-img {
+filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
+    drop-shadow(-1px 1px black) drop-shadow(-1px -1px black);
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
-.tf-mast-mark span {
-  background: var(--tf-ink);
-  display: block;
-}
-.tf-mast-mark span:nth-child(2) { background: var(--tf-blue); }
-.tf-mast-mark span:nth-child(3) { background: var(--tf-rust); }
 
 .tf-mast-word {
   font-family: var(--tf-display);
@@ -250,31 +246,6 @@
   pointer-events: none;
 }
 
-.tf-hero-serial {
-  position: absolute;
-  top: 28px;
-  right: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-  font-family: var(--tf-mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--tf-muted);
-  z-index: 2;
-}
-.tf-hero-serial-num {
-  font-family: var(--tf-display);
-  font-weight: 800;
-  font-size: clamp(56px, 7vw, 96px);
-  line-height: 0.82;
-  color: var(--tf-ink);
-  letter-spacing: -0.04em;
-  margin: 2px 0;
-}
-
 .tf-hero-grid {
   position: relative;
   display: grid;
@@ -286,9 +257,7 @@
   padding: 0 32px;
 }
 @media (max-width: 980px) {
-  .tf-hero-grid { grid-template-columns: 1fr; gap: 40px; padding-top: 56px; }
-  .tf-hero-serial { position: static; flex-direction: row; align-items: center; gap: 10px; padding: 0 32px; max-width: 1280px; margin: 0 auto 8px; }
-  .tf-hero-serial-num { font-size: 40px; margin: 0; }
+  .tf-hero-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 
 .tf-hero-left { padding-top: 32px; }
