@@ -101,6 +101,17 @@
   display: block;
 }
 
+body:has(.tf-page) #cs-navigation,
+body:has(.tf-page) #cs-footer-309 .cs-container,
+body:has(.tf-page) #cs-footer-309 .cs-bottom {
+  display: none;
+}
+
+body:has(.tf-page) #cs-footer-309 {
+  padding: 0;
+  background: transparent;
+}
+
 /* ============================================================
    MASTHEAD
    ============================================================ */
@@ -136,7 +147,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-padding: 1rem min(2rem,3vw);
+  padding: 1rem min(2rem, 3vw);
 }
 
 .tf-mast-logo {
@@ -151,7 +162,7 @@ padding: 1rem min(2rem,3vw);
   color: var(--tf-ink);
 }
 .tf-mast-logo .cs-logo-img {
-filter: drop-shadow(0.0625rem 0.0625rem black) drop-shadow(0.0625rem -0.0625rem black)
+  filter: drop-shadow(0.0625rem 0.0625rem black) drop-shadow(0.0625rem -0.0625rem black)
     drop-shadow(-0.0625rem 0.0625rem black) drop-shadow(-0.0625rem -0.0625rem black);
   width: 1.5rem;
   height: 1.5rem;
@@ -201,7 +212,7 @@ filter: drop-shadow(0.0625rem 0.0625rem black) drop-shadow(0.0625rem -0.0625rem 
   transition: right 0.32s ease;
 }
 .tf-mast-nav > a:not(.tf-mast-cta):hover::after { right: 0; }
-@media (max-width: 55rem) {
+@media (max-width: 63.9375rem) {
   .tf-mast-nav > a:not(.tf-mast-cta) { display: none; }
 }
 
@@ -223,6 +234,274 @@ filter: drop-shadow(0.0625rem 0.0625rem black) drop-shadow(0.0625rem -0.0625rem 
 .tf-mast-cta:hover { background: var(--tf-blue); border-color: var(--tf-blue); color: #fff; }
 .tf-arrow { display: inline-block; transition: transform 0.2s ease; }
 .tf-mast-cta:hover .tf-arrow { transform: translateX(0.1875rem); }
+
+.tf-menu-toggle,
+.tf-menu-close {
+  appearance: none;
+  border: 0.125rem solid var(--tf-ink);
+  border-radius: 0;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: var(--tf-paper);
+  background: var(--tf-ink);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tf-menu-toggle {
+  width: 3rem;
+  height: 2.75rem;
+}
+
+.tf-menu-toggle:hover,
+.tf-menu-close:hover {
+  background: var(--tf-blue);
+  border-color: var(--tf-blue);
+  color: #fff;
+}
+
+.tf-menu-toggle:active,
+.tf-menu-close:active {
+  transform: translateY(0.0625rem);
+}
+
+.tf-menu-toggle-icon,
+.tf-menu-close-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+}
+
+.tf-menu-dialog {
+  width: min(28rem, calc(100vw - 1.5rem));
+  max-width: calc(100vw - 1.5rem);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--tf-ink);
+  position: fixed;
+  inset: 0.75rem 0.75rem auto auto;
+  overflow: visible;
+}
+
+.tf-menu-dialog::backdrop {
+  background: rgba(10, 10, 10, 0.5);
+  -webkit-backdrop-filter: blur(0.125rem);
+  backdrop-filter: blur(0.125rem);
+  animation: tf-menu-backdrop-in 0.24s ease both;
+}
+
+.tf-menu-dialog.is-closing::backdrop {
+  animation: tf-menu-backdrop-out 0.2s ease both;
+}
+
+.tf-menu-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 95dvh;
+  max-height: calc(100dvh - 1.5rem);
+  overflow: hidden auto;
+  background: var(--tf-paper);
+  border: 0.125rem solid var(--tf-ink);
+  box-shadow: 0.5rem 0.5rem 0 var(--tf-ink);
+  animation: tf-menu-panel-in 0.26s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.tf-menu-dialog.is-closing .tf-menu-panel {
+  animation: tf-menu-panel-out 0.2s ease both;
+}
+
+.tf-menu-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--tf-rule) 0.0625rem, transparent 0.0625rem),
+    linear-gradient(to bottom, var(--tf-rule) 0.0625rem, transparent 0.0625rem);
+  background-size: 2.75rem 2.75rem;
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.tf-menu-head,
+.tf-menu-nav,
+.tf-menu-actions {
+  position: relative;
+  z-index: 1;
+}
+
+.tf-menu-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem;
+  border-bottom: 0.125rem solid var(--tf-ink);
+  background: var(--tf-paper-2);
+}
+
+.tf-menu-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--tf-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tf-muted);
+}
+
+.tf-menu-kicker::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--tf-rust);
+  box-shadow: 0 0 0 0.25rem var(--tf-rust-soft);
+}
+
+.tf-menu-close {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.tf-menu-nav {
+  display: grid;
+}
+
+.tf-menu-nav a,
+.tf-menu-call {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  min-height: 4.25rem;
+  padding: 0.875rem 1rem;
+  border-bottom: 0.125rem solid var(--tf-ink);
+  font-family: var(--tf-display);
+  font-size: clamp(1.65rem, 6vw, 2.35rem);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--tf-ink);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.tf-menu-nav a:last-child {
+  border-bottom: 0;
+}
+
+.tf-menu-nav a > span:first-child {
+  min-width: 0;
+}
+
+.tf-menu-nav a > span:last-child,
+.tf-menu-call > span:last-child {
+  font-family: var(--tf-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  color: var(--tf-muted);
+}
+
+.tf-menu-nav a:hover,
+.tf-menu-call:hover {
+  background: var(--tf-ink);
+  color: var(--tf-paper);
+  padding-left: 1.25rem;
+}
+
+.tf-menu-nav a:hover > span:last-child,
+.tf-menu-call:hover > span:last-child {
+  color: var(--tf-blue);
+}
+
+.tf-menu-actions {
+  margin-top: auto;
+  padding: 1rem;
+  border-top: 0.125rem solid var(--tf-ink);
+  background: var(--tf-paper-2);
+}
+
+.tf-menu-call {
+  border: 0.125rem solid var(--tf-ink);
+  background: var(--tf-blue);
+  color: #fff;
+  min-height: 4.5rem;
+  border-bottom: 0.125rem solid var(--tf-ink);
+}
+
+.tf-menu-call > span:last-child {
+  color: var(--tf-blue-deep);
+}
+
+.tf-menu-call:hover {
+  background: var(--tf-rust);
+}
+
+@keyframes tf-menu-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.75rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tf-menu-panel-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-0.5rem) scale(0.98);
+  }
+}
+
+@keyframes tf-menu-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes tf-menu-backdrop-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+html.tf-menu-open,
+html.tf-menu-open body {
+  overflow: hidden;
+}
+
+@media (max-width: 63.9375rem) {
+  .tf-mast-bar { gap: 1rem; }
+  .tf-mast-cta { display: none; }
+  .tf-menu-toggle { display: inline-flex; }
+}
+
+@media (max-width: 36.25rem) {
+  .tf-mast-strip { padding-inline: 1rem; }
+  .tf-mast-bar { padding: 0.875rem 1rem; }
+  .tf-mast-logo { gap: 0.5rem; font-size: 1.125rem; }
+  .tf-menu-dialog {
+    width: calc(100vw - 1rem);
+    max-width: calc(100vw - 1rem);
+    inset: 0.5rem 0.5rem auto auto;
+  }
+}
 
 /* ============================================================
    HERO
@@ -1662,6 +1941,12 @@ filter: drop-shadow(2px 2px black) drop-shadow(2px -2px black)
   }
   .tf-ticker-track,
   .tf-cta-marquee { animation: none; }
+  .tf-menu-dialog::backdrop,
+  .tf-menu-dialog.is-closing::backdrop,
+  .tf-menu-dialog .tf-menu-panel,
+  .tf-menu-dialog.is-closing .tf-menu-panel {
+    animation: none;
+  }
 }
 
 /* ============================================================

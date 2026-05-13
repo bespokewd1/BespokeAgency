@@ -45,6 +45,78 @@ image: /assets/images/og/home-og.webp
           <span class="tf-arrow" aria-hidden="true">→</span>
         </a>
       </nav>
+      <button
+        class="tf-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="tf-menu-dialog"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+      >
+        <svg
+          aria-hidden="true"
+          class="tf-menu-toggle-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 6h16" />
+          <path d="M4 12h16" />
+          <path d="M4 18h16" />
+        </svg>
+      </button>
+      <dialog
+        class="tf-menu-dialog"
+        id="tf-menu-dialog"
+        aria-labelledby="tf-menu-title"
+      >
+        <div class="tf-menu-panel">
+          <div class="tf-menu-head">
+            <span class="tf-menu-kicker" id="tf-menu-title">Navigation</span>
+            <button
+              class="tf-menu-close"
+              type="button"
+              aria-label="Close navigation menu"
+            >
+              <svg
+                aria-hidden="true"
+                class="tf-menu-close-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <nav class="tf-menu-nav" aria-label="Mobile primary">
+            <a href="#services"><span>Services</span><span>01</span></a>
+            <a href="#trades"><span>Trades</span><span>02</span></a>
+            <a href="#pricing"><span>Pricing</span><span>03</span></a>
+            <a href="#proof"><span>Portfolio</span><span>04</span></a>
+            <a href="#contact"><span>Start a project</span><span>05</span></a>
+          </nav>
+          <div class="tf-menu-actions">
+            <a href="tel:+17802638028" class="tf-menu-call">
+              <span>Book a call</span>
+              <span>780·263·8028</span>
+            </a>
+          </div>
+        </div>
+      </dialog>
     </div>
   </header>
 
@@ -960,5 +1032,68 @@ image: /assets/images/og/home-og.webp
     btn.setAttribute("aria-expanded", open ? "false" : "true");
     item.classList.toggle("is-open", !open);
   }
+
+  (function () {
+    var page = document.querySelector(".tf-page");
+    if (!page) return;
+
+    var dialog = page.querySelector("#tf-menu-dialog");
+    var openButton = page.querySelector(".tf-menu-toggle");
+    var closeButton = page.querySelector(".tf-menu-close");
+    if (!dialog || !openButton || !closeButton) return;
+
+    var lastFocused = null;
+    var closeDelay = 220;
+
+    function openMenu() {
+      if (dialog.open) return;
+      lastFocused = document.activeElement;
+      dialog.classList.remove("is-closing");
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+      openButton.setAttribute("aria-expanded", "true");
+      document.documentElement.classList.add("tf-menu-open");
+      closeButton.focus({ preventScroll: true });
+    }
+
+    function closeMenu(restoreFocus) {
+      if (!dialog.open || dialog.classList.contains("is-closing")) return;
+      dialog.classList.add("is-closing");
+      openButton.setAttribute("aria-expanded", "false");
+      document.documentElement.classList.remove("tf-menu-open");
+
+      window.setTimeout(function () {
+        dialog.classList.remove("is-closing");
+        if (typeof dialog.close === "function") {
+          dialog.close();
+        } else {
+          dialog.removeAttribute("open");
+        }
+        if (restoreFocus !== false && lastFocused && lastFocused.focus) {
+          lastFocused.focus({ preventScroll: true });
+        }
+      }, closeDelay);
+    }
+
+    openButton.addEventListener("click", openMenu);
+    closeButton.addEventListener("click", function () {
+      closeMenu(true);
+    });
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) closeMenu(true);
+    });
+    dialog.addEventListener("cancel", function (event) {
+      event.preventDefault();
+      closeMenu(true);
+    });
+    dialog.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeMenu(false);
+      });
+    });
+  })();
 </script>
 {% endblock %}
