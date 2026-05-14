@@ -529,12 +529,18 @@
 
 <script>
   (function () {
-    var page = document.querySelector(".tf-page");
-    if (!page) return;
+    var header =
+      document.currentScript &&
+      document.currentScript.previousElementSibling &&
+      document.currentScript.previousElementSibling.classList.contains("tf-masthead")
+        ? document.currentScript.previousElementSibling
+        : document.querySelector(".tf-masthead");
+    if (!header || header.dataset.tfMenuReady === "true") return;
+    header.dataset.tfMenuReady = "true";
 
-    var dialog = page.querySelector("#tf-menu-dialog");
-    var openButton = page.querySelector(".tf-menu-toggle");
-    var closeButton = page.querySelector(".tf-menu-close");
+    var dialog = header.querySelector("#tf-menu-dialog");
+    var openButton = header.querySelector(".tf-menu-toggle");
+    var closeButton = header.querySelector(".tf-menu-close");
     if (!dialog || !openButton || !closeButton) return;
 
     var lastFocused = null;

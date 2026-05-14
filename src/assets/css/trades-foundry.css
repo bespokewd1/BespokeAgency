@@ -35,7 +35,7 @@ body {overflow-x:unset !important ;}
   --tf-radius: 0;
   --tf-radius-soft: 0.25rem;
 
-  font-family: var(--tf-body);
+  font-family: var(--tf-body) !important;
   color: var(--tf-ink);
   background: var(--tf-paper);
   line-height: 1.5;
