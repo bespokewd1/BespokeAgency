@@ -12,7 +12,6 @@ eleventyNavigation:
 
 {% extends "layouts/base.html" %} {% block head %}
 <link rel="stylesheet" href="/assets/css/trades-foundry.css" />
-<link rel="preconnect" href="https://images.unsplash.com" crossorigin />
 {% endblock %} {% block body %}
 <div class="tf-page">
   <!-- ============================================================
@@ -337,40 +336,53 @@ eleventyNavigation:
           <span class="tf-badge-status">3 clients · growing</span>
           <span class="tf-badge-pulse" aria-hidden="true"></span>
         </li>
-        <li class="tf-badge">
+        <li class="tf-badge tf-badge-active">
           <span class="tf-badge-no">№02</span>
           <span class="tf-badge-name">Electrical</span>
-          <span class="tf-badge-status">Now accepting</span>
+          <span class="tf-badge-status">1 client active</span>
+          <span class="tf-badge-pulse" aria-hidden="true"></span>
+        </li>
+        <li class="tf-badge tf-badge-active">
+          <span class="tf-badge-no">№03</span>
+          <span class="tf-badge-name">Massage</span>
+          <span class="tf-badge-status">3 clients · growing</span>
+          <span class="tf-badge-pulse" aria-hidden="true"></span>
         </li>
         <li class="tf-badge">
-          <span class="tf-badge-no">№03</span>
+          <span class="tf-badge-no">№04</span>
           <span class="tf-badge-name">HVAC</span>
           <span class="tf-badge-status">Now accepting</span>
         </li>
         <li class="tf-badge">
-          <span class="tf-badge-no">№04</span>
+          <span class="tf-badge-no">№05</span>
           <span class="tf-badge-name">Roofing</span>
           <span class="tf-badge-status">Now accepting</span>
         </li>
         <li class="tf-badge tf-badge-active">
-          <span class="tf-badge-no">№05</span>
+          <span class="tf-badge-no">№06</span>
           <span class="tf-badge-name">Concrete &amp; coating</span>
           <span class="tf-badge-status">1 client active</span>
           <span class="tf-badge-pulse" aria-hidden="true"></span>
         </li>
         <li class="tf-badge">
-          <span class="tf-badge-no">№06</span>
+          <span class="tf-badge-no">№07</span>
           <span class="tf-badge-name">Landscaping</span>
           <span class="tf-badge-status">Now accepting</span>
         </li>
         <li class="tf-badge">
-          <span class="tf-badge-no">№07</span>
+          <span class="tf-badge-no">№08</span>
           <span class="tf-badge-name">General contractors</span>
           <span class="tf-badge-status">Now accepting</span>
         </li>
         <li class="tf-badge tf-badge-active">
-          <span class="tf-badge-no">№08</span>
+          <span class="tf-badge-no">№09</span>
           <span class="tf-badge-name">Cleaning services</span>
+          <span class="tf-badge-status">1 client active</span>
+          <span class="tf-badge-pulse" aria-hidden="true"></span>
+        </li>
+        <li class="tf-badge tf-badge-active">
+          <span class="tf-badge-no">№10</span>
+          <span class="tf-badge-name">Car lease</span>
           <span class="tf-badge-status">1 client active</span>
           <span class="tf-badge-pulse" aria-hidden="true"></span>
         </li>
@@ -570,6 +582,63 @@ eleventyNavigation:
             <span class="tf-mono">PLATE-02 / CONTRACTING</span>
           </figcaption>
         </figure>
+      </div>
+
+      <div class="tf-site-registry" aria-label="Recent website registry">
+        <a
+          href="https://imassage-therapeutic.ca/"
+          class="tf-site-registry-card"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="tf-mono">MASSAGE SITE</span>
+          <span>iMassage Therapeutic</span>
+        </a>
+        <a
+          href="https://kabayanmassage.ca/"
+          class="tf-site-registry-card"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="tf-mono">MASSAGE SITE</span>
+          <span>Kabayan Massage</span>
+        </a>
+        <a
+          href="https://stonemassage.ca/"
+          class="tf-site-registry-card"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="tf-mono">MASSAGE SITE</span>
+          <span>Stone Massage</span>
+        </a>
+        <a
+          href="https://rodselectric.netlify.app/"
+          class="tf-site-registry-card"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="tf-mono">ELECTRIC SITE</span>
+          <span>Rod's Electric</span>
+        </a>
+        <a
+          href="https://albertaleasefinance.netlify.app/"
+          class="tf-site-registry-card"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="tf-mono">CAR LEASE SITE</span>
+          <span>Alberta Lease Finance</span>
+        </a>
+        <a
+          href="https://www.squadvplumbing.ca/"
+          class="tf-site-registry-card"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="tf-mono">PLUMBING SITE</span>
+          <span>Squad V Plumbing</span>
+        </a>
       </div>
 
       <ul class="tf-quotes">
@@ -858,7 +927,6 @@ eleventyNavigation:
       </div>
     </div>
   </section>
-
 </div>
 
 <script>
