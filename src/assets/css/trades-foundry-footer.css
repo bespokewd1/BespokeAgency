@@ -191,6 +191,7 @@
 .tf-footer-socials {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.625rem;
   padding-top: 0.125rem;
 }
