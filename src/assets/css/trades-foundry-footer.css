@@ -1,0 +1,110 @@
+.tf-footer {
+  background: var(--tf-paper);
+  padding: 3.5rem 0 2.5rem;
+}
+
+.tf-footer-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 2.5rem 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 48.75rem) {
+  .tf-footer-inner { grid-template-columns: 1fr; }
+}
+
+.tf-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.tf-footer-logo {
+  display: inline-flex;
+  width: fit-content;
+}
+
+.tf-footer-logo .cs-logo-img {
+  filter: drop-shadow(2px 2px black) drop-shadow(2px -2px black)
+    drop-shadow(-2px 2px black) drop-shadow(-2px -2px black);
+  width: 8rem;
+  height: auto;
+}
+
+.tf-footer-brand .tf-mast-word {
+  font-size: 1.75rem;
+  letter-spacing: -0.005em;
+  color: var(--tf-ink);
+}
+
+.tf-footer-tag {
+  font-family: var(--tf-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tf-muted);
+}
+
+.tf-footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+@media (max-width: 36.25rem) {
+  .tf-footer-cols { grid-template-columns: 1fr; }
+}
+
+.tf-footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tf-footer-col .tf-mono {
+  color: var(--tf-rust);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.tf-footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tf-footer-col a,
+.tf-footer-col span:not(.tf-mono) {
+  font-family: var(--tf-body);
+  font-size: 0.875rem;
+  color: var(--tf-ink-soft);
+}
+
+.tf-footer-col a {
+  transition: color 0.2s ease;
+}
+
+.tf-footer-col a:hover { color: var(--tf-blue); }
+
+.tf-footer-copy {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 2rem;
+  margin-top: 1rem;
+  border-top: 0.125rem solid var(--tf-ink);
+  font-size: 0.78125rem;
+  color: var(--tf-muted);
+}
+
+.tf-footer-copy .tf-mono {
+  color: var(--tf-rust);
+  font-weight: 600;
+}
