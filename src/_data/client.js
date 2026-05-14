@@ -16,6 +16,8 @@ module.exports = {
   socials: {
     facebook: "https://www.facebook.com/profile.php?id=61561167136463",
     instagram: "https://www.instagram.com/bespokewebdesign.ca/",
+    linkedin: "https://www.linkedin.com/company/cs-webdesign-edmonton/about/",
+    youtube: "https://www.youtube.com/@BespokeWebdesignEdmonton"
   },
   //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
   domain: "https://bespokewebdesign.ca",

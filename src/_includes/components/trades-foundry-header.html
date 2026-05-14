@@ -105,7 +105,8 @@
     gap: 1.625rem;
   }
 
-  .tf-mast-nav > a:not(.tf-mast-cta) {
+  .tf-mast-nav > a:not(.tf-mast-cta),
+  .tf-mast-dropdown-button {
     font-family: var(--tf-body);
     font-size: 0.8125rem;
     font-weight: 500;
@@ -117,7 +118,18 @@
     padding-bottom: 0.125rem;
   }
 
-  .tf-mast-nav > a:not(.tf-mast-cta)::after {
+  .tf-mast-dropdown-button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .tf-mast-nav > a:not(.tf-mast-cta)::after,
+  .tf-mast-dropdown-button::after {
     content: '';
     position: absolute;
     left: 0;
@@ -128,10 +140,82 @@
     transition: right 0.32s ease;
   }
 
-  .tf-mast-nav > a:not(.tf-mast-cta):hover::after { right: 0; }
+  .tf-mast-nav > a:not(.tf-mast-cta):hover::after,
+  .tf-mast-nav > a.tf-is-active:not(.tf-mast-cta)::after,
+  .tf-mast-dropdown-button:hover::after,
+  .tf-mast-dropdown-button.tf-is-active::after,
+  .tf-mast-dropdown.is-open .tf-mast-dropdown-button::after { right: 0; }
+
+  .tf-mast-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .tf-mast-dropdown-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    transition: transform 0.2s ease;
+  }
+
+  .tf-mast-dropdown.is-open .tf-mast-dropdown-icon,
+  .tf-mast-dropdown:focus-within .tf-mast-dropdown-icon,
+  .tf-mast-dropdown:hover .tf-mast-dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  .tf-mast-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.85rem);
+    left: 50%;
+    min-width: 13rem;
+    margin: 0;
+    padding: 0.35rem;
+    list-style: none;
+    background: var(--tf-paper-2);
+    border: 0.125rem solid var(--tf-ink);
+    box-shadow: 0.375rem 0.375rem 0 var(--tf-ink);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -0.35rem);
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease,
+      visibility 0.18s ease;
+  }
+
+  .tf-mast-dropdown:hover .tf-mast-dropdown-menu,
+  .tf-mast-dropdown:focus-within .tf-mast-dropdown-menu,
+  .tf-mast-dropdown.is-open .tf-mast-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+
+  .tf-mast-dropdown-link {
+    display: block;
+    padding: 0.65rem 0.75rem;
+    color: var(--tf-ink);
+    font-family: var(--tf-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .tf-mast-dropdown-link:hover,
+  .tf-mast-dropdown-link.tf-is-active {
+    background: var(--tf-ink);
+    color: var(--tf-paper);
+  }
 
   @media (max-width: 63.9375rem) {
-    .tf-mast-nav > a:not(.tf-mast-cta) { display: none; }
+    .tf-mast-nav > a:not(.tf-mast-cta),
+    .tf-mast-dropdown { display: none; }
   }
 
   .tf-mast-cta {
@@ -324,6 +408,15 @@
   .tf-menu-nav a:last-child { border-bottom: 0; }
   .tf-menu-nav a > span:first-child { min-width: 0; }
 
+  .tf-menu-nav a.tf-menu-child {
+    min-height: 3.25rem;
+    padding-left: 1.75rem;
+    font-family: var(--tf-body);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
   .tf-menu-nav a > span:last-child,
   .tf-menu-call > span:last-child {
     font-family: var(--tf-mono);
@@ -333,6 +426,7 @@
   }
 
   .tf-menu-nav a:hover,
+  .tf-menu-nav a.tf-is-active,
   .tf-menu-call:hover {
     background: var(--tf-ink);
     color: var(--tf-paper);
@@ -340,8 +434,14 @@
   }
 
   .tf-menu-nav a:hover > span:last-child,
+  .tf-menu-nav a.tf-is-active > span:last-child,
   .tf-menu-call:hover > span:last-child {
     color: var(--tf-blue);
+  }
+
+  .tf-menu-nav a.tf-menu-child:hover,
+  .tf-menu-nav a.tf-menu-child.tf-is-active {
+    padding-left: 2rem;
   }
 
   .tf-menu-actions {
@@ -442,11 +542,75 @@
       />
       <span class="tf-mast-word">Bespoke<em>Web</em>Design</span>
     </a>
+    {% set navPages = collections.all | eleventyNavigation %}
     <nav class="tf-mast-nav" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#trades">Trades</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#proof">Portfolio</a>
+      {% for entry in navPages %}
+        {% set hasChild = entry.children.length %}
+        {% set hideClasses = [] %}
+        {% if entry.hideOnMobile %}
+          {% set hideClasses = (hideClasses.push("tf-hide-on-mobile"), hideClasses) %}
+        {% endif %}
+        {% if entry.hideOnDesktop %}
+          {% set hideClasses = (hideClasses.push("tf-hide-on-desktop"), hideClasses) %}
+        {% endif %}
+
+        {% if hasChild %}
+          {% set activeClass = "" %}
+          {% if entry.url == page.url %}
+            {% set activeClass = "tf-is-active" %}
+          {% endif %}
+          {% for child in entry.children %}
+            {% if child.url == page.url %}
+              {% set activeClass = "tf-is-active" %}
+            {% endif %}
+          {% endfor %}
+          <div class="tf-mast-dropdown {{ hideClasses | join(" ") }}">
+            <button
+              class="tf-mast-dropdown-button {{ activeClass }}"
+              type="button"
+              aria-expanded="false"
+            >
+              {{ entry.key }}
+              <svg
+                class="tf-mast-dropdown-icon"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <ul class="tf-mast-dropdown-menu">
+              {% for child in entry.children %}
+                <li>
+                  <a
+                    href="{{ child.url }}"
+                    class="tf-mast-dropdown-link {% if child.url == page.url %}tf-is-active{% endif %}"
+                    {% if child.url == page.url %}aria-current="page"{% endif %}
+                  >
+                    {{ child.key }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% else %}
+          <a
+            href="{{ entry.url }}"
+            class="{% if entry.url == page.url %}tf-is-active{% endif %} {{ hideClasses | join(" ") }}"
+            {% if entry.url == page.url %}aria-current="page"{% endif %}
+          >
+            {{ entry.key }}
+          </a>
+        {% endif %}
+      {% endfor %}
       <a href="tel:+17802638028" class="tf-mast-cta">
         <span>Book a call</span>
         <span class="tf-arrow" aria-hidden="true">→</span>
@@ -510,11 +674,28 @@
           </button>
         </div>
         <nav class="tf-menu-nav" aria-label="Mobile primary">
-          <a href="#services"><span>Services</span><span>01</span></a>
-          <a href="#trades"><span>Trades</span><span>02</span></a>
-          <a href="#pricing"><span>Pricing</span><span>03</span></a>
-          <a href="#proof"><span>Portfolio</span><span>04</span></a>
-          <a href="#contact"><span>Start a project</span><span>05</span></a>
+          {% for entry in navPages %}
+            {% set hasChild = entry.children.length %}
+            {% set parentIndex = loop.index %}
+            <a
+              href="{{ entry.url }}"
+              class="{% if entry.url == page.url %}tf-is-active{% endif %}"
+              {% if entry.url == page.url %}aria-current="page"{% endif %}
+            >
+              <span>{{ entry.key }}</span><span>{{ parentIndex }}</span>
+            </a>
+            {% if hasChild %}
+              {% for child in entry.children %}
+                <a
+                  href="{{ child.url }}"
+                  class="tf-menu-child {% if child.url == page.url %}tf-is-active{% endif %}"
+                  {% if child.url == page.url %}aria-current="page"{% endif %}
+                >
+                  <span>{{ child.key }}</span><span>{{ parentIndex }}.{{ loop.index }}</span>
+                </a>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
         </nav>
         <div class="tf-menu-actions">
           <a href="tel:+17802638028" class="tf-menu-call">
@@ -545,9 +726,42 @@
 
     var lastFocused = null;
     var closeDelay = 220;
+    var dropdowns = Array.prototype.slice.call(
+      header.querySelectorAll(".tf-mast-dropdown")
+    );
+
+    function closeDropdowns(exceptDropdown) {
+      dropdowns.forEach(function (dropdown) {
+        if (dropdown === exceptDropdown) return;
+        dropdown.classList.remove("is-open");
+        var button = dropdown.querySelector(".tf-mast-dropdown-button");
+        if (button) button.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    dropdowns.forEach(function (dropdown) {
+      var button = dropdown.querySelector(".tf-mast-dropdown-button");
+      if (!button) return;
+
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        var isOpen = dropdown.classList.toggle("is-open");
+        button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        closeDropdowns(dropdown);
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!header.contains(event.target)) closeDropdowns();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeDropdowns();
+    });
 
     function openMenu() {
       if (dialog.open) return;
+      closeDropdowns();
       lastFocused = document.activeElement;
       dialog.classList.remove("is-closing");
       if (typeof dialog.showModal === "function") {
