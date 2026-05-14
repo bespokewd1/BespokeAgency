@@ -1,6 +1,44 @@
 .tf-footer {
+  --tf-ink: #0A0A0A;
+  --tf-ink-soft: #1A1A1A;
+  --tf-muted: #5C5A55;
+  --tf-paper: #F4F1E6;
+  --tf-paper-2: #FAF7EE;
+  --tf-paper-edge: #E9E4D2;
+  --tf-rule: rgba(10, 10, 10, 0.16);
+  --tf-rule-strong: rgba(10, 10, 10, 0.45);
+  --tf-blue: #4594F2;
+  --tf-blue-deep: #0E3A8C;
+  --tf-blue-soft: #E0EBFB;
+  --tf-rust: #C24914;
+  --tf-rust-soft: #F6E1D3;
+  --tf-paper-white: #FAFAFA;
+  --tf-bg-light: #F9F9F9;
+  --tf-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --tf-body: 'Familjen Grotesk', system-ui, sans-serif;
+  --tf-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --tf-script: 'Newsreader', Georgia, serif;
+  --tf-radius: 0;
+  --tf-radius-soft: 0.25rem;
   background: var(--tf-paper);
+  color: var(--tf-ink);
+  font-family: var(--tf-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'ss01', 'cv05';
   padding: 3.5rem 0 2.5rem;
+}
+
+.tf-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tf-footer img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .tf-footer-inner {
@@ -33,9 +71,23 @@
 }
 
 .tf-footer-brand .tf-mast-word {
+  font-family: var(--tf-display);
+  font-weight: 800;
+  text-transform: uppercase;
   font-size: 1.75rem;
   letter-spacing: -0.005em;
   color: var(--tf-ink);
+}
+
+.tf-footer-brand .tf-mast-word em {
+  font-family: var(--tf-script);
+  font-style: italic;
+  font-weight: 500;
+  text-transform: none;
+  color: var(--tf-blue);
+  margin: 0 0.125rem;
+  font-size: 0.92em;
+  letter-spacing: 0;
 }
 
 .tf-footer-tag {
