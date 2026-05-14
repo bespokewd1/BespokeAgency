@@ -76,6 +76,20 @@
       href="/assets/fonts/noto-serif-georgian-v26-latin-700.woff2"
       crossorigin
     />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/fonts/big-shoulders-display-latin-600-900.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/fonts/familjen-grotesk-latin-400-700.woff2"
+      crossorigin
+    />
 
     <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
     {% if preloadImg != '' %}
@@ -85,6 +99,7 @@
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css" />
     <link rel="stylesheet" href="/assets/css/dark.css" />
+    <link rel="stylesheet" href="/assets/css/trades-foundry-fonts.css" />
     <link
       rel="preload"
       href="/assets/css/trades-foundry-footer.css"
@@ -138,10 +153,8 @@
       >Click To Skip To Main Content</a
     >
 
-    {% include "components/header.html" %} {% include
-    "components/trades-foundry-header.html" %}
+    {% include "components/trades-foundry-header.html" %}
     <main id="main">{% block body %}{% endblock %}</main>
-    {% include "components/trades-foundry-footer.html" %} {% include
-    "components/footer.html" %}
+    {% include "components/trades-foundry-footer.html" %}
   </body>
 </html>

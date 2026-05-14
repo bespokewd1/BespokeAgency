@@ -4,8 +4,6 @@
    Scoped under .tf-page — no global leakage
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap');
-
 body {overflow-x:unset !important ;}
 
 .tf-page {
@@ -26,11 +24,6 @@ body {overflow-x:unset !important ;}
   --tf-rust-soft: #F6E1D3;
   --tf-paper-white: #FAFAFA; /* from index.html --bodyTextColorWhite */
   --tf-bg-light: #F9F9F9;    /* from index.html --bodybg */
-
-  --tf-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
-  --tf-body: 'Familjen Grotesk', system-ui, sans-serif;
-  --tf-mono: 'JetBrains Mono', ui-monospace, monospace;
-  --tf-script: 'Newsreader', Georgia, serif;
 
   --tf-radius: 0;
   --tf-radius-soft: 0.25rem;

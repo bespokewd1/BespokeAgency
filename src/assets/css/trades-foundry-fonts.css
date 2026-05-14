@@ -1,0 +1,35 @@
+/* ============================================================
+   TRADES FOUNDRY — TYPE SYSTEM
+   Local font faces and shared tokens for foundry pages/components.
+   ============================================================ */
+
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: swap;
+  src: url('/assets/fonts/big-shoulders-display-latin-600-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/assets/fonts/familjen-grotesk-latin-400-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('/assets/fonts/newsreader-latin-italic-400-600.woff2') format('woff2');
+}
+
+:root {
+  --tf-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --tf-body: 'Familjen Grotesk', system-ui, sans-serif;
+  --tf-mono: ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --tf-script: 'Newsreader', Georgia, serif;
+}
