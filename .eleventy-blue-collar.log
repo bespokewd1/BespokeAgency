@@ -1,0 +1,53 @@
+[11ty] Writing public/index.html from ./src/index.html (njk)
+[11ty] Writing public/robots.txt from ./src/robots.html (njk)
+[11ty] Writing public/admin/index.html from ./src/admin/index.html (njk)
+[11ty] Writing public/sitemap.xml from ./src/sitemap.html (njk)
+[11ty] Writing public/assets/css/about.css from ./src/assets/css/about.css
+[11ty] Writing public/assets/css/appointment.css from ./src/assets/css/appointment.css
+[11ty] Writing public/assets/css/blaze.css from ./src/assets/css/blaze.css
+[11ty] Writing public/assets/css/blog.css from ./src/assets/css/blog.css
+[11ty] Writing public/assets/css/blue-collar-home.css from ./src/assets/css/blue-collar-home.css
+[11ty] Writing public/assets/css/contact copy.css from ./src/assets/css/contact copy.css
+[11ty] Writing public/assets/css/admin.css from ./src/assets/css/admin.css
+[11ty] Writing public/assets/css/contact.css from ./src/assets/css/contact.css
+[11ty] Writing public/assets/css/critical.css from ./src/assets/css/critical.css
+[11ty] Writing public/assets/css/dark copy.css from ./src/assets/css/dark copy.css
+[11ty] Writing public/assets/css/dark.css from ./src/assets/css/dark.css
+[11ty] Writing public/assets/css/landing.css from ./src/assets/css/landing.css
+[11ty] Writing public/assets/css/digital-card.css from ./src/assets/css/digital-card.css
+[11ty] Writing public/assets/css/copy-blog.css from ./src/assets/css/copy-blog.css
+[11ty] Writing public/assets/css/projects.css from ./src/assets/css/projects.css
+[11ty] Writing public/assets/css/portfolio.css from ./src/assets/css/portfolio.css
+[11ty] Writing public/assets/css/local.css from ./src/assets/css/local.css
+[11ty] Writing public/assets/css/services copy.css from ./src/assets/css/services copy.css
+[11ty] Writing public/assets/css/reviews.css from ./src/assets/css/reviews.css
+[11ty] Writing public/assets/css/trades-blueprint.css from ./src/assets/css/trades-blueprint.css
+[11ty] Writing public/assets/css/trades-foundry-fonts.css from ./src/assets/css/trades-foundry-fonts.css
+[11ty] Writing public/assets/css/review.css from ./src/assets/css/review.css
+[11ty] Writing public/assets/css/root.css from ./src/assets/css/root.css
+[11ty] Writing public/assets/css/trades-foundry-footer.css from ./src/assets/css/trades-foundry-footer.css
+[11ty] Writing public/assets/css/typecontact copy.css from ./src/assets/css/typecontact copy.css
+[11ty] Writing public/assets/css/trades-bold.css from ./src/assets/css/trades-bold.css
+[11ty] Writing public/assets/css/services.css from ./src/assets/css/services.css
+[11ty] Writing public/assets/css/trades-home.css from ./src/assets/css/trades-home.css
+[11ty] Writing public/assets/css/typecontact.css from ./src/assets/css/typecontact.css
+[11ty] Writing public/assets/css/trades-foundry.css from ./src/assets/css/trades-foundry.css
+[11ty] Writing public/contact/index.html from ./src/content/pages/contact.html (njk)
+[11ty] Writing public/about/index.html from ./src/content/pages/about.html (njk)
+[11ty] Writing public/content/pages/biolink/index.html from ./src/content/pages/biolink.html (njk)
+[11ty] Writing public/blue-collar/index.html from ./src/content/pages/blue-collar-home.html (njk)
+[11ty] Writing public/blog/index.html from ./src/content/pages/blog.html (njk)
+[11ty] Writing public/plumbing-website/index.html from ./src/content/pages/landing-plumbing.html (njk)
+[11ty] Writing public/landing/index.html from ./src/content/pages/landing.html (njk)
+[11ty] Writing public/home-backup/index.html from ./src/content/pages/home-backup.html (njk)
+[11ty] Writing public/mycard/index.html from ./src/content/pages/mycard.html (njk)
+[11ty] Writing public/portfolio/index.html from ./src/content/pages/portfolio.html (njk)
+[11ty] Writing public/cleaning-website/index.html from ./src/content/pages/landing-cleaning.html (njk)
+[11ty] Writing public/review/index.html from ./src/content/pages/review.html (njk)
+[11ty] Writing public/trades-foundry/index.html from ./src/content/pages/trades-foundry.html (njk)
+[11ty] Writing public/trades-blueprint/index.html from ./src/content/pages/trades-blueprint.html (njk)
+[11ty] Writing public/services/index.html from ./src/content/pages/services.html (njk)
+[11ty] Writing public/trades-home/index.html from ./src/content/pages/trades-home.html (njk)
+[11ty] Writing public/blog/google-business-profile-checklist-for-2025/index.html from ./src/content/blog/google-business-profile-checklist-for-2025-–-get-found-on-google.md (liquid)
+[11ty] Copied 326 files / Wrote 51 files in 0.29 seconds (5.7ms each, v2.0.1)
+[11ty] Watching…
