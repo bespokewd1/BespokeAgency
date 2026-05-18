@@ -1,0 +1,439 @@
+---
+title: "Bespoke Web Design — Contractor Marketing Reinvented"
+description: "Custom websites + monthly social media management for Edmonton plumbers, electricians, HVAC, roofers, and contractors. Fully managed from $245/month. No setup fees. Cancel anytime."
+preloadImg: ""
+permalink: "/blue-collar/"
+image: /assets/images/og/home-og.webp
+eleventyExcludeFromCollections: true
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/blue-collar-home.css" />
+{% endblock %} {% block body %}
+<div class="bcm-page">
+  <!-- ============================================================
+       Notification bar
+       ============================================================ -->
+  <div class="bcm-notice" role="region" aria-label="Promotional banner">
+    <div class="bcm-notice-inner">
+      <span class="bcm-notice-text">SKIP THE LINE! BOOK A CALL WITH US NOW!</span>
+      <a href="tel:+17802638028" class="bcm-notice-btn">
+        <span class="bcm-notice-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        BOOK YOUR ONBOARDING CALL
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Hero — Worker video / image
+       ============================================================ -->
+  <section class="bcm-hero" aria-labelledby="bcm-hero-title">
+    <div class="bcm-hero-media" aria-hidden="true">
+      <!--
+        Hero video: Pexels free-license stock (https://www.pexels.com/license/).
+        Pexels permits free use including for commercial projects, no attribution
+        required. Once a self-hosted video lands at /assets/videos/bcm-hero.mp4
+        it will be tried first (browser walks <source> top-down on 404 / decode
+        error) and the Pexels CDN URL becomes the fallback.
+      -->
+      <video
+        class="bcm-hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="/assets/images/mockup-squadv.webp"
+      >
+        <source src="/assets/videos/bcm-hero.mp4" type="video/mp4" />
+        <source
+          src="https://videos.pexels.com/video-files/10294768/10294768-hd_1920_1080_30fps.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="bcm-hero-veil"></div>
+    </div>
+
+    <div class="bcm-hero-inner">
+      <span class="bcm-hero-kicker">EDMONTON'S #1 BLUE COLLAR MARKETING AGENCY</span>
+      <h1 id="bcm-hero-title" class="bcm-hero-title">
+        <span class="bcm-h-line">CONTRACTOR MARKETING REINVENTED.</span>
+        <span class="bcm-h-line">DOMINATE YOUR TRADE.</span>
+      </h1>
+      <p class="bcm-hero-lede">
+        Your trade deserves a marketing team that speaks your language. At Bespoke Web Design we
+        build, run, and grow the entire digital presence for Edmonton plumbers, electricians, HVAC,
+        roofers, and contractors — fully managed from <strong>$245/month</strong>.
+      </p>
+      <div class="bcm-hero-cta">
+        <a href="tel:+17802638028" class="bcm-btn bcm-btn-primary">
+          <span class="bcm-btn-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </span>
+          GET STARTED TODAY
+        </a>
+      </div>
+    </div>
+
+    <div class="bcm-hero-scroll" aria-hidden="true">
+      <span>SCROLL</span>
+      <span class="bcm-hero-scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Trusted / Services grid
+       ============================================================ -->
+  <section class="bcm-section bcm-services" aria-labelledby="bcm-services-title">
+    <div class="bcm-wrap">
+      <div class="bcm-services-head">
+        <h2 id="bcm-services-title" class="bcm-h2">
+          TRUSTED BY CONTRACTORS<br />
+          &amp; TRADES COMPANIES<br />
+          <span class="bcm-underline">ACROSS NORTH AMERICA<span class="bcm-dot">.</span></span>
+        </h2>
+        <p class="bcm-services-lede">
+          We are Edmonton's <strong>leading digital marketing studio</strong> specifically focused
+          on building websites, branding, and managed marketing for trades businesses. Our team
+          knows your industry inside out — and we're dedicated to seeing contracting companies
+          reach their full potential.
+        </p>
+      </div>
+
+      <ul class="bcm-svc-grid">
+        <li class="bcm-svc-card">
+          <div class="bcm-svc-photo">
+            <img src="/assets/images/mockup-mpc.png" alt="Trades brand identity mockup" loading="lazy" decoding="async" />
+          </div>
+          <div class="bcm-svc-body">
+            <h3 class="bcm-svc-title">LOGO &amp; BRAND DESIGN</h3>
+            <p>
+              Our designers work to understand your vision and create a logo that looks great on
+              everything from your merch to your truck door.
+            </p>
+            <a href="#contact" class="bcm-svc-cta">
+              GET YOUR NEW LOOK
+              <span class="bcm-svc-cta-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li class="bcm-svc-card">
+          <div class="bcm-svc-photo">
+            <img src="/assets/images/mockup-kms.png" alt="Custom trades website on phone" loading="lazy" decoding="async" />
+          </div>
+          <div class="bcm-svc-body">
+            <h3 class="bcm-svc-title">CUSTOM WEBSITE DESIGN</h3>
+            <p>
+              Hand-coded — no templates. 5-page trade site built to rank on Google and turn visitors
+              into phone calls. Fast, mobile-first, owned by you.
+            </p>
+            <a href="#contact" class="bcm-svc-cta">
+              EXPLORE WEBSITES
+              <span class="bcm-svc-cta-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li class="bcm-svc-card">
+          <div class="bcm-svc-photo">
+            <img src="/assets/images/mockup-imassage.webp" alt="Social media post on phone" loading="lazy" decoding="async" />
+          </div>
+          <div class="bcm-svc-body">
+            <h3 class="bcm-svc-title">SOCIAL MEDIA MANAGEMENT</h3>
+            <p>
+              We design, write, and post 5 branded pieces of content every month on Facebook &amp;
+              Instagram. Showcase your projects, generate leads, build loyalty.
+            </p>
+            <a href="#contact" class="bcm-svc-cta">
+              GROW YOUR SOCIALS
+              <span class="bcm-svc-cta-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li class="bcm-svc-card">
+          <div class="bcm-svc-photo">
+            <img src="/assets/images/mockup-yeg-carpet.webp" alt="Trades media production" loading="lazy" decoding="async" />
+          </div>
+          <div class="bcm-svc-body">
+            <h3 class="bcm-svc-title">HYPE MEDIA PRODUCTION</h3>
+            <p>
+              Highlight your projects with a professional photo &amp; video shoot. Our team captures
+              striking visuals for your business that take it to the next level.
+            </p>
+            <a href="#contact" class="bcm-svc-cta">
+              GET KICKASS MEDIA
+              <span class="bcm-svc-cta-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li class="bcm-svc-card">
+          <div class="bcm-svc-photo">
+            <img src="/assets/images/mockup-merit.webp" alt="SEO analytics dashboard" loading="lazy" decoding="async" />
+          </div>
+          <div class="bcm-svc-body">
+            <h3 class="bcm-svc-title">SEARCH ENGINE OPTIMIZATION</h3>
+            <p>
+              Outperform competitors with proven local SEO that elevates your Google ranking,
+              attracts the right customers, and builds your industry reputation in Edmonton.
+            </p>
+            <a href="#contact" class="bcm-svc-cta">
+              EXPLORE SEO
+              <span class="bcm-svc-cta-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li class="bcm-svc-card">
+          <div class="bcm-svc-photo">
+            <img src="/assets/images/mockup-imassage2.webp" alt="Phone showing a lead generation form" loading="lazy" decoding="async" />
+          </div>
+          <div class="bcm-svc-body">
+            <h3 class="bcm-svc-title">DEDICATED LEAD GENERATION</h3>
+            <p>
+              Struggling to get quality leads? Our team uses Meta, Google, and dedicated booking
+              flows to connect you with the right customers and grow your contracting business.
+            </p>
+            <a href="#contact" class="bcm-svc-cta">
+              EXPLORE PPC
+              <span class="bcm-svc-cta-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Value Prop — Dark split
+       ============================================================ -->
+  <section class="bcm-section bcm-value" aria-labelledby="bcm-value-title">
+    <div class="bcm-value-grid">
+      <div class="bcm-value-left">
+        <h2 id="bcm-value-title" class="bcm-h2 bcm-h2-light">
+          EDMONTON'S #1 CHOICE FOR<br />
+          BLUE COLLAR DIGITAL MARKETING
+        </h2>
+        <p class="bcm-value-lede">
+          Our digital marketing solutions provide proven strategies to help you grow your business.
+          Focus on running your company and leave the digital side to us at affordable and
+          effective pricing. We partner with you long term and help you succeed year in and year
+          out.
+        </p>
+
+        <p class="bcm-value-sub">We Specialize In 6 Key Services</p>
+        <ul class="bcm-value-list">
+          <li><span class="bcm-chev" aria-hidden="true">›</span>LOGO &amp; GRAPHIC DESIGN</li>
+          <li><span class="bcm-chev" aria-hidden="true">›</span>WEBSITE DEVELOPMENT</li>
+          <li><span class="bcm-chev" aria-hidden="true">›</span>SOCIAL MEDIA</li>
+          <li><span class="bcm-chev" aria-hidden="true">›</span>PROFESSIONAL MEDIA PRODUCTION</li>
+          <li><span class="bcm-chev" aria-hidden="true">›</span>SEO</li>
+          <li><span class="bcm-chev" aria-hidden="true">›</span>LEAD GENERATION</li>
+        </ul>
+
+        <div class="bcm-value-cta">
+          <a href="#contact" class="bcm-btn bcm-btn-primary">GET STARTED TODAY</a>
+          <a href="#proof" class="bcm-btn bcm-btn-ghost-light">
+            <span class="bcm-btn-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+            VIEW OUR FULL PORTFOLIO
+          </a>
+        </div>
+      </div>
+
+      <div class="bcm-value-right" aria-hidden="true">
+        <img src="/assets/images/mockup-merit2.webp" alt="" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5 Star reputation — testimonial video
+       ============================================================ -->
+  <section id="proof" class="bcm-section bcm-reputation" aria-labelledby="bcm-rep-title">
+    <div class="bcm-wrap">
+      <h2 id="bcm-rep-title" class="bcm-h2 bcm-h2-center">
+        A <span class="bcm-text-blue">5 STAR REPUTATION</span> YEARS IN THE MAKING
+      </h2>
+
+      <ul class="bcm-rep-pills" aria-label="Why pick us">
+        <li><span class="bcm-pill-ic" aria-hidden="true">✓</span>BUILT FOR CONTRACTORS</li>
+        <li><span class="bcm-pill-ic" aria-hidden="true">✓</span>STRESS FREE PROCESS</li>
+        <li><span class="bcm-pill-ic" aria-hidden="true">✓</span>#1 RATED DIGITAL TEAM</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Industry changing — invest
+       ============================================================ -->
+  <section class="bcm-section bcm-invest" aria-labelledby="bcm-invest-title">
+    <div class="bcm-invest-grid">
+      <div class="bcm-invest-left">
+        <span class="bcm-kicker bcm-kicker-dark">THE TRADES INDUSTRY IS CHANGING</span>
+        <h2 id="bcm-invest-title" class="bcm-h2 bcm-h2-dark">
+          IT'S TIME TO INVEST<br />
+          IN YOUR BUSINESS<span class="bcm-dot bcm-dot-blue">.</span>
+        </h2>
+        <p class="bcm-invest-body">
+          The trades industry is notoriously behind when it comes to digital marketing. But the
+          divide is forming — more contractors are adopting digital, and the ones that aren't are
+          falling behind. It's been a great couple of years for the industry, but the good times
+          don't always last. Invest in your future while the cash flow is steady and your crews are
+          busy.
+        </p>
+
+        <div class="bcm-rating-row">
+          <div class="bcm-rating">
+            <span class="bcm-rating-label">Google</span>
+            <span class="bcm-rating-stars" aria-label="5 stars">5.0 ★★★★★</span>
+          </div>
+          <div class="bcm-rating">
+            <span class="bcm-rating-label">Facebook</span>
+            <span class="bcm-rating-stars" aria-label="5 stars">5.0 ★★★★★</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="bcm-invest-right">
+        <div class="bcm-invest-media">
+          <img src="/assets/images/mockup-squadv.webp" alt="Bespoke team at work" loading="lazy" decoding="async" />
+          <span class="bcm-invest-tag">EST. 2022 · EDMONTON, AB</span>
+        </div>
+        <div class="bcm-invest-quote">
+          <p>
+            "The team at Bespoke made our website design process seamless. Extremely knowledgeable
+            and willing to go the extra mile to take your project to the next level. Would
+            recommend to anyone looking for website design."
+          </p>
+          <span class="bcm-invest-author">PAT DAVIES</span>
+          <span class="bcm-invest-role">Sales &amp; Marketing</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Pushing forward — resources + partner boxes
+       ============================================================ -->
+  <section class="bcm-section bcm-forward" aria-labelledby="bcm-fwd-title">
+    <div class="bcm-wrap">
+      <h2 id="bcm-fwd-title" class="bcm-h2 bcm-h2-center">
+        PUSHING THE BLUE COLLAR INDUSTRY FORWARD<span class="bcm-dot bcm-dot-blue">.</span>
+      </h2>
+      <p class="bcm-forward-lede">
+        We are Edmonton's leading digital agency <strong>dedicated to supporting the blue collar industry.</strong>
+      </p>
+
+      <div class="bcm-forward-grid">
+        <article class="bcm-forward-main">
+          <div class="bcm-forward-main-copy">
+            <span class="bcm-kicker bcm-kicker-light">DEDICATED EDUCATIONAL RESOURCES</span>
+            <h3 class="bcm-forward-h3">
+              WEEKLY RESOURCES TO HELP<br />
+              YOU GET THE COMPETITIVE<br />
+              EDGE WITH YOUR BUSINESS<span class="bcm-dot bcm-dot-blue">.</span>
+            </h3>
+            <p>
+              Explore our vast library of digital resources designed to help you get the most out of
+              your marketing — built for blue collar businesses, by people who get the trade.
+            </p>
+            <a href="/blog/" class="bcm-btn bcm-btn-primary">
+              VIEW RESOURCE LIBRARY
+              <span class="bcm-btn-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+          <div class="bcm-forward-main-img" aria-hidden="true">
+            <img src="/assets/images/mockup-imassage2.webp" alt="" loading="lazy" decoding="async" />
+          </div>
+        </article>
+
+        <div class="bcm-forward-side">
+          <article class="bcm-forward-box">
+            <span class="bcm-kicker bcm-kicker-dark">PARTNER NETWORK</span>
+            <h3 class="bcm-forward-h3 bcm-forward-h3-sm">
+              JOIN OUR NETWORK OF<br />
+              INDUSTRY PARTNERS<span class="bcm-dot bcm-dot-blue">.</span>
+            </h3>
+            <a href="#contact" class="bcm-btn bcm-btn-primary bcm-btn-sm">LEARN MORE</a>
+          </article>
+
+          <article class="bcm-forward-box">
+            <span class="bcm-kicker bcm-kicker-dark">AGENCY SUPPORT PROGRAM</span>
+            <h3 class="bcm-forward-h3 bcm-forward-h3-sm">
+              SUPERCHARGE YOUR<br />
+              AGENCY WITH OUR TEAM<span class="bcm-dot bcm-dot-blue">.</span>
+            </h3>
+            <a href="#contact" class="bcm-btn bcm-btn-primary bcm-btn-sm">LEARN MORE</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Final CTA
+       ============================================================ -->
+  <section id="contact" class="bcm-cta" aria-labelledby="bcm-cta-title">
+    <div class="bcm-cta-media" aria-hidden="true">
+      <img src="/assets/images/mockup-squadv.webp" alt="" loading="lazy" decoding="async" />
+      <div class="bcm-cta-veil"></div>
+    </div>
+    <div class="bcm-cta-inner">
+      <h2 id="bcm-cta-title" class="bcm-h2 bcm-h2-light bcm-h2-center">
+        BETTER DIGITAL MARKETING STARTS HERE
+      </h2>
+      <p class="bcm-cta-lede">
+        Ready to work with a team of professionals dedicated to your industry? Get started below. If
+        you have questions, that's also no problem. Our team is happy to chat with you about our
+        services.
+      </p>
+      <a href="tel:+17802638028" class="bcm-btn bcm-btn-primary bcm-btn-lg">
+        <span class="bcm-btn-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </span>
+        CONTACT US TO GET STARTED
+      </a>
+
+      <div class="bcm-cta-trust">
+        <span class="bcm-rating-stars bcm-rating-stars-lg" aria-label="5 stars">★★★★★</span>
+        <span class="bcm-cta-trust-text">50+ Reviews on Google &amp; Facebook</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Onboarding strip — bottom
+       ============================================================ -->
+  <div class="bcm-notice bcm-notice-bottom" role="region" aria-label="Onboarding call CTA">
+    <div class="bcm-notice-inner">
+      <span class="bcm-notice-text">SKIP THE LINE! BOOK A CALL WITH US NOW!</span>
+      <a href="tel:+17802638028" class="bcm-notice-btn bcm-notice-btn-dark">
+        <span class="bcm-notice-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        BOOK YOUR ONBOARDING CALL
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}
