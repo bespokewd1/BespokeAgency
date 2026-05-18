@@ -110,6 +110,19 @@ body { overflow-x: clip; }
 .bcm-kicker-dark { color: var(--bcm-ink); }
 
 .bcm-section { padding: 5rem 0; }
+.bcm-section-head {
+  margin: 0 auto 3rem;
+  max-width: 58rem;
+}
+.bcm-section-lede {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--bcm-muted);
+  margin: 0;
+}
+.bcm-section-lede strong { color: var(--bcm-ink); font-weight: 700; }
+.bcm-section-lede-center { text-align: center; margin-left: auto; margin-right: auto; max-width: 46rem; }
+.bcm-section-lede-light { color: rgba(255,255,255,0.78); max-width: 40rem; }
 
 /* ============================================================
    BUTTONS
@@ -356,6 +369,62 @@ body { overflow-x: clip; }
 }
 
 /* ============================================================
+   TRUSTED BY — logo ticker
+   ============================================================ */
+.bcm-trusted {
+  background: var(--bcm-paper);
+  overflow: hidden;
+}
+.bcm-logo-ticker {
+  margin-top: 2.75rem;
+  overflow: hidden;
+  border-top: 0.0938rem solid var(--bcm-rule);
+  border-bottom: 0.0938rem solid var(--bcm-rule);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+.bcm-logo-track {
+  display: flex;
+  width: max-content;
+  animation: bcmLogoMarquee 36s linear infinite;
+}
+.bcm-logo-ticker:hover .bcm-logo-track { animation-play-state: paused; }
+.bcm-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+}
+.bcm-logo-card {
+  width: 11rem;
+  height: 5.25rem;
+  margin-right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bcm-paper-2);
+  border: 0.0938rem solid var(--bcm-rule);
+  padding: 1rem;
+}
+.bcm-logo-card img {
+  max-width: 100%;
+  max-height: 3.25rem;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.78;
+  transition: filter 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+.bcm-logo-card:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.04);
+}
+@keyframes bcmLogoMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ============================================================
    SERVICES — 6 grid
    ============================================================ */
 .bcm-services { background: var(--bcm-paper); }
@@ -473,6 +542,275 @@ body { overflow-x: clip; }
   border-radius: 999px;
   background: rgba(255,255,255,0.16);
   align-items: center; justify-content: center;
+}
+
+/* ============================================================
+   PORTFOLIO
+   ============================================================ */
+.bcm-portfolio {
+  background: var(--bcm-ink);
+  color: #fff;
+  overflow: hidden;
+}
+.bcm-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.bcm-portfolio-card {
+  min-height: 24rem;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--bcm-ink-2);
+  border: 0.0938rem solid var(--bcm-rule-light);
+}
+.bcm-portfolio-card-wide { grid-column: span 2; }
+.bcm-portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.9) brightness(0.86);
+  transition: transform 600ms cubic-bezier(.2,.7,.3,1), filter 220ms ease;
+}
+.bcm-portfolio-card:hover img {
+  transform: scale(1.04);
+  filter: saturate(1) brightness(0.96);
+}
+.bcm-portfolio-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,15,23,0.86) 0%, rgba(11,15,23,0.12) 58%);
+  pointer-events: none;
+}
+.bcm-portfolio-card figcaption {
+  position: absolute;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+}
+.bcm-portfolio-card figcaption span {
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.bcm-portfolio-card figcaption small,
+.bcm-site-registry span {
+  font-family: var(--bcm-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bcm-blue);
+}
+.bcm-site-registry {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0.0938rem solid var(--bcm-rule-light);
+  border-bottom: 0;
+}
+.bcm-site-registry a {
+  min-height: 5.75rem;
+  padding: 1rem;
+  border-right: 0.0938rem solid var(--bcm-rule-light);
+  border-bottom: 0.0938rem solid var(--bcm-rule-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  transition: background 180ms ease, color 180ms ease;
+}
+.bcm-site-registry a:nth-child(3n) { border-right: 0; }
+.bcm-site-registry a:hover { background: var(--bcm-blue); color: #fff; }
+.bcm-site-registry a:hover span { color: #fff; }
+
+/* ============================================================
+   REVIEWS
+   ============================================================ */
+.bcm-reviews { background: var(--bcm-paper); }
+.bcm-review-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.bcm-review-card {
+  background: var(--bcm-paper-2);
+  border: 0.0938rem solid var(--bcm-rule);
+  padding: 1.5rem;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.bcm-review-stars {
+  color: var(--bcm-yellow);
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.bcm-review-card p {
+  margin: 0 0 1.5rem;
+  color: var(--bcm-ink-2);
+  line-height: 1.62;
+  flex: 1;
+}
+.bcm-review-card footer {
+  padding-top: 1rem;
+  border-top: 0.0938rem solid var(--bcm-rule);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.bcm-review-card footer span {
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--bcm-ink);
+}
+.bcm-review-card footer small {
+  color: var(--bcm-muted);
+  font-size: 0.82rem;
+}
+.bcm-rating-row-center {
+  justify-content: center;
+  margin-top: 2.25rem;
+}
+
+/* ============================================================
+   PRICING
+   ============================================================ */
+.bcm-pricing {
+  background: var(--bcm-paper-2);
+}
+.bcm-price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+.bcm-price-card {
+  position: relative;
+  background: #fff;
+  border: 0.0938rem solid var(--bcm-rule);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 34rem;
+  box-shadow: 0 1.25rem 3rem rgba(11,15,23,0.06);
+}
+.bcm-price-card-featured {
+  background: var(--bcm-ink);
+  color: #fff;
+  border-color: var(--bcm-blue);
+  transform: translateY(-0.75rem);
+}
+.bcm-price-flag {
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+  transform: translateY(-50%);
+  background: var(--bcm-blue);
+  color: #fff;
+  padding: 0.35rem 0.65rem;
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.bcm-price-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.0938rem solid var(--bcm-rule);
+  font-family: var(--bcm-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bcm-muted);
+}
+.bcm-price-card-featured .bcm-price-head { border-color: var(--bcm-rule-light); color: rgba(255,255,255,0.68); }
+.bcm-price-card h3 {
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 1.35rem 0 0.5rem;
+}
+.bcm-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+.bcm-price span,
+.bcm-price small {
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 800;
+  color: var(--bcm-muted);
+}
+.bcm-price-card-featured .bcm-price span,
+.bcm-price-card-featured .bcm-price small { color: rgba(255,255,255,0.7); }
+.bcm-price strong {
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(3.5rem, 7vw, 5rem);
+  line-height: 0.9;
+}
+.bcm-price-card p {
+  margin: 0 0 1.25rem;
+  color: var(--bcm-muted);
+}
+.bcm-price-card-featured p { color: rgba(255,255,255,0.72); }
+.bcm-price-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: grid;
+  gap: 0.65rem;
+  flex: 1;
+}
+.bcm-price-card li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.65rem;
+  align-items: start;
+  color: var(--bcm-ink-2);
+  font-size: 0.92rem;
+}
+.bcm-price-card-featured li { color: rgba(255,255,255,0.84); }
+.bcm-price-card li span {
+  font-family: var(--bcm-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--bcm-blue);
+  padding-top: 0.1rem;
+}
+.bcm-price-card .bcm-btn {
+  width: 100%;
+  justify-content: center;
 }
 
 /* ============================================================
@@ -871,6 +1209,19 @@ body { overflow-x: clip; }
   .bcm-value-left { padding: 3rem 1.5rem; }
   .bcm-forward-main-copy { padding: 1.75rem 1.5rem; }
   .bcm-cta { padding: 4rem 0 5rem; }
+  .bcm-section-head { margin-bottom: 2rem; }
+  .bcm-logo-card { width: 9rem; height: 4.5rem; }
+  .bcm-portfolio-grid,
+  .bcm-review-grid,
+  .bcm-price-grid,
+  .bcm-site-registry { grid-template-columns: 1fr; }
+  .bcm-portfolio-card,
+  .bcm-portfolio-card-wide { grid-column: auto; min-height: 19rem; }
+  .bcm-site-registry a,
+  .bcm-site-registry a:nth-child(3n) { border-right: 0; }
+  .bcm-price-card-featured { transform: none; }
+  .bcm-review-card,
+  .bcm-price-card { min-height: auto; }
 }
 @media (max-width: 32rem) {
   .bcm-rep-pills { gap: 1rem; flex-direction: column; align-items: center; }
@@ -878,4 +1229,14 @@ body { overflow-x: clip; }
   .bcm-btn { width: 100%; justify-content: center; }
   .bcm-notice-inner { gap: 0.65rem; }
   .bcm-notice-text { font-size: 0.78rem; text-align: center; }
+  .bcm-portfolio-card figcaption { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 70rem) and (min-width: 48.01rem) {
+  .bcm-portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-review-grid,
+  .bcm-price-grid { grid-template-columns: 1fr; }
+  .bcm-price-card-featured { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bcm-logo-track { animation: none; }
 }
