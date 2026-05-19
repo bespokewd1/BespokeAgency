@@ -863,6 +863,7 @@ body { overflow-x: clip; }
   font-size: 2rem;
   margin: 1.35rem 0 0.5rem;
 }
+.bcm-price-card-featured h3 { color: #fff; }
 .bcm-price {
   display: flex;
   align-items: baseline;
