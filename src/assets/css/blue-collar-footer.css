@@ -1,0 +1,338 @@
+/* ============================================================
+   BLUE COLLAR FOOTER — bcm-footer
+   Dark ink slab with sharp 1.5px ruling, italic Work Sans
+   display + Poppins body, blue + yellow accents. Tokens
+   scoped to .bcm-footer so leakage is impossible.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,900&display=swap");
+
+.bcm-footer {
+  --bcm-ink: #0B0F17;
+  --bcm-ink-2: #11151E;
+  --bcm-ink-3: #1A1F2A;
+  --bcm-paper: #FFFFFF;
+  --bcm-muted: #5B6373;
+  --bcm-muted-soft: #B6BCC8;
+  --bcm-blue: #1F8FFF;
+  --bcm-blue-dark: #0A6FE0;
+  --bcm-yellow: #FFC927;
+  --bcm-rule-light: rgba(255, 255, 255, 0.14);
+  --bcm-rule-soft: rgba(255, 255, 255, 0.08);
+
+  --bcm-display: 'Work Sans', system-ui, -apple-system, sans-serif;
+  --bcm-body: 'Poppins', system-ui, -apple-system, sans-serif;
+
+  position: relative;
+  background: var(--bcm-ink);
+  color: var(--bcm-paper);
+  font-family: var(--bcm-body);
+  line-height: 1.55;
+  border-top: 0.0938rem solid var(--bcm-blue);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+.bcm-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--bcm-rule-soft) 0.0625rem, transparent 0.0625rem),
+    linear-gradient(to bottom, var(--bcm-rule-soft) 0.0625rem, transparent 0.0625rem);
+  background-size: 3.5rem 3.5rem;
+  opacity: 0.5;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 70%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 70%);
+}
+
+.bcm-footer *,
+.bcm-footer *::before,
+.bcm-footer *::after { box-sizing: border-box; }
+
+.bcm-footer * { font-family: inherit; }
+
+.bcm-footer a { color: inherit; text-decoration: none; transition: color 0.2s ease, letter-spacing 0.2s ease; }
+.bcm-footer img { max-width: 100%; height: auto; display: block; }
+
+.bcm-footer-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 4.5rem 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 2.1fr);
+  gap: 3.5rem clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+@media (max-width: 48.75rem) {
+  .bcm-footer-inner {
+    padding: 3.5rem 1.25rem 2rem;
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+}
+
+/* ============================================================
+   BRAND COLUMN
+   ============================================================ */
+.bcm-footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.bcm-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  font-synthesis: style;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  color: #fff;
+}
+
+.bcm-footer-logo .cs-logo-img {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.bcm-footer-word {
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  font-synthesis: style;
+  text-transform: uppercase;
+}
+
+.bcm-footer-word em {
+  font-style: italic;
+  font-weight: 900;
+  color: var(--bcm-blue);
+  margin: 0 0.05em;
+}
+
+.bcm-footer-tag {
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 700;
+  font-synthesis: style;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bcm-muted-soft);
+  max-width: 22rem;
+}
+
+.bcm-footer-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border: 0.0938rem solid var(--bcm-rule-light);
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 700;
+  font-synthesis: style;
+  font-size: 0.625rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bcm-yellow);
+}
+
+.bcm-footer-stamp-dot {
+  width: 0.3rem;
+  height: 0.3rem;
+  background: var(--bcm-blue);
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* ============================================================
+   RIGHT COLUMNS (LINKS / SERVICES / CONTACTS)
+   ============================================================ */
+.bcm-footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem clamp(1.5rem, 3vw, 2.75rem);
+}
+
+@media (max-width: 48.75rem) {
+  .bcm-footer-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 32rem) {
+  .bcm-footer-cols { grid-template-columns: 1fr; }
+}
+
+.bcm-footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.bcm-footer-heading {
+  position: relative;
+  display: inline-block;
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  font-synthesis: style;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bcm-yellow);
+  padding-bottom: 0.65rem;
+}
+
+.bcm-footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1.75rem;
+  height: 0.125rem;
+  background: var(--bcm-blue);
+}
+
+.bcm-footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bcm-footer-list li { min-width: 0; }
+
+.bcm-footer-list a {
+  display: inline-block;
+  font-family: var(--bcm-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: var(--bcm-muted-soft);
+  position: relative;
+}
+
+.bcm-footer-list a::before {
+  content: '';
+  position: absolute;
+  left: -0.85rem;
+  top: 0.65em;
+  width: 0.35rem;
+  height: 0.0938rem;
+  background: var(--bcm-blue);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.bcm-footer-list a:hover {
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+.bcm-footer-list a:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   SOCIALS
+   ============================================================ */
+.bcm-footer-socials {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bcm-footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.0938rem solid var(--bcm-rule-light);
+  color: var(--bcm-muted-soft);
+  background: transparent;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.bcm-footer-socials a svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.bcm-footer-socials a:hover {
+  background: var(--bcm-blue);
+  border-color: var(--bcm-blue);
+  color: #fff;
+  transform: translateY(-0.0938rem);
+}
+
+/* ============================================================
+   BOTTOM RULE
+   ============================================================ */
+.bcm-footer-bottom {
+  position: relative;
+  z-index: 1;
+  border-top: 0.0938rem solid var(--bcm-rule-light);
+  background: var(--bcm-ink-2);
+}
+
+.bcm-footer-bottom-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+@media (max-width: 48.75rem) {
+  .bcm-footer-bottom-inner { padding: 1.25rem 1.25rem; }
+}
+
+.bcm-footer-copy {
+  font-family: var(--bcm-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--bcm-muted-soft);
+}
+
+.bcm-footer-plate {
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 700;
+  font-synthesis: style;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bcm-yellow);
+}

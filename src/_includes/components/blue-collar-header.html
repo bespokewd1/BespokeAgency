@@ -1,0 +1,897 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,900&display=swap");
+
+  .bcm-masthead {
+    --bcm-ink: #0B0F17;
+    --bcm-ink-2: #11151E;
+    --bcm-ink-3: #1A1F2A;
+    --bcm-paper: #FFFFFF;
+    --bcm-paper-2: #F5F6F8;
+    --bcm-muted: #5B6373;
+    --bcm-muted-soft: #B6BCC8;
+    --bcm-blue: #1F8FFF;
+    --bcm-blue-dark: #0A6FE0;
+    --bcm-blue-soft: #DCEBFF;
+    --bcm-yellow: #FFC927;
+    --bcm-rule: rgba(11, 15, 23, 0.10);
+    --bcm-rule-light: rgba(255, 255, 255, 0.14);
+
+    --bcm-display: 'Work Sans', system-ui, -apple-system, sans-serif;
+    --bcm-body: 'Poppins', system-ui, -apple-system, sans-serif;
+
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--bcm-paper);
+    color: var(--bcm-ink);
+    font-family: var(--bcm-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    border-bottom: 0.0938rem solid var(--bcm-ink);
+  }
+
+  .bcm-masthead *,
+  .bcm-masthead *::before,
+  .bcm-masthead *::after { box-sizing: border-box; }
+
+  .bcm-masthead a { color: inherit; text-decoration: none; }
+  .bcm-masthead img { max-width: 100%; height: auto; display: block; }
+  .bcm-masthead button { background: none; border: 0; cursor: pointer; color: inherit; }
+
+  /* ====================================================
+     TOP STRIP — coords
+     ==================================================== */
+  .bcm-mast-strip {
+    background: var(--bcm-ink);
+    color: var(--bcm-paper);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.4375rem clamp(1rem, 3vw, 2rem);
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 700;
+    font-synthesis: style;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .bcm-mast-strip-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    white-space: nowrap;
+  }
+
+  .bcm-mast-strip-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    background: var(--bcm-blue);
+    display: inline-block;
+    box-shadow: 0 0 0 0.2rem rgba(31, 143, 255, 0.18);
+  }
+
+  .bcm-mast-strip-sep {
+    color: var(--bcm-blue);
+    font-style: normal;
+    letter-spacing: 0;
+    font-size: 0.55rem;
+    transform: translateY(-0.05em);
+  }
+
+  .bcm-hide-sm { display: none; }
+  @media (min-width: 57.5rem) {
+    .bcm-hide-sm { display: inline-flex; }
+  }
+
+  /* ====================================================
+     MAIN BAR
+     ==================================================== */
+  .bcm-mast-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem min(2rem, 4vw);
+  }
+
+  .bcm-mast-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 900;
+    font-synthesis: style;
+    font-size: 1.375rem;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+    color: var(--bcm-ink);
+  }
+
+  .bcm-mast-logo .cs-logo-img {
+    width: 1.6rem;
+    height: 1.6rem;
+    object-fit: contain;
+    flex: 0 0 auto;
+filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
+    drop-shadow(-1px 1px black) drop-shadow(-1px -1px black);
+  }
+
+  .bcm-mast-word {
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 900;
+    font-synthesis: style;
+    text-transform: uppercase;
+    letter-spacing: -0.005em;
+  }
+
+  .bcm-mast-word em {
+    font-style: italic;
+    font-weight: 900;
+    color: var(--bcm-blue);
+    margin: 0 0.05em;
+  }
+
+  /* ====================================================
+     DESKTOP NAV
+     ==================================================== */
+  .bcm-mast-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.625rem;
+  }
+
+  .bcm-mast-nav > a:not(.bcm-mast-cta),
+  .bcm-mast-dropdown-button {
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 700;
+    font-synthesis: style;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--bcm-ink);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0.25rem;
+    transition: color 0.18s ease;
+  }
+
+  .bcm-mast-nav > a:not(.bcm-mast-cta):hover,
+  .bcm-mast-dropdown-button:hover { color: var(--bcm-blue-dark); }
+
+  .bcm-mast-dropdown-button {
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .bcm-mast-nav > a:not(.bcm-mast-cta)::after,
+  .bcm-mast-dropdown-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 0.125rem;
+    background: var(--bcm-blue);
+    transition: right 0.32s ease;
+  }
+
+  .bcm-mast-nav > a:not(.bcm-mast-cta):hover::after,
+  .bcm-mast-nav > a.bcm-is-active:not(.bcm-mast-cta)::after,
+  .bcm-mast-dropdown-button:hover::after,
+  .bcm-mast-dropdown-button.bcm-is-active::after,
+  .bcm-mast-dropdown.is-open .bcm-mast-dropdown-button::after { right: 0; }
+
+  /* ====================================================
+     DROPDOWN
+     ==================================================== */
+  .bcm-mast-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .bcm-mast-dropdown-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    transition: transform 0.2s ease;
+  }
+
+  .bcm-mast-dropdown.is-open .bcm-mast-dropdown-icon,
+  .bcm-mast-dropdown:focus-within .bcm-mast-dropdown-icon,
+  .bcm-mast-dropdown:hover .bcm-mast-dropdown-icon { transform: rotate(180deg); }
+
+  .bcm-mast-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.85rem);
+    left: 50%;
+    min-width: 13rem;
+    margin: 0;
+    padding: 0.4rem;
+    list-style: none;
+    background: var(--bcm-ink);
+    border: 0.0938rem solid var(--bcm-ink);
+    box-shadow: 0 0.75rem 1.5rem -0.5rem rgba(31, 143, 255, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -0.35rem);
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease,
+      visibility 0.18s ease;
+  }
+
+  .bcm-mast-dropdown:hover .bcm-mast-dropdown-menu,
+  .bcm-mast-dropdown:focus-within .bcm-mast-dropdown-menu,
+  .bcm-mast-dropdown.is-open .bcm-mast-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+
+  .bcm-masthead a.bcm-mast-dropdown-link {
+    display: block;
+    padding: 0.7rem 0.85rem;
+    color: #fff;
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 700;
+    font-synthesis: style;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+  }
+
+  .bcm-masthead a.bcm-mast-dropdown-link:hover,
+  .bcm-masthead a.bcm-mast-dropdown-link.bcm-is-active {
+    background: var(--bcm-blue);
+    color: #fff;
+    padding-left: 1.1rem;
+  }
+
+  @media (max-width: 63.9375rem) {
+    .bcm-mast-nav > a:not(.bcm-mast-cta),
+    .bcm-mast-dropdown { display: none; }
+  }
+
+  /* ====================================================
+     CTA
+     ==================================================== */
+  .bcm-mast-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: var(--bcm-blue);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.85rem 1.4rem;
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 700;
+    font-synthesis: style;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    border: 0.0938rem solid var(--bcm-blue);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .bcm-mast-cta:hover {
+    background: var(--bcm-blue-dark);
+    border-color: var(--bcm-blue-dark);
+    transform: translateY(-0.0625rem);
+  }
+
+  .bcm-mast-cta .bcm-arrow {
+    transition: transform 0.2s ease;
+    display: inline-block;
+  }
+
+  .bcm-mast-cta:hover .bcm-arrow { transform: translateX(0.2rem); }
+
+  /* ====================================================
+     MOBILE TOGGLE
+     ==================================================== */
+  .bcm-menu-toggle,
+  .bcm-menu-close {
+    appearance: none;
+    border: 0.0938rem solid var(--bcm-ink);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    color: var(--bcm-paper);
+    background: var(--bcm-ink);
+    transition:
+      background 0.18s ease,
+      color 0.18s ease,
+      border-color 0.18s ease,
+      transform 0.18s ease;
+  }
+
+  .bcm-menu-toggle {
+    width: 3rem;
+    height: 2.75rem;
+  }
+
+  .bcm-menu-toggle:hover,
+  .bcm-menu-close:hover {
+    background: var(--bcm-blue);
+    border-color: var(--bcm-blue);
+    color: #fff;
+  }
+
+  .bcm-menu-toggle:active,
+  .bcm-menu-close:active { transform: translateY(0.0625rem); }
+
+  .bcm-menu-toggle-icon,
+  .bcm-menu-close-icon {
+    width: 1.35rem;
+    height: 1.35rem;
+    display: block;
+  }
+
+  /* ====================================================
+     MOBILE DIALOG
+     ==================================================== */
+  .bcm-menu-dialog {
+    width: min(28rem, calc(100vw - 1.5rem));
+    max-width: calc(100vw - 1.5rem);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--bcm-paper);
+    position: fixed;
+    inset: 0.75rem 0.75rem auto auto;
+    overflow: visible;
+  }
+
+  .bcm-menu-dialog::backdrop {
+    background: rgba(11, 15, 23, 0.65);
+    -webkit-backdrop-filter: blur(0.125rem);
+    backdrop-filter: blur(0.125rem);
+    animation: bcm-menu-backdrop-in 0.24s ease both;
+  }
+
+  .bcm-menu-dialog.is-closing::backdrop {
+    animation: bcm-menu-backdrop-out 0.2s ease both;
+  }
+
+  .bcm-menu-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 95dvh;
+    max-height: calc(100dvh - 1.5rem);
+    overflow: hidden auto;
+    background: var(--bcm-ink);
+    color: #fff;
+    border: 0.0938rem solid var(--bcm-ink);
+    box-shadow: 0 1.25rem 2.5rem -0.75rem rgba(31, 143, 255, 0.45);
+    animation: bcm-menu-panel-in 0.26s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .bcm-menu-dialog.is-closing .bcm-menu-panel {
+    animation: bcm-menu-panel-out 0.2s ease both;
+  }
+
+  .bcm-menu-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--bcm-rule-light) 0.0625rem, transparent 0.0625rem),
+      linear-gradient(to bottom, var(--bcm-rule-light) 0.0625rem, transparent 0.0625rem);
+    background-size: 2.75rem 2.75rem;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
+  .bcm-menu-head,
+  .bcm-menu-nav,
+  .bcm-menu-actions { position: relative; z-index: 1; }
+
+  .bcm-menu-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.875rem;
+    border-bottom: 0.0938rem solid var(--bcm-rule-light);
+    background: var(--bcm-ink-2);
+  }
+
+  .bcm-menu-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 700;
+    font-synthesis: style;
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bcm-muted-soft);
+  }
+
+  .bcm-menu-kicker::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--bcm-blue);
+    box-shadow: 0 0 0 0.25rem rgba(31, 143, 255, 0.22);
+  }
+
+  .bcm-menu-close {
+    display: inline-flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-color: var(--bcm-rule-light);
+    background: transparent;
+    color: #fff;
+  }
+
+  .bcm-menu-close:hover {
+    background: var(--bcm-blue);
+    border-color: var(--bcm-blue);
+    color: #fff;
+  }
+
+  .bcm-menu-nav { display: grid; }
+
+  .bcm-menu-nav a,
+  .bcm-menu-call {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    min-height: 4.25rem;
+    padding: 0.875rem 1rem;
+    border-bottom: 0.0938rem solid var(--bcm-rule-light);
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 900;
+    font-synthesis: style;
+    font-size: clamp(1.65rem, 6vw, 2.35rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition:
+      background 0.18s ease,
+      color 0.18s ease,
+      padding-left 0.18s ease;
+  }
+
+  .bcm-menu-nav a:last-of-type { border-bottom: 0; }
+  .bcm-menu-nav a > span:first-child { min-width: 0; }
+
+  .bcm-menu-nav a.bcm-menu-child {
+    min-height: 3.25rem;
+    padding-left: 1.75rem;
+    font-family: var(--bcm-body);
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: var(--bcm-muted-soft);
+  }
+
+  .bcm-menu-nav a > span:last-child,
+  .bcm-menu-call > span:last-child {
+    font-family: var(--bcm-display);
+    font-style: italic;
+    font-weight: 700;
+    font-synthesis: style;
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    color: var(--bcm-yellow);
+  }
+
+  .bcm-menu-nav a:hover,
+  .bcm-menu-nav a.bcm-is-active,
+  .bcm-menu-call:hover {
+    background: var(--bcm-blue);
+    color: #fff;
+    padding-left: 1.25rem;
+  }
+
+  .bcm-menu-nav a:hover > span:last-child,
+  .bcm-menu-nav a.bcm-is-active > span:last-child,
+  .bcm-menu-call:hover > span:last-child { color: #fff; }
+
+  .bcm-menu-nav a.bcm-menu-child:hover,
+  .bcm-menu-nav a.bcm-menu-child.bcm-is-active {
+    padding-left: 2rem;
+    color: #fff;
+  }
+
+  .bcm-menu-actions {
+    margin-top: auto;
+    padding: 1rem;
+    border-top: 0.0938rem solid var(--bcm-rule-light);
+    background: var(--bcm-ink-2);
+  }
+
+  .bcm-menu-call {
+    border: 0.0938rem solid var(--bcm-blue);
+    background: var(--bcm-blue);
+    color: #fff;
+    min-height: 4.5rem;
+  }
+
+  .bcm-menu-call > span:last-child { color: rgba(255, 255, 255, 0.82); }
+  .bcm-menu-call:hover { background: var(--bcm-blue-dark); border-color: var(--bcm-blue-dark); }
+
+  @keyframes bcm-menu-panel-in {
+    from {
+      opacity: 0;
+      transform: translateY(-0.75rem) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes bcm-menu-panel-out {
+    from {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-0.5rem) scale(0.98);
+    }
+  }
+
+  @keyframes bcm-menu-backdrop-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes bcm-menu-backdrop-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  html.bcm-menu-open,
+  html.bcm-menu-open body { overflow: hidden; }
+
+  @media (max-width: 63.9375rem) {
+    .bcm-mast-bar { gap: 1rem; }
+    .bcm-mast-cta { display: none; }
+    .bcm-menu-toggle { display: inline-flex; }
+  }
+
+  @media (max-width: 36.25rem) {
+    .bcm-mast-strip { padding-inline: 1rem; }
+    .bcm-mast-bar { padding: 0.875rem 1rem; }
+    .bcm-mast-logo {
+      gap: 0.5rem;
+      font-size: 1.125rem;
+    }
+    .bcm-menu-dialog {
+      width: calc(100vw - 1rem);
+      max-width: calc(100vw - 1rem);
+      inset: 0.5rem 0.5rem auto auto;
+    }
+  }
+</style>
+
+<!-- ============================================================
+     Masthead — Blue Collar
+     ============================================================ -->
+<header class="bcm-masthead">
+  <div class="bcm-mast-strip" aria-hidden="false">
+    <span class="bcm-mast-strip-item">
+      <span class="bcm-mast-strip-dot" aria-hidden="true"></span>
+      53.5461°N · 113.4938°W
+    </span>
+    <span class="bcm-mast-strip-item bcm-hide-sm">
+      YEG
+      <span class="bcm-mast-strip-sep" aria-hidden="true">◆</span>
+      Alberta
+      <span class="bcm-mast-strip-sep" aria-hidden="true">◆</span>
+      Canada
+    </span>
+  </div>
+  <div class="bcm-mast-bar">
+    <a class="bcm-mast-logo" href="/">
+      <img
+        class="cs-logo-img"
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        src="/assets/images/bespokelogonotexttt.png"
+        alt="logo"
+        width="150"
+        height="15"
+      />
+      <span class="bcm-mast-word">Bespoke<em>Web</em>Design</span>
+    </a>
+    {% set navPages = collections.all | eleventyNavigation %}
+    <nav class="bcm-mast-nav" aria-label="Primary">
+      {% for entry in navPages %}
+        {% set hasChild = entry.children.length %}
+        {% set hideClasses = [] %}
+        {% if entry.hideOnMobile %}
+          {% set hideClasses = (hideClasses.push("bcm-hide-on-mobile"), hideClasses) %}
+        {% endif %}
+        {% if entry.hideOnDesktop %}
+          {% set hideClasses = (hideClasses.push("bcm-hide-on-desktop"), hideClasses) %}
+        {% endif %}
+
+        {% if hasChild %}
+          {% set activeClass = "" %}
+          {% if entry.url == page.url %}
+            {% set activeClass = "bcm-is-active" %}
+          {% endif %}
+          {% for child in entry.children %}
+            {% if child.url == page.url %}
+              {% set activeClass = "bcm-is-active" %}
+            {% endif %}
+          {% endfor %}
+          <div class="bcm-mast-dropdown {{ hideClasses | join(" ") }}">
+            <button
+              class="bcm-mast-dropdown-button {{ activeClass }}"
+              type="button"
+              aria-expanded="false"
+            >
+              {{ entry.key }}
+              <svg
+                class="bcm-mast-dropdown-icon"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <ul class="bcm-mast-dropdown-menu">
+              {% for child in entry.children %}
+                <li>
+                  <a
+                    href="{{ child.url }}"
+                    class="bcm-mast-dropdown-link {% if child.url == page.url %}bcm-is-active{% endif %}"
+                    {% if child.url == page.url %}aria-current="page"{% endif %}
+                  >
+                    {{ child.key }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% else %}
+          <a
+            href="{{ entry.url }}"
+            class="{% if entry.url == page.url %}bcm-is-active{% endif %} {{ hideClasses | join(" ") }}"
+            {% if entry.url == page.url %}aria-current="page"{% endif %}
+          >
+            {{ entry.key }}
+          </a>
+        {% endif %}
+      {% endfor %}
+      <a href="tel:+17802638028" class="bcm-mast-cta">
+        <span>Book a call</span>
+        <span class="bcm-arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+    <button
+      class="bcm-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="bcm-menu-dialog"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+    >
+      <svg
+        aria-hidden="true"
+        class="bcm-menu-toggle-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4 6h16" />
+        <path d="M4 12h16" />
+        <path d="M4 18h16" />
+      </svg>
+    </button>
+    <dialog
+      class="bcm-menu-dialog"
+      id="bcm-menu-dialog"
+      aria-labelledby="bcm-menu-title"
+    >
+      <div class="bcm-menu-panel">
+        <div class="bcm-menu-head">
+          <span class="bcm-menu-kicker" id="bcm-menu-title">Navigation</span>
+          <button
+            class="bcm-menu-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >
+            <svg
+              aria-hidden="true"
+              class="bcm-menu-close-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="bcm-menu-nav" aria-label="Mobile primary">
+          {% for entry in navPages %}
+            {% set hasChild = entry.children.length %}
+            {% set parentIndex = loop.index %}
+            <a
+              href="{{ entry.url }}"
+              class="{% if entry.url == page.url %}bcm-is-active{% endif %}"
+              {% if entry.url == page.url %}aria-current="page"{% endif %}
+            >
+              <span>{{ entry.key }}</span><span>{{ parentIndex }}</span>
+            </a>
+            {% if hasChild %}
+              {% for child in entry.children %}
+                <a
+                  href="{{ child.url }}"
+                  class="bcm-menu-child {% if child.url == page.url %}bcm-is-active{% endif %}"
+                  {% if child.url == page.url %}aria-current="page"{% endif %}
+                >
+                  <span>{{ child.key }}</span><span>{{ parentIndex }}.{{ loop.index }}</span>
+                </a>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </nav>
+        <div class="bcm-menu-actions">
+          <a href="tel:+17802638028" class="bcm-menu-call">
+            <span>Book a call</span>
+            <span>780·263·8028</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
+  </div>
+</header>
+
+<script>
+  (function () {
+    var header =
+      document.currentScript &&
+      document.currentScript.previousElementSibling &&
+      document.currentScript.previousElementSibling.classList.contains("bcm-masthead")
+        ? document.currentScript.previousElementSibling
+        : document.querySelector(".bcm-masthead");
+    if (!header || header.dataset.bcmMenuReady === "true") return;
+    header.dataset.bcmMenuReady = "true";
+
+    var dialog = header.querySelector("#bcm-menu-dialog");
+    var openButton = header.querySelector(".bcm-menu-toggle");
+    var closeButton = header.querySelector(".bcm-menu-close");
+    if (!dialog || !openButton || !closeButton) return;
+
+    var lastFocused = null;
+    var closeDelay = 220;
+    var dropdowns = Array.prototype.slice.call(
+      header.querySelectorAll(".bcm-mast-dropdown")
+    );
+
+    function closeDropdowns(exceptDropdown) {
+      dropdowns.forEach(function (dropdown) {
+        if (dropdown === exceptDropdown) return;
+        dropdown.classList.remove("is-open");
+        var button = dropdown.querySelector(".bcm-mast-dropdown-button");
+        if (button) button.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    dropdowns.forEach(function (dropdown) {
+      var button = dropdown.querySelector(".bcm-mast-dropdown-button");
+      if (!button) return;
+
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        var isOpen = dropdown.classList.toggle("is-open");
+        button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        closeDropdowns(dropdown);
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!header.contains(event.target)) closeDropdowns();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeDropdowns();
+    });
+
+    function openMenu() {
+      if (dialog.open) return;
+      closeDropdowns();
+      lastFocused = document.activeElement;
+      dialog.classList.remove("is-closing");
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+      openButton.setAttribute("aria-expanded", "true");
+      document.documentElement.classList.add("bcm-menu-open");
+      closeButton.focus({ preventScroll: true });
+    }
+
+    function closeMenu(restoreFocus) {
+      if (!dialog.open || dialog.classList.contains("is-closing")) return;
+      dialog.classList.add("is-closing");
+      openButton.setAttribute("aria-expanded", "false");
+      document.documentElement.classList.remove("bcm-menu-open");
+
+      window.setTimeout(function () {
+        dialog.classList.remove("is-closing");
+        if (typeof dialog.close === "function") {
+          dialog.close();
+        } else {
+          dialog.removeAttribute("open");
+        }
+        if (restoreFocus !== false && lastFocused && lastFocused.focus) {
+          lastFocused.focus({ preventScroll: true });
+        }
+      }, closeDelay);
+    }
+
+    openButton.addEventListener("click", openMenu);
+    closeButton.addEventListener("click", function () {
+      closeMenu(true);
+    });
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) closeMenu(true);
+    });
+    dialog.addEventListener("cancel", function (event) {
+      event.preventDefault();
+      closeMenu(true);
+    });
+    dialog.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeMenu(false);
+      });
+    });
+  })();
+</script>
