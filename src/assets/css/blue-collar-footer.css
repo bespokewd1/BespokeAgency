@@ -198,7 +198,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--bcm-yellow);
+  color: var(--bcm-blue);
   padding-bottom: 0.65rem;
 }
 
@@ -209,7 +209,7 @@
   bottom: 0;
   width: 1.75rem;
   height: 0.125rem;
-  background: var(--bcm-blue);
+  background: var(--bcm-yellow);
 }
 
 .bcm-footer-list {
@@ -334,5 +334,5 @@
   font-size: 0.75rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--bcm-yellow);
+  color: var(--bcm-blue);
 }
