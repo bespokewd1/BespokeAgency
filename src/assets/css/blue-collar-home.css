@@ -369,6 +369,154 @@ body { overflow-x: clip; }
 }
 
 /* ============================================================
+   SEO LANDING SECTION
+   ============================================================ */
+.bcm-seo {
+  background: var(--bcm-ink);
+  color: #fff;
+  overflow: hidden;
+}
+.bcm-seo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(22rem, 0.92fr);
+  min-height: 38rem;
+}
+.bcm-seo-copy {
+  padding: clamp(4.5rem, 7vw, 7rem) clamp(1.5rem, 6vw, 7rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.bcm-seo-copy::before {
+  content: '';
+  position: absolute;
+  left: clamp(1.5rem, 6vw, 7rem);
+  top: clamp(4.5rem, 7vw, 7rem);
+  width: 3rem;
+  height: 0.1875rem;
+  background: var(--bcm-blue);
+  transform: translateY(-1.35rem);
+}
+.bcm-seo-copy .bcm-h2 {
+  max-width: 52rem;
+  margin-bottom: 1.35rem;
+}
+.bcm-seo-copy p {
+  max-width: 48rem;
+  margin: 0 0 1.15rem;
+  color: rgba(255,255,255,0.84);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.bcm-seo-copy h3 {
+  margin: 1.2rem 0 1rem;
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  font-synthesis: style;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.bcm-seo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  max-width: 48rem;
+}
+.bcm-seo-list li {
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 0.0938rem solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.045);
+  color: rgba(255,255,255,0.92);
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 800;
+  font-synthesis: style;
+  font-size: 0.88rem;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.bcm-seo-list span {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bcm-blue);
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+.bcm-seo-media {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-left: 0.0938rem solid var(--bcm-blue);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(31,143,255,0.22), transparent 26rem),
+    linear-gradient(135deg, #0B0F17 0%, #151A24 100%);
+}
+.bcm-seo-media::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(11,15,23,0.38), rgba(11,15,23,0) 42%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 0.7rem);
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 1;
+}
+.bcm-seo-media img {
+  position: absolute;
+  width: min(54rem, 112%);
+  max-width: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 1.5rem 2.5rem rgba(0,0,0,0.45));
+  z-index: 2;
+}
+
+@media (max-width: 66rem) {
+  .bcm-seo-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .bcm-seo-media {
+    min-height: 24rem;
+    border-left: 0;
+    border-top: 0.0938rem solid var(--bcm-blue);
+  }
+  .bcm-seo-media img {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(44rem, 115%);
+  }
+}
+
+@media (max-width: 40rem) {
+  .bcm-seo-list { grid-template-columns: 1fr; }
+  .bcm-seo-copy { padding-top: 4rem; padding-bottom: 4rem; }
+  .bcm-seo-media { min-height: 18rem; }
+  .bcm-seo-media img { width: min(35rem, 130%); }
+}
+
+/* ============================================================
    TRUSTED BY — logo ticker
    ============================================================ */
 .bcm-trusted {
