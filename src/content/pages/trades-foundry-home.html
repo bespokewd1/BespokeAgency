@@ -2,15 +2,14 @@
 title: "Bespoke Web Design — Edmonton Trades Foundry"
 description: "Custom websites + monthly social media management for Edmonton plumbers, electricians, HVAC, roofers, and contractors. Fully managed from $245/month. No setup fees. Cancel anytime."
 preloadImg: ""
-permalink: "/"
-tags: "sitemap"
 image: /assets/images/og/home-og.webp
-eleventyNavigation:
-  key: Home
-  order: 100
+permalink: "/trades-foundry-home/"
+eleventyExcludeFromCollections: true
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
+<!-- REMOVE THIS NOINDEX IF THIS PAGE IS USED AS A PUBLIC PAGE AGAIN -->
+<meta name="robots" content="noindex, nofollow" />
 <link rel="stylesheet" href="/assets/css/trades-foundry.css" />
 {% endblock %} {% block body %}
 <div class="tf-page">
