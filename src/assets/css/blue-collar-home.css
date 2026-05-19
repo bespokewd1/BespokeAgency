@@ -599,40 +599,13 @@ body { overflow-x: clip; }
   line-height: 1.05;
   text-transform: uppercase;
 }
-.bcm-portfolio-card figcaption small,
-.bcm-site-registry span {
+.bcm-portfolio-card figcaption small {
   font-family: var(--bcm-mono);
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--bcm-blue);
 }
-.bcm-site-registry {
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 0.0938rem solid var(--bcm-rule-light);
-  border-bottom: 0;
-}
-.bcm-site-registry a {
-  min-height: 5.75rem;
-  padding: 1rem;
-  border-right: 0.0938rem solid var(--bcm-rule-light);
-  border-bottom: 0.0938rem solid var(--bcm-rule-light);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.35rem;
-  font-family: var(--bcm-display);
-  font-style: italic;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #fff;
-  transition: background 180ms ease, color 180ms ease;
-}
-.bcm-site-registry a:nth-child(3n) { border-right: 0; }
-.bcm-site-registry a:hover { background: var(--bcm-blue); color: #fff; }
-.bcm-site-registry a:hover span { color: #fff; }
 
 /* ============================================================
    REVIEWS
@@ -1209,12 +1182,9 @@ body { overflow-x: clip; }
   .bcm-logo-card { width: 9rem; height: 4.5rem; }
   .bcm-portfolio-grid,
   .bcm-review-grid,
-  .bcm-price-grid,
-  .bcm-site-registry { grid-template-columns: 1fr; }
+  .bcm-price-grid { grid-template-columns: 1fr; }
   .bcm-portfolio-card,
   .bcm-portfolio-card-wide { grid-column: auto; min-height: 19rem; }
-  .bcm-site-registry a,
-  .bcm-site-registry a:nth-child(3n) { border-right: 0; }
   .bcm-price-card-featured { transform: none; }
   .bcm-review-card,
   .bcm-price-card { min-height: auto; }
