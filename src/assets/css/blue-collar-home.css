@@ -27,6 +27,8 @@ body { overflow-x: clip; }
   --bcm-display: 'Work Sans', system-ui, -apple-system, sans-serif;
   --bcm-body: 'Poppins', system-ui, -apple-system, sans-serif;
   --bcm-mono: 'Poppins', system-ui, -apple-system, sans-serif;
+  --bcm-header-h: 6.47rem;
+  --bcm-notice-h: 5.56rem;
 
   font-family: var(--bcm-body) !important;
   color: var(--bcm-ink);
@@ -34,6 +36,30 @@ body { overflow-x: clip; }
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 513px) {
+  .bcm-page {
+    --bcm-notice-h: 6.67rem;
+  }
+}
+
+@media (min-width: 581px) {
+  .bcm-page {
+    --bcm-header-h: 6.72rem;
+  }
+}
+
+@media (min-width: 595px) {
+  .bcm-page {
+    --bcm-notice-h: 3.70rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bcm-page {
+    --bcm-header-h: 8.36rem;
+  }
 }
 
 .bcm-page *,
@@ -291,7 +317,8 @@ body { overflow-x: clip; }
    ============================================================ */
 .bcm-hero {
   position: relative;
-  min-height: 92vh;
+  min-height: calc(100vh - var(--bcm-header-h) - var(--bcm-notice-h));
+  min-height: calc(100dvh - var(--bcm-header-h) - var(--bcm-notice-h));
   display: flex;
   align-items: center;
   background: var(--bcm-ink);
@@ -1519,7 +1546,6 @@ body { overflow-x: clip; }
    ============================================================ */
 @media (max-width: 48rem) {
   .bcm-section { padding: 3.5rem 0; }
-  .bcm-hero { min-height: 84vh; }
   .bcm-hero-inner { padding: 5.5rem 1.25rem 5rem; }
   .bcm-value-left { padding: 3rem 1.5rem; }
   .bcm-forward-main-copy { padding: 1.75rem 1.5rem; }

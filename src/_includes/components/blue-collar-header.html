@@ -626,75 +626,13 @@ filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
       />
       <span class="bcm-mast-word">Bespoke<em>Web</em>Design</span>
     </a>
-    {% set navPages = collections.all | eleventyNavigation %}
     <nav class="bcm-mast-nav" aria-label="Primary">
-      {% for entry in navPages %}
-        {% set hasChild = entry.children.length %}
-        {% set hideClasses = [] %}
-        {% if entry.hideOnMobile %}
-          {% set hideClasses = (hideClasses.push("bcm-hide-on-mobile"), hideClasses) %}
-        {% endif %}
-        {% if entry.hideOnDesktop %}
-          {% set hideClasses = (hideClasses.push("bcm-hide-on-desktop"), hideClasses) %}
-        {% endif %}
-
-        {% if hasChild %}
-          {% set activeClass = "" %}
-          {% if entry.url == page.url %}
-            {% set activeClass = "bcm-is-active" %}
-          {% endif %}
-          {% for child in entry.children %}
-            {% if child.url == page.url %}
-              {% set activeClass = "bcm-is-active" %}
-            {% endif %}
-          {% endfor %}
-          <div class="bcm-mast-dropdown {{ hideClasses | join(" ") }}">
-            <button
-              class="bcm-mast-dropdown-button {{ activeClass }}"
-              type="button"
-              aria-expanded="false"
-            >
-              {{ entry.key }}
-              <svg
-                class="bcm-mast-dropdown-icon"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            </button>
-            <ul class="bcm-mast-dropdown-menu">
-              {% for child in entry.children %}
-                <li>
-                  <a
-                    href="{{ child.url }}"
-                    class="bcm-mast-dropdown-link {% if child.url == page.url %}bcm-is-active{% endif %}"
-                    {% if child.url == page.url %}aria-current="page"{% endif %}
-                  >
-                    {{ child.key }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% else %}
-          <a
-            href="{{ entry.url }}"
-            class="{% if entry.url == page.url %}bcm-is-active{% endif %} {{ hideClasses | join(" ") }}"
-            {% if entry.url == page.url %}aria-current="page"{% endif %}
-          >
-            {{ entry.key }}
-          </a>
-        {% endif %}
-      {% endfor %}
+      <a href="/" class="{% if page.url == '/' %}bcm-is-active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#portfolio">Work</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
       <a href="https://calendly.com/arjiv28/30min?month=2026-05" class="bcm-mast-cta" target="_blank" rel="noopener noreferrer">
         <span>Book online</span>
         <span class="bcm-arrow" aria-hidden="true">→</span>
@@ -758,28 +696,24 @@ filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
           </button>
         </div>
         <nav class="bcm-menu-nav" aria-label="Mobile primary">
-          {% for entry in navPages %}
-            {% set hasChild = entry.children.length %}
-            {% set parentIndex = loop.index %}
-            <a
-              href="{{ entry.url }}"
-              class="{% if entry.url == page.url %}bcm-is-active{% endif %}"
-              {% if entry.url == page.url %}aria-current="page"{% endif %}
-            >
-              <span>{{ entry.key }}</span><span>{{ parentIndex }}</span>
-            </a>
-            {% if hasChild %}
-              {% for child in entry.children %}
-                <a
-                  href="{{ child.url }}"
-                  class="bcm-menu-child {% if child.url == page.url %}bcm-is-active{% endif %}"
-                  {% if child.url == page.url %}aria-current="page"{% endif %}
-                >
-                  <span>{{ child.key }}</span><span>{{ parentIndex }}.{{ loop.index }}</span>
-                </a>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
+          <a href="/" class="{% if page.url == '/' %}bcm-is-active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>
+            <span>Home</span><span>1</span>
+          </a>
+          <a href="/#services">
+            <span>Services</span><span>2</span>
+          </a>
+          <a href="/#portfolio">
+            <span>Work</span><span>3</span>
+          </a>
+          <a href="/#pricing">
+            <span>Pricing</span><span>4</span>
+          </a>
+          <a href="/#about">
+            <span>About</span><span>5</span>
+          </a>
+          <a href="/#contact">
+            <span>Contact</span><span>6</span>
+          </a>
         </nav>
         <div class="bcm-menu-actions">
           <a href="https://calendly.com/arjiv28/30min?month=2026-05" class="bcm-menu-call" target="_blank" rel="noopener noreferrer">
