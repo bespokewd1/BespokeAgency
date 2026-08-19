@@ -12,8 +12,8 @@
     <link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
 
     <!--Social Media Display-->
-    <meta property="og:title" content="{{ title }}" />
-    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:title" content="{{ ogTitle or title }}" />
+    <meta property="og:description" content="{{ ogDescription or description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
     <meta property="og:image" content="{{ image }}" />
@@ -134,6 +134,7 @@
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css" />
     <link rel="stylesheet" href="/assets/css/trades-foundry-fonts.css" />
+    {% if not funnelPage %}
     <link
       rel="preload"
       href="/assets/css/blue-collar-footer.css"
@@ -149,6 +150,7 @@
     <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/custom.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    {% endif %}
     <script type="speculationrules">
       {
         "prerender": [
@@ -186,8 +188,16 @@
       >Click To Skip To Main Content</a
     >
 
-    {% include "components/blue-collar-header.html" %}
+    {% if funnelPage %}
+      {% include "components/lead-funnel-header.html" %}
+    {% else %}
+      {% include "components/blue-collar-header.html" %}
+    {% endif %}
     <main id="main">{% block body %}{% endblock %}</main>
-    {% include "components/blue-collar-footer.html" %}
+    {% if funnelPage %}
+      {% include "components/lead-funnel-footer.html" %}
+    {% else %}
+      {% include "components/blue-collar-footer.html" %}
+    {% endif %}
   </body>
 </html>
