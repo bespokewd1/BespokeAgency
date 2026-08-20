@@ -457,7 +457,7 @@ Implementation is blocked or partially blocked until the following are supplied 
 - [x] Confirm Frappe CRM instead of Netlify Forms.
 - [x] Confirm embedded Frappe form as the preferred approach.
 - [ ] Resolve all blocking Frappe questions.
-- [ ] Confirm analytics and tracking access.
+- [x] Confirm analytics and tracking access.
 - [x] Confirm phone and booking destinations.
 - [x] Confirm final copy and visual direction.
 
@@ -494,13 +494,13 @@ Implementation is blocked or partially blocked until the following are supplied 
 - [x] Add the initial Open Graph metadata.
 - [x] Add the Twitter/X card metadata.
 - [x] Create and configure the OG image.
-- [ ] Configure GA4.
+- [x] Configure GA4.
 - [ ] Configure Meta Pixel.
-- [ ] Track CTA clicks.
-- [ ] Track form starts.
+- [x] Track CTA clicks.
+- [x] Track form starts.
 - [ ] Track successful form submissions as conversions.
 - [ ] Track form errors.
-- [ ] Track phone and consultation clicks.
+- [x] Track phone and consultation clicks.
 - [ ] Confirm Google Search Console coverage.
 
 ### Phase 5 — Quality assurance and release
@@ -548,6 +548,7 @@ The implementation is complete only when the following journey is demonstrated s
 | 2026-03-17 | Corrected narrow-mobile hero text overflow and balanced the audit preview spacing with its offset shadow. | Complete |
 | 2026-03-17 | Added the dedicated thank-you page with call and consultation actions. | Complete |
 | 2026-03-17 | Updated the funnel Open Graph and Twitter/X copy, assigned the dedicated `1200 × 630 px` image, and retained the crawler-blocked OG preview page as a future design guide. | Complete |
+| 2026-03-17 | Corrected the GA4 measurement ID and added CTA, form-start, phone, and consultation event tracking without collecting form values. | Complete |
 
 ---
 
