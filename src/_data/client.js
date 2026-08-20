@@ -3,6 +3,7 @@ module.exports = {
   email: "bespokewd1@gmail.com",
   phoneForTel: "+17802638028",
   phoneFormatted: "780-263-8028",
+  bookingUrl: "https://calendly.com/arjiv28/30min",
   address: {
     lineOne: "Ellerslie RD",
     lineTwo: "",

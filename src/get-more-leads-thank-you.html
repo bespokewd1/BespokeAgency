@@ -1,0 +1,81 @@
+---
+title: "Thank You | Free Lead Generation Audit | Bespoke Web Design"
+description: "Your free marketing and lead generation audit request has been received by Bespoke Web Design."
+preloadImg: ""
+permalink: "/get-more-leads/thank-you/"
+image: https://bespokewebdesign.ca/assets/images/og/home-og.webp
+ogTitle: "Your Audit Request Is In"
+ogDescription: "Thanks for requesting a Free Marketing & Lead Generation Audit from Bespoke Web Design."
+funnelPage: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/lead-generation-funnel.css" />
+<meta name="robots" content="noindex, nofollow" />
+{% endblock %}
+
+{% block body %}
+<div class="lgf-page lgf-thank-you-page">
+  <section class="lgf-thank-you" aria-labelledby="lgf-thank-you-title">
+    <div class="lgf-wrap lgf-thank-you-grid">
+      <div class="lgf-thank-you-copy">
+        <span class="lgf-thank-you-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="m5 12 4 4L19 6" />
+          </svg>
+        </span>
+        <span class="lgf-kicker">Audit request received</span>
+        <h1 id="lgf-thank-you-title">You're in!</h1>
+        <p class="lgf-thank-you-lede">
+          Thanks for requesting your Free Marketing &amp; Lead Generation Audit. We'll review your
+          online presence and contact you with our findings.
+        </p>
+        <div class="lgf-thank-you-actions" aria-label="Contact Bespoke Web Design">
+          <a class="lgf-btn lgf-btn-primary lgf-btn-large" href="tel:{{ client.phoneForTel }}">
+            Call Bespoke
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </a>
+          <a
+            class="lgf-btn lgf-btn-outline lgf-btn-large"
+            href="{{ client.bookingUrl }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a consultation
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 2v4M16 2v4M3 10h18" />
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+            </svg>
+          </a>
+        </div>
+        <p class="lgf-thank-you-contact">
+          Prefer email? <a href="mailto:{{ client.email }}">{{ client.email }}</a>
+        </p>
+      </div>
+
+      <aside class="lgf-thank-you-next" aria-labelledby="lgf-thank-you-next-title">
+        <span>What happens next</span>
+        <h2 id="lgf-thank-you-next-title">We'll look for the gaps costing you leads.</h2>
+        <ol>
+          <li>
+            <strong>01</strong>
+            <div><b>We review your online presence</b><small>Website, Google, lead capture and local competitors.</small></div>
+          </li>
+          <li>
+            <strong>02</strong>
+            <div><b>We identify missed opportunities</b><small>Clear findings based on what customers see online.</small></div>
+          </li>
+          <li>
+            <strong>03</strong>
+            <div><b>We contact you with next steps</b><small>No obligation and no generic sales report.</small></div>
+          </li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+</div>
+{% endblock %}
