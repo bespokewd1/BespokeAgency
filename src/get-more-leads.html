@@ -26,6 +26,125 @@ funnelPage: true
 <meta property="og:image:alt" content="Are You Losing Leads Online? Free Marketing and Lead Generation Audit from Bespoke Web Design." />
 <meta name="twitter:image" content="{{ image }}" />
 <meta name="twitter:image:alt" content="Are You Losing Leads Online? Free Marketing and Lead Generation Audit from Bespoke Web Design." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ client.domain }}/#organization",
+      "name": "Bespoke Web Design",
+      "url": "{{ client.domain }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "{{ client.domain }}/#logo",
+        "url": "{{ client.domain }}/assets/images/bespokelogonotexttt.png",
+        "contentUrl": "{{ client.domain }}/assets/images/bespokelogonotexttt.png",
+        "width": 1080,
+        "height": 1080,
+        "caption": "Bespoke Web Design"
+      },
+      "image": {
+        "@id": "{{ client.domain }}/#logo"
+      },
+      "email": "{{ client.email }}",
+      "telephone": "{{ client.phoneForTel }}",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "{{ client.phoneForTel }}",
+        "email": "{{ client.email }}",
+        "availableLanguage": "English",
+        "areaServed": [
+          "CA",
+          "US"
+        ]
+      },
+      "sameAs": [
+        "{{ client.socials.facebook }}",
+        "{{ client.socials.instagram }}",
+        "{{ client.socials.linkedin }}",
+        "{{ client.socials.youtube }}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ client.domain }}/#website",
+      "url": "{{ client.domain }}/",
+      "name": "Bespoke Web Design",
+      "publisher": {
+        "@id": "{{ client.domain }}/#organization"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "{{ client.domain }}/get-more-leads/#primaryimage",
+      "url": "{{ client.domain }}/assets/images/og/lead-generation-audit-og.webp",
+      "contentUrl": "{{ client.domain }}/assets/images/og/lead-generation-audit-og.webp",
+      "width": 1200,
+      "height": 630,
+      "caption": "Are You Losing Leads Online? Free Marketing and Lead Generation Audit from Bespoke Web Design."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ client.domain }}/get-more-leads/#webpage",
+      "url": "{{ client.domain }}/get-more-leads/",
+      "name": "Get More Leads | Free Lead Generation Audit | Bespoke Web Design",
+      "description": "Discover how your website, Google presence and online marketing can generate more calls, inquiries and customers. Get a free lead generation audit from Bespoke Web Design.",
+      "isPartOf": {
+        "@id": "{{ client.domain }}/#website"
+      },
+      "about": {
+        "@id": "{{ client.domain }}/get-more-leads/#service"
+      },
+      "mainEntity": {
+        "@id": "{{ client.domain }}/get-more-leads/#service"
+      },
+      "primaryImageOfPage": {
+        "@id": "{{ client.domain }}/get-more-leads/#primaryimage"
+      },
+      "publisher": {
+        "@id": "{{ client.domain }}/#organization"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "Service",
+      "@id": "{{ client.domain }}/get-more-leads/#service",
+      "name": "Free Marketing & Lead Generation Audit",
+      "serviceType": "Marketing and lead generation audit",
+      "description": "A free review of your website, Google visibility, SEO opportunities, lead capture, online reputation, social media presence and local competitors.",
+      "url": "{{ client.domain }}/get-more-leads/",
+      "provider": {
+        "@id": "{{ client.domain }}/#organization"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "North America"
+      },
+      "offers": {
+        "@id": "{{ client.domain }}/get-more-leads/#offer"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "{{ client.domain }}/get-more-leads/#offer",
+      "url": "{{ client.domain }}/get-more-leads/",
+      "name": "Free Marketing & Lead Generation Audit",
+      "description": "Request a free audit of your business's online marketing and lead-generation opportunities. No obligation.",
+      "price": "0",
+      "priceCurrency": "CAD",
+      "seller": {
+        "@id": "{{ client.domain }}/#organization"
+      },
+      "itemOffered": {
+        "@id": "{{ client.domain }}/get-more-leads/#service"
+      }
+    }
+  ]
+}
+</script>
 {% endblock %}
 
 {% block body %}
