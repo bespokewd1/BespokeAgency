@@ -1,8 +1,8 @@
 # Lead Generation Funnel — Source of Truth
 
-> **Status:** Landing and thank-you pages built / Frappe integration pending
+> **Status:** Landing and thank-you pages deployed / Frappe integration pending / not ready for campaign traffic
 > **Source:** `CreateLeadGenerationFunnel.pdf` plus confirmed project decisions
-> **Last updated:** 2026-03-17
+> **Last updated:** 2026-08-21
 
 This document is the implementation source of truth for the Bespoke Web Design lead-generation funnel. Update the requirements, decisions, progress checklists, and acceptance results here as the project changes.
 
@@ -362,18 +362,23 @@ Track the funnel:
 
 `Visitors → CTA Clicks → Form Starts → Form Submissions → Qualified Leads`
 
-### Proposed event names
+### Event names
 
-Final names must follow any existing analytics convention in the project.
+The live page uses GA4 Measurement ID `G-5J68RT0XCR`.
+
+Implemented and verified in GA4 Realtime:
 
 - `lead_audit_cta_click`
 - `lead_audit_form_start`
-- `lead_audit_form_submit`
-- `lead_audit_form_error`
 - `lead_audit_phone_click`
 - `lead_audit_consultation_click`
 
-A form conversion must be recorded only after a successful Frappe submission, not merely when the submit button is clicked.
+Pending Frappe integration:
+
+- `generate_lead` after confirmed lead creation
+- `lead_audit_form_error` after a real submission failure
+
+A form conversion must be recorded only after a successful Frappe submission, not merely when the submit button is clicked or when someone opens the thank-you URL directly. Do not send names, email addresses, phone numbers, business names, or other form values to GA4.
 
 ## 12. SEO Requirements
 
@@ -403,6 +408,19 @@ A form conversion must be recorded only after a successful Frappe submission, no
 
 Use these naturally. Do not keyword-stuff the page.
 
+### Structured data
+
+The page must expose one JSON-LD `@graph` connecting:
+
+- `Organization`
+- `WebSite`
+- `ImageObject`
+- `WebPage`
+- `Service`
+- `Offer`
+
+The graph must identify Bespoke Web Design as the provider, describe the Free Marketing & Lead Generation Audit as the page's main service, connect the dedicated OG image, and represent the offer as free with `price = 0` and `priceCurrency = CAD`. Structured data must remain factual and match visible page content.
+
 ## 13. Open Graph and Social Sharing
 
 ### Required metadata
@@ -410,22 +428,25 @@ Use these naturally. Do not keyword-stuff the page.
 | Property | Value |
 |---|---|
 | OG URL | `https://bespokewebdesign.ca/get-more-leads/` |
-| OG Title | `Need More Calls & Customers?` |
-| OG Description | `Get a Free Lead Generation Audit and discover opportunities to generate more leads online.` |
+| OG Title | `Are You Losing Leads Online?` |
+| OG Description | `Get a FREE Marketing & Lead Generation Audit. See what's working, what's not, and where you're missing opportunities. FREE • NO OBLIGATION.` |
+| OG Image | `https://bespokewebdesign.ca/assets/images/og/lead-generation-audit-og.webp` |
 | Twitter/X card | Large image summary card |
 | Canonical URL | `https://bespokewebdesign.ca/get-more-leads/` |
 
-Also configure `og:title`, `og:description`, `og:image`, `og:url`, page title, and favicon.
+Also configure `og:title`, `og:description`, `og:image`, `og:image:width`, `og:image:height`, `og:image:alt`, `og:url`, the matching Twitter/X tags, page title, and favicon.
 
 ### OG image
 
 - Size: `1200 × 630 px`
-- Suggested text:
-  - `NEED MORE CALLS & CUSTOMERS?`
-  - `FREE LEAD GENERATION AUDIT`
-  - `Bespoke Web Design`
+- Final text:
+  - `ARE YOU LOSING LEADS ONLINE?`
+  - `MARKETING & LEAD GENERATION AUDIT`
+  - `SEE WHAT'S WORKING, WHAT'S NOT, AND WHERE YOU'RE MISSING OPPORTUNITIES.`
+  - `FREE • NO OBLIGATION`
+  - `CHECK YOUR BUSINESS`
 
-The final image must be tested in social-link preview tools or live sharing previews.
+Keep the crawler-blocked `/get-more-leads/og-preview/` page as the reusable design guide for future funnel images. The final image must still be tested in Facebook and LinkedIn sharing-preview tools after deployment.
 
 ## 14. Dependencies and Open Questions
 
@@ -442,7 +463,8 @@ Implementation is blocked or partially blocked until the following are supplied 
 - [ ] What notification channel and recipients should be configured?
 - [x] Public phone number confirmed from the shared client config: `780-263-8028`.
 - [x] Consultation booking URL confirmed: `https://calendly.com/arjiv28/30min`.
-- [ ] What are the GA4 measurement ID, Meta Pixel ID, and required access details?
+- [x] GA4 Measurement ID confirmed as `G-5J68RT0XCR`, with property access and live Realtime collection verified.
+- [ ] What is the Meta Pixel ID, and who will provide the required access?
 - [ ] Does the site already use a consent mechanism that must cover analytics and Meta tracking?
 - [x] The dedicated `1200 × 630 px` OG image has been created and approved.
 - [x] Use the dedicated `/get-more-leads/thank-you/` URL after a confirmed Frappe submission.
@@ -494,6 +516,7 @@ Implementation is blocked or partially blocked until the following are supplied 
 - [x] Add the initial Open Graph metadata.
 - [x] Add the Twitter/X card metadata.
 - [x] Create and configure the OG image.
+- [x] Add and validate the JSON-LD structured-data graph.
 - [x] Configure GA4.
 - [ ] Configure Meta Pixel.
 - [x] Track CTA clicks.
@@ -513,7 +536,8 @@ Implementation is blocked or partially blocked until the following are supplied 
 - [ ] Test Frappe lead creation and all field values.
 - [ ] Test Lead Source and Campaign attribution.
 - [ ] Test internal notifications.
-- [ ] Test analytics events and conversion recording.
+- [x] Test GA4 page views and non-conversion funnel events in Realtime.
+- [ ] Test successful form submission and conversion recording after Frappe integration.
 - [ ] Test Facebook and LinkedIn sharing previews.
 - [ ] Test the complete production journey.
 - [ ] Obtain final approval.
@@ -523,11 +547,11 @@ Implementation is blocked or partially blocked until the following are supplied 
 
 The implementation is complete only when the following journey is demonstrated successfully:
 
-- [ ] 1. Open `/get-more-leads/` directly.
-- [ ] 2. Confirm the homepage remains available and does not redirect.
+- [x] 1. Open `/get-more-leads/` directly.
+- [x] 2. Confirm the homepage remains available and does not redirect.
 - [ ] 3. Share the landing-page URL on Facebook and LinkedIn and verify the preview.
-- [ ] 4. Open the landing page on mobile.
-- [ ] 5. Use the primary CTA to reach the form.
+- [x] 4. Open the landing page on mobile.
+- [x] 5. Use the primary CTA to reach the form.
 - [ ] 6. Complete and submit the form.
 - [ ] 7. See the thank-you experience.
 - [ ] 8. Receive the internal new-lead notification.
@@ -546,9 +570,11 @@ The implementation is complete only when the following journey is demonstrated s
 | 2026-03-17 | Created the Markdown source of truth from the PDF and confirmed project decisions. | Complete |
 | 2026-03-17 | Built the responsive `/get-more-leads/` page, minimal funnel header/footer, visual form shell, and mobile sticky CTA. | Complete |
 | 2026-03-17 | Corrected narrow-mobile hero text overflow and balanced the audit preview spacing with its offset shadow. | Complete |
-| 2026-03-17 | Added the dedicated thank-you page with call and consultation actions. | Complete |
-| 2026-03-17 | Updated the funnel Open Graph and Twitter/X copy, assigned the dedicated `1200 × 630 px` image, and retained the crawler-blocked OG preview page as a future design guide. | Complete |
-| 2026-03-17 | Corrected the GA4 measurement ID and added CTA, form-start, phone, and consultation event tracking without collecting form values. | Complete |
+| 2026-08-20 | Added the dedicated thank-you page with call and consultation actions. | Complete |
+| 2026-08-20 | Updated the funnel Open Graph and Twitter/X copy, assigned the dedicated `1200 × 630 px` image, and retained the crawler-blocked OG preview page as a future design guide. | Complete |
+| 2026-08-20 | Corrected the GA4 measurement ID and added CTA, form-start, phone, and consultation event tracking without collecting form values. | Complete |
+| 2026-08-20 | Added and build-validated the connected `Organization`, `WebSite`, `ImageObject`, `WebPage`, `Service`, and `Offer` JSON-LD graph. | Complete |
+| 2026-08-21 | Verified GA4 page views and all four non-conversion funnel events in Realtime, then reconciled the source-of-truth document with the deployed implementation. | Complete |
 
 ---
 
