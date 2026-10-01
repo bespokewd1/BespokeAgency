@@ -35,8 +35,18 @@ try {
   const { context, page } = await setup();
   const requests = [];
   let mode = "success";
+  const failures = {
+    quota: [503, "quota_unavailable", "Bespoke AI has reached its usage limit. Please try later or contact Bespoke."],
+    unavailable: [503, "service_unavailable", "Bespoke AI is unavailable right now. Please try later or contact Bespoke."],
+    deadline: [504, "timeout", "Bespoke AI took too long to respond. Please try again or contact Bespoke."],
+    blocked: [502, "answer_unavailable", "Bespoke AI couldn't provide an answer. Try a shorter service question or contact Bespoke."],
+  };
   await page.route("**/api/chat", async (route) => {
     requests.push(route.request().postDataJSON());
+    if (failures[mode]) {
+      const [status, code, message] = failures[mode];
+      return route.fulfill({ status, json: { ok: false, error: { code, message, retryAfterSeconds: null }, contactUrl: "/contact/" } });
+    }
     if (mode === "rate") return route.fulfill({ status: 429, contentType: "text/html", body: "<h1>platform raw error</h1>", headers: { "Retry-After": "60" } });
     if (mode === "broken") return route.fulfill({ status: 200, json: { ok: true, answer: " " } });
     if (mode === "network") return route.abort();
@@ -77,6 +87,16 @@ try {
   await open(page);
   check(await page.locator(".chat-message").count() === 4, "contact navigation restores history");
   check(await page.locator('form[name="CTA Form"]').count() === 1, "existing contact form remains present");
+  for (const [failure, [, , wording]] of Object.entries(failures)) {
+    mode = failure;
+    await send(page, `Check ${failure}`);
+    check((await page.locator(".chat-error p").textContent()) === wording, `${failure} displays controlled function wording`);
+    check(await page.locator(".chat-error a").getAttribute("href") === "/contact/"
+      && await page.locator(".chat-error a").isVisible(), `${failure} keeps contact navigation available`);
+    check(await page.locator("#chat-question").inputValue() === `Check ${failure}`
+      && (await page.evaluate(() => JSON.parse(sessionStorage.getItem("bespoke-chat-v1")).history)).length === 4,
+    `${failure} preserves input without storing failed exchange`);
+  }
   mode = "broken";
   await send(page, "Keep this failed question");
   check(await page.locator(".chat-error").isVisible() && (await page.locator(".chat-error").textContent()).includes("unavailable right now"), "malformed success becomes friendly unavailable error");

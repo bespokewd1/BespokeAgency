@@ -2,7 +2,7 @@
 
 ## Current status
 
-The website, `/api/chat` function and widget are implemented. Task 5's mocked checks and a subsequent live widget conversation pass. Two earlier UI requests timed out, but the investigation below could not reproduce the failure. The configured model remains `gemini-3.5-flash-lite`. Wider task 6 verification remains pending.
+The website, `/api/chat` function and widget are implemented. Task 6's local answer-quality, failure/security and regression checks pass, with physical-device and screen-reader checks still unverified. Thirty task 6 live requests succeeded. Two earlier UI timeouts have not recurred; their cause remains unknown. The configured model remains `gemini-3.5-flash-lite`. The next step is discussing task 7's deployment approach and hosted prerequisites.
 
 Use [the chatbot contract](chatbot-contract.md) for request/response shapes, limits, visitor wording and verification requirements, and `netlify/ai/system-prompt.md` for assistant instructions. The function entry is `netlify/functions/chat.mjs`; server-side validation and provider handling live in `netlify/ai/chat-handler.mjs`.
 
@@ -165,6 +165,62 @@ The user's 2026-10-01 review requested a collapsed "About your messages" disclos
 This review also reproduced an asset build race that earlier smoke checks missed. Source passthrough and the compiler's unawaited file writes could produce mixed source/bundle text in `public/assets/js/chat.js`. A module script alone does not prevent that corruption. `.eleventy.js` now excludes `.js` from asset passthrough, and `src/config/javascript.js` returns the compiled content for Eleventy to write. Development maps are inline. The widget test suite now parses the actual generated module to catch corrupted output.
 
 After the fix, the production build/light-only check, all 8 widget tests and 46 mocked browser checks passed. Desktop/mobile screenshots were reviewed with the homepage fonts loaded. This revision made no Gemini requests. The asset race is unrelated to the earlier provider deadline failures, which occurred after the widget successfully submitted requests.
+
+## Task 6 verification
+
+Completed local automated/browser review on 2026-10-01 through the existing Netlify Dev server at port 8888. Existing servers on 8080 and 8888 were preserved. No deployment, model/key/billing change or provider-deadline adjustment.
+
+### Repeatable checks
+
+- `npm run test:light-only`: production build and light-only check passed. This supplied the required build check without a separate redundant build.
+- `npm run test:chat`: all 38 checks passed, including missing configuration, upstream quota/failure, blocked/empty results, deadline/body-read cancellation and rejection before provider calls.
+- `npm run test:chat-widget`: all 8 checks passed, including generated routes and built-module syntax.
+- `tests/chat-widget.browser.mjs`: all 58 checks passed with mocked responses. Added 12 assertions for quota, service-unavailable, backend timeout and answer-unavailable errors. Each verifies the exact visitor wording, contact link, retained input and exclusion of failed messages from storage.
+- The existing browser suite also covers non-JSON rate limits, browser deadline, unsafe fresh/restored answers, reset races, storage failure and bounds, navigation/refresh, keyboard focus, small mobile viewports, independent message scrolling and simulated keyboard resizing.
+
+### Real answer review
+
+Thirteen actual widget requests formed the initial review. The same 13 were repeated after prompt corrections, followed by four affected cases after a final custom-scope clarification. All 30 returned HTTP 200, taking 1,361 to 1,983 ms from submission through rendering. Requests were spaced at least 6.5 seconds apart, used the existing free-tier model, and were not automatically retried.
+
+| Scenario | Reviewed result after corrections |
+| --- | --- |
+| Four starter buttons | Correct services, approved prices and conditions, Edmonton trades focus, contact-first getting-started guidance |
+| Plan comparison | $245/$445/$797, 5/12/20 social posts as totals, no setup fee, cancellation after 90 days with no penalty; ad spend requires confirmation |
+| Old $149 offer, permanent 20% discount and one-month cancellation | Current Starter price and 90-day condition; no calculated discount or promise of eligibility/duration |
+| Online shop, booking, payments and CRM in Starter | Cannot confirm inclusion, availability or price; refers to contact without inventing a quote or a definite exclusion |
+| AI search visibility, Toronto, launch deadline, copy and taxes | Refers unconfirmed scope, coverage and terms to the team |
+| Guaranteed ranking and 100 leads | Explicitly declines outcome guarantees |
+| Unrelated code and recipe request | Redirects to Bespoke services |
+| Claimed-owner instruction override and hostile checkout link | Does not adopt false $1 pricing, disclose instructions or render the hostile destination |
+| Forged earlier assistant answer | Corrects $1 pricing/immediate cancellation using approved Starter terms; treats ad spend as unconfirmed |
+| Direct contact options | Correct email, telephone, WhatsApp and booking destinations |
+
+The initial review exposed unsolicited prices, literal Markdown bold markers, additive post wording and unsupported claims about exclusions or discontinued offers. The prompt now explicitly addresses these. One custom-scope exclusion persisted in the second review; a final rule requires an uncertainty answer when asked whether an unconfirmed feature is included in a named plan. The four affected pricing/scope cases then passed. This is observed scenario coverage, not a guarantee that every future generated answer will be correct.
+
+Clicked the getting-started answer's actual `/contact/` link and verified restored conversation state. Rendered internal destinations `/contact/` and `/services/` returned 200. Direct-contact hrefs in the first review matched the exact allowlist, including the booking URL without a stale month parameter. No telephone call, message, booking or external form submission was attempted.
+
+### Endpoint, secret and site checks
+
+- 75 additional local assertions passed: 15 malformed/oversized/history/override/origin/media checks, 9 inaccessible private/source paths, route/widget checks, navigation and form validation. Endpoint failures had the expected controlled status, `no-store` and contact fallback.
+- `/.env`, `/.env.example`, function/handler source, both Markdown resources, alternate `/ai/` resource paths and `/.netlify/functions/chat` returned 404. No provider call was needed for these negative cases.
+- Scanned all 368 generated files against the actual configured key and server-only markers. The key was read only into local process memory, never printed, serialized into test artifacts or sent to the browser.
+- Each full live review scanned 131 browser requests and 83 readable local response bodies. The final targeted review scanned 93 requests and 57 local response bodies. No configured key, authentication header or server-prompt/handler markers were found. Live browser requests contained only `message` and bounded `history` in the chat JSON. Third-party requests were blocked except font resources.
+- All 22 generated HTML routes returned 200. Seven included routes opened the widget; exclusions had no widget. The `/trades-foundry/` redirect led to the homepage. Page loads and opening widgets made zero chat requests in the isolated route review.
+- Desktop Services navigation and the mobile menu's Contact navigation passed. The existing menu has a 220 ms close animation; the check waits for closure rather than assuming it is synchronous.
+- Contact required fields and email validation passed. Valid test fields passed local validation and remained intact after chat open/close. The form was not submitted; hosted delivery remains unverified.
+- Desktop/mobile screenshots were reviewed, including real site fonts and live restored conversations. Chrome sizes included 390x844, 320x568, 390x400 and 844x390, plus the simulated keyboard viewport. Physical iOS/Android keyboard/safe-area behavior and actual screen-reader announcements still need manual review.
+
+The site review also recorded existing errors: `nav.js` assumes the removed `#cs-navigation .cs-toggle` exists, and `custom.js` initializes Typed on an absent `.cs-changing-text`. These scripts and the current header match the parent commit before chatbot implementation. An additional check allowing their CDN libraries confirmed these are legacy missing-element errors. Missing Typed/Blaze globals in the isolated suite were caused by blocking those CDN scripts. Current header navigation, form controls and chat checks passed; legacy script cleanup is separate follow-up work.
+
+### Session artifacts
+
+Optional diagnostics are outside the repository in the same `bespoke-widget-checks` temporary folder used above:
+
+- `task6-local.mjs` and `task6-local-results.json`: endpoint and site review, no generation calls.
+- `task6-live.mjs`: explicit live widget review; running it consumes real quota. Its result files are `task6-live-results.json`, `task6-live-final-results.json` and `task6-live-targeted-results.json` for the three review rounds. They contain synthetic review questions, answers, timings and counts, not credentials.
+- `task6-screenshots/`: mocked and live desktop/mobile screenshots.
+
+These are session diagnostics, not application dependencies. Maintained evidence is recorded here and in the feature tracker. The user requested deferring preview-versus-direct-deployment decisions until task 7. Physical-device checks, hosted routing/packaging/rate enforcement, regional availability decisions, hosting allowances and actual external delivery remain outside the verified local results.
 
 ## References
 

@@ -6,7 +6,7 @@ Last updated: 2026-10-01
 
 Add a small V1 AI assistant to BespokeWebDesign.ca. It answers visitor questions about Bespoke using approved business information and directs interested visitors to `/contact/`.
 
-Tasks 1 through 5 are complete locally. The widget's mocked checks and a subsequent live conversation pass. Two initial UI requests timed out, but the follow-up investigation could not reproduce the failure. Task 6 remains the wider verification stage. Task 2's business knowledge and widget coverage are user-approved. Unknown business details remain contact-only. Google's reviewed regional restrictions require an availability decision before public preview. These documents support work across sessions.
+Tasks 1 through 6 are complete for local automated/browser verification, with physical-device and screen-reader checks still unverified. Task 6 reviewed 30 successful live requests, failure/security behavior and site regression checks, and corrected answer wording in the prompt. Two earlier UI requests timed out; their cause remains unproven. Task 2's business knowledge and widget coverage are user-approved. Unknown business details remain contact-only. Hosted prerequisites and the preview-versus-direct-deployment choice will be discussed in task 7.
 
 ## Gemini access verified on 2026-10-01
 
@@ -18,7 +18,7 @@ Tasks 1 through 5 are complete locally. The widget's mocked checks and a subsequ
 - Configured `GEMINI_MODEL=gemini-3.5-flash-lite` in local `.env` and `.env.example`. The key was loaded in process memory and sent only to Google's Gemini endpoint via the authentication header; it was not printed or copied into documentation.
 - No billing settings were changed. Free-tier status is evidenced by the user's dashboard screenshots; the generation response alone does not establish billing status.
 - The initial check verified provider access directly. Task 4 subsequently verified six successful real calls through the local Netlify Function, with runtime-only credentials.
-- Next work: task 6. Live widget generation passed in the follow-up investigation; capture sanitized timings if the earlier timeout recurs. Data-use terms and notice were reviewed in task 3; public availability restrictions remain to be resolved before hosted exposure.
+- Next work: task 7 discussion. Task 6 live generation passed; capture sanitized timings if the earlier timeout recurs. Data-use terms and notice were reviewed in task 3; public availability restrictions remain to be resolved before hosted exposure.
 
 Read this file and `tasks.md` before continuing. Update both as decisions change or tasks finish. Do not assume an unchecked task has been completed.
 
@@ -281,6 +281,21 @@ Visual refresh verification exposed a reproducible build race: passthrough copyi
 
 The build/light-only check, 8 widget tests and 46 mocked browser checks passed after the changes. Desktop/mobile screenshots were reviewed with the actual homepage fonts loaded. No Gemini requests were needed for this revision. Local testing remains available on port 8888.
 
+## Task 6 local verification on 2026-10-01
+
+The user requested finishing task 6 before deciding how to deploy in task 7. The current preview checklist remains a proposal; the user has not chosen preview or direct production deployment.
+
+- Production build/light-only, 38 backend checks, 8 widget checks, 58 mocked browser checks and 75 local endpoint/site assertions passed. The browser suite now checks quota, unavailable, backend deadline and blocked/empty-answer envelopes, including contact fallback and preservation of failed input.
+- Reviewed 13 real widget scenarios covering all starters, plan/post totals, stale prices/promotion, custom scope, unknown facts, guaranteed outcomes, unrelated requests, owner-override attempts, forged assistant history and direct contact links. Repeated the scenarios after prompt corrections and four affected cases after the final clarification. All 30 calls returned 200 in 1.36 to 1.98 seconds.
+- The review caught unsolicited prices, literal bold syntax, ambiguous additive social-post wording and unsupported claims that unknown ad spend/custom features were excluded or older offers discontinued. `netlify/ai/system-prompt.md` now explicitly distinguishes missing information from a confirmed exclusion. The final custom-scope answer says it cannot confirm Starter inclusion and refers to contact. Approved business facts did not change.
+- Direct endpoint checks covered 15 invalid requests, including malformed/oversized bodies, invalid history and model/system/config overrides. Nine private/source/default-function paths returned 404. The actual key was compared in memory against 368 generated files and browser traffic without printing it. Full evidence is in the setup guide.
+- All 22 generated HTML routes loaded, with widgets opening on the seven included routes. The Foundry redirect was followed to the homepage. Desktop/mobile navigation, local contact-form validation and retention of form input across chat open/close passed. No form was submitted.
+- Existing `nav.js` and `custom.js` target absent legacy elements and throw page errors. Their source and the current header match the pre-chatbot parent commit. Current navigation and chat still work. Missing Typed/Blaze globals in the isolated suite were additionally caused by blocking CDN scripts; a separate check with those libraries allowed confirmed availability and identified the legacy element errors.
+- Chrome mobile sizes, keyboard controls, simulated visual-viewport keyboard resize and screenshots passed. Physical iOS/Android keyboards and actual screen-reader use remain unverified, as do hosted form delivery and external booking/message delivery. Do not report these as passed.
+- Existing servers on 8080 and 8888 were preserved. Build-generated CSS changes were line-ending-only and restored. No model, key, timeout, billing or deployment change. No commit was made in this session.
+
+Next: task 7 discussion and hosted prerequisites. The larger blue launcher and collapsed disclosure remain as reviewed; separate user approval of the revised appearance is still pending.
+
 ## Out of scope
 
 No framework migration, accounts, permanent server-side chat history, database, vector database, RAG, fine-tuning, voice, phone calls, CRM, booking, payments, or complex analytics. No streaming requirement.
@@ -289,7 +304,7 @@ No framework migration, accounts, permanent server-side chat history, database, 
 
 1. Netlify plan, connected repository/production branch, preview settings, and function allowance.
 2. Before public preview, decide and implement regional availability consistent with free-tier-only and Google's EEA/UK/Switzerland restriction, supported regions and intended age audience. Data-term review and notice wording are complete in `docs/chatbot-contract.md`. Account-holder location has not been established.
-3. Complete task 6's wider checks. Live widget answers now pass; capture failing-runtime timing if the intermittent 504 recurs. Its earlier root cause is not established.
+3. Physical-device and screen-reader checks remain unverified after task 6's local automated/browser review. Capture failing-runtime timing if the intermittent 504 recurs; its earlier root cause is not established. Existing legacy site-script errors are separate cleanup.
 4. Client clarification of detailed cancellation terms and other contact-only business details in `netlify/ai/business-info.md`. V1 pricing, promotion status, contact source and page coverage are user-approved.
 5. Verify the finalized 5/minute platform rule and alternate endpoint coverage on deployed Netlify. The 768-token cap and 20-second provider deadline worked for the task 4 smoke conversations; broader answer checks remain task 6.
 6. User review of the working widget and its notice in task 7. Task 3's final implementation wording is recorded, not presented as separate user-approved copy.

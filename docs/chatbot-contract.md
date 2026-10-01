@@ -1,6 +1,6 @@
 # Chatbot contract
 
-Task 3 specification, 2026-10-01. Tasks 4 and 5 implemented the endpoint and widget against this contract. Backend tests, mocked UI checks and a live widget conversation pass. Two initial UI timeouts did not reproduce during the follow-up investigation. Wider task 6 checks and hosted verification remain pending. These are finalized V1 implementation defaults, not additional user-approved business claims.
+Task 3 specification, 2026-10-01. Tasks 4 and 5 implemented the endpoint and widget against this contract. Task 6's local answer, failure/security and regression checks pass, with physical-device and screen-reader limits recorded in the tracker. Hosted verification remains pending. Two earlier UI timeouts have not recurred and their cause remains unknown. These are finalized V1 implementation defaults, not additional user-approved business claims.
 
 The assistant uses `netlify/ai/system-prompt.md` and the approved `netlify/ai/business-info.md`. This document is the shared backend/frontend contract. Do not send the content audit, repository pages or browser-supplied configuration to Gemini.
 
@@ -197,6 +197,8 @@ Task 4 evidence is in `docs/chatbot-local-setup.md`. All 38 offline checks passe
 Task 5 added 7 passing widget unit/route checks and 44 passing mocked Chrome browser checks through Netlify Dev. These cover safe links in new/restored answers, request/storage bounds, non-JSON platform errors, corrupt/blocked storage, reset races, keyboard controls and mobile visual-viewport sizing. Production-output smoke and build/light-only checks also passed. Two real UI requests returned 504 at the existing 20-second backend deadline; task 6 must investigate/recheck live generation. Physical-device keyboard and screen-reader verification remain pending.
 
 The subsequent 504 investigation verified direct full-context generation, the local endpoint and a real two-message widget conversation without changing implementation or configuration. Contact navigation and transcript restoration passed. The initial timeout cause remains unproven; details and timings are in the setup guide.
+
+Task 6 verification on 2026-10-01: 38 backend, 8 widget and 58 mocked browser checks passed, alongside the production build/light-only check and 75 local endpoint/site assertions. Thirty real widget requests succeeded across the initial review and prompt rechecks. Prompt corrections reinforce plain formatting and contact referral for unknowns without asserting exclusion or discontinued offers. No request/response, storage or limit changes were needed. Generated-output and browser-traffic scans found no configured credential or server-only markers. See `chatbot-local-setup.md` for evidence and limitations.
 
 ## Documentation checked
 

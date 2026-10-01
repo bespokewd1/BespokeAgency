@@ -8,7 +8,7 @@ Last updated: 2026-10-01
 - Work in the order below. Account setup and business-content review can progress independently when one is waiting on the user.
 - Check items only after completion. Record evidence, changed paths, decisions, and blockers in the session handoff section.
 - Never put credentials in these documents.
-- Tasks 1 through 5 are complete locally. The initial widget live requests timed out, but a follow-up investigation verified successful real answers, contextual follow-up and contact navigation. Task 6's wider checks remain pending. Resolve the reviewed regional availability restriction before public preview.
+- Tasks 1 through 6 are complete for local automated/browser verification, with the manual-device limits recorded under task 6. Thirty task 6 live requests succeeded; the earlier timeout cause remains unknown. Discuss the deployment approach and resolve hosted prerequisites in task 7.
 
 ## 0. Planning and handoff
 
@@ -124,31 +124,39 @@ Use the Netlify Dev address for these checks. Use real Gemini calls for answer q
 
 ### Answers and conversation
 
-- [ ] Ask the four starter questions and compare answers with approved facts.
+- [x] Ask the four starter questions and compare answers with approved facts.
 - [x] Check a trades follow-up such as "What about for plumbers?" after a website question. Passed during the follow-up 504 investigation, with the real widget and Gemini.
-- [ ] Check known pricing includes conditions and unknown/custom pricing directs to contact.
-- [ ] Check unknown services/facts, unrelated requests, and attempts to override assistant instructions.
-- [ ] Verify no guaranteed ranking/lead claims in the review scenarios.
-- [ ] Verify actual response links resolve to the correct destinations.
-- [ ] Check close/reopen, reset during a request, refresh, navigation, storage failure, and bounded-history behavior.
+- [x] Check known pricing includes conditions and unknown/custom pricing directs to contact.
+- [x] Check unknown services/facts, unrelated requests, and attempts to override assistant instructions.
+- [x] Verify no guaranteed ranking/lead claims in the review scenarios.
+- [x] Verify actual response links resolve to the correct destinations. Clicked a real answer's contact link; internal destinations returned 200, and external/contact-scheme hrefs matched the approved destinations. External delivery/booking was not exercised.
+- [x] Check close/reopen, reset during a request, refresh, navigation, storage failure, and bounded-history behavior.
 
 ### Failure and security checks
 
-- [ ] Exercise oversized/malformed requests and invalid history directly against the endpoint.
-- [ ] Simulate rate-limit responses to verify widget handling. Actual Netlify enforcement is checked in task 7.
-- [ ] Simulate quota exhaustion, missing configuration, timeout, provider failure, and empty/blocked results.
-- [ ] Inspect generated `public/` files and browser network traffic for secret exposure.
-- [ ] Verify function source/resources are not published as static downloads.
-- [ ] Check malicious response text/URLs cannot inject scripts or unsafe links.
-- [ ] Confirm no model selection or system-instruction override is accepted from the browser.
+- [x] Exercise oversized/malformed requests and invalid history directly against the endpoint.
+- [x] Simulate rate-limit responses to verify widget handling. Actual Netlify enforcement is checked in task 7.
+- [x] Simulate quota exhaustion, missing configuration, timeout, provider failure, and empty/blocked results.
+- [x] Inspect generated `public/` files and browser network traffic for secret exposure.
+- [x] Verify function source/resources are not published as static downloads.
+- [x] Check malicious response text/URLs cannot inject scripts or unsafe links.
+- [x] Confirm no model selection or system-instruction override is accepted from the browser.
 
 ### Site regression checks
 
-- [ ] Run `npm run build` and appropriate existing checks, including `npm run test:light-only` where applicable. Avoid redundant builds if the latter already provides the required build check.
-- [ ] Test desktop and mobile widths, keyboard operation, focus, and readable message states.
-- [ ] Check main pages, blog pages, excluded pages, navigation, and the existing contact form.
+- [x] Run `npm run build` and appropriate existing checks, including `npm run test:light-only` where applicable. Avoid redundant builds if the latter already provides the required build check.
+- [x] Test desktop and mobile widths, keyboard operation, focus, and readable message states. Chrome emulation and simulated keyboard viewport; physical-device and screen-reader use remain unverified.
+- [x] Check main pages, blog pages, excluded pages, navigation, and the existing contact form. Local validation only, no form submission.
 
 **Completion check:** locally, the visitor can open chat, receive a useful grounded answer, ask follow-ups, follow contact links, and use it comfortably on mobile. Secrets remain private and the existing site still works.
+
+Evidence, 2026-10-01: production build/light-only passed, 38 backend checks, 8 widget checks, 58 mocked browser checks and 75 endpoint/site assertions passed. Reviewed 13 live answer scenarios, repeated them after prompt corrections, then rechecked four affected cases after the final custom-scope clarification. All 30 requests returned 200 in 1.36 to 1.98 seconds. The prompt now avoids unsupported exclusion/discontinuation claims, unsolicited service-list prices, additive post wording and literal bold markers. No approved business facts changed. Scanned 368 generated files and browser requests/responses against the configured key and server-only markers without printing secrets. Full evidence and reproduction notes are in `docs/chatbot-local-setup.md`.
+
+Verification limits and existing findings:
+
+- [ ] Physical iOS/Android keyboard and safe-area checks, and an actual screen-reader review. Desktop/mobile Chrome emulation does not establish these results.
+- Existing `nav.js` and `custom.js` throw when legacy navigation/typing elements are absent. Their source and the current header are unchanged from before chatbot implementation. Current desktop/mobile navigation, form validation and widget checks pass. Record as separate site cleanup, not a newly introduced chatbot regression.
+- Hosted form delivery, external booking/message delivery and actual platform rate enforcement remain unverified locally. Task 7's deployment approach will be discussed with the user then; no deployment is authorized by these results.
 
 ## 7. Deploy to a Netlify preview and verify hosting behavior
 
@@ -187,6 +195,15 @@ This is a pre-release check after local implementation and verification, not a p
 ## Session handoff
 
 ### Latest session
+
+- Date: 2026-10-01, task 6 local verification.
+- Completed: all task 6 local checks, with physical-device/screen-reader limits explicitly open above.
+- Changed: `netlify/ai/system-prompt.md`, 12 added mocked error-display assertions in `tests/chat-widget.browser.mjs`, and maintained documentation. Corrected answer wording after reviewing actual responses; business knowledge, model, provider deadlines and billing unchanged.
+- Verification: build/light-only, 38 backend, 8 widget, 58 browser and 75 local endpoint/site assertions; 30 successful live calls and private generated-output/network scans. See the setup guide for scenario results and existing site-script errors.
+- Runtime: preserved existing servers on 8080 and 8888. Restored only build-generated CSS line-ending changes. No deployment or commit.
+- Next: discuss task 7, including preview versus direct production workflow and existing hosted prerequisites. The user asked to defer that decision until task 6 was finished.
+
+### Previous widget design review
 
 - Date: 2026-10-01, user widget design review.
 - Changes: collapsed full message disclosure with a visible short notice; larger homepage-blue launcher, clear icon/supporting copy, homepage Work Sans/Poppins typography and sharper panel/buttons.
