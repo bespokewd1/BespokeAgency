@@ -75,7 +75,10 @@ module.exports = function (eleventyConfig) {
     ========================================================================*/
     /** https://www.11ty.dev/docs/copy/ */
 
-    eleventyConfig.addPassthroughCopy("./src/assets");
+    // JavaScript is emitted by the custom compiler, not copied over its output.
+    eleventyConfig.addPassthroughCopy("./src/assets", {
+        filter: (filePath) => !filePath.endsWith(".js"),
+    });
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/_redirects");
     /**=====================================================================

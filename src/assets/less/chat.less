@@ -1,0 +1,129 @@
+// Kept separate so excluded pages do not load widget styles.
+#bespoke-chat {
+  // Use the same fonts already loaded by the shared Blue Collar header.
+  --chat-display: 'Work Sans', system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: #0b0f17;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+
+  [hidden], &[hidden] { display: none !important; }
+  button, textarea { font: inherit; }
+  button { cursor: pointer; }
+  button, summary, a { touch-action: manipulation; }
+  button:disabled { cursor: default; opacity: 0.55; }
+  :focus-visible { outline: 3px solid #0966c2; outline-offset: 3px; }
+  p, a { font-size: inherit; line-height: inherit; color: inherit; }
+  a { color: #075eaf; text-decoration: underline; text-underline-offset: 0.15em; }
+  button { min-height: 44px; border: 1px solid #ccd3dd; border-radius: 0.25rem; padding: 0.5rem 0.8rem; color: #0b0f17; background: #fff; }
+  button:hover:not(:disabled) { background: #dcebff; }
+
+  .chat-trigger {
+    position: fixed;
+    right: ~"max(1rem, env(safe-area-inset-right))";
+    bottom: ~"max(1rem, env(safe-area-inset-bottom))";
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: calc(100vw - 2rem);
+    min-height: 4.5rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid #fff;
+    border-radius: 0.375rem;
+    background: #1f8fff;
+    color: #0b0f17;
+    text-align: left;
+    font-weight: 700;
+    box-shadow: 0 6px 28px #0b0f1766;
+    &:hover:not(:disabled) { background: #65b2ff; }
+    &:focus-visible { outline-color: #fff; box-shadow: 0 0 0 6px #0b0f17; }
+  }
+  .chat-trigger-icon { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; background: #0b0f17; color: #fff; flex-shrink: 0; border-radius: 0.25rem; }
+  .chat-trigger-copy { display: grid; gap: 0.1rem; }
+  #chat-trigger-label { font: italic 900 1.125rem/1.2 var(--chat-display); text-transform: uppercase; }
+  #chat-trigger-hint { font-size: 0.625rem; font-weight: 500; line-height: 1.5; }
+
+  #chat-panel {
+    position: fixed;
+    // Preserve browser-side math instead of invoking LESS's max function.
+    inset: ~"auto max(0.75rem, env(safe-area-inset-right)) max(0.75rem, env(safe-area-inset-bottom)) auto";
+    bottom: ~"max(0.75rem, env(safe-area-inset-bottom), var(--chat-viewport-bottom, 0px))";
+    margin: 0;
+    padding: 0;
+    width: 28rem;
+    max-width: calc(100vw - 1.5rem);
+    height: 44rem;
+    max-height: calc(100vh - 1.5rem);
+    max-height: calc(var(--chat-viewport-height, 100dvh) - 1.5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    border: 1px solid #ccd3dd;
+    border-top: 4px solid #1f8fff;
+    border-radius: 0.5rem;
+    background: #fff;
+    color: #0b0f17;
+    box-shadow: 0 16px 64px #0b0f1740;
+    overflow: hidden;
+    &[open] { display: flex; flex-direction: column; }
+    &::backdrop { background: #0b0f1733; }
+  }
+
+  .chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #0b0f17;
+    color: #fff;
+    flex-shrink: 0;
+    h2 { font: italic 900 1.5rem var(--chat-display); text-transform: uppercase; color: #fff; }
+    p { font-size: 0.75rem; margin-top: 0.25rem; }
+    button { background: transparent; color: #fff; border-color: #647084; }
+    button:hover { color: #0b0f17; }
+  }
+  .chat-toolbar { padding: 0.25rem 1rem; border-bottom: 1px solid #e1e5eb; }
+  .chat-reset { border: 0; padding: 0.25rem 0; font-size: 0.875rem; text-decoration: underline; }
+  .chat-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 1rem; scrollbar-gutter: stable; }
+  .chat-notice {
+    background: #f5f6f8;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.8125rem;
+    margin-bottom: 0.5rem;
+    summary { cursor: pointer; font-weight: 700; min-height: 28px; }
+    p { margin: 0.5rem 0; }
+    a { display: inline; }
+  }
+  .chat-notice-short { font-size: 0.75rem; color: #465063; margin-bottom: 1rem; }
+  .chat-welcome { margin-bottom: 1rem; }
+  .chat-starters { display: grid; gap: 0.5rem; }
+  .chat-starters button { text-align: left; font-size: 0.8125rem; border-color: #99bde8; border-left: 3px solid #1f8fff; }
+  .chat-message { margin-top: 1rem; padding: 0.85rem; border-radius: 0.75rem; background: #f5f6f8; overflow-wrap: anywhere; }
+  .chat-message-user { background: #dcebff; margin-left: 1.5rem; }
+  .chat-message-label { display: block; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .chat-message-text { white-space: pre-wrap; }
+  .chat-pruned, .chat-typing { margin-top: 1rem; font-size: 0.875rem; color: #465063; }
+  .chat-error { margin-top: 1rem; border-left: 3px solid #a52a24; padding: 0.75rem; background: #fff4f2; }
+  .chat-error a { display: inline-block; margin-top: 0.5rem; }
+  .chat-form { padding: 0.75rem 1rem; border-top: 1px solid #e1e5eb; flex-shrink: 0; }
+  .chat-form label { display: block; font-size: 0.875rem; font-weight: 700; margin-bottom: 0.4rem; }
+  textarea { display: block; width: 100%; min-height: 3rem; max-height: 7rem; resize: vertical; padding: 0.6rem; border: 1px solid #8995a7; border-radius: 0.5rem; background: #fff; color: #0b0f17; font-size: 16px; }
+  .chat-compose-row { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-top: 0.4rem; }
+  #chat-count, #chat-input-help, .chat-cooldown { font-size: 0.75rem; color: #465063; }
+  .chat-send { background: #1f8fff; color: #0b0f17; min-width: 5rem; border-color: #1f8fff; font: italic 900 1rem var(--chat-display); text-transform: uppercase; }
+  .chat-send:hover:not(:disabled) { background: #65b2ff; }
+  .chat-footer { padding: 0 1rem 0.65rem; text-align: center; font-size: 0.8125rem; flex-shrink: 0; }
+  .chat-announcement { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; clip-path: inset(50%); overflow: hidden; white-space: nowrap; }
+
+  @media (max-width: 30rem) {
+    #chat-panel { width: calc(100vw - 1.5rem); }
+    .chat-header { padding: 0.75rem; }
+  }
+  @media (max-height: 32rem) {
+    .chat-header { padding: 0.4rem 0.75rem; }
+    .chat-toolbar { padding: 0 0.75rem; }
+    .chat-form { padding: 0.4rem 0.75rem; }
+    textarea { min-height: 2.75rem; height: 2.75rem; }
+    #chat-input-help { display: none; }
+  }
+}

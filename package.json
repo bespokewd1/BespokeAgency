@@ -9,8 +9,12 @@
         "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
         "test:light-only": "npm run build && node scripts/check-light-only.js",
+        "test:chat": "node --test tests/chat.test.mjs",
+        "test:chat-widget": "node --test tests/chat-widget.test.mjs",
         "watch:cms": "npx decap-server",
         "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
+        "dev": "netlify dev --offline --no-open",
+        "dev:site": "npm-run-all --parallel watch:less watch:eleventy",
         "build": "run-s build:*"
     },
     "repository": {
@@ -37,5 +41,8 @@
         "less-watch-compiler": "^1.16.3",
         "npm-run-all": "^4.1.5",
         "starter-kit-v4": "file:"
+    },
+    "devDependencies": {
+        "netlify-cli": "^27.10.2"
     }
 }

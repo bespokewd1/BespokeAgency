@@ -20,6 +20,10 @@
   </p>
 </p>
 
+## Local chatbot development
+
+Run `npm run dev` and open `http://localhost:8888` to use the local Netlify environment. See [local chatbot setup](docs/chatbot-local-setup.md) for installation, private Gemini configuration, and current implementation status.
+
 ## Table of Contents
 
 -   <a href="#overview">Overview</a>

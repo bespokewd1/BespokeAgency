@@ -134,6 +134,10 @@
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css" />
     <link rel="stylesheet" href="/assets/css/trades-foundry-fonts.css" />
+    {% if chatEnabled == true and not funnelPage %}
+    <link rel="stylesheet" href="/assets/css/chat.css" />
+    <script type="module" src="/assets/js/chat.js"></script>
+    {% endif %}
     {% if not funnelPage %}
     <link
       rel="preload"
@@ -198,6 +202,9 @@
       {% include "components/lead-funnel-footer.html" %}
     {% else %}
       {% include "components/blue-collar-footer.html" %}
+    {% endif %}
+    {% if chatEnabled == true and not funnelPage %}
+      {% include "components/chat-widget.html" %}
     {% endif %}
   </body>
 </html>

@@ -1,4 +1,5 @@
 {
+    "chatEnabled": true,
     "layout": "layouts/post.html",
     "eleventyComputed": {
         "preloadImg": "{{ image }}",

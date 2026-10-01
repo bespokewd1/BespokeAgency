@@ -2,6 +2,18 @@
   publish = "public/"
   command = "npm run build"
 
+[functions]
+  directory = "netlify/functions"
+
+[functions.chat]
+  included_files = ["netlify/ai/system-prompt.md", "netlify/ai/business-info.md"]
+
+[dev]
+  command = "npm run dev:site"
+  framework = "#custom"
+  targetPort = 8080
+  port = 8888
+
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
   package = "@netlify/plugin-lighthouse"

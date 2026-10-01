@@ -1,0 +1,48 @@
+<div id="bespoke-chat" hidden>
+  <button class="chat-trigger" type="button" aria-haspopup="dialog" aria-controls="chat-panel" aria-expanded="false" aria-labelledby="chat-trigger-label" aria-describedby="chat-trigger-hint">
+    <span class="chat-trigger-icon"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11.5a8 8 0 0 1-8 8H4l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8 10h8M8 14h5"/></svg></span>
+    <span class="chat-trigger-copy"><span id="chat-trigger-label">Ask Bespoke AI</span><span id="chat-trigger-hint">Services, pricing &amp; getting started</span></span>
+  </button>
+  <dialog id="chat-panel" aria-labelledby="chat-title" aria-describedby="chat-identification">
+    <header class="chat-header">
+      <div>
+        <h2 id="chat-title" tabindex="-1">Bespoke AI</h2>
+        <p id="chat-identification">AI assistant · Answers may be inaccurate.</p>
+      </div>
+      <button class="chat-close" type="button">Close</button>
+    </header>
+    <div class="chat-toolbar"><button class="chat-reset" type="button">New conversation</button></div>
+    <div class="chat-scroll" tabindex="0" role="region" aria-label="Conversation and data notice">
+      <p class="chat-welcome">Hi! I'm Bespoke's AI assistant. I can help with questions about websites, SEO, Google Business Profile and social media services. What would you like to know?</p>
+      <details class="chat-notice">
+        <summary>About your messages</summary>
+        <p>Messages and recent chat history are sent to Google Gemini. Google may use chats to improve its products, and human reviewers may read them. Please don't share personal, sensitive or confidential information. Use our <a href="/contact/">contact form</a> for private enquiries.</p>
+        <p>Recent messages are saved in this tab for follow-up questions. New conversation clears this tab's chat history, but does not delete data already sent to Google.</p>
+        <a href="https://ai.google.dev/gemini-api/terms">Google data terms</a>
+      </details>
+      <p class="chat-notice-short">Chats go to Google Gemini and may be used for product improvement or human review. Don't share private information.</p>
+      <div class="chat-starters" aria-label="Suggested questions">
+        <button type="button">What services do you offer?</button>
+        <button type="button">How much does a website cost?</button>
+        <button type="button">Do you work with trades businesses?</button>
+        <button type="button">I need a website. Where do I start?</button>
+      </div>
+      <p class="chat-pruned" hidden>Showing the most recent messages.</p>
+      <div class="chat-messages" role="list" aria-label="Messages"></div>
+      <p class="chat-typing" hidden>Bespoke AI is replying...</p>
+      <div class="chat-error" hidden><p></p><a href="/contact/">Contact Bespoke</a></div>
+    </div>
+    <form class="chat-form">
+      <label for="chat-question">Your question about Bespoke</label>
+      <textarea id="chat-question" rows="2" maxlength="1000" placeholder="Ask about Bespoke's services" aria-describedby="chat-input-help chat-count" enterkeyhint="send"></textarea>
+      <div class="chat-compose-row">
+        <span id="chat-count">0 / 1,000</span>
+        <button class="chat-send" type="submit">Send</button>
+      </div>
+      <p id="chat-input-help">Enter to send. Shift+Enter for a new line.</p>
+      <p class="chat-cooldown" hidden></p>
+    </form>
+    <footer class="chat-footer"><a href="/contact/">Contact Bespoke</a></footer>
+    <p class="chat-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+  </dialog>
+</div>
