@@ -44,9 +44,20 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
+    <!-- Keep existing Identity email/provider links working without a public widget. -->
+    <script>
+      window.netlifyIdentityCallback = /(?:^|&)(?:confirmation|invite|recovery|email_change)_token=[^&]+|(?:^|&)access_token=|(?:^|&)error=access_denied&error_description=403(?:&|$)/.test(
+        window.location.hash.replace(/^#\/?/, ""),
+      );
+      if (window.netlifyIdentityCallback) {
+        window.location.replace("/admin/" + window.location.hash);
+      }
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
+        if (w.netlifyIdentityCallback) return;
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
@@ -60,46 +71,30 @@
     <!-- End Google Tag Manager -->
 
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-5J68RT0XCR"
-    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", "G-5J68RT0XCR");
+      if (!window.netlifyIdentityCallback) {
+        var googleTag = document.createElement("script");
+        googleTag.async = true;
+        googleTag.src = "https://www.googletagmanager.com/gtag/js?id=G-5J68RT0XCR";
+        document.head.appendChild(googleTag);
+        gtag("js", new Date());
+        gtag("config", "G-5J68RT0XCR");
+      }
     </script>
     <meta
       name="google-site-verification"
       content="VR5p7s-kGIHYiQ70BuLt9gUYTGuDuqlmU1oUXj4C-h4"
     />
 
-    <!-- Script for Netlify Identity -->
-    <script
-      defer
-      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-    ></script>
-    <script defer>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-
     <!-- Preloads -->
-    <link
-      rel="preload"
-      as="image"
-      href="https://bespokewebdesign.ca/assets/images/ogimage2.png"
-    />
+    {% if page.url == '/' %}
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/work-sans-v24-latin-italic-100-900.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/poppins-v24-latin-normal-400.woff2" crossorigin />
+    {% else %}
     <link
       rel="preload"
       as="font"
@@ -128,6 +123,7 @@
       href="/assets/fonts/familjen-grotesk-latin-400-700.woff2"
       crossorigin
     />
+    {% endif %}
 
     <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
     {% if preloadImg != '' %}
@@ -135,8 +131,13 @@
     {% endif %}
 
     <!-- Sitewide Stylesheets and Scripts -->
+    {% if page.url == '/' %}
+    <link rel="stylesheet" href="/assets/css/home-base.css" />
+    {% else %}
     <link rel="stylesheet" href="/assets/css/root.css" />
     <link rel="stylesheet" href="/assets/css/trades-foundry-fonts.css" />
+    {% endif %}
+    <link rel="stylesheet" href="/assets/css/blue-collar-fonts.css" />
     {% if chatEnabled == true and not funnelPage %}
     <link rel="stylesheet" href="/assets/css/chat.css" />
     <script type="module" src="/assets/js/chat.js"></script>
@@ -154,9 +155,11 @@
     <noscript>
       <link rel="stylesheet" href="/assets/css/blue-collar-footer.css" />
     </noscript>
+    {% if page.url != '/' %}
     <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/custom.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    {% endif %}
     {% endif %}
     <script type="speculationrules">
       {
@@ -191,7 +194,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!--Screen reader skip main nav-->
-    <a class="skip" aria-label="skip to main content" href="#main" tabindex="1"
+    <a class="skip" href="#main"
       >Click To Skip To Main Content</a
     >
 

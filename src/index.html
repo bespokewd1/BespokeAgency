@@ -13,6 +13,8 @@ eleventyNavigation:
 
 {% extends "layouts/base.html" %} {% block head %}
 <link rel="stylesheet" href="/assets/css/blue-collar-home.css" />
+<link rel="preload" as="image" href="/assets/images/bcm-hero-worker-1280.webp" imagesrcset="/assets/images/bcm-hero-worker-768.webp 768w, /assets/images/bcm-hero-worker-1280.webp 1280w" imagesizes="100vw" fetchpriority="high" />
+<script defer src="/assets/js/home-hero.js"></script>
 {% endblock %} {% block body %}
 <div class="bcm-page">
   <!-- ============================================================
@@ -35,30 +37,31 @@ eleventyNavigation:
        ============================================================ -->
   <section class="bcm-hero" aria-labelledby="bcm-hero-title">
     <div class="bcm-hero-media" aria-hidden="true">
-      <!--
-        Hero video: Pexels free-license stock (https://www.pexels.com/license/).
-        Pexels permits free use including for commercial projects, no attribution
-        required. Once a self-hosted video lands at /assets/videos/bcm-hero.mp4
-        it will be tried first (browser walks <source> top-down on 404 / decode
-        error) and the Pexels CDN URL becomes the fallback.
-      -->
+      <img
+        class="bcm-hero-poster"
+        src="/assets/images/bcm-hero-worker-1280.webp"
+        srcset="/assets/images/bcm-hero-worker-768.webp 768w, /assets/images/bcm-hero-worker-1280.webp 1280w"
+        sizes="100vw"
+        width="1280"
+        height="720"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <!-- Self-hosted Pexels stock. Source and license: /assets/videos/bcm-hero-license.txt -->
       <video
         class="bcm-hero-video"
-        autoplay
+        data-src="/assets/videos/bcm-hero-720p.mp4"
         muted
         loop
         playsinline
-        preload="metadata"
-        poster="/assets/images/mockup-squadv.webp"
-      >
-        <source src="/assets/videos/bcm-hero.mp4" type="video/mp4" />
-        <source
-          src="https://videos.pexels.com/video-files/10294768/10294768-hd_1920_1080_30fps.mp4"
-          type="video/mp4"
-        />
-      </video>
+        preload="none"
+        tabindex="-1"
+      ></video>
       <div class="bcm-hero-veil"></div>
     </div>
+    <button class="bcm-hero-motion" type="button" hidden>Pause background video</button>
 
     <div class="bcm-hero-inner">
       <span class="bcm-hero-kicker">EDMONTON'S #1 BLUE COLLAR MARKETING AGENCY</span>
@@ -117,7 +120,7 @@ eleventyNavigation:
         </ul>
       </div>
       <div class="bcm-seo-media" aria-hidden="true">
-        <img src="/assets/images/mockup-mpc-laptop-only.webp" alt="" loading="lazy" decoding="async" />
+        <img src="/assets/images/mockup-mpc-laptop-only.webp" width="699" height="414" alt="" loading="lazy" decoding="async" />
       </div>
     </div>
   </section>
@@ -144,16 +147,16 @@ eleventyNavigation:
       <div class="bcm-logo-ticker" aria-label="Client logos">
         <div class="bcm-logo-track">
           <div class="bcm-logo-row">
-            <span class="bcm-logo-card"><img src="/assets/images/client-logos/mpc.avif" alt="MPC" loading="lazy" decoding="async" /></span>
-            <span class="bcm-logo-card"><img src="/assets/images/client-logos/kms_logo.png" alt="KMS Plumbing YEG" loading="lazy" decoding="async" /></span>
-            <span class="bcm-logo-card"><img src="/assets/images/client-logos/rods-electric.webp" alt="Rod's Electric" loading="lazy" decoding="async" /></span>
-            <span class="bcm-logo-card"><img src="/assets/images/client-logos/squadv.webp" alt="Squad V Plumbing" loading="lazy" decoding="async" /></span>
+            <span class="bcm-logo-card"><img src="/assets/images/client-logos/mpc-ticker-webp.webp" width="174" height="104" alt="MPC" loading="lazy" decoding="async" /></span>
+            <span class="bcm-logo-card"><img src="/assets/images/client-logos/kms-ticker-webp.webp" width="104" height="104" alt="KMS Plumbing YEG" loading="lazy" decoding="async" /></span>
+            <span class="bcm-logo-card"><img src="/assets/images/client-logos/rods-electric-ticker-webp.webp" width="125" height="104" alt="Rod's Electric" loading="lazy" decoding="async" /></span>
+            <span class="bcm-logo-card"><img src="/assets/images/client-logos/squadv-ticker-webp.webp" width="210" height="79" alt="Squad V Plumbing" loading="lazy" decoding="async" /></span>
           </div>
           <div class="bcm-logo-row" aria-hidden="true">
-            <span class="bcm-logo-card"><img src="/assets/images/client-logos/mpc.avif" alt="" loading="lazy" decoding="async" /></span>
-            <span class="bcm-logo-card"><img src="/assets/images/client-logos/kms_logo.png" alt="" loading="lazy" decoding="async" /></span>
-            <span class="bcm-logo-card"><img src="/assets/images/client-logos/rods-electric.webp" alt="" loading="lazy" decoding="async" /></span>
-            <span class="bcm-logo-card"><img src="/assets/images/client-logos/squadv.webp" alt="" loading="lazy" decoding="async" /></span>
+            <span class="bcm-logo-card"><img src="/assets/images/client-logos/mpc-ticker-webp.webp" width="174" height="104" alt="" loading="lazy" decoding="async" /></span>
+            <span class="bcm-logo-card"><img src="/assets/images/client-logos/kms-ticker-webp.webp" width="104" height="104" alt="" loading="lazy" decoding="async" /></span>
+            <span class="bcm-logo-card"><img src="/assets/images/client-logos/rods-electric-ticker-webp.webp" width="125" height="104" alt="" loading="lazy" decoding="async" /></span>
+            <span class="bcm-logo-card"><img src="/assets/images/client-logos/squadv-ticker-webp.webp" width="210" height="79" alt="" loading="lazy" decoding="async" /></span>
           </div>
         </div>
       </div>
@@ -180,7 +183,7 @@ eleventyNavigation:
       <ul class="bcm-svc-grid">
         <li class="bcm-svc-card">
           <div class="bcm-svc-photo">
-            <img src="/assets/images/mpc-logo-with-bg.webp" alt="MPC updated logo" loading="lazy" decoding="async" />
+            <img src="/assets/images/mpc-logo-with-bg.webp" width="1082" height="394" alt="MPC updated logo" loading="lazy" decoding="async" />
           </div>
           <div class="bcm-svc-body">
             <h3 class="bcm-svc-title">BRANDING &amp; LOGO DESIGN</h3>
@@ -199,7 +202,7 @@ eleventyNavigation:
 
         <li class="bcm-svc-card">
           <div class="bcm-svc-photo">
-            <img src="/assets/images/mockup-rod-electrical.webp" alt="Rod's Electric website mockup" loading="lazy" decoding="async" />
+            <img src="/assets/images/mockup-rod-electrical.webp" width="888" height="636" alt="Rod's Electric website mockup" loading="lazy" decoding="async" />
           </div>
           <div class="bcm-svc-body">
             <h3 class="bcm-svc-title">WEB DESIGN</h3>
@@ -218,7 +221,7 @@ eleventyNavigation:
 
         <li class="bcm-svc-card">
           <div class="bcm-svc-photo">
-            <img src="/assets/images/mockup-squadv.webp" alt="Squad V Plumbing social media mockup" loading="lazy" decoding="async" />
+            <img src="/assets/images/mockup-squadv.webp" width="1003" height="610" alt="Squad V Plumbing social media mockup" loading="lazy" decoding="async" />
           </div>
           <div class="bcm-svc-body">
             <h3 class="bcm-svc-title">SOCIAL MEDIA MANAGEMENT</h3>
@@ -237,7 +240,7 @@ eleventyNavigation:
 
         <li class="bcm-svc-card">
           <div class="bcm-svc-photo">
-            <img src="/assets/images/mockup-kms-mobile.webp" alt="KMS Plumbing mobile website mockup" loading="lazy" decoding="async" />
+            <img src="/assets/images/mockup-kms-mobile.webp" width="371" height="429" alt="KMS Plumbing mobile website mockup" loading="lazy" decoding="async" />
           </div>
           <div class="bcm-svc-body">
             <h3 class="bcm-svc-title">HOSTING &amp; UNLIMITED EDITS</h3>
@@ -256,7 +259,7 @@ eleventyNavigation:
 
         <li class="bcm-svc-card">
           <div class="bcm-svc-photo">
-            <img src="/assets/images/mockup-mpc.png" alt="MPC website mockup" loading="lazy" decoding="async" />
+            <img src="/assets/images/mockup-mpc-webp-1000.webp" srcset="/assets/images/mockup-mpc-webp-500.webp 500w, /assets/images/mockup-mpc-webp-1000.webp 1000w" sizes="(max-width: 50rem) calc(100vw - 3rem), (max-width: 78rem) calc(50vw - 2.125rem), 36.875rem" width="1000" height="1000" alt="MPC website mockup" loading="lazy" decoding="async" />
           </div>
           <div class="bcm-svc-body">
             <h3 class="bcm-svc-title">LOCAL SEARCH OPTIMIZATION</h3>
@@ -275,7 +278,7 @@ eleventyNavigation:
 
         <li class="bcm-svc-card">
           <div class="bcm-svc-photo">
-            <img src="/assets/images/mockup-squadv.webp" alt="Squad V Plumbing lead generation mockup" loading="lazy" decoding="async" />
+            <img src="/assets/images/mockup-squadv.webp" width="1003" height="610" alt="Squad V Plumbing lead generation mockup" loading="lazy" decoding="async" />
           </div>
           <div class="bcm-svc-body">
             <h3 class="bcm-svc-title">GOOGLE PROFILE &amp; LEADS</h3>
@@ -314,28 +317,28 @@ eleventyNavigation:
 
       <div class="bcm-portfolio-grid">
         <figure class="bcm-portfolio-card bcm-portfolio-card-wide">
-          <img src="/assets/images/mockup-kms.png" alt="KMS Plumbing YEG website mockup" loading="lazy" decoding="async" />
+          <img src="/assets/images/mockup-kms-webp-1000.webp" srcset="/assets/images/mockup-kms-webp-500.webp 500w, /assets/images/mockup-kms-webp-1000.webp 1000w" sizes="(max-width: 48rem) calc(100vw - 3rem), (max-width: 78rem) calc(50vw - 2rem), 37rem" width="1000" height="1000" alt="KMS Plumbing YEG website mockup" loading="lazy" decoding="async" />
           <figcaption>
             <span>KMS Plumbing YEG</span>
             <small>PLATE-01 / PLUMBING</small>
           </figcaption>
         </figure>
         <figure class="bcm-portfolio-card">
-          <img src="/assets/images/mockup-mpc.png" alt="Montano Plumbing and Contracting website mockup" loading="lazy" decoding="async" />
+          <img src="/assets/images/mockup-mpc-webp-1000.webp" srcset="/assets/images/mockup-mpc-webp-500.webp 500w, /assets/images/mockup-mpc-webp-1000.webp 1000w" sizes="(max-width: 48rem) calc(100vw - 3rem), (max-width: 78rem) calc(50vw - 2rem), 37rem" width="1000" height="1000" alt="Montano Plumbing and Contracting website mockup" loading="lazy" decoding="async" />
           <figcaption>
             <span>Montano Plumbing &amp; Contracting</span>
             <small>PLATE-02 / CONTRACTING</small>
           </figcaption>
         </figure>
         <figure class="bcm-portfolio-card">
-          <img src="/assets/images/mockup-squadv.webp" alt="Squad V Plumbing website mockup" loading="lazy" decoding="async" />
+          <img src="/assets/images/mockup-squadv.webp" width="1003" height="610" alt="Squad V Plumbing website mockup" loading="lazy" decoding="async" />
           <figcaption>
             <span>Squad V Plumbing</span>
             <small>PLATE-03 / PLUMBING</small>
           </figcaption>
         </figure>
         <figure class="bcm-portfolio-card">
-          <img src="/assets/images/mockup-rod-electrical.webp" alt="Rod's Electric website mockup" loading="lazy" decoding="async" />
+          <img src="/assets/images/mockup-rod-electrical.webp" width="888" height="636" alt="Rod's Electric website mockup" loading="lazy" decoding="async" />
           <figcaption>
             <span>Rod's Electric</span>
             <small>PLATE-04 / ELECTRICAL</small>
@@ -545,7 +548,7 @@ eleventyNavigation:
 
         <div class="bcm-founder-media" aria-label="Charles with a laptop in an office setting">
           <div class="bcm-founder-photo">
-            <img src="/assets/images/cta-bg.webp" alt="" loading="lazy" decoding="async" />
+            <img src="/assets/images/cta-bg.webp" width="1600" height="1068" alt="" loading="lazy" decoding="async" />
             <div class="bcm-founder-photo-overlay" aria-hidden="true"></div>
           </div>
           <div class="bcm-founder-proof">

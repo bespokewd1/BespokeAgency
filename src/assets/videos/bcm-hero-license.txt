@@ -1,0 +1,32 @@
+Hero media source and transformations
+
+Source provider: Pexels
+Source video ID: 10294768
+Original media URL: https://videos.pexels.com/video-files/10294768/10294768-hd_1920_1080_30fps.mp4
+License URL: https://www.pexels.com/license/
+Source downloaded: 2026-10-14
+
+This project already used this Pexels video for its homepage hero. The local
+assets below are resized/transcoded copies of that same source, not new media.
+Use remains subject to the Pexels license. This file does not claim that the
+media is public domain or Creative Commons licensed. Keep the source and
+license links if these assets are moved to another project.
+
+The license page rejected this environment's automated fetch with HTTP 403.
+Check the current terms at the license URL before reuse outside this project.
+No creator attribution was inferred from the numeric video ID.
+
+bcm-hero-720p.mp4
+  Video only, audio removed, H.264 High profile level 3.1, yuv420p.
+  1280 x 720, constant 30 fps, duration approximately 9.967 seconds.
+  libx264 slow preset, CRF 26, maxrate 1100k, bufsize 2200k, GOP 60.
+  Lanczos downscale, source metadata stripped, MP4 faststart.
+
+../images/bcm-hero-worker-1280.webp
+../images/bcm-hero-worker-768.webp
+  Still from the original source at 1.5 seconds, matching the hero video.
+  1280 x 720 and 768 x 432, WebP quality 80, effort 6, smartSubsample true.
+  Lanczos downscale only, withoutEnlargement true. No enlargement or crop.
+
+Technical checks and exact sizes are recorded in the local performance report.
+A human should review the still and compressed video before visual approval.

@@ -1,6 +1,4 @@
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,900&display=swap");
-
   .bcm-masthead {
     --bcm-ink: #0B0F17;
     --bcm-ink-2: #11151E;
@@ -133,7 +131,7 @@ filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
   .bcm-mast-word em {
     font-style: italic;
     font-weight: 900;
-    color: var(--bcm-blue);
+    color: var(--bcm-blue-dark);
     margin: 0 0.05em;
   }
 
@@ -273,7 +271,7 @@ filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    background: var(--bcm-blue);
+    background: var(--bcm-blue-dark);
     color: #fff;
     text-decoration: none;
     padding: 0.85rem 1.4rem;
@@ -284,9 +282,11 @@ filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
     text-transform: uppercase;
     font-size: 0.875rem;
     letter-spacing: 0.04em;
-    border: 0.0938rem solid var(--bcm-blue);
+    border: 0.0938rem solid var(--bcm-blue-dark);
     transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   }
+
+  .bcm-masthead a.bcm-mast-cta { color: #fff; }
 
   .bcm-mast-cta:hover {
     background: var(--bcm-blue-dark);
@@ -593,6 +593,15 @@ filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
       inset: 0.5rem 0.5rem auto auto;
     }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bcm-masthead *,
+    .bcm-masthead *::before,
+    .bcm-masthead *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
 </style>
 
 <!-- ============================================================
@@ -617,12 +626,14 @@ filter: drop-shadow(1px 1px black) drop-shadow(1px -1px black)
       <img
         class="cs-logo-img"
         aria-hidden="true"
-        loading="lazy"
+        loading="eager"
         decoding="async"
-        src="/assets/images/bespokelogonotexttt.png"
-        alt="logo"
-        width="150"
-        height="15"
+        src="/assets/images/bespokelogonotexttt-webp-64.webp"
+        srcset="/assets/images/bespokelogonotexttt-webp-64.webp 64w, /assets/images/bespokelogonotexttt-webp-96.webp 96w"
+        sizes="1.6rem"
+        alt=""
+        width="64"
+        height="64"
       />
       <span class="bcm-mast-word">Bespoke<em>Web</em>Design</span>
     </a>

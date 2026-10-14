@@ -5,7 +5,7 @@
    ============================================================ */
 
 /* Blue Collar Marketing uses Work Sans for primary display text and Poppins for body/accent text. */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,900&display=swap");
+
 
 body { overflow-x: clip; }
 
@@ -176,13 +176,13 @@ body { overflow-x: clip; }
   border-color: var(--bcm-blue-dark);
   transform: translateY(-0.0625rem);
 }
-.bcm-btn-primary { background: var(--bcm-blue); color: #fff; border-color: var(--bcm-blue); }
-.bcm-btn-primary,
-.bcm-btn-primary:hover,
-.bcm-btn-primary:focus-visible,
-.bcm-btn-primary:visited,
-.bcm-btn-primary span,
-.bcm-btn-primary svg {
+.bcm-btn-primary { background: var(--bcm-blue-dark); color: #fff; border-color: var(--bcm-blue-dark); }
+.bcm-page .bcm-btn-primary,
+.bcm-page .bcm-btn-primary:hover,
+.bcm-page .bcm-btn-primary:focus-visible,
+.bcm-page .bcm-btn-primary:visited,
+.bcm-page .bcm-btn-primary span,
+.bcm-page .bcm-btn-primary svg {
   color: #fff;
   stroke: currentColor;
 }
@@ -285,9 +285,9 @@ body { overflow-x: clip; }
   font-size: 0.85rem;
   text-transform: uppercase;
   padding: 0.6rem 1.1rem;
-  background: var(--bcm-blue);
+  background: var(--bcm-blue-dark);
   color: #fff;
-  border: 0.0938rem solid var(--bcm-blue);
+  border: 0.0938rem solid var(--bcm-blue-dark);
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 .bcm-notice-btn:hover { background: var(--bcm-blue-dark); border-color: var(--bcm-blue-dark); }
@@ -330,11 +330,32 @@ body { overflow-x: clip; }
   inset: 0;
   z-index: 0;
 }
+.bcm-page .bcm-hero-poster,
 .bcm-hero-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: saturate(0.85) brightness(0.78);
+}
+.bcm-hero-video { opacity: 0; }
+.bcm-hero-video.is-ready { opacity: 1; }
+.bcm-page .bcm-hero-motion {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 3;
+  padding: 0.65rem 0.85rem;
+  background: var(--bcm-ink);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.7);
+  font-size: 0.75rem;
+}
+.bcm-hero-motion[hidden] { display: none; }
+.bcm-hero-motion:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
 }
 .bcm-hero-veil {
   position: absolute;
@@ -518,7 +539,7 @@ body { overflow-x: clip; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--bcm-blue);
+  background: var(--bcm-blue-dark);
   color: #fff;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
@@ -828,7 +849,7 @@ body { overflow-x: clip; }
   flex-direction: column;
 }
 .bcm-review-stars {
-  color: var(--bcm-yellow);
+  color: #806000;
   letter-spacing: 0.12em;
   font-weight: 700;
   margin-bottom: 1.25rem;
@@ -895,7 +916,7 @@ body { overflow-x: clip; }
   top: 0;
   right: 1.2rem;
   transform: translateY(-50%);
-  background: var(--bcm-blue);
+  background: var(--bcm-blue-dark);
   color: #fff;
   padding: 0.35rem 0.65rem;
   font-family: var(--bcm-display);
@@ -975,9 +996,10 @@ body { overflow-x: clip; }
   font-family: var(--bcm-mono);
   font-size: 0.68rem;
   letter-spacing: 0.14em;
-  color: var(--bcm-blue);
+  color: var(--bcm-blue-dark);
   padding-top: 0.1rem;
 }
+.bcm-price-card-featured li span { color: var(--bcm-blue); }
 .bcm-price-card .bcm-btn {
   width: 100%;
   justify-content: center;
@@ -1349,7 +1371,7 @@ body { overflow-x: clip; }
   text-transform: uppercase;
 }
 .bcm-rating-stars {
-  color: var(--bcm-yellow);
+  color: #806000;
   letter-spacing: 0.1em;
   font-size: 0.95rem;
   font-weight: 700;
