@@ -4,7 +4,8 @@ import test from "node:test";
 import vm from "node:vm";
 
 const layout = await readFile(new URL("../src/_includes/layouts/base.html", import.meta.url), "utf8");
-const scripts = [...layout.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
+const activeLayout = layout.replace(/\{#[\s\S]*?#\}/g, "");
+const scripts = [...activeLayout.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
   .filter(([, attributes]) => !/\bsrc=|\btype=/i.test(attributes))
   .map(([, , code]) => code);
 
@@ -35,16 +36,14 @@ const callbacks = [
   "#error=access_denied&error_description=403",
 ];
 
-test("ordinary public visits and anchors keep tracking but never load Identity", () => {
+test("ordinary public visits and anchors load neither disabled analytics nor Identity", () => {
   for (const hash of ["", "#contact", "#about", "#services", "#main", "#invite_token", "#invite_token=", "#not_invite_token=anchor", "#token=anchor", "#error=unrelated"]) {
     const result = visit(hash);
     assert.deepEqual(result.replacements, [], hash);
     assert.equal(result.window.netlifyIdentityCallback, false, hash);
-    assert.equal(result.downloads.length, 2, hash);
-    assert.ok(result.downloads.every((url) => url.startsWith("https://www.googletagmanager.com/")), hash);
-    assert.equal(typeof result.window.gtag, "function", hash);
-    result.window.gtag("event", "lead_audit_form_start", { funnel_name: "free_lead_generation_audit" });
-    assert.equal(result.window.dataLayer.at(-1)[1], "lead_audit_form_start", hash);
+    assert.deepEqual(result.downloads, [], hash);
+    assert.equal(typeof result.window.gtag, "undefined", hash);
+    assert.equal(result.window.dataLayer, undefined, hash);
   }
 });
 
@@ -54,7 +53,7 @@ test("supported callbacks replace the current visit with admin and the unchanged
     assert.deepEqual(result.replacements, ["/admin/" + hash]);
     assert.equal(result.window.netlifyIdentityCallback, true);
     assert.deepEqual(result.downloads, [], "callbacks must not start public tracking");
-    assert.equal(result.window.dataLayer.length, 0, "callbacks must not enqueue a public page view");
+    assert.equal(result.window.dataLayer, undefined, "callbacks must not initialize disabled analytics");
     assert.equal(result.window.location.hash, hash, "only admin's widget may consume the fragment");
   }
 });
@@ -62,7 +61,9 @@ test("supported callbacks replace the current visit with admin and the unchanged
 test("Identity stays in the existing admin document rather than the public layout", async () => {
   const admin = await readFile(new URL("../src/admin/index.html", import.meta.url), "utf8");
   const config = await readFile(new URL("../src/admin/config.yml", import.meta.url), "utf8");
-  assert.ok(!layout.includes("https://identity.netlify.com/v1/netlify-identity-widget.js"));
+  assert.ok(!activeLayout.includes("https://identity.netlify.com/v1/netlify-identity-widget.js"));
+  assert.ok(!activeLayout.includes("googletagmanager.com"));
+  assert.ok(activeLayout.includes('name="google-site-verification"'));
   assert.ok(admin.includes("https://identity.netlify.com/v1/netlify-identity-widget.js"));
   assert.ok(admin.includes("https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"));
   assert.match(config, /name:\s*git-gateway/);

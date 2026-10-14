@@ -9,7 +9,8 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH,
 const base = process.env.IDENTITY_TEST_URL || "http://identity.test";
 const layout = await readFile(new URL("../src/_includes/layouts/base.html", import.meta.url), "utf8");
 const admin = await readFile(new URL("../src/admin/index.html", import.meta.url), "utf8");
-const publicScripts = [...layout.matchAll(/<script\b([^>]*)>[\s\S]*?<\/script>/gi)]
+const activeLayout = layout.replace(/\{#[\s\S]*?#\}/g, "");
+const publicScripts = [...activeLayout.matchAll(/<script\b([^>]*)>[\s\S]*?<\/script>/gi)]
   .filter(([, attributes]) => !/\btype=/i.test(attributes))
   .map(([tag]) => tag).join("\n");
 const widget = process.env.IDENTITY_WIDGET_PATH ? await readFile(process.env.IDENTITY_WIDGET_PATH, "utf8") : null;
@@ -61,8 +62,8 @@ try {
     await page.goto(base + path);
     check(!requests.some((url) => url.startsWith("https://identity.netlify.com/")), `${path} does not download Identity`);
     check(!new URL(page.url()).pathname.startsWith("/admin/"), `${path} stays public`);
-    check(await page.evaluate(() => typeof window.gtag === "function"), `${path} keeps global gtag`);
-    check(requests.some((url) => url.includes("googletagmanager.com/gtm.js")) && requests.some((url) => url.includes("googletagmanager.com/gtag/js")), `${path} keeps both existing tracking loaders`);
+    check(await page.evaluate(() => typeof window.gtag === "undefined"), `${path} leaves disabled gtag undefined`);
+    check(!requests.some((url) => url.includes("googletagmanager.com") || url.includes("google-analytics.com")), `${path} never requests disabled analytics`);
     await context.close();
   }
 
