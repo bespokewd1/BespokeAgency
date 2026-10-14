@@ -83,10 +83,10 @@ try {
   await open(page);
   check(await page.locator(".chat-message").count() === 4, "refresh restores completed history");
   await page.locator(".chat-footer a").click();
-  await page.waitForURL(`${base}/contact/`);
+  await page.waitForURL(`${base}/#contact`);
   await open(page);
-  check(await page.locator(".chat-message").count() === 4, "contact navigation restores history");
-  check(await page.locator('form[name="CTA Form"]').count() === 1, "existing contact form remains present");
+  check(await page.locator(".chat-message").count() === 4, "contact redirect restores history");
+  check(await page.locator('#contact a[href^="sms:"]').count() === 1, "homepage contact options remain present");
   for (const [failure, [, , wording]] of Object.entries(failures)) {
     mode = failure;
     await send(page, `Check ${failure}`);
@@ -194,7 +194,7 @@ try {
   for (const size of [{ width: 390, height: 844 }, { width: 320, height: 568 }, { width: 390, height: 400 }, { width: 844, height: 390 }]) {
     await mobile.page.setViewportSize(size);
     await mobile.page.locator("#chat-question").focus();
-    const fits = await mobile.page.evaluate(() => {
+    const fitResult = await mobile.page.waitForFunction(() => {
       const panel = document.querySelector("#chat-panel").getBoundingClientRect();
       const input = document.querySelector("#chat-question").getBoundingClientRect();
       const send = document.querySelector(".chat-send").getBoundingClientRect();
@@ -202,6 +202,8 @@ try {
       return panel.left >= 0 && panel.right <= innerWidth && panel.top >= 0 && panel.bottom <= innerHeight
         && input.top >= panel.top && send.bottom <= panel.bottom && scroll.clientHeight > 0;
     });
+    const fits = await fitResult.jsonValue();
+    await fitResult.dispose();
     check(fits, `mobile controls and scroll region fit ${size.width}x${size.height}`);
   }
   await mobile.page.setViewportSize({ width: 390, height: 844 });
@@ -222,8 +224,8 @@ try {
   await mobile.page.locator(".chat-close").click();
   const controls = await mobile.page.evaluate(() => [...document.querySelectorAll("body *")].filter((el) => getComputedStyle(el).position === "fixed" && el.getBoundingClientRect().height > 0).map((el) => el.id || el.className));
   check(!controls.includes("sticky-cta"), "legacy sticky CTA is absent on included pages");
-  await mobile.page.goto(`${base}/plumbing-website/`);
-  check(await mobile.page.locator("#bespoke-chat").count() === 0 && !(await mobile.page.evaluate(() => performance.getEntriesByType("resource").map((entry) => entry.name))).some((url) => /\/assets\/(js\/chat.js|css\/chat.css)/.test(url)), "excluded plumbing page has no widget or assets");
+  await mobile.page.goto(`${base}/get-more-leads/`);
+  check(await mobile.page.locator("#bespoke-chat").count() === 0 && !(await mobile.page.evaluate(() => performance.getEntriesByType("resource").map((entry) => entry.name))).some((url) => /\/assets\/(js\/chat.js|css\/chat.css)/.test(url)), "audit funnel has no widget or assets");
   await mobile.context.close();
   console.log(`${checks} browser checks passed. All chat responses were mocked.`);
 } finally { await browser.close(); }

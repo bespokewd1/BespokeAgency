@@ -5,7 +5,7 @@
         "preloadImg": "{{ image }}",
         "permalink": "/blog/{{ url | slug }}/index.html"
     },
-    "tags": "post",
+    "tags": ["post", "sitemap"],
     "preloadCSS": "/assets/css/blog.css",
     "image": "{{ image }}"
 }

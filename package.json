@@ -11,6 +11,8 @@
         "test:light-only": "npm run build && node scripts/check-light-only.js",
         "test:chat": "node --test tests/chat.test.mjs",
         "test:chat-widget": "node --test tests/chat-widget.test.mjs",
+        "test:pages": "npm run build && node --test tests/page-retirement.test.mjs",
+        "prebuild": "del-cli ./public --force",
         "watch:cms": "npx decap-server",
         "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
         "dev": "netlify dev --offline --no-open",
