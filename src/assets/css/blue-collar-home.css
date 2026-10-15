@@ -1005,6 +1005,63 @@ body { overflow-x: clip; }
   justify-content: center;
 }
 
+/* Content guidance and common questions */
+.bcm-start-title {
+  margin: 0 0 1rem;
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.4rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--bcm-ink);
+}
+.bcm-reviews .bcm-review-card { min-height: 0; }
+.bcm-reviews .bcm-review-card p { margin-bottom: 0; }
+.bcm-plan-note {
+  max-width: 58rem;
+  margin: 2rem auto 0;
+  color: var(--bcm-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+.bcm-faq { background: var(--bcm-paper-2); }
+.bcm-faq-list { max-width: 58rem; margin: 0 auto; }
+.bcm-faq-list details { border-top: 1px solid var(--bcm-rule); }
+.bcm-faq-list details:last-child { border-bottom: 1px solid var(--bcm-rule); }
+.bcm-faq-list summary {
+  padding: 1.25rem 0;
+  color: var(--bcm-ink);
+  font-weight: 700;
+  cursor: pointer;
+}
+.bcm-faq-list p {
+  max-width: 48rem;
+  margin: 0 0 1.5rem;
+  color: var(--bcm-muted);
+  line-height: 1.7;
+}
+.bcm-page .bcm-faq-list a {
+  color: var(--bcm-blue-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.bcm-seo-list a:hover { text-decoration: underline; }
+.bcm-seo-list a:focus-visible,
+.bcm-faq-list a:focus-visible,
+.bcm-faq-list summary:focus-visible {
+  outline: 2px solid var(--bcm-blue);
+  outline-offset: 4px;
+}
+.bcm-page [id^="service-"],
+.bcm-page #services,
+.bcm-page #portfolio,
+.bcm-page #pricing,
+.bcm-page #proof,
+.bcm-page #faq,
+.bcm-page #about,
+.bcm-page #contact { scroll-margin-top: var(--bcm-header-h); }
+
 /* ============================================================
    FOUNDER CTA
    ============================================================ */
