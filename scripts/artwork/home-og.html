@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200, initial-scale=1" />
+    <title>Bespoke homepage social artwork</title>
+    <style>
+      @font-face {
+        font-family: "Work Sans";
+        font-style: italic;
+        font-weight: 100 900;
+        src: url("../../src/assets/fonts/work-sans-v24-latin-italic-100-900.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../../src/assets/fonts/poppins-v24-latin-normal-400.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 700;
+        src: url("../../src/assets/fonts/poppins-v24-latin-normal-700.woff2") format("woff2");
+      }
+
+      * { box-sizing: border-box; }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        margin: 0;
+        overflow: hidden;
+        background: #0b0f17;
+      }
+
+      .artboard {
+        position: relative;
+        isolation: isolate;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-synthesis: none;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      /* Reuse the photograph from the previous homepage share graphic. */
+      .photograph {
+        position: absolute;
+        z-index: -3;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .artboard::before {
+        position: absolute;
+        z-index: -2;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(0deg, rgba(11, 15, 23, 0.8), transparent 42%),
+          linear-gradient(90deg, #0b0f17 0%, rgba(11, 15, 23, 0.96) 31%, rgba(11, 15, 23, 0.82) 51%, rgba(11, 15, 23, 0.4) 79%, rgba(11, 15, 23, 0.3));
+      }
+
+      .artboard::after {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        content: "";
+        background: radial-gradient(ellipse at 0% 100%, rgba(31, 143, 255, 0.2), transparent 60%);
+      }
+
+      .accent {
+        position: absolute;
+        top: 65px;
+        left: 64px;
+        width: 56px;
+        height: 4px;
+        background: #1f8fff;
+      }
+
+      h1 {
+        position: absolute;
+        top: 101px;
+        left: 60px;
+        margin: 0;
+        font-family: "Work Sans", sans-serif;
+        font-size: 64px;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.02;
+        letter-spacing: -0.8px;
+        text-transform: uppercase;
+      }
+
+      .headline-line {
+        display: block;
+        width: max-content;
+        white-space: nowrap;
+      }
+
+      .dot { color: #1f8fff; }
+
+      .support {
+        position: absolute;
+        top: 326px;
+        left: 64px;
+        margin: 0;
+        color: #e4e9f2;
+        font-size: 24px;
+        line-height: 1.5;
+      }
+
+      .support-line { display: block; }
+
+      .price {
+        position: absolute;
+        top: 431px;
+        left: 64px;
+        margin: 0;
+        padding: 12px 22px;
+        background: #0a6fe0;
+        box-shadow: 6px 6px 0 rgba(31, 143, 255, 0.25);
+        font-size: 25px;
+        line-height: 1.4;
+        white-space: nowrap;
+      }
+
+      .price strong { font-weight: 700; }
+
+      .footer {
+        position: absolute;
+        right: 64px;
+        bottom: 32px;
+        left: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand img {
+        display: block;
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand-name {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+        white-space: nowrap;
+      }
+
+      .brand-name span { color: #1f8fff; }
+
+      .domain {
+        margin: 0;
+        color: #e4e9f2;
+        font-size: 20px;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Local-only editable artwork. Do not move this file into src. -->
+    <main class="artboard">
+      <img class="photograph" src="../../src/assets/images/cta-bg.webp" alt="" />
+      <div class="accent" aria-hidden="true"></div>
+      <h1 data-safe>
+        <span class="headline-line">Websites &amp;</span>
+        <span class="headline-line">marketing for</span>
+        <span class="headline-line">Edmonton trades<span class="dot">.</span></span>
+      </h1>
+      <p class="support" data-safe>
+        <span class="support-line">Custom websites and</span>
+        <span class="support-line">social media management.</span>
+      </p>
+      <p class="price" data-safe>Plans from <strong>$245/month</strong></p>
+      <footer class="footer">
+        <div class="brand" data-safe>
+          <img src="../../src/assets/images/bespokelogonotexttt.png" alt="" />
+          <p class="brand-name">Bespoke <span>Web</span> Design</p>
+        </div>
+        <p class="domain" data-safe>bespokewebdesign.ca</p>
+      </footer>
+    </main>
+  </body>
+</html>

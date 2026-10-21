@@ -790,7 +790,8 @@ body { overflow-x: clip; }
   filter: saturate(0.9) brightness(0.86);
   transition: transform 600ms cubic-bezier(.2,.7,.3,1), filter 220ms ease;
 }
-.bcm-portfolio-card:hover img {
+.bcm-portfolio-card:hover img,
+.bcm-portfolio-card:focus-within img {
   transform: scale(1.04);
   filter: saturate(1) brightness(0.96);
 }
@@ -826,6 +827,46 @@ body { overflow-x: clip; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--bcm-blue);
+}
+.bcm-portfolio-card-ironfist figcaption {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.bcm-portfolio-info {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+.bcm-portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  padding: 0.6rem 0.8rem;
+  border: 0.0938rem solid var(--bcm-blue);
+  background: var(--bcm-ink);
+  color: #fff;
+  font-family: var(--bcm-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 180ms ease;
+}
+.bcm-portfolio-link:hover { background: var(--bcm-blue-dark); }
+.bcm-portfolio-link:focus-visible {
+  outline: 0.1875rem solid #fff;
+  outline-offset: 0.25rem;
+}
+@media (max-width: 30rem) {
+  .bcm-portfolio-card-ironfist img {
+    position: relative;
+    top: -2.5rem;
+    object-fit: contain;
+  }
 }
 
 /* ============================================================

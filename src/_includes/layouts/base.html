@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ description }}" />
+    <meta name="description" content="{{ description | escape }}" />
     {% if robots %}
     <meta name="robots" content="{{ robots }}" />
     {% endif %}
@@ -15,12 +15,43 @@
     <link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
 
     <!--Social Media Display-->
-    <meta property="og:title" content="{{ ogTitle or title }}" />
-    <meta property="og:description" content="{{ ogDescription or description }}" />
+    {% set socialTitle = ogTitle or title %}
+    {% set socialDescription = ogDescription or description %}
+    {% set socialImage = image %}
+    {% set absoluteImagePattern = r/^https?:\/\//i %}
+    {% if image and not absoluteImagePattern.test(image) %}
+      {% set socialImage = (client.domain | replace(r/\/+$/, "")) ~ "/" ~ (image | replace(r/^\/+/, "")) %}
+    {% endif %}
+    <meta property="og:site_name" content="Bespoke Web Design" />
+    <meta property="og:title" content="{{ socialTitle | escape }}" />
+    <meta property="og:description" content="{{ socialDescription | escape }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-    <meta property="og:image" content="{{ image }}" />
-    <meta property="og:image:secure_url" content="{{ image }}" />
+    {% if socialImage %}
+    <meta property="og:image" content="{{ socialImage | escape }}" />
+    <meta property="og:image:secure_url" content="{{ socialImage | escape }}" />
+    {% if imageWidth %}
+    <meta property="og:image:width" content="{{ imageWidth }}" />
+    {% endif %}
+    {% if imageHeight %}
+    <meta property="og:image:height" content="{{ imageHeight }}" />
+    {% endif %}
+    {% if imageType %}
+    <meta property="og:image:type" content="{{ imageType | escape }}" />
+    {% endif %}
+    {% if imageAlt %}
+    <meta property="og:image:alt" content="{{ imageAlt | escape }}" />
+    {% endif %}
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ socialTitle | escape }}" />
+    <meta name="twitter:description" content="{{ socialDescription | escape }}" />
+    {% if socialImage %}
+    <meta name="twitter:image" content="{{ socialImage | escape }}" />
+    {% if imageAlt %}
+    <meta name="twitter:image:alt" content="{{ imageAlt | escape }}" />
+    {% endif %}
+    {% endif %}
 
     <!--Favicons-->
     <link
@@ -181,7 +212,7 @@
     </script>
     {% block head %}{% endblock %}
 
-    <title>{{ title }}</title>
+    <title>{{ title | escape }}</title>
   </head>
   <body>
     {#
